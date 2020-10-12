@@ -20,7 +20,7 @@
 project = 'Experimental Physics 3'
 copyright = '2020, Frank Cichos'
 author = 'Frank Cichos'
-master_doc = 'index'
+master_doc = 'contents'
 
 # The full version, including alpha/beta/rc tags
 release = '1'
