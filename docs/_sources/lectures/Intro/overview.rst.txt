@@ -1,8 +1,7 @@
 Overview
 ========
 
-During the course we will use the Jupyter Notebook environment, which is a Browser based web application that connects to specific kernels axecuting the code.
-This is to give you some introduction into the Jupyter environment in case you have not encountered it before
+The Experimental Physics III course will deal with two major topics - electromagnetic waves and particle waves.
 
 1. Jupyter Environnment (00:00)
 2. Notebook Editor (05:30)

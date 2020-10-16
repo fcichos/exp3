@@ -6,10 +6,11 @@
 Course Schedule
 ===============
 
-The course will be updated weekly with the schedule of the lectures. Thus, expect every 
+The course will be held in two weekly lectures, starting **26.10.2020** in the big lecture hall and online. 
 
-**Tuesday starting April, 7th at 1:30 pm** 
+**Monday 11:15 - 12:45 pm** 
+**Thursday 11:15 - 12:45 pm** 
 
-a new lecture and assignment. As it is an online course and the material is available online, you can come back to study whenever it is suitable for you.
+The course and the material is available online, you can come back to study whenever it is suitable for you.
 
-We will add also new videos explaining the details of the notebooks every week. Please explore the new materials, especially the notebooks on the mybinder server. They will help you to finish the weekly assignments.
+
