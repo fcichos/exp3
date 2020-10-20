@@ -34,13 +34,6 @@ This is the website of the Experimental Physics 3 course in the
    :maxdepth: 2
    :caption: Lecture 1:
 
-   lectures/L1/overview_1.rst
-   notebooks/L1/1_variables.ipynb
-   notebooks/L1/2_operators.ipynb
-   notebooks/L1/3_datatypes.ipynb
-   notebooks/L1/4_modules.ipynb
-   lectures/L1/assignment_1.rst
-
 
    
 Indices and tables
