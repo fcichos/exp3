@@ -6,8 +6,11 @@
 Assignments
 ============
 
-The lecture will be held in a hybrid format this year. This
-We will supply also the problem sets every week to all students. The assignments come as a Jupyter Notebook, with individual problems. Please fill in the code or answers your are asked for and return the notebooks **before the lecture** every Tuesday morning. You will receive the web address of our assignment server as well as a login and password. Find also below a short video on how to download and return the assignments.
+All of the assignments of the lecture will be handled in **moodle**. An assigment will be handed out every week starting the 26.October 2020 in the afternoon. The assignment will be due the week after before the lecture until 11:00 o'clock. All assignments will be corrected and the solution to the individual problems will be discussed in the seminar one week later. 
+
+To take part in the final exam you beed 50% (sharp!) of the total point possible.
+
+The video below tells you how to access the assignments and how to submit the solutions.
 
 
 .. raw:: html
