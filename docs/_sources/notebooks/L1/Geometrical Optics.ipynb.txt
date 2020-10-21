@@ -33,23 +33,30 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "As geometrical optics is only approximately describing the propagation of light, we have to write down some postulates (things we do not understand yet) to describe rays\n",
+    "As geometrical optics is not a rigorous description, we have to write down some postulates (things we do not understand yet) to describe light propagation in geometrical optics\n",
     "\n",
-    "\n",
+    "– light rays emergy from a light source\n",
+    "- light rays are detected by a detector \n",
     "- light propagate in straight line path (rays) in a homogeneous medium\n",
-    "- light bends in curved path in inhomogeneous media (refractive index varying with position $\\vec{r}$)\n",
-    "- rays may be reflected or refracted at interfaces between media\n",
-    "- rays may split at interfaces\n",
-    "- follow curved paths in a medium in which the refractive index changes\n",
-    "- may be absorbed or reflected."
+    "- light bends to a curved path in inhomogeneous media (refractive index varying with position $\\vec{r}$)\n",
+    "- rays may be reflected and refracted at interfaces between media\n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "The figure below shows a sketch of a pinhole camera as one of the object where you may notice the propagation in straight lines. \n",
+    "\n",
     "![pinhole](img/pinhole_camera.png)"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {

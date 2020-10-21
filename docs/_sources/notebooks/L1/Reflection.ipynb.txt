@@ -19,15 +19,47 @@
     }
    },
    "source": [
-    "### Symbol names \n",
+    "The law of reflection is probably the most simple one. Yet the simplicity gives us the chance to define some basic objects which we will further use for the description of light rays and their propagation.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The sketch below shows the reflection of an incoming light ray (red) on an interface. This incoming light ray has an angle $\\theta_{1}$ with the axis (dashed line), which is perpendicular to the reflecting surface. As compared to X-ray diffraction, we measure the angle to the normal of the surface and not to the surface itself. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![reflection](img/reflection.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The law of reflection tells us now, that the outgoing reflected ray is now leaving the surface under and angle $\\theta_2=\\theta_1$. So both angles are the same for the reflection."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-warning\">\n",
     "\n",
-    "Text"
+    "**Law of Reflection**\n",
+    "    \n",
+    "If a ray is incident to a reflecting surface under an angle $\\theta_1$ it will be reflected towards under an angle $\\theta_2=\\theta_1$ to the same side of the surface. \n",
+    "</div>\n",
+    "\n",
+    "\n"
    ]
   }
  ],
  "metadata": {
   "anaconda-cloud": {},
-  "celltoolbar": "Slideshow",
   "hide_input": false,
   "kernelspec": {
    "display_name": "Python 3",
