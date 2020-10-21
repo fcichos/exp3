@@ -4,14 +4,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# MONA Snippets - Refraction Explorer"
+    "## EXP3 Snippets - Refraction Explorer"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Demonstrates the refraction at a planar interface\n",
+    "This is a small python code snippet, which you can explore on the *myBinder* service with the button on the top of this webpage. It shows the the refraction of a light ray (red) incident to an interface (horizontal line), which is then refracted. The interface is seperating two areas with different refractive index $n_1, n_2$, which you can modify with the sliders in the same way as the incident angle. The refractive index $n_2$ may even go negative and you may want to explore what happens then.\n",
     "\n",
     "(c) F. Cichos 2020"
    ]
@@ -30,13 +30,13 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "f7ba99de8e104847a4d5e29bf8852694",
+       "model_id": "67f6ef8808a6483fb6ef2a3ebc8a8b69",
        "version_major": 2,
        "version_minor": 0
       },
@@ -50,7 +50,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "b6562607ef3c47fb99c25d0ea55c7c45",
+       "model_id": "26a0381b741c4588b6d6adbac8dfef8f",
        "version_major": 2,
        "version_minor": 0
       },
@@ -64,8 +64,9 @@
    ],
    "source": [
     "fig, ax = plt.subplots(figsize=(4, 4))\n",
+    "fig.canvas.header_visible = False\n",
     " \n",
-    "@widgets.interact(n1=(1,2,0.01),n2=(1,2,0.01), phi=(0, 90, 0.1))\n",
+    "@widgets.interact(n1=(1,2,0.01),n2=(-2,3,0.01), phi=(0, 90, 0.1))\n",
     "def update(n1=1,n2=1.5,phi=45):\n",
     "    \"\"\"Remove old lines from plot and plot new one\"\"\"\n",
     "    ax.cla()\n",
@@ -86,6 +87,13 @@
     "    ax.quiver(0,0,np.sin(theta1),np.cos(theta1),scale=3,pivot='tip' ,color='red')\n",
     "    ax.quiver(0,0,np.sin(theta2),np.cos(theta2),scale=3,color='blue')"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
@@ -104,7 +112,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.7.4"
+   "version": "3.8.5"
   }
  },
  "nbformat": 4,

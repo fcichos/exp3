@@ -13,5 +13,5 @@ The course will be held in two weekly lectures, starting **26.10.2020** in the b
 
 The course and the material is available online on this website. You may come back to study whenever it is suitable for you.
 
-
+The seminar will be held online by Alex and Nic. Please also use the discussion forum to ask questions and leave comments.
 
