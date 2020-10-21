@@ -7,24 +7,14 @@
 Welcome to the Experimental Physik 3 Course!
 ============================================
 
-With the experimental physics 3 course, we will dive into the world of light and waves. In particular that means 
+In this Experimental Physics 3 course, we will dive into to basic experiments and mathematical descriptions related to light propagation, electromagnetic waves and its material counter part of matter waves. In particular we will have a look at 
 
-* Ray Optics
+* Geometrical Optics
 * Wave Optics
 * Electromagnetic Waves
-
 * Matter waves and Quantum Mechanics
 
-
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/lSIwZFeRpfQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-|
-|
+The fields of optics and quantum mechanics are nowadays very active research areas with a  dynamically devloping areas of optical technolgies, high resolution microscopy and quantum information. All this builds on the fundations that are tackled in this course.
 
 
 .. toctree::

@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Instructor
-==========
+Instructors
+===========
 
 Email: *lastname@physik.uni-leipzig.de*
 
@@ -14,4 +14,18 @@ Email: *lastname@physik.uni-leipzig.de*
   * Office: 322
   * Phone: +0341 97 32571
 
+
+
+* Alexander Fischer
+
+  * Linnéstr. 5, 04103 Leipzig 
+  * Office: 322
+  * Phone: +0341 97 32571
+
+
+* Nicola Söker
+
+  * Linnéstr. 5, 04103 Leipzig 
+  * Office: 322
+  * Phone: +0341 97 32571
 

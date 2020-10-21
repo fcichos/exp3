@@ -11,10 +11,18 @@ Books
 
 The course will be mainly build on a number of excellent books on electrodynamics and optics as well as on the basics of quantum mechanics.
 
- * Demtröder, Electrodynamics and Optics
- * Jackson, 
- * Demtröder
- * 
+1. **Optics and Electrodynamics**
+
+    * Demtröder: Electrodynamics and Optics, Springer, 2019
+    * Saleh/Teich: Fundamentals of Photonics, Wiley, 2007
+    * Jackson: Classical Electrodynamics, Wiley, 1998
+    * Hecht: Optics, Pearson, 2016
+| 
+2. **Quantum Mechanics**
+
+    * Demtröder: Atoms, Molecules and Photons, Springer, 2010 (amazon)
+    * Haken, Wolf: The Physics of Atoms and Quanta: Introduction to Experiments and Theory, Springer, 2005 (amazon)
+    * Harnwel, Livingood: Experimental Atomic Physics, McGraw-Hill Book Company, Inc, 1933 (amazon)
 
 
 Molecular Nanophotonics Group
