@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Introduction to Computer-based Physical Modeling'
+project = 'Experimental Physics 3'
 copyright = '2020, Frank Cichos'
 author = 'Frank Cichos'
 master_doc = 'index'
@@ -38,6 +38,7 @@ extensions = [
     'IPython.sphinxext.ipython_console_highlighting',
     'IPython.sphinxext.ipython_directive',
 ]
+
 
 # Add any paths that contain templates here, relative to this directory.
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
@@ -96,7 +97,7 @@ html_context = {
     # Set the following variables to generate the resulting github URL for each page.
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     'github_user': 'fcichos',
-    'github_repo': 'website',
+    'github_repo': 'exp3',
     'github_version': 'master/',
     'conf_py_path': '/source/'
 }

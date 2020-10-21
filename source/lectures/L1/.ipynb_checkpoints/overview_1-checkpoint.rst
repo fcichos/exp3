@@ -1,14 +1,7 @@
 Lecture Contents
 ================
 
-After you have hopefully explored the Jupyter environment and are able to create and open notebooks, we can start with the basics of the Python language.
-
-0. Introduction (00:00)
-1. Variables and Types (01:23)
-2. Operators and comparisons (15:42)
-3. Data Types (22:09)
-4. Modules and namespaces (45:03)
-
+This is our first lecture, in which we will have a look at the organization of the course and start off with the basic ingredients of **Geometrical Optics**.
 
 .. raw:: html
 
