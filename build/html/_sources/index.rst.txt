@@ -43,6 +43,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    :caption: Lecture 1:
 
    lectures/L1/overview_1.rst
+   notebooks/L1/Geometrical Optics.ipynb
    notebooks/L1/Reflection.ipynb
    notebooks/L1/Refraction.ipynb
    snippets/Refraction Explorer.ipynb
