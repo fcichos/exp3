@@ -19,7 +19,22 @@
     }
    },
    "source": [
-    "Geometrical optics refers to a field of optics that describes light propagation in terms of rays. This is on one side borrow from your daily experience for example with shadows, "
+    "Geometrical optics refers to a field of optics that describes light propagation in terms of rays. This is on one side borrowed from your daily experience for example with shadows. On a more scientific side, it will turn out that geometrical optics is the approximation in which the wavelength of light is much shorter "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "**Geometrical Optics**\n",
+    " \n",
+    "Geometrical optics is a approximate description of light propagation in the limit of infinitely small wavelength, wher all wave phenomena like diffraction are absent.\n",
+    "</div>\n",
+    "\n",
+    "\n",
+    "\n"
    ]
   },
   {
