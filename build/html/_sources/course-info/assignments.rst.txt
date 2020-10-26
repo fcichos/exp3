@@ -4,11 +4,11 @@
    contain the root `toctree` directive.
 
 Assignments
-============
+===========
 
 All of the assignments of the lecture will be handled in moodle_. An assigment will be handed out every week starting the 26.October 2020 in the afternoon. The assignment will be due the week after before the lecture until 11:00 o'clock. All assignments will be corrected and the solution to the individual problems will be discussed in the seminar one week later. 
 
-To take part in the final exam you beed 50% (sharp!) of the total point possible.
+**To take part in the final exam you need 50% (sharp!) of the total point possible.**
 
 The video below tells you how to access the assignments and how to submit the solutions.
 
