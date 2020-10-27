@@ -11,13 +11,72 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "**to be filled**"
+    "The law of refraction is the second important law of geometrical optics. It connects the refractive index $n_1$ at the incident side and the angle of incidence $\\theta_1$ to the refractive index $n_2$ and the angle of refraction $\\theta_2$ on the transmission side. It will later turn out, that both laws, the law of reflection and the law of refraction actually correspond to a conservation of momentum. \n",
+    "\n",
+    "![refraction](img/refraction.png)\n",
+    "\n"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "**Law of Reflection (Snells Law)**\n",
+    "    \n",
+    "The law of refraction (Snell's law) is given for the above sketch by\n",
+    "\n",
+    "\\begin{equation}\n",
+    "n_1 \\sin(\\theta_1)=n_2 \\sin(\\theta_2)\n",
+    "\\end{equation}\n",
+    "</div>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "According to this there is a general behavior of the corresponding angles, which you might want to remember. Consder the case the following cases:\n",
+    "\n",
+    "$n_1<n_2$: \n",
+    "- refraction if towards the optical axis\n",
+    "- $\\theta_2<\\theta_1$\n",
+    "\n",
+    "\n",
+    "$n_2<n_1$: \n",
+    "- refraction if towards the optical axis\n",
+    "- $\\theta_1<\\theta_2$\n",
+    "\n",
+    "\n",
+    "In addition, there is a special case occurring when $n_1>n_2$. Under these condition, one may change the incident angle $\\theta_1$ such that the outgoing angle becomes $\\theta_2=\\frac{\\pi}{2}$. For any incident angle $\\theta_1$ larger than this critical angle, the is no refracted ray anymore, but just a reflected ray. This is despite the fact that the material with $n_2$ is completely transparent. This phenomenon is called **total internal reflection** and it has several important applications. \n",
+    "\n",
+    "Let's first formalize this. Using the Snell's law. For $\\theta_2=\\frac{\\pi}{2}$ we obtain \n",
+    "\n",
+    "$$\\theta_1=\\theta_c=\\sin^{-1}\\left (\\frac{n_2}{n_1}\\right )$$\n",
+    "\n",
+    "\n",
+    "for the critical angle $\\theta_c$. As the $\\sin^{-1}()$ requires an argument smaller than $1$, this works only in the case $n_2 < n_1$\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![tir](img/tir.png)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
   "anaconda-cloud": {},
-  "celltoolbar": "Slideshow",
   "hide_input": false,
   "kernelspec": {
    "display_name": "Python 3",
