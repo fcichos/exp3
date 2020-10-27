@@ -83,7 +83,6 @@
     "\n",
     "![fiber](img/fiber.png)\n",
     "\n",
-    "\n",
     "This angle can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature $NA$, which is the sine of the opening angle $\\theta_a$\n",
     "\n",
     "\\begin{equation}\n",
