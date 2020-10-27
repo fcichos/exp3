@@ -14,7 +14,7 @@ Email: *lastname@physik.uni-leipzig.de*
   * Office: 322
   * Phone: +0341 97 32571
 
-
+|
 
 * Alexander Fischer
 
@@ -22,6 +22,7 @@ Email: *lastname@physik.uni-leipzig.de*
   * Office: 322
   * Phone: +0341 97 32571
 
+|
 
 * Nicola Söker
 
