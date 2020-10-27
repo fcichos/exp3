@@ -7,6 +7,14 @@ you find the planned contents of our course. Besides the physical contents, this
 interactive features. These features are provided by so-called Jupyter notebooks and the contained Python code. If you want to know more about those possibilities, have a look at the sections on Jupyter notebooks in the Course Introduction. 
 
 
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/_WPurc1vMrw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+
+
 1. Ray Optics
     | 1.1.Reflection
     | 1.2.Refraction, Total Internal Reflection, Rainbow Challenge
