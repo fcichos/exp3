@@ -103,6 +103,7 @@
 <p class="caption"><span class="caption-text">Course Introduction:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html#lecture-contents">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Intro/Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
@@ -136,9 +137,14 @@
 <li class="toctree-l2"><a class="reference internal" href="Geometrical Optics.html#Assumptions">Assumptions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Reflection</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reflection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Law-of-Reflection">Law of Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Fermat’s-Principle">Fermat’s Principle</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Refraction.html">Refraction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Refraction.html#Total-Internl-Reflection">Total Internl Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Refraction.html#Snells-Law">Snells Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction Explorer.html">EXP3 Snippets - Refraction Explorer</a></li>
@@ -238,6 +244,8 @@ This page was generated from <a href="#id1"><span class="problematic" id="id2">`
 <div class="section" id="Reflection">
 <h1>Reflection<a class="headerlink" href="#Reflection" title="Permalink to this headline">¶</a></h1>
 <p>The law of reflection is probably the most simple one. Yet the simplicity gives us the chance to define some basic objects which we will further use for the description of light rays and their propagation.</p>
+<div class="section" id="Law-of-Reflection">
+<h2>Law of Reflection<a class="headerlink" href="#Law-of-Reflection" title="Permalink to this headline">¶</a></h2>
 <p>The sketch below shows the reflection of an incoming light ray (red) on an interface. This incoming light ray has an angle <span class="math notranslate nohighlight">\(\theta_{1}\)</span> with the axis (dashed line), which is perpendicular to the reflecting surface. As compared to X-ray diffraction, we measure the angle to the normal of the surface and not to the surface itself.</p>
 <p><img alt="reflection" src="../../_images/reflection.png" /></p>
 <p>The law of reflection tells us now, that the outgoing reflected ray is now leaving the surface under and angle <span class="math notranslate nohighlight">\(\theta_2=\theta_1\)</span>. So both angles are the same for the reflection.</p>
@@ -245,6 +253,9 @@ This page was generated from <a href="#id1"><span class="problematic" id="id2">`
 <p class="admonition-title fa fa-exclamation-circle"><strong>Law of Reflection</strong></p>
 <p>If a ray is incident to a reflecting surface under an angle <span class="math notranslate nohighlight">\(\theta_1\)</span> it will be reflected towards under an angle <span class="math notranslate nohighlight">\(\theta_2=\theta_1\)</span> to the same side of the surface.</p>
 </div>
+</div>
+<div class="section" id="Fermat’s-Principle">
+<h2>Fermat’s Principle<a class="headerlink" href="#Fermat’s-Principle" title="Permalink to this headline">¶</a></h2>
 <p>The law of reflection can be actually obtained from a variational principle saying the light rays propagate along those path on which the propagation time is an extremum. This variational principle is called Fermat’s principle.</p>
 <p><img alt="fermat" src="../../_images/fermat.png" /></p>
 <p>Consider now a light ray that should travel from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(C\)</span> via a point <span class="math notranslate nohighlight">\(B\)</span> on the mirror surface. In general multiple path are possible such as the one indicated in the above picture. Clearly this path is not satisfying our reflection law formulated above. Fermats principle now restricts the path length from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(C\)</span> to be the one, which takes the least amount of time.</p>
@@ -286,6 +297,7 @@ t=\frac{l}{c}
 \delta \int\limits_{A}^{C} n(\vec{r}) ds=0
 \end{equation}</span></p>
 <p>where the <span class="math notranslate nohighlight">\(\delta\)</span> denotes a variation of the path indicated.</p>
+</div>
 </div>
 
 
