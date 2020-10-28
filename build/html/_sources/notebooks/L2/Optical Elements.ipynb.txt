@@ -25,7 +25,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![plane_mirror](img/plane_mirror.png)"
+    "<img src=\"img/plane_mirror.png\" width=\"40%\">"
    ]
   },
   {
@@ -43,7 +43,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![image_mirror](img/image_plane_mirror.png)"
+    "<img src=\"img/image_plane_mirror.png\" width=\"60%\">"
    ]
   },
   {
@@ -57,7 +57,128 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![concave mirror](img/concave_mirror.png)"
+    "When we apply the law of reflection for a concave mirror (i.e. the reflecting side of the mirror is on the inside of the spherical surface), the light parallel to the optical axis at a distance $h$ is reflected towards the optical axis and crosses the axis at a specifc point $F$. For symmetry reasons, a ray on the other side of the mirror needs to cross the axis in the same point. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/concave_mirror.png\" width=\"40%\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We may calculate the position of the point $F$, e.g. the distance from the mirror surface point $O$, by applying the law of reflection. If the spherical mirror surface has a radius $R$, then the distance between the center of the sphere $M$ and the point $F$ is given by\n",
+    "\n",
+    "$$FM=\\frac{R}{2\\cos(\\alpha)}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Therefore, we can also calculate the distance of the mirror surafce from the point $F$, which results in \n",
+    "\n",
+    "\\begin{equation}\\label{eq:focal_length}\n",
+    "OF=R\\left (1-\\frac{1}{2\\cos(\\alpha)}\\right)=f\n",
+    "\\end{equation}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This distance is the so-called focal length of the concave mirror $f$. For small angle $\\alpha$, the above equation yields the so called paraxial limit (all angles are small and the rays are close to the optical axis). In this limit we find $\\cos(\\alpha)\\approx 1$ and the focal length becomes $f=R/2$. If we replace the cosine function by\n",
+    "$\\cos(\\alpha)=\\sqrt{1-sin^2(\\alpha)}$ with $\\sin(\\alpha)=h/R$, we find\n",
+    "\n",
+    "\\begin{equation}\n",
+    "f=R\\left [ 1-\\frac{R}{2\\sqrt{R^2-h^2}}\\right ]\n",
+    "\\end{equation}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This equation is telling us, that the focal distance is not a single value for a concave mirror. The focal distance rather changes with the distance $h$ from the optical axis. If $h$ approaches $R$ the focal length become shorter."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "To obtain now an equation which predicts the point at which the reflected ray intersects the optical axis if it emerged at a point $A$, we just consider the following sketch."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/image_concave_mirror.png\" width=\"40%\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "For this situation, we can write down immediately the following relations\n",
+    "\n",
+    "$$\\delta=\\alpha+\\gamma$$\n",
+    "\n",
+    "$$\\gamma+\\beta=2\\delta$$\n",
+    "\n",
+    "\n",
+    "Further \n",
+    "\n",
+    "$$\\tan(\\gamma)=\\frac{h}{g}\\approx \\gamma$$\n",
+    "\n",
+    "and\n",
+    "\n",
+    "$$\\tan(\\beta)=\\frac{h}{g}\\approx \\beta$$\n",
+    "\n",
+    "and finally \n",
+    "\n",
+    "$$\\sin(\\delta)=\\frac{h}{R}\\approx \\delta$$\n",
+    "\n",
+    "from which we obtain the imaging equation\n",
+    "\n",
+    "$$\\frac{1}{g}+\\frac{1}{b}\\approx \\frac{2}{R}\\approx \\frac{1}{f}$$\n",
+    "\n",
+    "This equation has some surprising property. It if completely independent of $h$ and $\\gamma$. That means all points in a plane at a distance $g$ are images into a plane at a distance $b$. Both planes are therefore called conjugated planes. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "**Imaging Equation Concave Mirror**\n",
+    "    \n",
+    "The sum of the inverse object and image distances equals the inverse focal length of the cocave mirror.\n",
+    "\n",
+    "$$\\frac{1}{g}+\\frac{1}{b}\\approx\\frac{1}{f}$$\n",
+    "    \n",
+    " \n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This equation now helps to construct the image of an object in front of a concave mirror and we may in general differentiate between the following general situations:\n",
+    "\n",
+    "1. $g>2f$: image is real, inverted and smaller than the object\n",
+    "\n",
+    "2. $g=2f$: image is real, inverted and of the same size than the object\n",
+    "\n",
+    "3. $f<g<2f$: image is real, inverted and larger than the object\n",
+    "\n",
+    "4. $g<f$: image is virtual, upright and larger than the object"
    ]
   },
   {
@@ -72,6 +193,13 @@
    "metadata": {},
    "source": [
     "Prisms are wedge shaped optical elements made of a transparent material as for example of glass. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"img/diy_prism.png\" width=\"40%\">"
    ]
   }
  ],

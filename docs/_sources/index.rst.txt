@@ -52,7 +52,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    :maxdepth: 2
    :caption: Lecture 2:
 
-   lectures/L1/overview_2.rst
+   lectures/L2/overview_2.rst
    notebooks/L2/Optical Elements.ipynb
    
 Indices and tables
