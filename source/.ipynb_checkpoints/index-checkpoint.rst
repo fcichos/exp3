@@ -48,6 +48,12 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L1/Refraction.ipynb
    snippets/Refraction Explorer.ipynb
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 1:
+
+   lectures/L1/overview_2.rst
+   notebooks/L2/Optical Elements.ipynb
    
 Indices and tables
 ==================
