@@ -11,7 +11,16 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The law of refraction is the second important law of geometrical optics. It connects the refractive index $n_1$ at the incident side and the angle of incidence $\\theta_1$ to the refractive index $n_2$ and the angle of refraction $\\theta_2$ on the transmission side. It will later turn out, that both laws, the law of reflection and the law of refraction actually correspond to a conservation of momentum. "
+    "The law of refraction is the second important law of geometrical optics. It connects the refractive index $n_1$ at the incident side and the angle of incidence $\\theta_1$ to the refractive index $n_2$ and the angle of refraction $\\theta_2$ on the transmission side. It will later turn out, that both laws, the law of reflection and the law of refraction actually correspond to a conservation of momentum. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Refractive Index\n",
+    "\n",
+    "The refractive index $n$ is a material constant representing the factor by which the speed of light is slowed down in the medium. As the maximum speed is the speed of light in vacuum, the refractive index is typically a number $n \\le 1$. Yet, it will turn out later, that the refractive index can be smaller than 1 or even negative. This, however, requires first to understand the origin of the refractive index."
    ]
   },
   {
@@ -41,6 +50,8 @@
     "\\begin{equation}\n",
     "n_1 \\sin(\\theta_1)=n_2 \\sin(\\theta_2)\n",
     "\\end{equation}\n",
+    "    \n",
+    " \n",
     "</div>\n",
     "\n"
    ]
@@ -49,15 +60,27 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "According to this there is a general behavior of the corresponding angles, which you might want to remember. Consder the case the following cases:\n",
+    "***\n",
     "\n",
-    "$n_1<n_2$: \n",
-    "- refraction if towards the optical axis\n",
+    "In the previous section in refraction we have derived the law of reflection from Fermat's principle. Try yourself and obtain Snell's law in a similar way.\n",
+    " Check out the [Refraction Explorer Snippet](https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/snippets/Refraction%20Explorer.ipynb) if you want to play around with Snells law. You may tray there even negative refraction. \n",
+    "\n",
+    "***\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "According to Snell's law, there is a general behavior of the corresponding angles, which you might want to remember. Consider the following cases:\n",
+    "\n",
+    "$n_1<n_2$:\n",
+    "- refraction is towards the optical axis\n",
     "- $\\theta_2<\\theta_1$\n",
     "\n",
     "\n",
     "$n_2<n_1$: \n",
-    "- refraction if towards the optical axis\n",
+    "- refraction is away from the optical axis\n",
     "- $\\theta_1<\\theta_2$\n"
    ]
   },
@@ -74,7 +97,7 @@
     "$$\\theta_1=\\theta_c=\\sin^{-1}\\left (\\frac{n_2}{n_1}\\right )$$\n",
     "\n",
     "\n",
-    "for the critical angle $\\theta_c$. As the $\\sin^{-1}()$ requires an argument smaller than $1$, this works only in the case $n_2 < n_1$\n",
+    "for the critical angle $\\theta_c$. As the $\\sin^{-1}()$ requires an argument $\\le1$, this works only if we have $n_2 < n_1$\n",
     "\n"
    ]
   },
@@ -89,12 +112,42 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Total internal reflection is very important for guiding light in telecommunications, for example. There, small glass wires are used to transport light. The glass wire with a central core of refractive index $n_1$ is surrounded by cladding layer of slightly lower refractive index $n_2$. Light is then coupled into the fiber from one side. To obtain total internal reflection under those conditions, the incident rays have to hit the front of the fiber at a maximum angle $\\theta_{a}$\n",
+    "<div class=\"alert alert-info\">\n",
     "\n",
+    "**Total Internal Reflection**\n",
+    "    \n",
+    "Total internal reflection occurs when light is passing from higher refractive index to lower refractive index materials for incidence angle larger than a critical angle \n",
+    "    \n",
+    "\\begin{equation}\n",
+    "\\theta_c=\\sin^{-1}\\left (\\frac{n_2}{n_1}\\right )\n",
+    "\\end{equation}\n",
+    "    \n",
+    " \n",
+    "</div>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can demonstrate total internal reflection very easily with a water basin, for example, where we couple in light from a laser from the side. \n",
+    "\n",
+    "![basin_tir](img/basin_tir.png)\n",
+    "\n",
+    "\n",
+    "But you could try that yourself also in the bath tub diving below the water surface."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Total internal reflection is very important for guiding light in telecommunications, for example. There, glass wires with a diameter from a few to several 100 µm are used to transport light. The glass wire with a central core of refractive index $n_1$ is surrounded by a cladding layer of slightly lower refractive index $n_2$. Light is then coupled into the fiber from one side. To obtain total internal reflection in this setting, the incident rays have to hit the front of the fiber at a maximum angle $\\theta_{a}$\n",
     "\n",
     "![fiber](img/fiber.png)\n",
     "\n",
-    "This angle can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature $NA$, which is the sine of the opening angle $\\theta_a$\n",
+    "The angle $\\theta_{a}$ can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature $NA$, which is the sine of the opening angle $\\theta_a$\n",
     "\n",
     "\\begin{equation}\n",
     "NA=\\sin(\\theta_a)=\\sqrt{n_1^2-n_2^{2}}\n",

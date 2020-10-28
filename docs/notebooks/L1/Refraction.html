@@ -102,8 +102,10 @@
 </ul>
 <p class="caption"><span class="caption-text">Course Introduction:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html#lecture-contents">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lectures/Intro/overview.html#lecture-contents">Lecture Contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Intro/Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
@@ -143,6 +145,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Refraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Refractive-Index">Refractive Index</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Snells-Law">Snells Law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Total-Internal-Reflection">Total Internal Reflection</a></li>
 </ul>
@@ -244,6 +247,10 @@ This page was generated from <a href="#id1"><span class="problematic" id="id2">`
 <div class="section" id="Refraction">
 <h1>Refraction<a class="headerlink" href="#Refraction" title="Permalink to this headline">¶</a></h1>
 <p>The law of refraction is the second important law of geometrical optics. It connects the refractive index <span class="math notranslate nohighlight">\(n_1\)</span> at the incident side and the angle of incidence <span class="math notranslate nohighlight">\(\theta_1\)</span> to the refractive index <span class="math notranslate nohighlight">\(n_2\)</span> and the angle of refraction <span class="math notranslate nohighlight">\(\theta_2\)</span> on the transmission side. It will later turn out, that both laws, the law of reflection and the law of refraction actually correspond to a conservation of momentum.</p>
+<div class="section" id="Refractive-Index">
+<h2>Refractive Index<a class="headerlink" href="#Refractive-Index" title="Permalink to this headline">¶</a></h2>
+<p>The refractive index <span class="math notranslate nohighlight">\(n\)</span> is a material constant representing the factor by which the speed of light is slowed down in the medium. As the maximum speed is the speed of light in vacuum, the refractive index is typically a number <span class="math notranslate nohighlight">\(n \le 1\)</span>. Yet, it will turn out later, that the refractive index can be smaller than 1 or even negative. This, however, requires first to understand the origin of the refractive index.</p>
+</div>
 <div class="section" id="Snells-Law">
 <h2>Snells Law<a class="headerlink" href="#Snells-Law" title="Permalink to this headline">¶</a></h2>
 <p><img alt="refraction" src="../../_images/refraction.png" /></p>
@@ -254,9 +261,12 @@ This page was generated from <a href="#id1"><span class="problematic" id="id2">`
 n_1 \sin(\theta_1)=n_2 \sin(\theta_2)
 \end{equation}</span></p>
 </div>
-<p>According to this there is a general behavior of the corresponding angles, which you might want to remember. Consder the case the following cases:</p>
-<p><span class="math notranslate nohighlight">\(n_1&lt;n_2\)</span>: - refraction if towards the optical axis - <span class="math notranslate nohighlight">\(\theta_2&lt;\theta_1\)</span></p>
-<p><span class="math notranslate nohighlight">\(n_2&lt;n_1\)</span>: - refraction if towards the optical axis - <span class="math notranslate nohighlight">\(\theta_1&lt;\theta_2\)</span></p>
+<hr class="docutils" />
+<p>In the previous section in refraction we have derived the law of reflection from Fermat’s principle. Try yourself and obtain Snell’s law in a similar way. Check out the <a class="reference external" href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/snippets/Refraction%20Explorer.ipynb">Refraction Explorer Snippet</a> if you want to play around with Snells law. You may tray there even negative refraction.</p>
+<hr class="docutils" />
+<p>According to Snell’s law, there is a general behavior of the corresponding angles, which you might want to remember. Consider the following cases:</p>
+<p><span class="math notranslate nohighlight">\(n_1&lt;n_2\)</span>: - refraction is towards the optical axis - <span class="math notranslate nohighlight">\(\theta_2&lt;\theta_1\)</span></p>
+<p><span class="math notranslate nohighlight">\(n_2&lt;n_1\)</span>: - refraction is away from the optical axis - <span class="math notranslate nohighlight">\(\theta_1&lt;\theta_2\)</span></p>
 </div>
 <div class="section" id="Total-Internal-Reflection">
 <h2>Total Internal Reflection<a class="headerlink" href="#Total-Internal-Reflection" title="Permalink to this headline">¶</a></h2>
@@ -265,12 +275,22 @@ several important applications.</p>
 <p>Let’s first formalize this. Using the Snell’s law. For <span class="math notranslate nohighlight">\(\theta_2=\frac{\pi}{2}\)</span> we obtain</p>
 <div class="math notranslate nohighlight">
 \[\theta_1=\theta_c=\sin^{-1}\left (\frac{n_2}{n_1}\right )\]</div>
-<p>for the critical angle <span class="math notranslate nohighlight">\(\theta_c\)</span>. As the <span class="math notranslate nohighlight">\(\sin^{-1}()\)</span> requires an argument smaller than <span class="math notranslate nohighlight">\(1\)</span>, this works only in the case <span class="math notranslate nohighlight">\(n_2 &lt; n_1\)</span></p>
+<p>for the critical angle <span class="math notranslate nohighlight">\(\theta_c\)</span>. As the <span class="math notranslate nohighlight">\(\sin^{-1}()\)</span> requires an argument <span class="math notranslate nohighlight">\(\le1\)</span>, this works only if we have <span class="math notranslate nohighlight">\(n_2 &lt; n_1\)</span></p>
 <p><img alt="tir" src="../../_images/tir.png" /></p>
-<p>Total internal reflection is very important for guiding light in telecommunications, for example. There, small glass wires are used to transport light. The glass wire with a central core of refractive index <span class="math notranslate nohighlight">\(n_1\)</span> is surrounded by cladding layer of slightly lower refractive index <span class="math notranslate nohighlight">\(n_2\)</span>. Light is then coupled into the fiber from one side. To obtain total internal reflection under those conditions, the incident rays have to hit the front of the fiber at a maximum angle
-<span class="math notranslate nohighlight">\(\theta_{a}\)</span></p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Total Internal Reflection</strong></p>
+<p>Total internal reflection occurs when light is passing from higher refractive index to lower refractive index materials for incidence angle larger than a critical angle</p>
+<p><span class="math">\begin{equation}
+\theta_c=\sin^{-1}\left (\frac{n_2}{n_1}\right )
+\end{equation}</span></p>
+</div>
+<p>We can demonstrate total internal reflection very easily with a water basin, for example, where we couple in light from a laser from the side.</p>
+<p><img alt="basin_tir" src="../../_images/basin_tir.png" /></p>
+<p>But you could try that yourself also in the bath tub diving below the water surface.</p>
+<p>Total internal reflection is very important for guiding light in telecommunications, for example. There, glass wires with a diameter from a few to several 100 µm are used to transport light. The glass wire with a central core of refractive index <span class="math notranslate nohighlight">\(n_1\)</span> is surrounded by a cladding layer of slightly lower refractive index <span class="math notranslate nohighlight">\(n_2\)</span>. Light is then coupled into the fiber from one side. To obtain total internal reflection in this setting, the incident rays have to hit the front of the fiber at
+a maximum angle <span class="math notranslate nohighlight">\(\theta_{a}\)</span></p>
 <p><img alt="fiber" src="../../_images/fiber.png" /></p>
-<p>This angle can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature <span class="math notranslate nohighlight">\(NA\)</span>, which is the sine of the opening angle <span class="math notranslate nohighlight">\(\theta_a\)</span></p>
+<p>The angle <span class="math notranslate nohighlight">\(\theta_{a}\)</span> can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature <span class="math notranslate nohighlight">\(NA\)</span>, which is the sine of the opening angle <span class="math notranslate nohighlight">\(\theta_a\)</span></p>
 <p><span class="math">\begin{equation}
 NA=\sin(\theta_a)=\sqrt{n_1^2-n_2^{2}}
 \end{equation}</span></p>
@@ -300,7 +320,7 @@ NA=\sin(\theta_a)=\sqrt{n_1^2-n_2^{2}}
     <p>
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Oct 27, 2020.
+        Last updated on Oct 28, 2020.
       </span>
 
     </p>

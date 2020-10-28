@@ -40,7 +40,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![reflection](img/reflection.png)"
+    "![reflection](./img/reflection.png)"
    ]
   },
   {
