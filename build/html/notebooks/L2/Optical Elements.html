@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Refraction &mdash; Experimental Physics 3 1 documentation</title>
+  <title>Optical Elements &mdash; Experimental Physics 3 1 documentation</title>
   
 
   
@@ -38,9 +38,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="EXP3 Snippets - Refraction Explorer" href="../../snippets/Refraction Explorer.html" />
-    <link rel="prev" title="Reflection" href="Reflection.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -133,21 +131,21 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 1:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L1/overview_1.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Geometrical Optics.html">Geometrical Optics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Geometrical Optics.html#Assumptions">Assumptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Geometrical Optics.html">Geometrical Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Geometrical Optics.html#Assumptions">Assumptions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Reflection.html">Reflection</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reflection.html#Law-of-Reflection">Law of Reflection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Reflection.html">Reflection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Law-of-Reflection">Law of Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Refraction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Refractive-Index">Refractive Index</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Snells-Law">Snells Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Total-Internal-Reflection">Total Internal Reflection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Refraction.html">Refraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Refractive-Index">Refractive Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Snells-Law">Snells Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction Explorer.html">EXP3 Snippets - Refraction Explorer</a></li>
@@ -196,14 +194,14 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Refraction</li>
+      <li>Optical Elements</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L1/Refraction.ipynb" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L2/Optical Elements.ipynb" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -460,61 +458,13 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L1/Refraction.ipynb`_</span></a>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L1/Refraction.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></div>
-<div class="section" id="Refraction">
-<h1>Refraction<a class="headerlink" href="#Refraction" title="Permalink to this headline">¶</a></h1>
-<p>The law of refraction is the second important law of geometrical optics. It connects the refractive index <span class="math notranslate nohighlight">\(n_1\)</span> at the incident side and the angle of incidence <span class="math notranslate nohighlight">\(\theta_1\)</span> to the refractive index <span class="math notranslate nohighlight">\(n_2\)</span> and the angle of refraction <span class="math notranslate nohighlight">\(\theta_2\)</span> on the transmission side. It will later turn out, that both laws, the law of reflection and the law of refraction actually correspond to a conservation of momentum.</p>
-<div class="section" id="Refractive-Index">
-<h2>Refractive Index<a class="headerlink" href="#Refractive-Index" title="Permalink to this headline">¶</a></h2>
-<p>The refractive index <span class="math notranslate nohighlight">\(n\)</span> is a material constant representing the factor by which the speed of light is slowed down in the medium. As the maximum speed is the speed of light in vacuum, the refractive index is typically a number <span class="math notranslate nohighlight">\(n \ge 1\)</span>. Yet, it will turn out later, that the refractive index can be smaller than 1 or even negative. This, however, requires first to understand the origin of the refractive index.</p>
-</div>
-<div class="section" id="Snells-Law">
-<h2>Snells Law<a class="headerlink" href="#Snells-Law" title="Permalink to this headline">¶</a></h2>
-<p><img alt="refraction" src="../../_images/snell.png" /></p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Law of Reflection (Snells Law)</strong></p>
-<p>The law of refraction (Snell’s law) is given for the above sketch by</p>
-<p><span class="math">\begin{equation}
-n_1 \sin(\theta_1)=n_2 \sin(\theta_2)
-\end{equation}</span></p>
-</div>
-<hr class="docutils" />
-<p>In the previous section in refraction we have derived the law of reflection from Fermat’s principle. <strong>Try yourself to obtain Snell’s law with the help of</strong><a class="reference internal" href="Reflection.html"><span class="doc">Fermat’s principle</span></a>). Check out the <a class="reference external" href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/snippets/Refraction%20Explorer.ipynb">Refraction Explorer Snippet</a> if you want to play around with Snells law. You may tray there even negative refraction.</p>
-<hr class="docutils" />
-<p>According to Snell’s law, there is a general behavior of the corresponding angles, which you might want to remember (see also Fig. above). Consider the following cases:</p>
-<p><span class="math notranslate nohighlight">\(n_1&lt;n_2\)</span>: - refraction is towards the optical axis - <span class="math notranslate nohighlight">\(\theta_2&lt;\theta_1\)</span></p>
-<p><span class="math notranslate nohighlight">\(n_2&lt;n_1\)</span>: - refraction is away from the optical axis - <span class="math notranslate nohighlight">\(\theta_1&lt;\theta_2\)</span></p>
-<p>The plot below shows this result in three plots with varying incident angle and two different refractive index combinations (glass/air, ait/glass).</p>
-<p><img alt="Angle" src="../../_images/angles.png" /></p>
-</div>
-<div class="section" id="Total-Internal-Reflection">
-<h2>Total Internal Reflection<a class="headerlink" href="#Total-Internal-Reflection" title="Permalink to this headline">¶</a></h2>
-<p>In addition, there is a special case occurring when <span class="math notranslate nohighlight">\(n_1&gt;n_2\)</span>. Under these condition, one may change the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> such that the outgoing angle becomes <span class="math notranslate nohighlight">\(\theta_2=\frac{\pi}{2}\)</span>. For any incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> larger than this critical angle, the is no refracted ray anymore, but just a reflected ray. This is despite the fact that the material with <span class="math notranslate nohighlight">\(n_2\)</span> is completely transparent. This phenomenon is called <strong>total internal reflection</strong> and it has
-several important applications.</p>
-<p>Let’s first formalize this. Using the Snell’s law. For <span class="math notranslate nohighlight">\(\theta_2=\frac{\pi}{2}\)</span> we obtain</p>
-<div class="math notranslate nohighlight">
-\[\theta_1=\theta_c=\sin^{-1}\left (\frac{n_2}{n_1}\right )\]</div>
-<p>for the critical angle <span class="math notranslate nohighlight">\(\theta_c\)</span>. As the <span class="math notranslate nohighlight">\(\sin^{-1}()\)</span> requires an argument <span class="math notranslate nohighlight">\(\le1\)</span>, this works only if we have <span class="math notranslate nohighlight">\(n_2 &lt; n_1\)</span></p>
-<p><img alt="tir" src="../../_images/tir.png" /></p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Total Internal Reflection</strong></p>
-<p>Total internal reflection occurs when light is passing from higher refractive index to lower refractive index materials for incidence angle larger than a critical angle</p>
-<p><span class="math">\begin{equation}
-\theta_c=\sin^{-1}\left (\frac{n_2}{n_1}\right )
-\end{equation}</span></p>
-</div>
-<p>We can demonstrate total internal reflection very easily with a water basin, for example, where we couple in light from a laser from the side.</p>
-<p><img alt="basin_tir" src="../../_images/basin_tir.png" /></p>
-<p>But you could try that yourself also in the bath tub diving below the water surface.</p>
-<p><strong>Optical Fiber</strong> Total internal reflection is very important for guiding light in telecommunications, for example. There, glass wires with a diameter from a few to several 100 µm are used to transport light. The glass wire with a central core of refractive index <span class="math notranslate nohighlight">\(n_1\)</span> is surrounded by a cladding layer of slightly lower refractive index <span class="math notranslate nohighlight">\(n_2\)</span>. Light is then coupled into the fiber from one side. To obtain total internal reflection in this setting, the incident rays have to hit the
-front of the fiber at a maximum angle <span class="math notranslate nohighlight">\(\theta_{a}\)</span></p>
-<p><img alt="fiber" src="../../_images/fiber.png" /></p>
-<p>The angle <span class="math notranslate nohighlight">\(\theta_{a}\)</span> can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature <span class="math notranslate nohighlight">\(NA\)</span>, which is the sine of the opening angle <span class="math notranslate nohighlight">\(\theta_a\)</span></p>
-<p><span class="math">\begin{equation}
-NA=\sin(\theta_a)=\sqrt{n_1^2-n_2^{2}}
-\end{equation}</span></p>
-<p>Using typical values of the refractive indices <span class="math notranslate nohighlight">\(n_1=1.475\)</span> and <span class="math notranslate nohighlight">\(n_2=1.46\)</span> one obtains a numerical apeture of <span class="math notranslate nohighlight">\(NA\approx 0.2\)</span>.</p>
+This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L2/Optical Elements.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L2/Optical Elements.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></div>
+<div class="section" id="Optical-Elements">
+<h1>Optical Elements<a class="headerlink" href="#Optical-Elements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Prisms">
+<h2>Prisms<a class="headerlink" href="#Prisms" title="Permalink to this headline">¶</a></h2>
+<p>Prisms are wedge shaped optical elements made of a transparent material as for example of glass.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -532,15 +482,6 @@ NA=\sin(\theta_a)=\sqrt{n_1^2-n_2^{2}}
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../snippets/Refraction Explorer.html" class="btn btn-neutral float-right" title="EXP3 Snippets - Refraction Explorer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Reflection.html" class="btn btn-neutral float-left" title="Reflection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

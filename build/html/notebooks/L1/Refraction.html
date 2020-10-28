@@ -219,6 +219,224 @@
             
   
 <style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -249,11 +467,11 @@ This page was generated from <a href="#id1"><span class="problematic" id="id2">`
 <p>The law of refraction is the second important law of geometrical optics. It connects the refractive index <span class="math notranslate nohighlight">\(n_1\)</span> at the incident side and the angle of incidence <span class="math notranslate nohighlight">\(\theta_1\)</span> to the refractive index <span class="math notranslate nohighlight">\(n_2\)</span> and the angle of refraction <span class="math notranslate nohighlight">\(\theta_2\)</span> on the transmission side. It will later turn out, that both laws, the law of reflection and the law of refraction actually correspond to a conservation of momentum.</p>
 <div class="section" id="Refractive-Index">
 <h2>Refractive Index<a class="headerlink" href="#Refractive-Index" title="Permalink to this headline">¶</a></h2>
-<p>The refractive index <span class="math notranslate nohighlight">\(n\)</span> is a material constant representing the factor by which the speed of light is slowed down in the medium. As the maximum speed is the speed of light in vacuum, the refractive index is typically a number <span class="math notranslate nohighlight">\(n \le 1\)</span>. Yet, it will turn out later, that the refractive index can be smaller than 1 or even negative. This, however, requires first to understand the origin of the refractive index.</p>
+<p>The refractive index <span class="math notranslate nohighlight">\(n\)</span> is a material constant representing the factor by which the speed of light is slowed down in the medium. As the maximum speed is the speed of light in vacuum, the refractive index is typically a number <span class="math notranslate nohighlight">\(n \ge 1\)</span>. Yet, it will turn out later, that the refractive index can be smaller than 1 or even negative. This, however, requires first to understand the origin of the refractive index.</p>
 </div>
 <div class="section" id="Snells-Law">
 <h2>Snells Law<a class="headerlink" href="#Snells-Law" title="Permalink to this headline">¶</a></h2>
-<p><img alt="refraction" src="../../_images/refraction.png" /></p>
+<p><img alt="refraction" src="../../_images/snell.png" /></p>
 <div class="admonition note">
 <p class="admonition-title fa fa-exclamation-circle"><strong>Law of Reflection (Snells Law)</strong></p>
 <p>The law of refraction (Snell’s law) is given for the above sketch by</p>
@@ -262,11 +480,13 @@ n_1 \sin(\theta_1)=n_2 \sin(\theta_2)
 \end{equation}</span></p>
 </div>
 <hr class="docutils" />
-<p>In the previous section in refraction we have derived the law of reflection from Fermat’s principle. <strong>Try yourself to obtain Snell’s law with the help of Fermat’s principle</strong>. Check out the <a class="reference external" href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/snippets/Refraction%20Explorer.ipynb">Refraction Explorer Snippet</a> if you want to play around with Snells law. You may tray there even negative refraction.</p>
+<p>In the previous section in refraction we have derived the law of reflection from Fermat’s principle. <strong>Try yourself to obtain Snell’s law with the help of</strong><a class="reference internal" href="Reflection.html"><span class="doc">Fermat’s principle</span></a>). Check out the <a class="reference external" href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/snippets/Refraction%20Explorer.ipynb">Refraction Explorer Snippet</a> if you want to play around with Snells law. You may tray there even negative refraction.</p>
 <hr class="docutils" />
-<p>According to Snell’s law, there is a general behavior of the corresponding angles, which you might want to remember. Consider the following cases:</p>
+<p>According to Snell’s law, there is a general behavior of the corresponding angles, which you might want to remember (see also Fig. above). Consider the following cases:</p>
 <p><span class="math notranslate nohighlight">\(n_1&lt;n_2\)</span>: - refraction is towards the optical axis - <span class="math notranslate nohighlight">\(\theta_2&lt;\theta_1\)</span></p>
 <p><span class="math notranslate nohighlight">\(n_2&lt;n_1\)</span>: - refraction is away from the optical axis - <span class="math notranslate nohighlight">\(\theta_1&lt;\theta_2\)</span></p>
+<p>The plot below shows this result in three plots with varying incident angle and two different refractive index combinations (glass/air, ait/glass).</p>
+<p><img alt="Angle" src="../../_images/angles.png" /></p>
 </div>
 <div class="section" id="Total-Internal-Reflection">
 <h2>Total Internal Reflection<a class="headerlink" href="#Total-Internal-Reflection" title="Permalink to this headline">¶</a></h2>
@@ -287,14 +507,23 @@ several important applications.</p>
 <p>We can demonstrate total internal reflection very easily with a water basin, for example, where we couple in light from a laser from the side.</p>
 <p><img alt="basin_tir" src="../../_images/basin_tir.png" /></p>
 <p>But you could try that yourself also in the bath tub diving below the water surface.</p>
-<p>Total internal reflection is very important for guiding light in telecommunications, for example. There, glass wires with a diameter from a few to several 100 µm are used to transport light. The glass wire with a central core of refractive index <span class="math notranslate nohighlight">\(n_1\)</span> is surrounded by a cladding layer of slightly lower refractive index <span class="math notranslate nohighlight">\(n_2\)</span>. Light is then coupled into the fiber from one side. To obtain total internal reflection in this setting, the incident rays have to hit the front of the fiber at
-a maximum angle <span class="math notranslate nohighlight">\(\theta_{a}\)</span></p>
+<p><strong>Optical Fiber</strong> Total internal reflection is very important for guiding light in telecommunications, for example. There, glass wires with a diameter from a few to several 100 µm are used to transport light. The glass wire with a central core of refractive index <span class="math notranslate nohighlight">\(n_1\)</span> is surrounded by a cladding layer of slightly lower refractive index <span class="math notranslate nohighlight">\(n_2\)</span>. Light is then coupled into the fiber from one side. To obtain total internal reflection in this setting, the incident rays have to hit the
+front of the fiber at a maximum angle <span class="math notranslate nohighlight">\(\theta_{a}\)</span></p>
 <p><img alt="fiber" src="../../_images/fiber.png" /></p>
 <p>The angle <span class="math notranslate nohighlight">\(\theta_{a}\)</span> can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature <span class="math notranslate nohighlight">\(NA\)</span>, which is the sine of the opening angle <span class="math notranslate nohighlight">\(\theta_a\)</span></p>
 <p><span class="math">\begin{equation}
 NA=\sin(\theta_a)=\sqrt{n_1^2-n_2^{2}}
 \end{equation}</span></p>
 <p>Using typical values of the refractive indices <span class="math notranslate nohighlight">\(n_1=1.475\)</span> and <span class="math notranslate nohighlight">\(n_2=1.46\)</span> one obtains a numerical apeture of <span class="math notranslate nohighlight">\(NA\approx 0.2\)</span>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
