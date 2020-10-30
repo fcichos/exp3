@@ -30,13 +30,45 @@
   },
   {
    "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def magnitude(vector):\n",
+    "   return np.sqrt(np.dot(np.array(vector),np.array(vector)))\n",
+    "\n",
+    "def norm(vector):\n",
+    "   return np.array(vector)/magnitude(np.array(vector))\n",
+    "\n",
+    "def lineRayIntersectionPoint(rayOrigin, rayDirection, point1, point2):\n",
+    "        # Convert to numpy arrays\n",
+    "    rayOrigin = np.array(rayOrigin, dtype=np.float)\n",
+    "    rayDirection = np.array(norm(rayDirection), dtype=np.float)\n",
+    "    point1 = np.array(point1, dtype=np.float)\n",
+    "    point2 = np.array(point2, dtype=np.float)\n",
+    "\n",
+    "    # Ray-Line Segment Intersection Test in 2D\n",
+    "    # http://bit.ly/1CoxdrG\n",
+    "    v1 = rayOrigin - point1\n",
+    "    v2 = point2 - point1\n",
+    "    v3 = np.array([-rayDirection[1], rayDirection[0]])\n",
+    "    t1 = np.cross(v2, v1) / np.dot(v2, v3)\n",
+    "    t2 = np.dot(v1, v3) / np.dot(v2, v3)\n",
+    "    if t1 >= 0.0 and t2 >= 0.0 and t2 <= 1.0:\n",
+    "        return [rayOrigin + t1 * rayDirection]\n",
+    "    return []\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
    "execution_count": 2,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "b43b790d77634ee58012d816fa38ad7d",
+       "model_id": "08ba3083fc4c4a809b8f86418f3fb151",
        "version_major": 2,
        "version_minor": 0
       },
@@ -50,7 +82,7 @@
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "036ab4d7b45f43389a7793ddbcace0bd",
+       "model_id": "11c661a38d1049b49ae840a2e1ee39cb",
        "version_major": 2,
        "version_minor": 0
       },
@@ -94,6 +126,13 @@
    "source": [
     "![refraction](img/refraction_explorer.png)"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
