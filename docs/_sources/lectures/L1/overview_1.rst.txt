@@ -6,6 +6,5 @@ While during Experimental Physics 2, you did already address electrical oscillat
 
 .. image:: img/slides.png
    :width: 600
-   :target: Lecture 1.pdf
 
 Lecture 1 slides for download :download:`pdf <Lecture 1.pdf>`
