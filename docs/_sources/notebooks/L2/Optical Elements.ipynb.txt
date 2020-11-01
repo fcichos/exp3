@@ -396,6 +396,38 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "The refraction of white light on a prism, therefore splits the different colors composing white light spatially into a colored spectrum. Thereby the light with the longest wavelength is deflected the leats, while the one with the highest refractive index is deflected most."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/spectrum.jpeg\" width=\"80%\">|\n",
+    "|-|\n",
+    "|**Fig.:** Deflection of different wavelength of light in a prism with normal dispersion.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This dependence is very important as it enables spectroscopy, i.e. the recording of the intensity of light as a function of the wavelength. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/prism_spec_principle.jpeg\" width=\"40%\"> <img src=\"img/prism_spectrometer.jpeg\" width=\"40%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Principle and technical realization of a prism spectrometer. |"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "**DIY prism** \n",
     "\n",
     "If you don't have a prism at home, which of course most people do, you can try to create your own, by a mirror, which you dip into a water basin. Shine some white light with the flash lamp on it and observe the reflected and refracted light especially at the edges. If you want it a bit better, integrate a small aperature into a piece of black paper and put it in fornt of the flash light."
@@ -456,6 +488,150 @@
     "plt.ylabel(\"refractive index n\")\n",
     "plt.legend()\n",
     "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Lenses"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The most important optical elements are lenses, which come in many different flavours. The consist of curved surfaces, which most commonly have the shape of a part of a spherical cap. It is therefoire usefult to have a look at the refraction at spherical surfaces. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Refraction at spherical surfaces"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "For our calculations of the refraction at spherical surfaces, we consider the sketch below.  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/curved_surface.png\" width=\"80%\">|\n",
+    "|-|\n",
+    "|**Fig.:** Refraction at a curved surface.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "What we would like to calculate is the distance $b$ and the angle $\\theta_2$ at which a ray crosses the optical axis, if it originated at a distance $a$ under an angle $\\theta_1$ on the left side. This will help us to obtain an imaging equation for a lens. For the above geometry we may write down snells law as\n",
+    "\n",
+    "$$n_{1}\\sin(\\alpha+\\theta_1)=n_{2}\\sin(\\alpha+\\theta_2)$$\n",
+    "\n",
+    "In addition, we may write down a number of definitions for the angular functions, which will turn out to be useful.\n",
+    "\n",
+    "- $\\sin(\\alpha)=\\frac{y}{R}$\n",
+    "- $\\tan(\\theta_1)=\\frac{y}{a}$\n",
+    "- $\\tan(\\theta_2)=\\frac{y}{b}$\n",
+    "\n",
+    "To find now an imaging equation, we do an approximation, which is very common in optics. This is the so called **paraxial** approximation. It assumes that all angles involved in the calculation are small, such that we can resort to the first order approaximation of the angular functions. At the end, this will yield a linearization of these function.\n",
+    "For small angles, we obtain\n",
+    "\n",
+    "- $\\sin(\\theta)\\approx \\theta$\n",
+    "- $\\cos(\\theta)\\approx 1$\n",
+    "- $\\tan(\\theta)=\\frac{\\sin(\\theta)}{\\cos(\\theta)}\\approx \\theta$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "With the help of these approximations we can write Snells law for the curved surface as\n",
+    "\n",
+    "$$n_1(\\alpha+\\theta_1)=n_2(\\alpha-\\theta_2)$$\n",
+    "\n",
+    "With some slight transformation which you will find in the video of the online lecture we obtain therefore\n",
+    "\n",
+    "$$\\theta_2=\\frac{n_2-n_1}{n_2 R}y -\\frac{n_1}{n_2}\\theta_1$$\n",
+    "\n",
+    "which is a purely linear equation in $y$ and $\\theta_1$."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Lets now assume light is coming form a point a distance $y$ from the optical axis and there is a ray travelling parallel to the optical axis hitting the spherical surface at $y$, while a second ray is incident for $y=0$."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/image_curved.png\" width=\"80%\">|\n",
+    "|-|\n",
+    "|**Fig.:** Image formation at a curved surface.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We may apply our obatined formula for the two cases. \n",
+    "\n",
+    "\n",
+    "**$\\theta_1=0$:**\n",
+    "\n",
+    "$$\\theta_2=\\frac{n_2-n_1}{n_2}\\frac{y}{R}$$\n",
+    "$$\\theta_2=\\frac{y+\\delta y}{b}$$\n",
+    "\n",
+    "and thus\n",
+    "\n",
+    "$$\\frac{y+\\delta y}{b}=\\frac{n_2-n_1}{n_2}\\frac{y}{R}$$\n",
+    "\n",
+    "**$y=0$:**\n",
+    "\n",
+    "$$\\frac{\\Delta y}{b}=\\frac{y}{a}$$\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Combining both equations yields\n",
+    "\n",
+    "$$\\frac{1}{a}+\\frac{1}{b}=\\frac{n_2-n_1}{n_2 R}$$\n",
+    "\n",
+    "where we define the new quantity **focal length** which only depends on the properties of the curved surface\n",
+    "\n",
+    "$$f=\\frac{n_2}{n_2-n_1}R$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "**Imaging Equation Spherical Refracting Surface**\n",
+    "    \n",
+    "The sum of the inverse object and image distances equals the inverse focal length of the spherical refracting surface\n",
+    "\n",
+    "$$\\frac{1}{g}+\\frac{1}{b}\\approx\\frac{1}{f}$$\n",
+    "    \n",
+    "where the focal length of the refracting surface is given by\n",
+    "    \n",
+    "$$f=\\frac{n_2}{n_2-n_1}R$$\n",
+    "\n",
+    "in the parixial approximation.\n",
+    "</div>"
    ]
   }
  ],
