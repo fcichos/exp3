@@ -155,9 +155,15 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L2/overview_2.html">Lecture Contents</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Optical Elements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Plane-Mirrors">Plane Mirrors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Concave-Mirrors">Concave Mirrors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Prisms">Prisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Mirrors">Mirrors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Plane-Mirrors">Plane Mirrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Concave-Mirrors">Concave Mirrors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Prisms">Prisms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Dispersion">Dispersion</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -228,6 +234,224 @@
             
   
 <style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -255,17 +479,85 @@ This page was generated from <a href="#id1"><span class="problematic" id="id2">`
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L2/Optical Elements.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></div>
 <div class="section" id="Optical-Elements">
 <h1>Optical Elements<a class="headerlink" href="#Optical-Elements" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">## just for plotting later</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+                     <span class="s1">&#39;axes.titlesize&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+                     <span class="s1">&#39;axes.labelsize&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                     <span class="s1">&#39;axes.labelpad&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+                     <span class="s1">&#39;lines.linewidth&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                     <span class="s1">&#39;lines.markersize&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                     <span class="s1">&#39;xtick.labelsize&#39;</span> <span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                     <span class="s1">&#39;ytick.labelsize&#39;</span> <span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                     <span class="s1">&#39;xtick.top&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                     <span class="s1">&#39;xtick.direction&#39;</span> <span class="p">:</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;ytick.right&#39;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                     <span class="s1">&#39;ytick.direction&#39;</span> <span class="p">:</span> <span class="s1">&#39;in&#39;</span><span class="p">,})</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Mirrors">
+<h2>Mirrors<a class="headerlink" href="#Mirrors" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="Plane-Mirrors">
-<h2>Plane Mirrors<a class="headerlink" href="#Plane-Mirrors" title="Permalink to this headline">¶</a></h2>
+<h3>Plane Mirrors<a class="headerlink" href="#Plane-Mirrors" title="Permalink to this headline">¶</a></h3>
 <p>If a point <span class="math notranslate nohighlight">\(P\)</span> send out light that is reflected on a mirror as depicted in the image below, the rays reflected from the mirror diverge, but appear to originate from a point <span class="math notranslate nohighlight">\(P^\prime\)</span> behind the mirror. The distance of this image point from the mirror is the same as the one of the object point from the mirror due to the reflection law. An observer, who would thus collect all the reflected rays and image them e.g.&nbsp;onto the retina of his eye will see the point behind the mirror.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Fig.:</strong> Reflection on a plane mirror.</td>
+</tr>
+</tbody>
+</table>
 <p>If now many point of an object emit light towards the mirror then this is also true for all of the points and the whole object appears as an image behind the mirror. Consequently, the image has the same size than the object. Therefore the magnification defined as</p>
 <p><span class="math">\begin{equation}
 M=\frac{h_{\rm image}}{h_{\rm object}}=1
 \end{equation}</span></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Fig.:</strong> Image Formation on a plane mirror.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="Concave-Mirrors">
-<h2>Concave Mirrors<a class="headerlink" href="#Concave-Mirrors" title="Permalink to this headline">¶</a></h2>
+<h3>Concave Mirrors<a class="headerlink" href="#Concave-Mirrors" title="Permalink to this headline">¶</a></h3>
 <p>When we apply the law of reflection for a concave mirror (i.e.&nbsp;the reflecting side of the mirror is on the inside of the spherical surface), the light parallel to the optical axis at a distance <span class="math notranslate nohighlight">\(h\)</span> is reflected towards the optical axis and crosses the axis at a specifc point <span class="math notranslate nohighlight">\(F\)</span>. For symmetry reasons, a ray on the other side of the mirror needs to cross the axis in the same point.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Fig.:</strong> Ray propagation on a spherical mirror.</td>
+</tr>
+</tbody>
+</table>
 <p>We may calculate the position of the point <span class="math notranslate nohighlight">\(F\)</span>, e.g.&nbsp;the distance from the mirror surface point <span class="math notranslate nohighlight">\(O\)</span>, by applying the law of reflection. If the spherical mirror surface has a radius <span class="math notranslate nohighlight">\(R\)</span>, then the distance between the center of the sphere <span class="math notranslate nohighlight">\(M\)</span> and the point <span class="math notranslate nohighlight">\(F\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[FM=\frac{R}{2\cos(\alpha)}\]</div>
@@ -279,6 +571,19 @@ f=R\left [ 1-\frac{R}{2\sqrt{R^2-h^2}}\right ]
 \end{equation}</span></p>
 <p>This equation is telling us, that the focal distance is not a single value for a concave mirror. The focal distance rather changes with the distance <span class="math notranslate nohighlight">\(h\)</span> from the optical axis. If <span class="math notranslate nohighlight">\(h\)</span> approaches <span class="math notranslate nohighlight">\(R\)</span> the focal length become shorter.</p>
 <p>To obtain now an equation which predicts the point at which the reflected ray intersects the optical axis if it emerged at a point <span class="math notranslate nohighlight">\(A\)</span>, we just consider the following sketch.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Fig.:</strong> Image formation on a concave mirror.</td>
+</tr>
+</tbody>
+</table>
 <p>For this situation, we can write down immediately the following relations</p>
 <div class="math notranslate nohighlight">
 \[\delta=\alpha+\gamma\]</div>
@@ -311,9 +616,159 @@ f=R\left [ 1-\frac{R}{2\sqrt{R^2-h^2}}\right ]
 <li><span class="math notranslate nohighlight">\(g&lt;f\)</span>: image is virtual, upright and larger than the object</li>
 </ol>
 </div>
+</div>
 <div class="section" id="Prisms">
 <h2>Prisms<a class="headerlink" href="#Prisms" title="Permalink to this headline">¶</a></h2>
-<p>Prisms are wedge shaped optical elements made of a transparent material as for example of glass.</p>
+<p>Prisms are wedge shaped optical elements made of a transparent material as for example of glass. A special form of such a prism is an isosceles prims with two sides of equal length. The two equal sides enclose an angle <span class="math notranslate nohighlight">\(\gamma\)</span>. When light is coupled into that prism light is refracted twice. First the incendent angle <span class="math notranslate nohighlight">\(\alpha_1\)</span> is changed into a refracted angle <span class="math notranslate nohighlight">\(\beta_1\)</span>. This refracted ray then hits the second interface under an angle <span class="math notranslate nohighlight">\(\beta_2\)</span> leading again to a
+refraction into the outgoing angle <span class="math notranslate nohighlight">\(\alpha_2\)</span>. What is now interesting, is the total deflection of the incident ray, which is measured by the angle <span class="math notranslate nohighlight">\(\delta\)</span>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Fig.:</strong> Refraction of rays on a prism.</td>
+</tr>
+</tbody>
+</table>
+<p>We can calculate the deflection angle <span class="math notranslate nohighlight">\(\delta\)</span> from a number of considerations. First consider the following relations between the angles in the prims</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(\delta \alpha_1-\beta_1+\alpha_2-\beta_2\)</span></li>
+<li><span class="math notranslate nohighlight">\(\gamma=\beta_1+\beta_2\)</span></li>
+</ul>
+<p>from which follows</p>
+<div class="math notranslate nohighlight">
+\[\delta =\alpha_1+\alpha_2-\gamma\]</div>
+<p>If we now would liek to know, how the deflection angle changes with the incident angle <span class="math notranslate nohighlight">\(\alpha_1\)</span>, we calculate the derivative of the deflection angle <span class="math notranslate nohighlight">\(\delta\)</span> with respect to <span class="math notranslate nohighlight">\(\alpha_1\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\delta}{d\alpha_1}=1+\frac{d\alpha_2}{d \alpha_1}\]</div>
+<p>We are here especially interested in the case, where this change in deflection is reaching a minimum, i.e.&nbsp;<span class="math notranslate nohighlight">\(d\delta/d\alpha_1 =0\)</span>. This readily yields</p>
+<div class="math notranslate nohighlight">
+\[d \alpha_2=-d\alpha_1\]</div>
+<p>This means a change in the incidence angle <span class="math notranslate nohighlight">\(d\alpha_1\)</span> yields an opposite change in the outgoing angle <span class="math notranslate nohighlight">\(-d\alpha_2\)</span>. We may later observe that in the experiment.</p>
+<p>As both, the incident and the outgoing angle are related to each other by Snells’s law, we may introduce the derivatives of Snells law for both interfaces, e.g.</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(\cos(\alpha_1)d\alpha_1=n\cos(\beta_1)d\beta_1\)</span></li>
+<li><span class="math notranslate nohighlight">\(\cos(\alpha_2)d\alpha_2=n\cos(\beta_2)d\beta_2\)</span></li>
+</ul>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the refractive index of the prism material and the material outside is air (<span class="math notranslate nohighlight">\(n_{\rm air}=1\)</span>). Replacing <span class="math notranslate nohighlight">\(\cos(\alpha)=\sqrt{1-\sin^2(\alpha)}\)</span> and dividing the two previous equations by each other readily yields</p>
+<div class="math notranslate nohighlight">
+\[\frac{1-\sin^2(\alpha_1)}{1-\sin^2(\alpha_2)}=\frac{n^2-\sin^2(\alpha_1)}{n^2-\sin^2(\alpha_2)}\]</div>
+<p>The latter equation is for <span class="math notranslate nohighlight">\(n\neq 1\)</span> only satisfied if <span class="math notranslate nohighlight">\(\alpha_1=\alpha_2=\alpha\)</span>. In this case, the light path through the prism must be symmetric and we may write down the minimum deflection angle <span class="math notranslate nohighlight">\(\delta_{\rm min}\)</span>:</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Minimum prims deflection</strong></p>
+<p>The minimum deflection angle of a isosceles prism with a prism angle <span class="math notranslate nohighlight">\(\gamma\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[\delta_{\rm min}=2\alpha-\gamma\]</div>
+</div>
+<p>In this case, we may also write down Snells law using <span class="math notranslate nohighlight">\(\sin(\alpha)=n\sin(\beta)\)</span>, which results in</p>
+<div class="math notranslate nohighlight">
+\[\sin \left ( \frac{\delta_{\rm min}+\gamma}{2}\right )=n\sin\left (\frac{\gamma}{2}\right)\]</div>
+<div class="section" id="Dispersion">
+<h3>Dispersion<a class="headerlink" href="#Dispersion" title="Permalink to this headline">¶</a></h3>
+<p>Very important applications now arise from the fact, that the refractive index is a material property, which depends on the color (frequency or wavelength) of light. We do not yet understand the origin of this dependence. The plots below show the wavelength dependence of three different glasses. You may find much more data on the refractive index of different materials in an <a class="reference external" href="https://refractiveindex.info/">online database</a>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">bk7</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/BK7.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">sf10</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/SF10.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">fk51a</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/FK51A.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bk7</span><span class="o">.</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">n</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;BK7&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sf10</span><span class="o">.</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">sf10</span><span class="o">.</span><span class="n">n</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;SF10&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fk51a</span><span class="o">.</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">fk51a</span><span class="o">.</span><span class="n">n</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;FK51A&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">900</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;wavelength [nm]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;refractive index n&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../_images/notebooks_L2_Optical_Elements_28_0.png"><img alt="../../_images/notebooks_L2_Optical_Elements_28_0.png" src="../../_images/notebooks_L2_Optical_Elements_28_0.png" style="width: 422px; height: 282px;" /></a>
+</div>
+</div>
+<p>The plots have a general feature, which is that the refractive index is largest at small wavelength (blue colors), while it drops continuously with increasing wavelength towards the red (800 nm). If you would characterize the dependence by the slope, i.e.&nbsp;<span class="math notranslate nohighlight">\(dn/d\lambda\)</span> then all displayed curves show in the visible range</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(\frac{dn}{d\lambda}&lt;0\)</span>, is called normal dispersion</li>
+</ul>
+<p>while</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(\frac{dn}{d\lambda}&lt;0\)</span>, is called anomalous dispersion</li>
+</ul>
+<p>This wavelength dependence of the refractive index will yield a dependence of the deflection angle on the color of light as well. The change of the deflection angle with the refractive index can be calculated to be</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\delta}{d n}=\frac{2\sin(\gamma/2)}{\sqrt{1-n^2\sin^2(\gamma/2)}}\]</div>
+<p>together with the relation</p>
+<div class="math notranslate nohighlight">
+\[\frac{d \delta}{d \lambda}=\frac{d\delta}{d n}\frac{d n}{d\lambda}\]</div>
+<p>we obtain</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\delta}{d\lambda}=\frac{2\sin(\gamma/2)}{\sqrt{1-n^2\sin^2(\gamma/2)}}\frac{d n}{d \lambda}\]</div>
+<p><strong>DIY prism</strong></p>
+<p>If you don’t have a prism at home, which of course most people do, you can try to create your own, by a mirror, which you dip into a water basin. Shine some white light with the flash lamp on it and observe the reflected and refracted light especially at the edges. If you want it a bit better, integrate a small aperature into a piece of black paper and put it in fornt of the flash light.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&#160;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Fig.:</strong> Home made water prism.</td>
+</tr>
+</tbody>
+</table>
+<p>The dependence of the refractive index of water on the wavelength is, however, weak. Yet, it is enough to alo show the well known colors of the rainbow. We will later refer to the colors of the rainbow.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">h2o</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/H2O.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">h2o</span><span class="o">.</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">n</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;H2O&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">900</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span><span class="mf">1.36</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;wavelength [nm]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;refractive index n&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<a class="reference internal image-reference" href="../../_images/notebooks_L2_Optical_Elements_34_0.png"><img alt="../../_images/notebooks_L2_Optical_Elements_34_0.png" src="../../_images/notebooks_L2_Optical_Elements_34_0.png" style="width: 433px; height: 286px;" /></a>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -337,7 +792,7 @@ f=R\left [ 1-\frac{R}{2\sqrt{R^2-h^2}}\right ]
     <p>
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Oct 30, 2020.
+        Last updated on Nov 01, 2020.
       </span>
 
     </p>
