@@ -79,15 +79,51 @@
    "source": [
     "**Pinhole Camera**\n",
     "\n",
-    "![pinhole](img/pinhole_camera.png)"
+    "|<img src=\"img/pinhole_camera.png\" width=\"80%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Schematics of a pinhole camera. |"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "**Water Basin with Sugar**"
+    "|<img src=\"img/pinhole_cameraF.png\" width=\"40%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Image of an upright letter \"F\" on the screen of a pinhole camera in lecture 1. |"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/core_shadow.png\" width=\"40%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Core shawdow and partial shadows behind a disk when illuminated with two seperate light sources. |"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Water Basin with Salt**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/refractive_index_gradient.png\" width=\"40%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Bend rays in a refractive index gradient with a salt (NaCl) layer on the bottom. |"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {

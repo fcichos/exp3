@@ -59,9 +59,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/plane_mirror.png\" width=\"40%\">|\n",
-    "|-|\n",
-    "| **Fig.:** Reflection on a plane mirror.|"
+    "<img src=\"img/plane_mirror.png\" width=\"40%\">\n"
    ]
   },
   {
@@ -79,9 +77,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/image_plane_mirror.png\" width=\"40%\">|\n",
-    "|-|\n",
-    "|**Fig.:** Image Formation on a plane mirror. |"
+    "<img src=\"img/image_plane_mirror.png\" width=\"40%\">\n"
    ]
   },
   {
@@ -102,9 +98,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/concave_mirror.png\" width=\"40%\">|\n",
-    "|-|\n",
-    "|**Fig.:** Ray propagation on a spherical mirror.|"
+    "<img src=\"img/concave_mirror.png\" width=\"40%\">"
    ]
   },
   {
