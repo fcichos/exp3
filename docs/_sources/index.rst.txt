@@ -5,7 +5,7 @@
 .. figure:: img/CompSoft_banner.png
 
 Welcome to the Experimental Physics 3 Course!
-============================================
+=============================================
 
 In this Experimental Physics 3 course, we will dive into to basic experiments and mathematical descriptions related to light propagation, electromagnetic waves and its material counter part of matter waves. In particular we will have a look at 
 

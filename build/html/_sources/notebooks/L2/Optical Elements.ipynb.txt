@@ -59,8 +59,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/plane_mirror.png\" width=\"50%\"><img src=\"img/reflection_plane.png\" width=\"50%\">|\n",
-    "|-|\n",
+    "|<img src=\"img/plane_mirror.png\" width=\"49%\"> <img src=\"img/reflection_plane.png\" width=\"50%\">|\n",
+    "|--|\n",
     "|**Fig.:** Image formation on a plane mirror.|"
    ]
   },
@@ -212,14 +212,36 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "This equation now helps to construct the image of an object in front of a concave mirror and we may in general differentiate between the following general situations:\n",
+    "This equation now helps to construct the image of an object in front of a concave mirror and we may define 3 different rays to identify the size of an image $h_{\\rm image}$ from the size of an object $h_{\\rm object}$.\n",
+    "\n",
+    "|<img src=\"img/image_size.png\" width=\"70%\">|\n",
+    "|-|\n",
+    "|**Fig.:** Image formation on a concave mirror.|\n",
+    "\n",
+    "In the above sketch, there are three different rays, which help us to construct the image.\n",
+    "\n",
+    "1. **red ray:** parallel ray → focal ray\n",
+    "2. **green ray:** focal ray → parallel ray\n",
+    "3. **central ray:** central ray → central ray\n",
+    "\n",
+    "All three reflected rays will either intersect on the same side of the mirror as the object. In this case, the image is called **real image** and it will be inverted as in the sketch. If the reflected rays on the other hand diverge, the appear to intersect behind the mirror. In this case, the image is called **virtual image**. It is located behind the mirror. There is no real intersection of rays in that case. \n",
+    "\n",
+    "The intersection point further gives the size of the image. Using a ray from the tip of the object to the intersection between mirror and optical axis (O), we may easily determine the image height $h_{\\rm image}$. Try yourself, if you see that the magnification of a concave mirror is described by\n",
+    "\n",
+    "$$ \\frac{h_{\\rm image}}{h_{\\rm image}}=-\\frac{b}{g}=M$$\n",
+    "\n",
+    "As mentioned earlier, this resembles to be the magnification $M$. The minus sign in the ratio of image and object distance appears due to the fact that the image is reversed in its orientation in a real image. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "With the help of the imaging equation and the magnification we may in general differentiate between the following general situations:\n",
     "\n",
     "1. $g>2f$: image is real, inverted and smaller than the object\n",
-    "\n",
     "2. $g=2f$: image is real, inverted and of the same size than the object\n",
-    "\n",
     "3. $f<g<2f$: image is real, inverted and larger than the object\n",
-    "\n",
     "4. $g<f$: image is virtual, upright and larger than the object"
    ]
   },
