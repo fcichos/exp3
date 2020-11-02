@@ -4,17 +4,17 @@
    contain the root `toctree` directive.
 .. figure:: img/CompSoft_banner.png
 
-Welcome to the Experimental Physik 3 Course!
-============================================
+Welcome to the Experimental Physics 3 Course!
+=============================================
 
 In this Experimental Physics 3 course, we will dive into to basic experiments and mathematical descriptions related to light propagation, electromagnetic waves and its material counter part of matter waves. In particular we will have a look at 
 
 * Geometrical Optics
 * Wave Optics
 * Electromagnetic Waves
-* Matter waves and Quantum Mechanics
+* Matter Waves and Quantum Mechanics
 
-The fields of optics and quantum mechanics are nowadays very active research areas with a  dynamically devloping areas of optical technolgies, high resolution microscopy and quantum information. All this builds on the fundations that are tackled in this course.
+The fields of optics and quantum mechanics are nowadays very active research areas with a dynamically devloping field of optical technologies, high resolution microscopy and quantum information. All this builds on the fundations that are tackled in this course.
 
 
 .. toctree::
@@ -54,7 +54,14 @@ The fields of optics and quantum mechanics are nowadays very active research are
 
    lectures/L2/overview_2.rst
    notebooks/L2/Optical Elements.ipynb
-   
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 3:
+
+   lectures/L3/overview_3.rst
+   notebooks/L3/Optical Elements.ipynb
+
 Indices and tables
 ==================
 
