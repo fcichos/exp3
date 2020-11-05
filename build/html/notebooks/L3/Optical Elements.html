@@ -40,6 +40,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lecture Contents" href="../../lectures/L4/overview_4.html" />
     <link rel="prev" title="Lecture Contents" href="../../lectures/L3/overview_3.html" /> 
 </head>
 
@@ -180,10 +181,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Rainbow">Rainbow</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Color-of-the-rainbow">Color of the rainbow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Rainbow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Optical%20Elements.html">Optical Elements Part III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Optical%20Elements.html#Rainbow">Rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Optical%20Elements.html#Color-of-the-rainbow">Color of the rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Optical%20Elements.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Optical%20Elements.html#Glassbow">Glassbow</a></li>
 </ul>
 </li>
 </ul>
@@ -511,7 +519,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id2"><span class="problematic" id="id3">`source/notebooks/L3/Optical Elements.ipynb`_</span></a>.
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L3/Optical Elements.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L3/Optical Elements.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
 <div class="section" id="Optical-Elements-Part-II">
@@ -554,7 +562,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="6f612d3ab0374fe089df2de5dea9c94f" class="no-scaled-link" src="../../_images/prism.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="dcf719023e7f42a2b5d6babea2630bdd" class="no-scaled-link" src="../../_images/prism.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -573,7 +581,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 \[\alpha_2=\sin^{-1}\left (\frac{n_1}{n_0}\sin(\beta_2)\right )\]</div>
 <div class="math notranslate nohighlight">
 \[\theta_2=\alpha_2-\gamma\]</div>
-<p>The total deflection angle <span class="math notranslate nohighlight">\(\delta\)</span> is then</p>
+<p>where <span class="math notranslate nohighlight">\(\theta_2\)</span> is the angle between the incident surface normal and the outgoing ray. The total deflection angle <span class="math notranslate nohighlight">\(\delta\)</span> is then</p>
 <div class="math notranslate nohighlight">
 \[\delta =\alpha_1-\beta_1+\alpha_2-\beta_2\]</div>
 <p>or</p>
@@ -694,21 +702,32 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">a_1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.15</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">n1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mf">0.400</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_1</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">deflection</span><span class="p">(</span><span class="n">a_1</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\lambda=400$ nm&quot;</span><span class="p">)</span>
-<span class="n">n1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mf">0.500</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_1</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">deflection</span><span class="p">(</span><span class="n">a_1</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\lambda=500$ nm&quot;</span><span class="p">)</span>
-<span class="n">n1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mf">0.600</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_1</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">deflection</span><span class="p">(</span><span class="n">a_1</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\lambda=600$ nm&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.400</span><span class="p">,</span><span class="mf">0.700</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">n1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">wavelength_to_rgb</span><span class="p">(</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_1</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">deflection</span><span class="p">(</span><span class="n">a_1</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;incindence angle $\alpha_1$ [°]&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;deflection angle $\delta$ [°]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.400</span><span class="p">,</span><span class="mf">0.700</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">n1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">bk7</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">c</span><span class="o">=</span><span class="n">wavelength_to_rgb</span><span class="p">(</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a_1</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">deflection</span><span class="p">(</span><span class="n">a_1</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;incindence angle $\alpha_1$ [°]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;deflection angle $\delta$ [°]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -717,7 +736,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L3_Optical_Elements_17_0.png" class="no-scaled-link" src="../../_images/notebooks_L3_Optical_Elements_17_0.png" style="width: 348px; height: 282px;" />
+<img alt="../../_images/notebooks_L3_Optical_Elements_17_0.png" class="no-scaled-link" src="../../_images/notebooks_L3_Optical_Elements_17_0.png" style="width: 757px; height: 288px;" />
 </div>
 </div>
 <p>The plots have a general feature, which is that the refractive index is largest at small wavelength (blue colors), while it drops continuously with increasing wavelength towards the red (800 nm). If you would characterize the dependence by the slope, i.e. <span class="math notranslate nohighlight">\(dn/d\lambda\)</span> then all displayed curves show in the visible range</p>
@@ -743,7 +762,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="617c3297ce094457be8fd4858ba4aa25" class="no-scaled-link" src="../../_images/spectrum.jpeg" style="width: 80%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="160143c989524a159c3dc99e9788e594" class="no-scaled-link" src="../../_images/spectrum.jpeg" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -757,7 +776,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="9447e6afd75c47d88263643f5be4f089" class="no-scaled-link" src="../../_images/prism_spec_principle.jpeg" style="width: 40%;" /> <img alt="e0067f6e855a441faa8e7a3d8d2fd8d7" class="no-scaled-link" src="../../_images/prism_spectrometer.jpeg" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="655e4561808b46fa9f298806982a83b8" class="no-scaled-link" src="../../_images/prism_spec_principle.jpeg" style="width: 40%;" /> <img alt="b8ad93874ca14701b66789d3797bb05a" class="no-scaled-link" src="../../_images/prism_spectrometer.jpeg" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -772,7 +791,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="b7ca5a0b0080444080b43143f4caad76" class="no-scaled-link" src="../../_images/diy_prism.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="d694805f82fc4d44a1b5c7f792771aa6" class="no-scaled-link" src="../../_images/diy_prism.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -825,7 +844,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="ff36f5758f014ab69e2f6da979c628df" class="no-scaled-link" src="../../_images/curved_surface.png" style="width: 80%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="6329236002754f93a9371eba5a93ec13" class="no-scaled-link" src="../../_images/curved_surface.png" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -861,7 +880,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="4bdf973c9f0642ea8fcf407d36236262" class="no-scaled-link" src="../../_images/image_curved.png" style="width: 80%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="92c3386a972c4693b183204dab68e0b3" class="no-scaled-link" src="../../_images/image_curved.png" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -910,7 +929,7 @@ to be negative as the curvature with respect to the optical axis has reversed.</
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="916b4fa4db4f4d57b5b60d8c4b3af3d4" class="no-scaled-link" src="../../_images/thin_lens.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="dfe4fd6659444e6a9a702c7f1ec8c723" class="no-scaled-link" src="../../_images/thin_lens.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -935,7 +954,7 @@ to be negative as the curvature with respect to the optical axis has reversed.</
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="ae412149328a47dc93491edfacbfa306" class="no-scaled-link" src="../../_images/thin_lens_imaging.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="aed418f99b1349c3b4793fa0d0abcbc0" class="no-scaled-link" src="../../_images/thin_lens_imaging.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -960,205 +979,7 @@ to be negative as the curvature with respect to the optical axis has reversed.</
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="d13ac28fb96b4ea7af22a5bf264bdc38" class="no-scaled-link" src="../../_images/lens_types.png" style="width: 40%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Reflection of rays in a single drop.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="Rainbow">
-<h2>Rainbow<a class="headerlink" href="#Rainbow" title="Permalink to this headline">¶</a></h2>
-<p>As the last topic of the optical elements we would like to have a look at a phenomenon, which has nothing to do with optical elements but is fun and just fits to the topic of dispersion. We will explore the rainbow and in addition a DIY version, the glassbow. To understand the rainbow we will have first a look at the reflection of rays from a single droplet.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="5c087ce980a4450eaa424df256200d95" class="no-scaled-link" src="../../_images/rainbow.png" style="width: 40%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Reflection of rays in a single drop.</p></td>
-</tr>
-</tbody>
-</table>
-<p>In the sketch above a light ray of white light is entering the droplet under and angle <span class="math notranslate nohighlight">\(\alpha\)</span> to the surface normal on the top. The ray is refracted and enters the droplet under an angle <span class="math notranslate nohighlight">\(\beta\)</span> to the surface normal. The angle can be calculated from Snells law</p>
-<div class="math notranslate nohighlight">
-\[n_{\rm air}\sin(\alpha)=n_{\rm water}\sin(\beta)\]</div>
-<p>Inside the droplet, the ray is now hitting the water/air surface at the backside from which it gets reflected. There, the incident angle is also <span class="math notranslate nohighlight">\(\beta\)</span> and the ray is reflected under an angle <span class="math notranslate nohighlight">\(\beta\)</span> as well. At that point, most of the light will, however, exit the drop on the backside, so that only a small fraction is reflected and travelling further to hit a second time the water air surface at the angle <span class="math notranslate nohighlight">\(\beta\)</span>. The light refracted out at that point leaves the droplet under
-an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the surface normal due to the reversiblity of the light path. We are, however interested in the angle <span class="math notranslate nohighlight">\(\phi\)</span> that the ray makes with the incident direction.</p>
-<p>This angle <span class="math notranslate nohighlight">\(\phi\)</span> can be calculated from the above sketch to be</p>
-<div class="math notranslate nohighlight">
-\[\phi=4\beta-2\alpha\]</div>
-<p>Since</p>
-<div class="math notranslate nohighlight">
-\[\beta=\sin^{-1}\left (\frac{n_{\rm air}}{n_{\rm water}}\sin(\alpha) \right)\]</div>
-<p>such that finally</p>
-<div class="math notranslate nohighlight">
-\[\phi=4\sin^{-1}\left (\frac{n_{\rm air}}{n_{\rm water}}\sin(\alpha) \right)-2\alpha\]</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">alpha</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">h2o</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/H2O.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
-<span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mf">0.500</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">rainbow</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">alpha</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maximum deflection angle &#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">rainbow</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Maximum deflection angle  41.78815648670841
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alpha</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">rainbow</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;incident angle $\alpha$ [°]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;deflection angle $\phi$ [°]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/notebooks_L3_Optical_Elements_58_0.png" class="no-scaled-link" src="../../_images/notebooks_L3_Optical_Elements_58_0.png" style="width: 404px; height: 282px;" />
-</div>
-</div>
-<div class="section" id="Color-of-the-rainbow">
-<h3>Color of the rainbow<a class="headerlink" href="#Color-of-the-rainbow" title="Permalink to this headline">¶</a></h3>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.400</span><span class="p">,</span><span class="mf">0.700</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">c</span><span class="o">=</span><span class="n">wavelength_to_rgb</span><span class="p">(</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-    <span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alpha</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">rainbow</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;incident angle $\alpha$ [°]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;deflection angle $\phi$ [°]&quot;</span><span class="p">)</span>
-
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.400</span><span class="p">,</span><span class="mf">0.700</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">c</span><span class="o">=</span><span class="n">wavelength_to_rgb</span><span class="p">(</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-    <span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">alpha</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">rainbow</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;incident angle $\alpha$ [°]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;deflection angle $\phi$ [°]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="mi">70</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">43</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/notebooks_L3_Optical_Elements_60_0.png" class="no-scaled-link" src="../../_images/notebooks_L3_Optical_Elements_60_0.png" style="width: 850px; height: 274px;" />
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.400</span><span class="p">,</span><span class="mf">0.700</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">c</span><span class="o">=</span><span class="n">wavelength_to_rgb</span><span class="p">(</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-    <span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">rainbow</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;outgoing angle $\alpha$ [°]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;intensity [a.u.]&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">45</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/notebooks_L3_Optical_Elements_61_0.png" class="no-scaled-link" src="../../_images/notebooks_L3_Optical_Elements_61_0.png" style="width: 367px; height: 391px;" />
-</div>
-</div>
-</div>
-<div class="section" id="id1">
-<h3>Rainbow<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="e90009cef89f4bc4a45cd19224868c24" class="no-scaled-link" src="../../_images/rainbow_full.JPG" style="width: 100%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Double rainbow over Grand Canyon.</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="baae41273f4b43268d4072d9dd29825a" class="no-scaled-link" src="../../_images/rainbow_gczoom.JPG" style="width: 100%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Zoom into the rainbow over Grand Canyon.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="Glassbow">
-<h3>Glassbow<a class="headerlink" href="#Glassbow" title="Permalink to this headline">¶</a></h3>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="d67ec3b6749c4701a5047c48541d7224" class="no-scaled-link" src="../../_images/glassbow.JPG" style="width: 100%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="948fcc86e41644d7873cf3580e3ef1bd" class="no-scaled-link" src="../../_images/lens_types.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -1177,6 +998,8 @@ Maximum deflection angle  41.78815648670841
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../lectures/L4/overview_4.html" class="btn btn-neutral float-right" title="Lecture Contents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../../lectures/L3/overview_3.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
