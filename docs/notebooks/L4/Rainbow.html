@@ -40,7 +40,8 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Lecture Contents" href="../../lectures/L4/overview_4.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -184,8 +185,17 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 4:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -515,7 +525,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Rainbow">
 <h1>Rainbow<a class="headerlink" href="#Rainbow" title="Permalink to this headline">¶</a></h1>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -543,13 +553,15 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
+<div class="section" id="Deflection-with-one-reflection">
+<h2>Deflection with one reflection<a class="headerlink" href="#Deflection-with-one-reflection" title="Permalink to this headline">¶</a></h2>
 <p>As the last topic of the optical elements we would like to have a look at a phenomenon, which has nothing to do with optical elements but is fun and just fits to the topic of dispersion. We will explore the rainbow and in addition a DIY version, the glassbow. To understand the rainbow we will have first a look at the reflection of rays from a single droplet.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="cbff56d7f3e84ecabbf3dcd41c5296d1" class="no-scaled-link" src="../../_images/rainbow.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="0add16d892e84c5f9989b92c8f72ce65" class="no-scaled-link" src="../../_images/rainbow.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -573,7 +585,7 @@ an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the s
 \[\phi=4\sin^{-1}\left (\frac{n_{\rm air}}{n_{\rm water}}\sin(\alpha) \right)-2\alpha\]</div>
 <p>So lets have a look at this dependence of the deflection angle as a function of the incidence angle.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -584,7 +596,7 @@ an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the s
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -594,7 +606,7 @@ an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the s
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -609,12 +621,12 @@ an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the s
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L4_Rainbow_9_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_9_0.png" style="width: 404px; height: 282px;" />
+<img alt="../../_images/notebooks_L4_Rainbow_10_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_10_0.png" style="width: 404px; height: 282px;" />
 </div>
 </div>
 <p>The dependence seems to show a maximum deflection angle at an incidence angle of around <span class="math notranslate nohighlight">\(\alpha=60^{\circ}\)</span>. This is an important finding, as the whole appearance of the rainbow depends on that.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -630,10 +642,12 @@ an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the s
 Maximum deflection angle  41.78815648670841
 </pre></div></div>
 </div>
+</div>
 <div class="section" id="Color-of-the-rainbow">
 <h2>Color of the rainbow<a class="headerlink" href="#Color-of-the-rainbow" title="Permalink to this headline">¶</a></h2>
+<p>The color of the rainbow is now teh result of the fact that the maximum deflection angle depends on the color of the light due to the dispersion. Since we have a refraction, reflection and another refraction, the largest maximum deflection angle is observed for red light, while the smallest one appears for blue light. The diagrams below show this result, which is in general true for materials with normal dispersion.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -666,11 +680,14 @@ Maximum deflection angle  41.78815648670841
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L4_Rainbow_13_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_13_0.png" style="width: 850px; height: 274px;" />
+<img alt="../../_images/notebooks_L4_Rainbow_15_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_15_0.png" style="width: 850px; height: 274px;" />
 </div>
 </div>
+<p>This order of the colors is actually true for all incident angles, which raises the question, why the rainbow is actually colored. The blue color of a certain incidence angle would actually overlap with the green color of a different incidence angle and the red color of an even different incidence angle. If you select a specific outgoing angle under which you observe the rainbow, lets say 41°, then you find under this observation angle all color and therefore should observe alway white light.</p>
+<p>This is actually true, if you look at the inside of a rainbow. You clearly recognize that inside the rainbow, it is much brighter than outside. Yet when you reach the maximum angle of each color, you have a region, where even for larger angles for the incidence angles, the deflection angle does not change. Thus if you assume you send in rays at constantly spaced incidence angles, you will have more rays with a deflection angle close to the maximum. The diagram below just counts the number of
+deflection angles in the different for each color and you clearly see, that around the maximum deflection angles for each color you have a strong peak.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -679,7 +696,7 @@ Maximum deflection angle  41.78815648670841
     <span class="n">c</span><span class="o">=</span><span class="n">wavelength_to_rgb</span><span class="p">(</span><span class="n">wl</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
     <span class="n">n</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">wl</span><span class="p">,</span><span class="n">h2o</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">rainbow</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;outgoing angle $\alpha$ [°]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;deflection angle $\alpha$ [°]&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;intensity [a.u.]&quot;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">45</span><span class="p">)</span>
@@ -691,18 +708,31 @@ Maximum deflection angle  41.78815648670841
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L4_Rainbow_14_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_14_0.png" style="width: 367px; height: 391px;" />
+<img alt="../../_images/notebooks_L4_Rainbow_18_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_18_0.png" style="width: 367px; height: 391px;" />
 </div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>Rainbow<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Thus around each droplet on the sky, there is a cone of deflected light reflected back from the sun. On the outside of that cone is red light under an angle of almost <span class="math notranslate nohighlight">\(42^{\circ}\)</span> while on the inside edge we find blue light and finally white light (see left image below). We just have to connect that to the observer now. This is shown in the right sketch. The rainbow therefore results from teh fact that we look at different height at different edges of the cone.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="bddf603d65624fb7a0b8c6216f70d8e2" class="no-scaled-link" src="../../_images/rainbow_full.JPG" style="width: 100%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="f2bedb226f144023b4697d183f9413ba" class="no-scaled-link" src="../../_images/cone.png" style="width: 40%;" /> <img alt="447097988c3b47c5a82d9d3370e4c670" class="no-scaled-link" src="../../_images/observation.png" style="width: 40%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Deflection cones of different color on a single drop in a rainbow and rainbow as a result of the observation of the cones.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h3>Rainbow<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="0c021d7286d14debbc3351eae85c9b60" class="no-scaled-link" src="../../_images/rainbow_full.JPG" style="width: 100%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -715,7 +745,7 @@ Maximum deflection angle  41.78815648670841
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="2396d74cf1dc493aa93a5b347a3421e6" class="no-scaled-link" src="../../_images/rainbow_gczoom.JPG" style="width: 100%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="98a363e6563c4833bcfe18d0b989d9a5" class="no-scaled-link" src="../../_images/rainbow_gczoom.JPG" style="width: 100%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -725,13 +755,13 @@ Maximum deflection angle  41.78815648670841
 </table>
 </div>
 <div class="section" id="Glassbow">
-<h2>Glassbow<a class="headerlink" href="#Glassbow" title="Permalink to this headline">¶</a></h2>
+<h3>Glassbow<a class="headerlink" href="#Glassbow" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="2dc86b8995f0459188741619e4b5d4d2" class="no-scaled-link" src="../../_images/glassbow.JPG" style="width: 100%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="50b6cbf3ed3e414aa63467c99a36ac15" class="no-scaled-link" src="../../_images/glassbow.JPG" style="width: 100%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -741,12 +771,20 @@ Maximum deflection angle  41.78815648670841
 </table>
 </div>
 </div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../lectures/L4/overview_4.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
