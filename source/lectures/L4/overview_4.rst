@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 4 we will cntinue to discuss several optical elements, which help us to construct optical instruments like spectrometers, microscopes or telescopes. The optical elements which are left, are lenses. Additionally we will talk about a rainbow and a dry version of it for your at home. 
+In Lecture 4 we will continue to discuss several optical elements, which help us to create optical instruments like spectrometers, microscopes or telescopes. The optical elements which are left, are thick lenses. Additionally we will talk about a rainbow and a dry version of it for your at home. In addition we will start a new section of optical instruments. 
 
 
 
