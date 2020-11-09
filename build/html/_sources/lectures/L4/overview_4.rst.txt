@@ -5,6 +5,9 @@ In Lecture 4 we will continue to discuss several optical elements, which help us
 
 
 
+
 .. image:: img/slides.png
    :width: 600
    
+
+Lecture 4 slides for download :download:`pdf <Lecture 4.pdf>`
