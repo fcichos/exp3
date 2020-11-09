@@ -44,10 +44,84 @@
     "\n",
     "$$b_2=\\frac{a_2 f_2}{a_2-f_2}=\\frac{(D-b_1) f_2}{D-b_1-f_2}$$\n",
     "\n",
-    "from which we can obtain after a longer calculation the focal distance of the lens systems\n",
+    "from which we can finally calculate the image location and also size with the help of $b_1$."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Instead of doing a lengthy transformation I would like to draw your attention to a simple method which arises from the linearization of Snells law. This is called **matrix optics**. Matrix optics relates the outgoing angle $\\theta_2$ and height $y_2$ of an optical element to its incident angle $\\theta_1$ and $y_1$ via a matrix operation. Let's have a look at an example of a bi-convex lens with a focal length $f$. An incident ray is then expressed by a vector \n",
     "\n",
+    "$$\\begin{bmatrix}\n",
+    "y_1\\\\\n",
+    "\\theta_1\n",
+    "\\end{bmatrix}$$\n",
     "\n",
-    "$$\\frac{1}{f}=\\frac{1}{f_1}+\\frac{1}{f_2}-\\frac{D}{f_1 f_2}$$"
+    "which is converted by the lens into an outgoing ray vector\n",
+    "\n",
+    "$$\\begin{bmatrix}\n",
+    "y_2\\\\\n",
+    "\\theta_2\n",
+    "\\end{bmatrix}$$\n",
+    "\n",
+    "If you have two 2D vectors which you want to transform by a linear operation into each other, then the transformation can be described by a 2x2 matrix, which is given for a lens with \n",
+    "\n",
+    "$$\\begin{bmatrix}\n",
+    "A & B\\\\\n",
+    "C & D\n",
+    "\\end{bmatrix}\n",
+    "=\n",
+    "\\begin{bmatrix}\n",
+    "1 & 0\\\\\n",
+    "-\\frac{1}{f} & 1\n",
+    "\\end{bmatrix}\n",
+    "$$\n",
+    "\n",
+    "Similarly we can also define a free space propagation matrix for a propagation by a distance $D$, which is\n",
+    "\n",
+    "$$\\begin{bmatrix}\n",
+    "A & B\\\\\n",
+    "C & D\n",
+    "\\end{bmatrix}\n",
+    "=\n",
+    "\\begin{bmatrix}\n",
+    "1 & D\\\\\n",
+    "0 & 1\n",
+    "\\end{bmatrix}\n",
+    "$$\n",
+    "\n",
+    "The propagation of light through two lenses, which are seprarated by a distance $D$ is then the product of two matrices for the lenses and one for the free space. The transformation then in addition requires to multiply from the right side the incdent vector and we obtain on the left side the outgoing ray vector.\n",
+    "\n",
+    "$$\\begin{bmatrix}\n",
+    "y_2\\\\\n",
+    "\\theta_2\\\\\n",
+    "\\end{bmatrix}\n",
+    "=\n",
+    "\\begin{bmatrix}\n",
+    "1 & 0\\\\\n",
+    "-\\frac{1}{f_2} & 1 \\\\\n",
+    "\\end{bmatrix}\n",
+    "\\begin{bmatrix}\n",
+    "1 & D\\\\\n",
+    "0 & 1\n",
+    "\\end{bmatrix}\n",
+    "\\begin{bmatrix}\n",
+    "1 & 0\\\\\n",
+    "-\\frac{1}{f_1} & 1\n",
+    "\\end{bmatrix}\n",
+    "\\begin{bmatrix}\n",
+    "y_1\\\\\n",
+    "\\theta_1\n",
+    "\\end{bmatrix}$$\n",
+    "\n",
+    "If you multiply the 2x2 matrices with each other, you will obtain a new 2x2 matric with a matrix element $C$, which should correspond to the effective focal length of that system. This is the case since the element $C=-\\frac{1}{f}$\n",
+    "\n",
+    "The result of that calculation is \n",
+    "\n",
+    "$$\\frac{1}{f}=\\frac{1}{f_1}+\\frac{1}{f_2}-\\frac{D}{f_1 f_2}$$\n",
+    "\n",
+    "which gives the effective focal length of two bi-convex lenses at a distance $D$."
    ]
   },
   {
@@ -103,7 +177,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The human eye is certainly one of the most amazing biological sensorial systems, which consists of biologically grown optical elements, like an apeture, a "
+    "The human eye is certainly one of the most amazing biological sensorial systems, which consists of biologically grown optical elements including an apeture, an adaptive lens and a photodetector, which is connected to an intelligent neural network, that is amazingly accurate and fast in pattern recognition. Think of that for a moment, that this performance is given with a few 10 W power consumption and then turn around your laptop and check out its power consumption. \n",
+    "\n",
+    "The eye allows you to image objects at variable distance from you. The sketch below indicates some of its essential ingredients."
    ]
   },
   {
@@ -113,6 +189,15 @@
     "|<img src=\"img/eye.jpeg\" width=\"80%\">|\n",
     "|-|\n",
     "|**Fig.:** Image construction on a biconvex lens with a parallel and a central ray for different object distances.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In a first look we realize that the optical systems consists of the pupil lens which is connected to air on one side as the surrounding medium and to a vitreous humor (glass body) on the oder side. So there is some asymmetry. The eye therefore has a front focal length of $f_1=17\\,{\\rm mm}$ and a back focal length of $f_2=22\\,{\\rm mm}$. These values may vary by the individual but also by the distance of the object. For close objects the eye can accomodate its focal distance to $f_1=14\\,{\\rm mm}$ and $f_2=19\\,{\\rm mm}$.\n",
+    "\n",
+    "In the normal relaxed state of the eye muscle, on can therefore observe objects up to a distance of $s_0=25\\, {\\rm cm}$, which is called the distance of clear visual sight."
    ]
   },
   {

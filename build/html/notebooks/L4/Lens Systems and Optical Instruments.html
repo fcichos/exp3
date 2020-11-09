@@ -318,7 +318,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="d9359b9e401249b9b5bc56ea594d8abb" class="no-scaled-link" src="../../_images/lens_system.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="74d21b0258f14c72ad2fc47b1241e6b9" class="no-scaled-link" src="../../_images/lens_system.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -333,9 +333,69 @@
 <p>The second lens then images this intermediate object into</p>
 <div class="math notranslate nohighlight">
 \[b_2=\frac{a_2 f_2}{a_2-f_2}=\frac{(D-b_1) f_2}{D-b_1-f_2}\]</div>
-<p>from which we can obtain after a longer calculation the focal distance of the lens systems</p>
+<p>from which we can finally calculate the image location and also size with the help of <span class="math notranslate nohighlight">\(b_1\)</span>.</p>
+<p>Instead of doing a lengthy transformation I would like to draw your attention to a simple method which arises from the linearization of Snells law. This is called <strong>matrix optics</strong>. Matrix optics relates the outgoing angle <span class="math notranslate nohighlight">\(\theta_2\)</span> and height <span class="math notranslate nohighlight">\(y_2\)</span> of an optical element to its incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(y_1\)</span> via a matrix operation. Let’s have a look at an example of a bi-convex lens with a focal length <span class="math notranslate nohighlight">\(f\)</span>. An incident ray is then expressed by a vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+y_1\\
+\theta_1
+\end{bmatrix}\end{split}\]</div>
+<p>which is converted by the lens into an outgoing ray vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+y_2\\
+\theta_2
+\end{bmatrix}\end{split}\]</div>
+<p>If you have two 2D vectors which you want to transform by a linear operation into each other, then the transformation can be described by a 2x2 matrix, which is given for a lens with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+A &amp; B\\
+C &amp; D
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 &amp; 0\\
+-\frac{1}{f} &amp; 1
+\end{bmatrix}\end{split}\]</div>
+<p>Similarly we can also define a free space propagation matrix for a propagation by a distance <span class="math notranslate nohighlight">\(D\)</span>, which is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+A &amp; B\\
+C &amp; D
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 &amp; D\\
+0 &amp; 1
+\end{bmatrix}\end{split}\]</div>
+<p>The propagation of light through two lenses, which are seprarated by a distance <span class="math notranslate nohighlight">\(D\)</span> is then the product of two matrices for the lenses and one for the free space. The transformation then in addition requires to multiply from the right side the incdent vector and we obtain on the left side the outgoing ray vector.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+y_2\\
+\theta_2\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 &amp; 0\\
+-\frac{1}{f_2} &amp; 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; D\\
+0 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0\\
+-\frac{1}{f_1} &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+y_1\\
+\theta_1
+\end{bmatrix}\end{split}\]</div>
+<p>If you multiply the 2x2 matrices with each other, you will obtain a new 2x2 matric with a matrix element <span class="math notranslate nohighlight">\(C\)</span>, which should correspond to the effective focal length of that system. This is the case since the element <span class="math notranslate nohighlight">\(C=-\frac{1}{f}\)</span></p>
+<p>The result of that calculation is</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{f}=\frac{1}{f_1}+\frac{1}{f_2}-\frac{D}{f_1 f_2}\]</div>
+<p>which gives the effective focal length of two bi-convex lenses at a distance <span class="math notranslate nohighlight">\(D\)</span>.</p>
 <p>Following this equation the inverse of the total focal length of the combined lenses is just the sum of its inverse focal distances minus a term, which depends on the distance of the two lenses. If this distance is small as compared to the focal length, i.e. the lenses are close to each other, the total inverse focal is just given by the first two terms. The inverse focal distances characterize the refractive power of a lens. The larger the invserse value, the smaller is the focal distance. This
 refractive power is commonly measured in the unit <strong>diopter</strong>. One diopter corresponds to <strong>1 dpt=1 :math:`m^{-1}`</strong>.</p>
 <p>The image above shows also, that in the case of the combined lenses and a real inverted intermediate image, the final image will be upright again. Thus, if the first lens has a magnification <span class="math notranslate nohighlight">\(M_1=-b_1/a_1\)</span> and the second lens a magnification <span class="math notranslate nohighlight">\(M_2=-b_2/a_2\)</span> the total magnification is the product, which is</p>
@@ -351,13 +411,14 @@ refractive power is commonly measured in the unit <strong>diopter</strong>. One 
 <p>Optical instruments now combine a number of optical elements or even consist only out of a single one as in the case of the magnifying glass or the eye.</p>
 <div class="section" id="The-Eye">
 <h3>The Eye<a class="headerlink" href="#The-Eye" title="Permalink to this headline">¶</a></h3>
-<p>The human eye is certainly one of the most amazing biological sensorial systems, which consists of biologically grown optical elements, like an apeture, a</p>
+<p>The human eye is certainly one of the most amazing biological sensorial systems, which consists of biologically grown optical elements including an apeture, an adaptive lens and a photodetector, which is connected to an intelligent neural network, that is amazingly accurate and fast in pattern recognition. Think of that for a moment, that this performance is given with a few 10 W power consumption and then turn around your laptop and check out its power consumption.</p>
+<p>The eye allows you to image objects at variable distance from you. The sketch below indicates some of its essential ingredients.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="05d07ec8a8bf4cfda11376027197ac75" class="no-scaled-link" src="../../_images/eye.jpeg" style="width: 80%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="2223552f8494406baac1e0cf21a51b1a" class="no-scaled-link" src="../../_images/eye.jpeg" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -365,6 +426,9 @@ refractive power is commonly measured in the unit <strong>diopter</strong>. One 
 </tr>
 </tbody>
 </table>
+<p>In a first look we realize that the optical systems consists of the pupil lens which is connected to air on one side as the surrounding medium and to a vitreous humor (glass body) on the oder side. So there is some asymmetry. The eye therefore has a front focal length of <span class="math notranslate nohighlight">\(f_1=17\,{\rm mm}\)</span> and a back focal length of <span class="math notranslate nohighlight">\(f_2=22\,{\rm mm}\)</span>. These values may vary by the individual but also by the distance of the object. For close objects the eye can accomodate its focal distance to
+<span class="math notranslate nohighlight">\(f_1=14\,{\rm mm}\)</span> and <span class="math notranslate nohighlight">\(f_2=19\,{\rm mm}\)</span>.</p>
+<p>In the normal relaxed state of the eye muscle, on can therefore observe objects up to a distance of <span class="math notranslate nohighlight">\(s_0=25\, {\rm cm}\)</span>, which is called the distance of clear visual sight.</p>
 </div>
 <div class="section" id="Magnifying-Glass">
 <h3>Magnifying Glass<a class="headerlink" href="#Magnifying-Glass" title="Permalink to this headline">¶</a></h3>
