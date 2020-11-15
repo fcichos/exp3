@@ -139,7 +139,7 @@
     "\n",
     "|<img src=\"img/ptychography.png\" width=\"80%\">|\n",
     "|-|\n",
-    "| **Fig.:** Simple fluorescence microscope. |\n",
+    "| **Fig.:** Ptychpgraphic imaging with LED arrays. |\n",
     "\n",
     "\n",
     "There is a massive amount of other technques with increadible images being generated. Have a look around."
