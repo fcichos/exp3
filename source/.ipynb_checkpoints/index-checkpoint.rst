@@ -77,6 +77,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
 
    lectures/L5/overview_5.rst
    notebooks/L5/Lens Systems and Optical Instruments.ipynb
+   notebooks/L5/Optical Instruments.ipynb
 
 .. toctree::
    :maxdepth: 2
