@@ -34,7 +34,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/eye.jpeg\" width=\"40%\"> <img src=\"img/retina.png\" width=\"40%\">|\n",
+    "|<img src=\"img/eye.jpeg\" width=\"20%\"> <img src=\"img/retina.png\" width=\"20%\">|\n",
     "|-|\n",
     "|**Fig.:** Sketch of the ingredients of the human eye. Most important parts the lens, the glass body and the retina containing the bightness (rods) and color sensors (cones). A more detailed sketch in depicted on the right side, which shows the arrangement of rods and cones in the retina including their parallel connection. Their combined signal is ending the optical nerves guiding the signals to the brain.|"
    ]
