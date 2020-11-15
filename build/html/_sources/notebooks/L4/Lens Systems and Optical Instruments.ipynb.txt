@@ -18,7 +18,23 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Most of the optical instruments consist of multiple lenses that are used to image objects or to magnify them. They are combined at distances, which are either larger or smaller than the sum of their focal distances. We will consider first a pair of two bi-convex lenses that are at a distance $D>f_1+f_2$m where $f_1$ and $f_2$ are their focal distances. "
+    "Most of the optical instruments consist of multiple lenses that are used to image objects or to magnify them. They are combined at distances, which are either larger or smaller than the sum of their focal distances. The image below shows for example an artifical image of a lens system contained in a single microscope objctive lens, where you see multiple elements e.g. doublets and triplets of lenses. These elements as joined objects may considerably improve the performance of the optics, e.g. correct for imaging errors. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/objective_lens.jpg\" width=\"60%\">|\n",
+    "|-|\n",
+    "| **Fig.:** System of of lenses inside a microscope objective lens.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We will consider first a pair of two bi-convex lenses that are at a distance $D>f_1+f_2$m where $f_1$ and $f_2$ are their focal distances. "
    ]
   },
   {
@@ -150,75 +166,6 @@
    "metadata": {},
    "source": [
     "For more than two lenses, there is a versatile framework called **Matrix Optics**, which treats each optical element as a 2x2 matrix. This becomes possible as we derived earlier equations which were linear in $y$ and $\\theta$. A whole system of different lenses, plates and other optical elements can thus be treated as a matrix multiplication, which is quite useful. "
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Optical Instruments"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Optical instruments now combine a number of optical elements or even consist only out of a single one as in the case of the magnifying glass or the eye.\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### The Eye"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "The human eye is certainly one of the most amazing biological sensorial systems, which consists of biologically grown optical elements including an apeture, an adaptive lens and a photodetector, which is connected to an intelligent neural network, that is amazingly accurate and fast in pattern recognition. Think of that for a moment, that this performance is given with a few 10 W power consumption and then turn around your laptop and check out its power consumption. \n",
-    "\n",
-    "The eye allows you to image objects at variable distance from you. The sketch below indicates some of its essential ingredients."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "|<img src=\"img/eye.jpeg\" width=\"80%\">|\n",
-    "|-|\n",
-    "|**Fig.:** Image construction on a biconvex lens with a parallel and a central ray for different object distances.|"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "In a first look we realize that the optical systems consists of the pupil lens which is connected to air on one side as the surrounding medium and to a vitreous humor (glass body) on the oder side. So there is some asymmetry. The eye therefore has a front focal length of $f_1=17\\,{\\rm mm}$ and a back focal length of $f_2=22\\,{\\rm mm}$. These values may vary by the individual but also by the distance of the object. For close objects the eye can accomodate its focal distance to $f_1=14\\,{\\rm mm}$ and $f_2=19\\,{\\rm mm}$.\n",
-    "\n",
-    "In the normal relaxed state of the eye muscle, on can therefore observe objects up to a distance of $s_0=25\\, {\\rm cm}$, which is called the distance of clear visual sight."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Magnifying Glass"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Telescope"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Microscope"
    ]
   }
  ],

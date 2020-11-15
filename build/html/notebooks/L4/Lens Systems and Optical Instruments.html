@@ -40,8 +40,7 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Rainbow" href="Rainbow.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -187,7 +186,7 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 4:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Optical%20Elements.html">Optical Elements Part III</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Optical%20Elements.html#Thick-lens">Thick lens</a></li>
@@ -202,15 +201,21 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lens Systems and Optical Instruments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Lens-Systems">Lens Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Optical-Instruments">Optical Instruments</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#The-Eye">The Eye</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Magnifying-Glass">Magnifying Glass</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Telescope">Telescope</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Microscope">Microscope</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 5:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L5/overview_5.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L5/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 6:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L6/overview_6.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L6/Magnifying%20Glass.html">Magnifying Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L6/Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Microscope.html#Modern-microscopy">Modern microscopy</a></li>
 </ul>
 </li>
 </ul>
@@ -312,13 +317,28 @@
 <h1>Lens Systems and Optical Instruments<a class="headerlink" href="#Lens-Systems-and-Optical-Instruments" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Lens-Systems">
 <h2>Lens Systems<a class="headerlink" href="#Lens-Systems" title="Permalink to this headline">¶</a></h2>
-<p>Most of the optical instruments consist of multiple lenses that are used to image objects or to magnify them. They are combined at distances, which are either larger or smaller than the sum of their focal distances. We will consider first a pair of two bi-convex lenses that are at a distance <span class="math notranslate nohighlight">\(D&gt;f_1+f_2\)</span>m where <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span> are their focal distances.</p>
+<p>Most of the optical instruments consist of multiple lenses that are used to image objects or to magnify them. They are combined at distances, which are either larger or smaller than the sum of their focal distances. The image below shows for example an artifical image of a lens system contained in a single microscope objctive lens, where you see multiple elements e.g. doublets and triplets of lenses. These elements as joined objects may considerably improve the performance of the optics,
+e.g. correct for imaging errors.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="ee981c8c250c48809a1426fe3df45e6f" class="no-scaled-link" src="../../_images/lens_system.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="cf75377c94fa46c8b5a364a3540e7232" class="no-scaled-link" src="../../_images/objective_lens.jpg" style="width: 60%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> System of of lenses inside a microscope objective lens.</p></td>
+</tr>
+</tbody>
+</table>
+<p>We will consider first a pair of two bi-convex lenses that are at a distance <span class="math notranslate nohighlight">\(D&gt;f_1+f_2\)</span>m where <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span> are their focal distances.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="c72c4d895a914577bf080e47d883fc78" class="no-scaled-link" src="../../_images/lens_system.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -406,40 +426,6 @@ refractive power is commonly measured in the unit <strong>diopter</strong>. One 
 \[M=\frac{1}{1-\frac{a_1}{f_1}-\frac{a_1+D}{f_2}+\frac{a_1D}{f_1 f_2}}\]</div>
 <p>For more than two lenses, there is a versatile framework called <strong>Matrix Optics</strong>, which treats each optical element as a 2x2 matrix. This becomes possible as we derived earlier equations which were linear in <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(\theta\)</span>. A whole system of different lenses, plates and other optical elements can thus be treated as a matrix multiplication, which is quite useful.</p>
 </div>
-<div class="section" id="Optical-Instruments">
-<h2>Optical Instruments<a class="headerlink" href="#Optical-Instruments" title="Permalink to this headline">¶</a></h2>
-<p>Optical instruments now combine a number of optical elements or even consist only out of a single one as in the case of the magnifying glass or the eye.</p>
-<div class="section" id="The-Eye">
-<h3>The Eye<a class="headerlink" href="#The-Eye" title="Permalink to this headline">¶</a></h3>
-<p>The human eye is certainly one of the most amazing biological sensorial systems, which consists of biologically grown optical elements including an apeture, an adaptive lens and a photodetector, which is connected to an intelligent neural network, that is amazingly accurate and fast in pattern recognition. Think of that for a moment, that this performance is given with a few 10 W power consumption and then turn around your laptop and check out its power consumption.</p>
-<p>The eye allows you to image objects at variable distance from you. The sketch below indicates some of its essential ingredients.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="b6ca38e4246d4d44aa903635fa659f6d" class="no-scaled-link" src="../../_images/eye.jpeg" style="width: 80%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Image construction on a biconvex lens with a parallel and a central ray for different object distances.</p></td>
-</tr>
-</tbody>
-</table>
-<p>In a first look we realize that the optical systems consists of the pupil lens which is connected to air on one side as the surrounding medium and to a vitreous humor (glass body) on the oder side. So there is some asymmetry. The eye therefore has a front focal length of <span class="math notranslate nohighlight">\(f_1=17\,{\rm mm}\)</span> and a back focal length of <span class="math notranslate nohighlight">\(f_2=22\,{\rm mm}\)</span>. These values may vary by the individual but also by the distance of the object. For close objects the eye can accomodate its focal distance to
-<span class="math notranslate nohighlight">\(f_1=14\,{\rm mm}\)</span> and <span class="math notranslate nohighlight">\(f_2=19\,{\rm mm}\)</span>.</p>
-<p>In the normal relaxed state of the eye muscle, on can therefore observe objects up to a distance of <span class="math notranslate nohighlight">\(s_0=25\, {\rm cm}\)</span>, which is called the distance of clear visual sight.</p>
-</div>
-<div class="section" id="Magnifying-Glass">
-<h3>Magnifying Glass<a class="headerlink" href="#Magnifying-Glass" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="Telescope">
-<h3>Telescope<a class="headerlink" href="#Telescope" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="Microscope">
-<h3>Microscope<a class="headerlink" href="#Microscope" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
 </div>
 
 
@@ -447,13 +433,6 @@ refractive power is commonly measured in the unit <strong>diopter</strong>. One 
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="Rainbow.html" class="btn btn-neutral float-left" title="Rainbow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -463,7 +442,7 @@ refractive power is commonly measured in the unit <strong>diopter</strong>. One 
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Nov 13, 2020.
+        Last updated on Nov 15, 2020.
       </span>
 
     </p>
