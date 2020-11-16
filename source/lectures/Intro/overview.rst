@@ -22,13 +22,13 @@ Lecture Contents
 
 1. Ray Optics
     | 1.1.Reflection
-    | 1.2.Refraction, Total Internal Reflection, Rainbow Challenge
+    | 1.2.Refraction, Total internal reflection, Rainbow challenge
     | 1.3.Mirrors, Lenses, Prisms
-    | 1.4.Optical Instruments
+    | 1.4.Optical instruments
     |    1.4.1.Telescope
     |    1.4.2.Microscope
     | 1.5.Dispersion
-    | 1.6.Imaging Errors
+    | 1.6.Imaging errors
     |    1.6.1.Spherical aberration
     |    1.6.2.Coma
     |    1.6.3.Astigmatism
@@ -41,7 +41,7 @@ Lecture Contents
     | 2.2.Interference
     |    2.2.1.Coherence
     |    2.2.2.Interferometers
-    | 2.3.Huygens Principle
+    | 2.3.Huygens principle
     |    2.3.1.Diffraction
     |    2.3.2.Single and double slit
     |    2.3.3.Diffraction grating
@@ -52,9 +52,9 @@ Lecture Contents
     | 3.2.Plane and spherical electromagnetic waves
     | 3.3.Energy transport and Poynting vector
     | 3.4.Polarization
-    | 3.5.Reflection und Transmission
+    | 3.5.Reflection and transmission
     | 3.6.Total internal reflection
-    | 3.7.Fresnel Formula’s
+    | 3.7.Fresnel formulas
     | 3.8.Hertz dipole
 
 4. Foundations of Quantum Physics
@@ -65,13 +65,13 @@ Lecture Contents
     |    4.1.4.Planck’s radiation law
     | 4.2.Structure of matter
     |    4.2.1.Thomson model of the atom
-    |    4.2.2.Rutherford- scattering
-    |    4.2.3.Rutherford and Bohr Atom model
+    |    4.2.2.Rutherford scattering
+    |    4.2.3.Rutherford and Bohr atom model
     | 4.3.Matter waves
     |    4.3.1.Heisenberg uncertainty relation
     |    4.3.2.Wave function
     |    4.3.3.Probability interpretation of the wave function
-    |    4.3.4.Schrödinger-equation
+    |    4.3.4.Schrödinger equation
     |    4.3.5.Quantum states
     |    4.3.6.Potential box
     |    4.3.7.Harmonic oscillator
