@@ -19,14 +19,14 @@ Email: *lastname@physik.uni-leipzig.de*
 * Alexander Fischer
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 322
-  * Phone: +0341 97 32571
+  * Office: 333a
+  * Phone: +0341 97 32570
 
 |
 
 * Nicola Söker
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 322
-  * Phone: +0341 97 32571
+  * Office: 102a
+  * Phone: +0341 97 32575
 
