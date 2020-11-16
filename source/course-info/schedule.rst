@@ -6,10 +6,10 @@
 Course Schedule
 ===============
 
-The course will be held in two weekly lectures, starting **26.10.2020** in the big lecture hall and online. 
+The course will be held in two weekly lectures, starting **26.10.2020** online. 
 
-| **Monday 11:15 - 12:45 pm** 
-| **Thursday 11:15 - 12:45 pm** 
+| **Monday 11:15 am – 12:45 pm** 
+| **Thursday 11:15 am – 12:45 pm** 
 
 The course and the material is available online on this website. You may come back to study whenever it is suitable for you.
 
