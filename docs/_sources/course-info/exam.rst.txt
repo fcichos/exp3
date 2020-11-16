@@ -6,4 +6,4 @@
 Exams
 =====
 
-This course will end with a **written exam** of **180 min** duration. To take part in the exam you need to qualify with 50% of the possible points of the exercises handed out weekly. 
+This course will end with a **written exam** of **180 min** duration. To take part in the exam you need to qualify with 50 % of the possible points of the exercises handed out weekly. 
