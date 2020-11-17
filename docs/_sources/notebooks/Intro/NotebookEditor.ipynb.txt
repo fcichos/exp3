@@ -30,7 +30,7 @@
     "\n",
     "\n",
     "\n",
-    "* **edit mode** the mode where you edit a cells content.\n",
+    "* **edit mode** the mode where you edit a cell's content.\n",
     "* **command mode** the mode where you execute the cells content.\n",
     "\n",
     "In the more advanced version of JupyterLab, which we are using on myBinder, this will look like that"
@@ -122,7 +122,7 @@
     "2. Basic navigation: `↑`/`k`, `↓`/`j`\n",
     "3. Run or render currently selected cell: `Shift`+`Enter` or `Control`+`Enter`\n",
     "4. Saving the notebook: `s`\n",
-    "5. Change Cell types: `y` to make it a **code** cell, `m` for **markdown** and `r` for **raw**\n",
+    "5. Change cell types: `y` to make it a **code** cell, `m` for **markdown** and `r` for **raw**\n",
     "6. Inserting new cells: `a` to **insert above**, `b` to **insert below**\n",
     "7. Manipulating cells using pasteboard: `x` for **cut**, `c` for **copy**, `v` for **paste**, `d` for **delete** and `z` for **undo delete**\n",
     "8. Kernel operations: `i` to **interrupt** and `0` to **restart**\n"
@@ -194,7 +194,7 @@
    "source": [
     "There are a couple of keyboard shortcuts for running code:\n",
     "\n",
-    "* `Control`+`Enter` run the current cell and enters command mode.\n",
+    "* `Control`+`Enter` runs the current cell and enters command mode.\n",
     "* `Shift`+`Enter` runs the current cell and moves selection to the one below.\n",
     "* `Option`+`Enter` runs the current cell and inserts a new one below."
    ]
@@ -218,9 +218,9 @@
     }
    },
    "source": [
-    "Code is run in a separate process called the **kernel**, which can be interrupted or restarted. You can see kernel indicator in the top-right corner reporting current kernel state: `⚪︎` means kernel is **ready** to execute code, and `⚫︎` means kernel is currently **busy**. Tapping kernel indicator will open **kernel menu**, where you can reconnect, interrupt or restart kernel.  \n",
+    "Code is run in a separate process called the **kernel**, which can be interrupted or restarted. You can see the kernel indicator in the top-right corner reporting the current kernel state: `⚪︎` means the kernel is **ready** to execute code, and `⚫︎` means the kernel is currently **busy**. Tapping kernel indicator will open the **kernel menu**, where you can reconnect, interrupt or restart the kernel.  \n",
     "\n",
-    "Try running the following cell — kernel indicator will switch from `⚪︎` to `⚫︎`, i.e. reporting kernel as \"busy\". This means that you won't be able to run any new cells until current execution finishes, or until kernel is interrupted. You can then go to kernel menu by tapping the kernel indicator and select \"Interrupt\"."
+    "Try running the following cell — kernel indicator will switch from `⚪︎` to `⚫︎`, i.e., reporting the kernel as \"busy\". This means that you will not be able to run any new cells until the current execution finishes, or until the kernel is interrupted. You can then go to the kernel menu by tapping the kernel indicator and select \"Interrupt\"."
    ]
   }
  ],
