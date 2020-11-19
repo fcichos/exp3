@@ -19,7 +19,7 @@
     }
    },
    "source": [
-    "Geometrical optics refers to a field of optics that describes light propagation in terms of rays. This is on one side borrowed from your daily experience for example with shadows. On a more scientific side, it will turn out that geometrical optics is the approximation in which the wavelength of light is much shorter "
+    "Geometrical optics refers to a field of optics that describes light propagation in terms of rays. This is on one side borrowed from your daily experience, for example, with shadows. On a more scientific side, it will turn out that geometrical optics is the approximation in which the wavelength of light is much shorter. "
    ]
   },
   {
@@ -30,7 +30,7 @@
     "\n",
     "**Geometrical Optics**\n",
     " \n",
-    "Geometrical optics is a approximate description of light propagation in the limit of infinitely small wavelength, wher all wave phenomena like diffraction can be neglected.\n",
+    "Geometrical optics is an approximate description of light propagation in the limit of infinitely small wavelength, where all wave phenomena like diffraction can be neglected.\n",
     "</div>\n",
     "\n",
     "\n",
@@ -50,11 +50,11 @@
    "source": [
     "As geometrical optics is not a rigorous description, we have to write down some postulates (things we do not understand yet) to describe light propagation in geometrical optics\n",
     "\n",
-    "- light rays emergy from a light source\n",
+    "- light rays emerge from a light source\n",
     "- light rays are detected by a detector \n",
-    "- light propagate in straight line path (rays) in a homogeneous medium\n",
-    "- light matter interaction is characterized by a refractive index $n$\n",
-    "- light bends to a curved path in inhomogeneous media (i.e. $n(\\vec{r})$)\n",
+    "- light propagates in straight line paths (rays) in a homogeneous medium\n",
+    "- light--matter interaction is characterized by a refractive index $n$\n",
+    "- light bends to a curved path in inhomogeneous media (i.e., $n(\\vec{r})$)\n",
     "- rays may be reflected and refracted at interfaces between media\n",
     "\n"
    ]
@@ -63,7 +63,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Let's have a look at some examples providing indications for the linear propagation of light."
+    "Let us have a look at some examples providing indications for the linear propagation of light."
    ]
   },
   {
@@ -99,7 +99,7 @@
    "source": [
     "|<img src=\"img/core_shadow.png\" width=\"40%\">|\n",
     "|-|\n",
-    "| **Fig.:** Core shawdow and partial shadows behind a disk when illuminated with two seperate light sources. |"
+    "| **Fig.:** Core shadow and partial shadows behind a disk when illuminated with two seperate light sources. |"
    ]
   },
   {

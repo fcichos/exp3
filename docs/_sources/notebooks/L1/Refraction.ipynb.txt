@@ -27,7 +27,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Snells Law"
+    "### Snell's Law"
    ]
   },
   {
@@ -45,12 +45,12 @@
    "source": [
     "<div class=\"alert alert-info\">\n",
     "\n",
-    "**Law of Reflection (Snells Law)**\n",
+    "**Law of Reflection (Snell's Law)**\n",
     "    \n",
     "The law of refraction (Snell's law) is given for the above sketch by\n",
     "\n",
     "\\begin{equation}\n",
-    "n_1 \\sin(\\theta_1)=n_2 \\sin(\\theta_2)\n",
+    "n_1 \\sin(\\theta_1)=n_2 \\sin(\\theta_2).\n",
     "\\end{equation}\n",
     "    \n",
     " \n",
@@ -64,8 +64,8 @@
    "source": [
     "***\n",
     "\n",
-    "In the previous section in refraction we have derived the law of reflection from Fermat's principle. **Try yourself to obtain Snell's law with the help of Fermat's principle**.\n",
-    " Check out the [Refraction Explorer Snippet](https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/snippets/Refraction%20Explorer.ipynb) if you want to play around with Snells law. You may tray there even negative refraction. \n",
+    "In the previous section on refraction we have derived the law of reflection from Fermat's principle. **Try yourself to obtain Snell's law with the help of Fermat's principle**.\n",
+    " Check out the [Refraction Explorer Snippet](https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/snippets/Refraction%20Explorer.ipynb) if you want to play around with Snell's law. You may try there even negative refraction. \n",
     "\n",
     "***\n"
    ]
@@ -85,7 +85,7 @@
     "- refraction is away from the optical axis\n",
     "- $\\theta_1<\\theta_2$\n",
     "\n",
-    "The plot below shows this result in three plots with varying incident angle and two different refractive index combinations (glass/air, ait/glass). "
+    "The plot below shows this result in three plots with varying incident angle and two different refractive index combinations (glass/air, air/glass). "
    ]
   },
   {
@@ -103,14 +103,14 @@
    "source": [
     "### Total Internal Reflection\n",
     "\n",
-    "The above diagram reveals a special case occurring when $n_1>n_2$. Under these condition, one may change the incident angle $\\theta_1$ such that the outgoing angle becomes $\\theta_2=\\frac{\\pi}{2}$. For any incident angle $\\theta_1$ larger than this critical angle, the is no refracted ray anymore, but just a reflected ray. This is despite the fact that the material with $n_2$ is completely transparent. This phenomenon is called **total internal reflection** and it has several important applications. \n",
+    "The above diagram reveals a special case occurring when $n_1>n_2$. Under these condition, one may change the incident angle $\\theta_1$ such that the outgoing angle becomes $\\theta_2=\\frac{\\pi}{2}$. For any incident angle $\\theta_1$ larger than this critical angle, there is no refracted ray anymore, but just a reflected ray. This is despite the fact that the material with $n_2$ is completely transparent. This phenomenon is called **total internal reflection** and it has several important applications. \n",
     "\n",
-    "Let's first formalize this. Using the Snell's law. For $\\theta_2=\\frac{\\pi}{2}$ we obtain \n",
+    "Let us first formalize this. Using Snell's law, for $\\theta_2=\\frac{\\pi}{2}$ we obtain \n",
     "\n",
     "$$\\theta_1=\\theta_c=\\sin^{-1}\\left (\\frac{n_2}{n_1}\\right )$$\n",
     "\n",
     "\n",
-    "for the critical angle $\\theta_c$. As the $\\sin^{-1}()$ requires an argument $\\le1$, this works only if we have $n_2 < n_1$\n",
+    "for the critical angle $\\theta_c$. As the $\\sin^{-1}()$ requires an argument $\\le1$, this works only if we have $n_2 < n_1$.\n",
     "\n"
    ]
   },
@@ -131,10 +131,10 @@
     "\n",
     "**Total Internal Reflection**\n",
     "    \n",
-    "Total internal reflection occurs when light is passing from higher refractive index to lower refractive index materials for incidence angle larger than a critical angle \n",
+    "Total internal reflection occurs when light is passing from higher refractive index to lower refractive index materials for incidence angles larger than a critical angle \n",
     "    \n",
     "\\begin{equation}\n",
-    "\\theta_c=\\sin^{-1}\\left (\\frac{n_2}{n_1}\\right )\n",
+    "\\theta_c=\\sin^{-1}\\left (\\frac{n_2}{n_1}\\right ).\n",
     "\\end{equation}\n",
     "    \n",
     " \n",
@@ -160,20 +160,20 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "**Optical Fiber** Total internal reflection is very important for guiding light in telecommunications, for example. There, glass wires with a diameter from a few to several 100 µm are used to transport light. The glass wire with a central core of refractive index $n_1$ is surrounded by a cladding layer of slightly lower refractive index $n_2$. Light is then coupled into the fiber from one side. To obtain total internal reflection in this setting, the incident rays have to hit the front of the fiber at a maximum angle $\\theta_{a}$\n",
+    "**Optical Fiber** Total internal reflection is very important for guiding light in telecommunications, for example. There, glass wires with a diameter from a few to several 100 µm are used to transport light. The glass wire with a central core of refractive index $n_1$ is surrounded by a cladding layer of slightly lower refractive index $n_2$. Light is then coupled into the fiber from one side. To obtain total internal reflection in this setting, the incident rays have to hit the front of the fiber at a maximum angle $\\theta_{a}$\.n",
     "\n",
     "\n",
     "|<img src=\"img/fiber.png\" width=\"59%\"> <img src=\"img/tir_rod.png\" width=\"40%\">|\n",
     "|--|\n",
     "|**Fig.:** Total internal reflection in an optical fiber and a glass rod.|\n",
     "\n",
-    "The angle $\\theta_{a}$ can be easily calculated from Snells law. To characterize this opening angle one typically defines a new quantity called numerical aperature $NA$, which is the sine of the opening angle $\\theta_a$\n",
+    "The angle $\\theta_{a}$ can be easily calculated from Snell's law. To characterize this opening angle one typically defines a new quantity called numerical aperature $NA$, which is the sine of the opening angle $\\theta_a$\n",
     "\n",
     "\\begin{equation}\n",
-    "NA=\\sin(\\theta_a)=\\sqrt{n_1^2-n_2^{2}}\n",
+    "NA=\\sin(\\theta_a)=\\sqrt{n_1^2-n_2^{2}}.\n",
     "\\end{equation}\n",
     "\n",
-    "Using typical values of the refractive indices $n_1=1.475$ and $n_2=1.46$ one obtains a numerical apeture of $NA\\approx 0.2$."
+    "Using typical values of the refractive indices $n_1=1.475$ and $n_2=1.46$ one obtains a numerical aperture of $NA\\approx 0.2$."
    ]
   }
  ],

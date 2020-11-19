@@ -18,7 +18,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "For a thin lens, the displacement of the beam in height ($y,y^{\\prime}$) due to the thickness has been neglected. That means, that we can reduce all refracting action of the lens to a single plane, which we call a principle plane. This approximation is (independent of the paraxial approximation) not anymore true for lenses, if the displacement $\\Delta$ of the ray as in the image below cannot be neglected. Such lenses are called **thick lenses** and they do not have a single principle plane anymore. In fact, the principle plane splits up into two principle planes at a distance $h$."
+    "For a thin lens, the displacement of the beam in height ($y,y^{\\prime}$) due to the thickness has been neglected. That means that we can reduce all refracting action of the lens to a single plane, which we call a principle plane. This approximation is (independent of the paraxial approximation) not anymore true for lenses if the displacement $\\Delta$ of the ray as in the image below cannot be neglected. Such lenses are called **thick lenses** and they do not have a single principle plane anymore. In fact, the principle plane splits up into two principle planes at a distance $h$."
    ]
   },
   {
@@ -34,7 +34,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "As indicated in the sketch above, an incident ray which is not deflected can be extended to its intersection with the optical axis at a point, which is a distance $h_1$ behind the lens surface. This is the location for the first principle plane. The position of the second principle plane at a distance $h_2$ before the back surface the is found for by reversing the ray path. According to that, both principle planes have a distance $h=d-h_1-h_2$. Using some mathematical effort, one can show, that the same imaging equation as for a thins lens can be used with a new definition of the focal length and taking into account that object and image distances refer to their principle planes. "
+    "As indicated in the sketch above, an incident ray which is not deflected can be extended to its intersection with the optical axis at a point, which is a distance $h_1$ behind the lens surface. This is the location for the first principle plane. The position of the second principle plane at a distance $h_2$ before the back surface is found for by reversing the ray path. According to that, both principle planes have a distance $h=d-h_1-h_2$. Using some mathematical effort, one can show that the same imaging equation as for a thins lens can be used with a new definition of the focal length and taking into account that object and image distances refer to their principle planes. "
    ]
   },
   {
@@ -47,7 +47,7 @@
     "    \n",
     "The sum of the inverse object and image distances to the principle planes ($H_1,H_2$) equals the inverse focal length of the thin lens\n",
     "\n",
-    "$$\\frac{1}{a}+\\frac{1}{b}\\approx\\frac{1}{f}$$\n",
+    "$$\\frac{1}{a}+\\frac{1}{b}\\approx\\frac{1}{f},$$\n",
     "    \n",
     "where the inverse focal length of the thick lens is given by\n",
     "    \n",
@@ -72,7 +72,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "As compared to the construction of an image on a thin lens, we now have to consider some pecularities for the thick lens. An incident parallel ray, which turns into a focal ray is now refracted at the second principle plane. The reverse must therefore be true for an incident focal ray. This ray is refracted on the first principle plane. The central ray is deflected on both principle planes. It is incident under a certain angle at the first principle plane and outgoing with the same principle angle to the second principle plane. The sketch below summarizes these issues fot a thick lens."
+    "As compared to the construction of an image on a thin lens, we now have to consider some pecularities for the thick lens. An incident parallel ray, which turns into a focal ray is now refracted at the second principle plane. The reverse must, therefore, be true for an incident focal ray. This ray is refracted on the first principle plane. The central ray is deflected on both principle planes. It is incident under a certain angle at the first principle plane and outgoing with the same principle angle to the second principle plane. The sketch below summarizes these issues for a thick lens."
    ]
   },
   {

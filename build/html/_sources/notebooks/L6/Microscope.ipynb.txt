@@ -139,7 +139,7 @@
     "\n",
     "|<img src=\"img/ptychography.png\" width=\"80%\">|\n",
     "|-|\n",
-    "| **Fig.:** Ptychpgraphic imaging with LED arrays. |\n",
+    "| **Fig.:** Ptychographic imaging with LED arrays. |\n",
     "\n",
     "\n",
     "There is a massive amount of other technques with increadible images being generated. Have a look around."
@@ -162,7 +162,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.8.5"
+   "version": "3.6.6+"
   }
  },
  "nbformat": 4,
