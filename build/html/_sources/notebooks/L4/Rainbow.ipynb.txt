@@ -63,12 +63,12 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "In the sketch above a light ray of white light is entering the droplet under and angle $\\alpha$ to the surface normal on the top. The ray is refracted and enters the droplet under an angle $\\beta$ to the surface normal.\n",
-    "The angle can be calculated from Snells law\n",
+    "In the sketch above a light ray of white light is entering the droplet under an angle $\\alpha$ to the surface normal on the top. The ray is refracted and enters the droplet under an angle $\\beta$ to the surface normal.\n",
+    "The angle can be calculated from Snell's law\n",
     "\n",
-    "$$n_{\\rm air}\\sin(\\alpha)=n_{\\rm water}\\sin(\\beta)$$\n",
+    "$$n_{\\rm air}\\sin(\\alpha)=n_{\\rm water}\\sin(\\beta).$$\n",
     "\n",
-    "Inside the droplet, the ray is now hitting the water/air surface at the backside from which it gets reflected. There, the incident angle is also $\\beta$ and the ray is reflected under an angle $\\beta$ as well. At that point, most of the light will, however, exit the drop on the backside, so that only a small fraction is reflected and travelling further to hit a second time the water air surface at the angle $\\beta$. The light refracted out at that point leaves the droplet under an angle $\\alpha$ with the surface normal due to the reversiblity of the light path. We are, however interested in the angle $\\phi$ that the ray makes with the incident direction. "
+    "Inside the droplet, the ray is now hitting the water/air surface at the backside from which it gets reflected. There, the incident angle is also $\\beta$ and the ray is reflected under an angle $\\beta$ as well. At that point, most of the light will, however, exit the drop on the backside, so that only a small fraction is reflected and traveling further to hit a second time the water/air surface at the angle $\\beta$. The light refracted out at that point leaves the droplet under an angle $\\alpha$ with the surface normal due to the reversiblity of the light path. We are, however, interested in the angle $\\phi$ that the ray makes with the incident direction. "
    ]
   },
   {
@@ -77,7 +77,7 @@
    "source": [
     "This angle $\\phi$ can be calculated from the above sketch to be \n",
     "\n",
-    "$$\\phi=4\\beta-2\\alpha$$\n",
+    "$$\\phi=4\\beta-2\\alpha.$$\n",
     "\n",
     "Since \n",
     "\n",
@@ -92,7 +92,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "So lets have a look at this dependence of the deflection angle as a function of the incidence angle."
+    "So let us have a look at this dependence of the deflection angle as a function of the incidence angle."
    ]
   },
   {
@@ -180,7 +180,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The color of the rainbow is now teh result of the fact that the maximum deflection angle depends on the color of the light due to the dispersion. Since we have a refraction, reflection and another refraction, the largest maximum deflection angle is observed for red light, while the smallest one appears for blue light. The diagrams below show this result, which is in general true for materials with normal dispersion. "
+    "The color of the rainbow is now the result of the fact that the maximum deflection angle depends on the color of the light due to the dispersion. Since we have a refraction, reflection and another refraction, the largest maximum deflection angle is observed for red light, while the smallest one appears for blue light. The diagrams below show this result, which is in general true for materials with normal dispersion. "
    ]
   },
   {
@@ -234,14 +234,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "This order of the colors is actually true for all incident angles, which raises the question, why the rainbow is actually colored. The blue color of a certain incidence angle would actually overlap with the green color of a different incidence angle and the red color of an even different incidence angle. If you select a specific outgoing angle under which you observe the rainbow, lets say 41°, then you find under this observation angle all color and therefore should observe alway white light."
+    "This order of the colors is actually true for all incident angles, which raises the question, why the rainbow is actually colored. The blue color of a certain incidence angle would actually overlap with the green color of a different incidence angle and the red color of an even different incidence angle. If you select a specific outgoing angle under which you observe the rainbow, let us say 41°, then you find under this observation angle all color and, therefore, should observe always white light."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "This is actually true, if you look at the inside of a rainbow. You clearly recognize that inside the rainbow, it is much brighter than outside. Yet when you reach the maximum angle of each color, you have a region, where even for larger angles for the incidence angles, the deflection angle does not change. Thus if you assume you send in rays at constantly spaced incidence angles, you will have more rays with a deflection angle close to the maximum. The diagram below just counts the number of deflection angles in the different for each color and you clearly see, that around the maximum deflection angles for each color you have a strong peak."
+    "This is actually true if you look at the inside of a rainbow. You clearly recognize that inside the rainbow it is much brighter than outside. Yet when you reach the maximum angle of each color, you have a region, where even for larger angles for the incidence angles, the deflection angle does not change. Thus, if you assume you send in rays at constantly spaced incidence angles, you will have more rays with a deflection angle close to the maximum. The diagram below just counts the number of deflection angles in the different for each color and you clearly see that around the maximum deflection angles for each color you have a strong peak."
    ]
   },
   {
@@ -283,7 +283,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Thus around each droplet on the sky, there is a cone of deflected light reflected back from the sun. On the outside of that cone is red light under an angle of almost $42^{\\circ}$ while on the inside edge we find blue light and finally white light (see left image below). We just have to connect that to the observer now. This is shown in the right sketch. The rainbow therefore results from the fact that we look at different height at different edges of the cone. "
+    "Thus, around each droplet on the sky, there is a cone of deflected light reflected back from the sun. On the outside of that cone is red light under an angle of almost $42^{\\circ}$ while on the inside edge we find blue light and finally white light (see left image below). We just have to connect that to the observer now. This is shown in the right sketch. The rainbow, therefore, results from the fact that we look at different height at different edges of the cone. "
    ]
   },
   {
@@ -306,7 +306,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The photos below show a rainbow, where you should see the inhanced white color in the center of the rainbow, the color order of the bow itself und the darker region outside. But there is also a second rainbow appearing on the outside."
+    "The photos below show a rainbow, where you should see the enhanced white color in the center of the rainbow, the color order of the bow itself and the darker region outside. But there is also a second rainbow appearing on the outside."
    ]
   },
   {
@@ -315,7 +315,7 @@
    "source": [
     "|<img src=\"img/rainbow_full.JPG\" width=\"100%\">|\n",
     "|-|\n",
-    "|**Fig.:** Double rainbow over Grand Canyon. (c) Picture by Frank Cichos|"
+    "|**Fig.:** Double rainbow over the Grand Canyon. (c) Picture by Frank Cichos|"
    ]
   },
   {
@@ -331,7 +331,7 @@
    "source": [
     "|<img src=\"img/rainbow_gczoom.JPG\" width=\"100%\">|\n",
     "|-|\n",
-    "|**Fig.:** Zoom into the rainbow over Grand Canyon. (Picture by Frank Cichos)|"
+    "|**Fig.:** Zoom into the rainbow over the Grand Canyon. (c) Picture by Frank Cichos|"
    ]
   },
   {
@@ -345,7 +345,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "You can observe a beautiful rainbow at home of you just have a few glass beads. YOu can get these glass beeds from us. They have a diameter of about 200 µm. If you place then on a black background and use a flash lamp, you will observe a nice rainbow as Mr. Märcker did in the photo below. The main difference is the observation angle. Try to calculate the new observation angle for the refractivbe indices of glass."
+    "You can observe a beautiful rainbow at home if you just have a few glass beads. You can get these glass beeds from us. They have a diameter of about 200 µm. If you place them on a black background and use a flash lamp, you will observe a nice rainbow as Mr. Märcker did in the photo below. The main difference is the observation angle. Try to calculate the new observation angle for the refractive indices of glass."
    ]
   },
   {
@@ -354,7 +354,7 @@
    "source": [
     "|<img src=\"img/glassbow.JPG\" width=\"100%\">|\n",
     "|-|\n",
-    "|**Fig.:** Reflection of rays in a single drop (c) Picture by Axel Märcker.|"
+    "|**Fig.:** Reflection of rays in a single drop. (c) Picture by Axel Märcker.|"
    ]
   }
  ],

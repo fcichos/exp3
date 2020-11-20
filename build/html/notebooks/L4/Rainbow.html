@@ -147,13 +147,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../L1/Refraction.html">Refraction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Refractive-Index">Refractive Index</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Snells-Law">Snells Law</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction%20Explorer.html">EXP3 Snippets - Refraction Explorer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction%20Explorer.html">EXP3 Snippets – Refraction Explorer</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 2:</span></p>
 <ul>
@@ -209,6 +203,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L5/overview_5.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L5/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L5/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L5/Optical%20Instruments.html#The-Eye">The Eye</a></li>
 </ul>
 </li>
 </ul>
@@ -585,7 +583,7 @@ div.rendered_html tbody tr:hover {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="6cc2098b20c449c488dbadc76f216bb5" class="no-scaled-link" src="../../_images/rainbow.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="79f5b3de98834cfd99cbc208eeb02a46" class="no-scaled-link" src="../../_images/rainbow.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -593,21 +591,21 @@ div.rendered_html tbody tr:hover {
 </tr>
 </tbody>
 </table>
-<p>In the sketch above a light ray of white light is entering the droplet under and angle <span class="math notranslate nohighlight">\(\alpha\)</span> to the surface normal on the top. The ray is refracted and enters the droplet under an angle <span class="math notranslate nohighlight">\(\beta\)</span> to the surface normal. The angle can be calculated from Snells law</p>
+<p>In the sketch above a light ray of white light is entering the droplet under an angle <span class="math notranslate nohighlight">\(\alpha\)</span> to the surface normal on the top. The ray is refracted and enters the droplet under an angle <span class="math notranslate nohighlight">\(\beta\)</span> to the surface normal. The angle can be calculated from Snell’s law</p>
 <div class="math notranslate nohighlight">
-\[n_{\rm air}\sin(\alpha)=n_{\rm water}\sin(\beta)\]</div>
-<p>Inside the droplet, the ray is now hitting the water/air surface at the backside from which it gets reflected. There, the incident angle is also <span class="math notranslate nohighlight">\(\beta\)</span> and the ray is reflected under an angle <span class="math notranslate nohighlight">\(\beta\)</span> as well. At that point, most of the light will, however, exit the drop on the backside, so that only a small fraction is reflected and travelling further to hit a second time the water air surface at the angle <span class="math notranslate nohighlight">\(\beta\)</span>. The light refracted out at that point leaves the droplet under
-an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the surface normal due to the reversiblity of the light path. We are, however interested in the angle <span class="math notranslate nohighlight">\(\phi\)</span> that the ray makes with the incident direction.</p>
+\[n_{\rm air}\sin(\alpha)=n_{\rm water}\sin(\beta).\]</div>
+<p>Inside the droplet, the ray is now hitting the water/air surface at the backside from which it gets reflected. There, the incident angle is also <span class="math notranslate nohighlight">\(\beta\)</span> and the ray is reflected under an angle <span class="math notranslate nohighlight">\(\beta\)</span> as well. At that point, most of the light will, however, exit the drop on the backside, so that only a small fraction is reflected and traveling further to hit a second time the water/air surface at the angle <span class="math notranslate nohighlight">\(\beta\)</span>. The light refracted out at that point leaves the droplet under
+an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the surface normal due to the reversiblity of the light path. We are, however, interested in the angle <span class="math notranslate nohighlight">\(\phi\)</span> that the ray makes with the incident direction.</p>
 <p>This angle <span class="math notranslate nohighlight">\(\phi\)</span> can be calculated from the above sketch to be</p>
 <div class="math notranslate nohighlight">
-\[\phi=4\beta-2\alpha\]</div>
+\[\phi=4\beta-2\alpha.\]</div>
 <p>Since</p>
 <div class="math notranslate nohighlight">
 \[\beta=\sin^{-1}\left (\frac{n_{\rm air}}{n_{\rm water}}\sin(\alpha) \right)\]</div>
 <p>such that finally</p>
 <div class="math notranslate nohighlight">
 \[\phi=4\sin^{-1}\left (\frac{n_{\rm air}}{n_{\rm water}}\sin(\alpha) \right)-2\alpha\]</div>
-<p>So lets have a look at this dependence of the deflection angle as a function of the incidence angle.</p>
+<p>So let us have a look at this dependence of the deflection angle as a function of the incidence angle.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -669,7 +667,7 @@ Maximum deflection angle  41.78815648670841
 </div>
 <div class="section" id="Color-of-the-rainbow">
 <h2>Color of the rainbow<a class="headerlink" href="#Color-of-the-rainbow" title="Permalink to this headline">¶</a></h2>
-<p>The color of the rainbow is now teh result of the fact that the maximum deflection angle depends on the color of the light due to the dispersion. Since we have a refraction, reflection and another refraction, the largest maximum deflection angle is observed for red light, while the smallest one appears for blue light. The diagrams below show this result, which is in general true for materials with normal dispersion.</p>
+<p>The color of the rainbow is now the result of the fact that the maximum deflection angle depends on the color of the light due to the dispersion. Since we have a refraction, reflection and another refraction, the largest maximum deflection angle is observed for red light, while the smallest one appears for blue light. The diagrams below show this result, which is in general true for materials with normal dispersion.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
@@ -707,9 +705,10 @@ Maximum deflection angle  41.78815648670841
 <img alt="../../_images/notebooks_L4_Rainbow_15_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_15_0.png" style="width: 850px; height: 274px;" />
 </div>
 </div>
-<p>This order of the colors is actually true for all incident angles, which raises the question, why the rainbow is actually colored. The blue color of a certain incidence angle would actually overlap with the green color of a different incidence angle and the red color of an even different incidence angle. If you select a specific outgoing angle under which you observe the rainbow, lets say 41°, then you find under this observation angle all color and therefore should observe alway white light.</p>
-<p>This is actually true, if you look at the inside of a rainbow. You clearly recognize that inside the rainbow, it is much brighter than outside. Yet when you reach the maximum angle of each color, you have a region, where even for larger angles for the incidence angles, the deflection angle does not change. Thus if you assume you send in rays at constantly spaced incidence angles, you will have more rays with a deflection angle close to the maximum. The diagram below just counts the number of
-deflection angles in the different for each color and you clearly see, that around the maximum deflection angles for each color you have a strong peak.</p>
+<p>This order of the colors is actually true for all incident angles, which raises the question, why the rainbow is actually colored. The blue color of a certain incidence angle would actually overlap with the green color of a different incidence angle and the red color of an even different incidence angle. If you select a specific outgoing angle under which you observe the rainbow, let us say 41°, then you find under this observation angle all color and, therefore, should observe always white
+light.</p>
+<p>This is actually true if you look at the inside of a rainbow. You clearly recognize that inside the rainbow it is much brighter than outside. Yet when you reach the maximum angle of each color, you have a region, where even for larger angles for the incidence angles, the deflection angle does not change. Thus, if you assume you send in rays at constantly spaced incidence angles, you will have more rays with a deflection angle close to the maximum. The diagram below just counts the number of
+deflection angles in the different for each color and you clearly see that around the maximum deflection angles for each color you have a strong peak.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -735,13 +734,13 @@ deflection angles in the different for each color and you clearly see, that arou
 <img alt="../../_images/notebooks_L4_Rainbow_18_0.png" class="no-scaled-link" src="../../_images/notebooks_L4_Rainbow_18_0.png" style="width: 367px; height: 391px;" />
 </div>
 </div>
-<p>Thus around each droplet on the sky, there is a cone of deflected light reflected back from the sun. On the outside of that cone is red light under an angle of almost <span class="math notranslate nohighlight">\(42^{\circ}\)</span> while on the inside edge we find blue light and finally white light (see left image below). We just have to connect that to the observer now. This is shown in the right sketch. The rainbow therefore results from the fact that we look at different height at different edges of the cone.</p>
+<p>Thus, around each droplet on the sky, there is a cone of deflected light reflected back from the sun. On the outside of that cone is red light under an angle of almost <span class="math notranslate nohighlight">\(42^{\circ}\)</span> while on the inside edge we find blue light and finally white light (see left image below). We just have to connect that to the observer now. This is shown in the right sketch. The rainbow, therefore, results from the fact that we look at different height at different edges of the cone.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="b5f2587f1ebe411a9a73fa69166aa6d1" class="no-scaled-link" src="../../_images/cone.png" style="width: 40%;" /> <img alt="80c1cfe90dec45ee8cd4688ba3a2a67d" class="no-scaled-link" src="../../_images/observation.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="87fe5fe9193d4b3f8a1439df9d432f5b" class="no-scaled-link" src="../../_images/cone.png" style="width: 40%;" /> <img alt="6a97e7f412d14fa5819de988f527ba43" class="no-scaled-link" src="../../_images/observation.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -751,17 +750,17 @@ deflection angles in the different for each color and you clearly see, that arou
 </table>
 <div class="section" id="id1">
 <h3>Rainbow<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>The photos below show a rainbow, where you should see the inhanced white color in the center of the rainbow, the color order of the bow itself und the darker region outside. But there is also a second rainbow appearing on the outside.</p>
+<p>The photos below show a rainbow, where you should see the enhanced white color in the center of the rainbow, the color order of the bow itself and the darker region outside. But there is also a second rainbow appearing on the outside.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="bf79d52161be4c2c975c8d52f5f08b85" class="no-scaled-link" src="../../_images/rainbow_full.JPG" style="width: 100%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="91c299699c4b4aff9385f7408300cff1" class="no-scaled-link" src="../../_images/rainbow_full.JPG" style="width: 100%;" /></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Double rainbow over Grand Canyon. (c) Picture by Frank Cichos</p></td>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Double rainbow over the Grand Canyon. (c) Picture by Frank Cichos</p></td>
 </tr>
 </tbody>
 </table>
@@ -771,28 +770,28 @@ deflection angles in the different for each color and you clearly see, that arou
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="9d9ca792e1bf42239b001c23d4b35569" class="no-scaled-link" src="../../_images/rainbow_gczoom.JPG" style="width: 100%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="d103686a90c44a478d20ba2245ad3730" class="no-scaled-link" src="../../_images/rainbow_gczoom.JPG" style="width: 100%;" /></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Zoom into the rainbow over Grand Canyon. (Picture by Frank Cichos)</p></td>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Zoom into the rainbow over the Grand Canyon. (c) Picture by Frank Cichos</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="Glassbow">
 <h3>Glassbow<a class="headerlink" href="#Glassbow" title="Permalink to this headline">¶</a></h3>
-<p>You can observe a beautiful rainbow at home of you just have a few glass beads. YOu can get these glass beeds from us. They have a diameter of about 200 µm. If you place then on a black background and use a flash lamp, you will observe a nice rainbow as Mr. Märcker did in the photo below. The main difference is the observation angle. Try to calculate the new observation angle for the refractivbe indices of glass.</p>
+<p>You can observe a beautiful rainbow at home if you just have a few glass beads. You can get these glass beeds from us. They have a diameter of about 200 µm. If you place them on a black background and use a flash lamp, you will observe a nice rainbow as Mr. Märcker did in the photo below. The main difference is the observation angle. Try to calculate the new observation angle for the refractive indices of glass.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="5bc9b4295b1f42bfb48230144068b539" class="no-scaled-link" src="../../_images/glassbow.JPG" style="width: 100%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="a2b091dfc6e84010a740415dfe2250a0" class="no-scaled-link" src="../../_images/glassbow.JPG" style="width: 100%;" /></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Reflection of rays in a single drop (c) Picture by Axel Märcker.</p></td>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Reflection of rays in a single drop. (c) Picture by Axel Märcker.</p></td>
 </tr>
 </tbody>
 </table>
@@ -823,7 +822,7 @@ deflection angles in the different for each color and you clearly see, that arou
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Nov 15, 2020.
+        Last updated on Nov 20, 2020.
       </span>
 
     </p>
