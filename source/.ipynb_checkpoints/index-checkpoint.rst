@@ -87,7 +87,14 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L6/Magnifying Glass.ipynb
    notebooks/L6/Microscope.ipynb
    notebooks/L6/Telescope.pynb
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 7:
    
+   lectures/L7/overview_7.rst
+   notebooks/L7/Imaging Errors.ipynb
 
 Indices and tables
 ==================

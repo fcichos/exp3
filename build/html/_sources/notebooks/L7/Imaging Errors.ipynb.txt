@@ -6,6 +6,208 @@
    "source": [
     "## Imaging Errors"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "During our derivation of the imaging equation for lenses and the lens-maker equation we have been working under the paraxial approximation. This approximation stated, that all rays are close to the optical axis and therefore make only small angles with the surface normals of the curved surfaces of lenses (but also mirrors). If we violate this approximation, i.e. if we use rays, which are incident for from the optical axis or strongly inclined, then we end up with reflections and refraction which do not obey the imaging equation. In addition we have seen that light propagation for different colors is subject to different refractive indices (remember the prism). Thus we will induce aberrations, related to color."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "According to Seidel, aberration are classified the following way"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- chromatic aberration\n",
+    "- spherical aberration\n",
+    "- coma\n",
+    "- astigmatism \n",
+    "- field curvature\n",
+    "- field distortion"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Chromatic Aberrations"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Chromatic Aberration are based on the fact that light of different color has a different speed of propgation and thus also a different refractive index. We experienced that also for the prism, where it was useful to create a spectrograph. Here it is causing colored edges in you image, which you do not want.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "As the refractive index for shorter wavelength is typically higher, we expect that the blue color has a shorter focal distance than the red color.\n",
+    "\n",
+    "\n",
+    "\n",
+    "|<img src=\"img/chromatic.png\" width=\"30%\"> <img src=\"img/chromatic_exp.png\" width=\"30%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Chromatic aberration.|\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Such a chromatic aberrations may be corrected by using a system of two lenses as shown below."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/achromat.png\" width=\"30%\"> |\n",
+    "|-|\n",
+    "| **Fig.:** Correction of chromatic aberration.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Such so-called achromatic lenses are typically consisting of a bixconvex lens that is glues to a bi-concave lens. Both lenses are made often made of different materials.\n",
+    "Each of the lenses $i$ have a focal length according to the lensmaker equation\n",
+    "\n",
+    "$$\n",
+    "\\frac{1}{f_i}=(n_i-1)\\rho_i\n",
+    "$$\n",
+    "\n",
+    "where the $\\rho$ is given by\n",
+    "\n",
+    "$$\n",
+    "\\rho_i=\\frac{(R_{i2}-R_{i1})}{R_{i1}R_{i2}}\n",
+    "$$\n",
+    "\n",
+    "Here the $R_{i1},R_{i2}$ denote the different surfaces of the lens from left to right. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "As we have treated lens systems already, we may refer to the calculation for short distances of the lenses and write down the refractive power of the lens system as\n",
+    "\n",
+    "$$\n",
+    "\\frac{1}{f}=(n_1-1)\\rho_1+(n_2-1)\\rho_2\n",
+    "$$\n",
+    "\n",
+    "If now the regfractive index at two different wavelength is given, i.e. $n_{1r},n_{1b}$ for the first lens and $n_{2r},n_{2b}$ for the second lens, we may formulate our color correcrion wish as\n",
+    "\n",
+    "$$\n",
+    "(n_{1r}-1)\\rho_1+(n_{2r}-1)\\rho_1=(n_{1b}-1)\\rho_1+(n_{2b}-1)\\rho_1\n",
+    "$$\n",
+    "\n",
+    "This is just saying that the refractive powers of the lens system for the red and the blue colors should be the same, as then the two colors at least are focused into the same point.\n",
+    "After some slight transformation, this gives us\n",
+    "\n",
+    "$$\n",
+    "\\frac{\\rho_1}{\\rho_2}=-\\frac{n_{2b}-n_{2r}}{n_{1b}-n_{1r}}\n",
+    "$$\n",
+    "\n",
+    "This is a condition for the radii of the two lenses, which can be further teared down, if we consider the lesn system in the image. There the two inner surfaces of the two lenses have the same radius of curvature, i.e. $R_{12}=R_{21}$ and we also find $R_{11}=R_1=-R_{12}=-R_{21}$ and $R_{22}=R_2$. Using this, we may further simplify the above equation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Spherical Aberration"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/spherical.png\" width=\"30%\"> <img src=\"img/spherical_exp.png\" width=\"30%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Spherical aberration.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Coma"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/coma_exp.png\" width=\"45%\"> |\n",
+    "|-|\n",
+    "| **Fig.:** Coma.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Astigmatism"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/astigvert_exp.png\" width=\"45%\"> <img src=\"img/astighor_exp.png\" width=\"43%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Astigmatism of a lens showing the focusing of vertical (left) and horizontal (right) lines of an object at different focus positions for a lens tilted in the beam path.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Field Curvature"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/fieldcurvature_exp.png\" width=\"45%\"> |\n",
+    "|-|\n",
+    "| **Fig.:** Field curvature.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Distortions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/cushion_exp.png\" width=\"45%\"> <img src=\"img/barrel_exp.png\" width=\"45%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Cushion (left) and barrel (right) type of distortions.|"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
