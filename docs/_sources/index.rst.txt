@@ -95,6 +95,13 @@ The fields of optics and quantum mechanics are nowadays very active research are
    
    lectures/L7/overview_7.rst
    notebooks/L7/Imaging Errors.ipynb
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 8:
+   
+   lectures/L8/overview_8.rst
+   notebooks/L8/Wave Optics.ipynb   
 
 Indices and tables
 ==================
