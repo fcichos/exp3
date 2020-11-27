@@ -41,6 +41,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="EXP3 Snippets: Wave Explorer" href="../../snippets/Wave%20Explorer.html" />
     <link rel="prev" title="Lecture Contents" href="../../lectures/L8/overview_8.html" /> 
 </head>
 
@@ -249,11 +250,21 @@
 <li class="toctree-l3"><a class="reference internal" href="#Spherical-wave-propagation">Spherical wave propagation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Interference">Interference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Huygens-Principle">Huygens Principle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Diffraction-pattern-of-a-single-slit">Diffraction pattern of a single slit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Farfield-vs. nearfield">Farfield vs. nearfield</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Comparison-to-the-analytical-solution">Comparison to the analytical solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Interference">Interference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Interferometers">Interferometers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Double-Slit">Double Slit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Thin-Film-Interference">Thin Film Interference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Wave%20Explorer.html">EXP3 Snippets: Wave Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-Waves">Plane Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-wave-propagation">Plane wave propagation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-Waves">Spherical Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-wave-propagation">Spherical wave propagation</a></li>
 </ul>
 </li>
 </ul>
@@ -587,7 +598,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Wave-Optics">
 <h1>Wave Optics<a class="headerlink" href="#Wave-Optics" title="Permalink to this headline">¶</a></h1>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -624,7 +635,7 @@ div.rendered_html tbody tr:hover {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="9ef65a50aec84a65953c38128fa74aa3" class="no-scaled-link" src="../../_images/spectrum1.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="a6b6c3f08a10408db1738a57ef9d2616" class="no-scaled-link" src="../../_images/spectrum1.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -668,7 +679,7 @@ div.rendered_html tbody tr:hover {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="5aed1f9a7a6f44e39bb99b0eda216899" class="no-scaled-link" src="../../_images/wave.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="b01e952e082f47188bc8f2c15f3b64c2" class="no-scaled-link" src="../../_images/wave.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -699,7 +710,7 @@ div.rendered_html tbody tr:hover {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="6c49657a75b945e882406fd527a5445e" class="no-scaled-link" src="../../_images/complex_rep.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="47781e0c36154c898288f785f2125482" class="no-scaled-link" src="../../_images/complex_rep.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -735,18 +746,9 @@ k_{0z}\\
 k_{0}=\frac{2\pi}{\lambda_{0}}=\frac{\omega}{c_{0}}
 \end{equation}</span></p>
 <p>At the same time, its magnitude is also given by the frequency of the light devided by the wave vector. The latter is called a dispersion relation.</p>
-<p>In a medium, the wavevector is by a factor of <span class="math notranslate nohighlight">\(n\)</span> longer, where n is the refractive index. Since the refractive index may be a complex number, e.g. <span class="math notranslate nohighlight">\(n=\eta+i\kappa\)</span>, the wavevector can be imaginary as well. It is then given by</p>
-<p><span class="math">\begin{equation}
-\vec{k}=n\vec{k}_{0}=
-\begin{pmatrix}
-k_{x}^{\prime}+ik_{x}^{"} \\
-k_{y}^{\prime}+ik_{y}^{"} \\
-k_{z}^{\prime}+ik_{z}^{"} \\
-\end{pmatrix}
-\end{equation}</span></p>
-<p>The complex number of the refractive index means, that there is some damping of the wave due to absorption, for example.</p>
+<p>With a few lines of Python code, we will explore planes waves as well as their propagation.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -757,7 +759,7 @@ k_{z}^{\prime}+ik_{z}^{"} \\
 </div>
 <p>Lets have a look at waves and wave propagation. We want to create a wave, which has a wavelength of 532 nm in vacuum.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -770,7 +772,7 @@ k_{z}^{\prime}+ik_{z}^{"} \\
 </div>
 <p>It shall propagate along the z-direction and we wull have a look at the x-z plane.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -783,7 +785,7 @@ k_{z}^{\prime}+ik_{z}^{"} \\
 </div>
 <p>We can plot the electric field in the x-z plane by defining a grid of points (x,z). This is done by the <em>meshgrid</em> function of <em>numpy</em>. The meshgrid returns a 2-dimensional array for each coordinate. Have a look at the values in the meshgrid.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -801,7 +803,7 @@ you want to plot it, you have to calculate the magnitude square of the electric 
 I\propto |E|^{2}
 \end{equation}</span></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -830,7 +832,7 @@ I\propto |E|^{2}
 <h3>Plane wave propagation<a class="headerlink" href="#Plane-wave-propagation" title="Permalink to this headline">¶</a></h3>
 <p>The above graph shows a static snapshot of the plane wave at a time <span class="math notranslate nohighlight">\(t=0\)</span>. We know, however, that a plane wave is propagating in space and time. Since we know how to animate things, we may do that using the <code class="docutils literal notranslate"><span class="pre">ipycanvas</span></code> module.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -843,7 +845,7 @@ I\propto |E|^{2}
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -856,11 +858,24 @@ I\propto |E|^{2}
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "b428c2a0226548d880ec58e02898bae7", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a559d293734d4a3ba4b4fabfd834330c", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <p>To do the animation I use a little trick to get the same color map as in the matplotlib plotting. The function below uses the matplotlib color map <code class="docutils literal notranslate"><span class="pre">seismic</span></code> and the corresponding mapping of values with a given minimum <code class="docutils literal notranslate"><span class="pre">vmin</span></code> and maximum <code class="docutils literal notranslate"><span class="pre">vmax</span></code> value. The mapping is done in the animation function with <code class="docutils literal notranslate"><span class="pre">c=m.to_rgba(tmp)</span></code>.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="816b3fd993b242229a84c5f05b8d4ca2" class="no-scaled-link" src="notebooks/L8/img/plane_prop.mov" style="width: 40%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> . Propagating spherical waves for positive and negative wavenumber.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -875,9 +890,17 @@ I\propto |E|^{2}
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+zsh:1: unknown file attribute: i
+</pre></div></div>
+</div>
 <p>This is our animation function, where I provide time and the wavevector as arguments, such that we may change both parameters easily.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -895,7 +918,7 @@ I\propto |E|^{2}
 </div>
 <p>With the call below, you may animate the wave now with different refractive indices.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -919,7 +942,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 \end{equation}</span></p>
 <p>Note that we have to introduce an additional scaling of the amplitude with the inverse distance of the source. This is due to energy conservation, as we require that all the energy that flows through all spheres around the source is constant.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -932,7 +955,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 </div>
 <p>Lets have a look at the electric field of the spherical wave. Below is some code plotting the electric field is space. The source is at the origin and the plot nicely shows, that the amplitude decays with the distance.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -942,7 +965,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">5e-6</span><span class="p">,</span><span class="mf">5e-6</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
 
 <span class="n">X</span><span class="p">,</span><span class="n">Z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-<span class="n">r</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Z</span><span class="p">])</span>
+<span class="n">r</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Z</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
 
 <span class="n">wavelength</span><span class="o">=</span><span class="mf">532e-9</span>
 <span class="n">k0</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">wavelength</span>
@@ -963,25 +986,16 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-&lt;ipython-input-58-2df42afded16&gt;:7: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
-  r=np.array([X,0,Z])
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L8_Wave_Optics_43_1.png" class="no-scaled-link" src="../../_images/notebooks_L8_Wave_Optics_43_1.png" style="width: 342px; height: 334px;" />
+<img alt="../../_images/notebooks_L8_Wave_Optics_44_0.png" class="no-scaled-link" src="../../_images/notebooks_L8_Wave_Optics_44_0.png" style="width: 342px; height: 334px;" />
 </div>
 </div>
 <p>The line plots below show that the field amplitude rapidly decays and the intensity follows a <span class="math notranslate nohighlight">\(1/r^2\)</span> law as expected. The slight deiviation at small distances is an artifact from our discretization. We used the image above to extract the line plot and therefore never exactly hit <span class="math notranslate nohighlight">\(r=0\)</span>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1008,14 +1022,14 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L8_Wave_Optics_45_0.png" class="no-scaled-link" src="../../_images/notebooks_L8_Wave_Optics_45_0.png" style="width: 853px; height: 347px;" />
+<img alt="../../_images/notebooks_L8_Wave_Optics_46_0.png" class="no-scaled-link" src="../../_images/notebooks_L8_Wave_Optics_46_0.png" style="width: 853px; height: 347px;" />
 </div>
 </div>
 <div class="section" id="Spherical-wave-propagation">
 <h3>Spherical wave propagation<a class="headerlink" href="#Spherical-wave-propagation" title="Permalink to this headline">¶</a></h3>
 <p>We can also visualize the animation our spherical wave to check for the direction of the wave propagation.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1026,7 +1040,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1039,10 +1053,10 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1ce4b7aeba9c4ee0be124610d0ef5a6e", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "c4fc9c6f28934883b9eb44c41f9a8c47", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1059,7 +1073,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1068,239 +1082,31 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 </pre></div>
 </div>
 </div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="f2e3c0827efa49849950e6aa2a16d0c2" class="no-scaled-link" src="notebooks/L8/img/out.mov" style="width: 20%;" /> <img alt="86fbbc59ee444ccd9001b7e381122f76" class="no-scaled-link" src="notebooks/L8/img/in.mov" style="width: 20%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> . Propagating spherical waves for positive and negative wavenumber.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="section" id="Interference">
 <h2>Interference<a class="headerlink" href="#Interference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Interferometers">
+<h3>Interferometers<a class="headerlink" href="#Interferometers" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="Huygens-Principle">
-<h2>Huygens Principle<a class="headerlink" href="#Huygens-Principle" title="Permalink to this headline">¶</a></h2>
-<p>The Huygens principle states, that each point of a wavefront is the source of a spherical wave in forward direction. This means nothing else, that any wave can be expanded into a superposition of spherical waves, which is the fundamental of Mie scattering for example. Yet, the overall statement of this principle seems a bit unphysical. Classically, accelerated charges are the source of electromagnetic waves. If there is no accelerated charge, there is no wave. Yet, the Huygens principle is in
-accord with quantum field theory.</p>
+<div class="section" id="Double-Slit">
+<h3>Double Slit<a class="headerlink" href="#Double-Slit" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="Diffraction-pattern-of-a-single-slit">
-<h2>Diffraction pattern of a single slit<a class="headerlink" href="#Diffraction-pattern-of-a-single-slit" title="Permalink to this headline">¶</a></h2>
-<p>Here we would like to have a look at the Huygens principle by playing around with the interference from multiple sources arranged on a line. Using this way we can simulate the diffraction patterns from a slit. So here is our spherical wave function again.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">spherical_wave</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">omega</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">r0</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
-    <span class="n">k</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="n">r0</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">d</span><span class="o">-</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">))</span><span class="o">/</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<p>The next cell defines the space for our calculation again. The value of <span class="math notranslate nohighlight">\(d\)</span> denotes the slit width, which we want to vary to see the effect of changing slit width vs. wavelength, which we chose to be <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">5e-6</span><span class="p">,</span><span class="mf">5e-6</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">10e-6</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
-
-<span class="n">X</span><span class="p">,</span><span class="n">Z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-<span class="n">r</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Z</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
-
-<span class="n">wavelength</span><span class="o">=</span><span class="mf">532e-9</span>
-<span class="n">k0</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">wavelength</span>
-<span class="n">c</span><span class="o">=</span><span class="mi">299792458</span>
-<span class="n">omega0</span><span class="o">=</span><span class="n">k0</span><span class="o">*</span><span class="n">c</span>
-<span class="n">k</span><span class="o">=</span><span class="n">k0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<p>The next cell sums up the electric field of 200 spherical waves in the x-z plane such that we can plot the intensity or the field in space.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">slit</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
-    <span class="n">field</span><span class="o">=</span><span class="mi">0</span>
-    <span class="k">for</span> <span class="n">x0</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="mi">400</span><span class="p">):</span>
-        <span class="n">r0</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.1e-6</span><span class="p">])</span>
-        <span class="n">field</span><span class="o">=</span><span class="n">field</span><span class="o">+</span><span class="n">spherical_wave</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">omega0</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">r0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-
-    <span class="n">field</span><span class="o">=</span><span class="n">field</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
-
-</pre></div>
-</div>
-</div>
-<p>Let us plot the wavefronts and the intensity pattern in space. As the intensity decays strongly with distance from the slit, we do that by taking the log of the intensity.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">extent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mf">1e6</span>
-<span class="n">field</span><span class="o">=</span><span class="n">slit</span><span class="p">(</span><span class="o">-</span><span class="mf">1e-6</span><span class="p">,</span><span class="mf">1e-6</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">transpose</span><span class="p">()),</span><span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">,</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;seismic&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;z [µm]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;x [µm]&#39;</span><span class="p">)</span>
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span><span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;z [µm]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;x [µm]&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/notebooks_L8_Wave_Optics_62_0.png" class="no-scaled-link" src="../../_images/notebooks_L8_Wave_Optics_62_0.png" style="width: 718px; height: 334px;" />
-</div>
-</div>
-<div class="section" id="Farfield-vs. nearfield">
-<h3>Farfield vs. nearfield<a class="headerlink" href="#Farfield-vs. nearfield" title="Permalink to this headline">¶</a></h3>
-<p>You might remember that there is a difference between the nearfield and the farfield intensity pattern begind a slit or in general. The farfield approximation is the usual approximation which we deal with in the undergraduate lectures. It measures the intensity at large distance. The Fresnel approximation is looking at the near fields, where the wavefronts are curved and this is of relevance for the diffraction pattern. Let us look at two distances, <span class="math notranslate nohighlight">\(d=1\)</span> µm and <span class="math notranslate nohighlight">\(d=100\)</span> µm to show
-the difference between both intensity patterns.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">x1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">10e-6</span><span class="p">,</span><span class="mf">10e-6</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1e-6</span><span class="p">])</span>
-<span class="n">X</span><span class="p">,</span><span class="n">Z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-<span class="n">r</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Z</span><span class="p">])</span>
-<span class="n">d</span><span class="o">=</span><span class="mf">5e-6</span>
-
-<span class="c1">## near field calculation</span>
-<span class="n">field</span><span class="o">=</span><span class="n">slit</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
-
-<span class="n">x2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">50e-6</span><span class="p">,</span><span class="mf">50e-6</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">100e-6</span><span class="p">])</span>
-<span class="n">X</span><span class="p">,</span><span class="n">Z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-<span class="n">r</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">Z</span><span class="p">])</span>
-
-<span class="c1">## far field calculation</span>
-<span class="n">field1</span><span class="o">=</span><span class="n">slit</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-&lt;ipython-input-68-1263304c3c5c&gt;:4: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
-  r=np.array([X,0,Z])
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-68-1263304c3c5c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-red-fg">## near field calculation</span>
-<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span>field<span class="ansi-blue-fg">=</span>slit<span class="ansi-blue-fg">(</span>d<span class="ansi-blue-fg">,</span>r<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span> x2<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">50e-6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">50e-6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">TypeError</span>: slit() missing 1 required positional argument: &#39;r&#39;
-</pre></div></div>
-</div>
-<p>The two plots below show the drastic difference between the diffraction pattern in the near field and the far field. The near field resembles to be a shadow picture, while the far field intensity pattern is considerable wider than the slit. This even becomes worse, if we make the slit narrower.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">field</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=-</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;near field&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x [µm]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;intensity [a.u.]&#39;</span><span class="p">)</span>
-
-
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">field1</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=-</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;far field&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x [µm]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;intensity [a.u.]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="Comparison-to-the-analytical-solution">
-<h3>Comparison to the analytical solution<a class="headerlink" href="#Comparison-to-the-analytical-solution" title="Permalink to this headline">¶</a></h3>
-<p>We know now the numerical solution summing up many spherical waves. If we calculate the analytical pattern, we actually do the same thing. We sum up many spherical waves for large distances. The analytical result we obtain for a single slit is</p>
-<p><span class="math">\begin{equation}
-I=I_{0}\left (\frac{\sin(\delta)}{\delta}\right )^2
-\end{equation}</span></p>
-<p>where <span class="math">\begin{equation}
-\delta=\frac{\pi d}{\lambda}\sin(\theta)
-\end{equation}</span></p>
-<p>and <span class="math notranslate nohighlight">\(d\)</span> is the slit width. <span class="math notranslate nohighlight">\(\theta\)</span> is the diffraction angle. So lets compare our numerical calculation with the analytical prediction.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">single_slit</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">theta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-    <span class="n">delta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="n">wavelength</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span><span class="o">/</span><span class="n">delta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">intensity</span><span class="o">=</span><span class="n">single_slit</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mf">100e-6</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<p>The plot below nicely shows that we are not to bad with our numerical simulation and the 200 sources. You may want to further explore how the number of sources used changes the result. How many sources would be enough?</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">field1</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;k-.&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="o">*</span><span class="mf">1e6</span><span class="p">,</span><span class="n">intensity</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x [µm]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;intensity [a.u.]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<p>You may also want to explore what the wavelength and the slit width change on the diffraction pattern. The next step would be to show the diffraction pattern from a grating or even to show the diffraction from a spherical particles, where the sources are spread over spherical region is space. I would leave this effort to you and your project.</p>
-<p>Create the intensity pattern generated by a grating with 10 slits of width <span class="math notranslate nohighlight">\(d\)</span> and distance <span class="math notranslate nohighlight">\(D\)</span>. Compare that to the analytical solution.</p>
-<p><span class="math">\begin{equation}
-I=I_{0}\left (\frac{\sin(\delta)}{\delta}\right )^2\left (\frac{\sin(N\gamma)}{\sin(\gamma)}\right )^2
-\end{equation}</span></p>
-<p>where <span class="math">\begin{equation}
-\gamma=\frac{\pi D}{\lambda}\sin(\theta)
-\end{equation}</span></p>
-<p>and <span class="math notranslate nohighlight">\(N\)</span> is the number of slits.</p>
+<div class="section" id="Thin-Film-Interference">
+<h3>Thin Film Interference<a class="headerlink" href="#Thin-Film-Interference" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
@@ -1312,6 +1118,8 @@ I=I_{0}\left (\frac{\sin(\delta)}{\delta}\right )^2\left (\frac{\sin(N\gamma)}{\
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../snippets/Wave%20Explorer.html" class="btn btn-neutral float-right" title="EXP3 Snippets: Wave Explorer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../../lectures/L8/overview_8.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -1326,7 +1134,7 @@ I=I_{0}\left (\frac{\sin(\delta)}{\delta}\right )^2\left (\frac{\sin(N\gamma)}{\
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Nov 22, 2020.
+        Last updated on Nov 27, 2020.
       </span>
 
     </p>
