@@ -104,6 +104,21 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L8/Wave Optics.ipynb   
    snippets/Wave Explorer.ipynb
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 9:
+   
+   lectures/L9/overview_9.rst
+   notebooks/L9/Interference.ipynb   
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 10:
+   
+   lectures/L10/overview_10.rst
+   notebooks/L10/Interference.ipynb    
+   notebooks/L10/Diffraction.ipynb
+   
 Indices and tables
 ==================
 

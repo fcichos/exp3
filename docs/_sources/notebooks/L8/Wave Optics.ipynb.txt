@@ -8,38 +8,6 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 2,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import numpy as np\n",
-    "import matplotlib.pyplot as plt\n",
-    "from time import sleep,time\n",
-    "from ipycanvas import MultiCanvas, hold_canvas,Canvas\n",
-    "import matplotlib as mpl\n",
-    "import matplotlib.cm as cm\n",
-    "\n",
-    "\n",
-    "%matplotlib inline\n",
-    "%config InlineBackend.figure_format = 'retina'\n",
-    "\n",
-    "# default values for plotting\n",
-    "plt.rcParams.update({'font.size': 12,\n",
-    "                     'axes.titlesize': 18,\n",
-    "                     'axes.labelsize': 16,\n",
-    "                     'axes.labelpad': 14,\n",
-    "                     'lines.linewidth': 1,\n",
-    "                     'lines.markersize': 10,\n",
-    "                     'xtick.labelsize' : 16,\n",
-    "                     'ytick.labelsize' : 16,\n",
-    "                     'xtick.top' : True,\n",
-    "                     'xtick.direction' : 'in',\n",
-    "                     'ytick.right' : True,\n",
-    "                     'ytick.direction' : 'in',}) "
-   ]
-  },
-  {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -439,7 +407,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Interference is one of the most important phenomena in physics."
+    "Interference is one of the most important phenomena in physics. It is a realization of the superposition principle which is valid, if the differential equation which produce the solutions is linear as we already stated above."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's assume we have two solutions of the wave equation $U_1(\\vec{r})$ and $U_2(\\vec{r})$. The superposition allows to add them to get a new solution $U(\\vec{r})$"
    ]
   },
   {
@@ -448,30 +423,35 @@
    "source": [
     "$$\n",
     "U(\\vec{r})=U_{1}(\\vec{r})+U_{2}(\\vec{r})\n",
-    "$$\n",
-    "\n",
-    "\n",
-    "$$I_{1}=|U_1|^2$$\n",
-    "\n",
-    "$$I_{2}=|U_2|^2$$"
+    "$$\n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "To calculate the intensity of the total wave, we have to calculate therfore the magnitude square of the sum of the two waves. \n",
+    "\n",
     "\\begin{eqnarray}\n",
     "I &= &|U|^2\\\\\n",
     "  &= &|U_1+U_2|\\\\\n",
     "  &= &|U_1|^2+|U_2|^2+U^{*}_1 U_2 + U_1 U^{*}_1  \n",
-    "\\end{eqnarray}"
+    "\\end{eqnarray}\n",
+    "\n",
+    "which results in two terms, which resemble to be the sum of the two waves. Yet, there are two additional cross-term, which say that the resulting intensity is not just the sum of the two intensities in case the two terms do not cancel out."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "If we write\n",
+    "If we use\n",
+    "\n",
+    "$$I_{1}=|U_1|^2$$\n",
+    "\n",
+    "$$I_{2}=|U_2|^2$$\n",
+    "\n",
+    "we can express the individual waves as\n",
     "\n",
     "$$\n",
     "U_{1}=\\sqrt{I_1}e^{i\\phi_1}\n",
@@ -483,7 +463,7 @@
     "U_{2}=\\sqrt{I_2}e^{i\\phi_2}\n",
     "$$\n",
     "\n",
-    "then we obtain \n",
+    "where the exponential term with $\\phi_1,\\phi_2$ denotes the phase of the two spatial amplitudes.  Taking the magnitude square of the sum of those two wave we then obtain \n",
     "\n",
     "$$\n",
     "I=I_{1}+I_{2}+2\\sqrt{I_1 I_2}\\cos(\\Delta \\phi)\n",
@@ -495,7 +475,7 @@
     "\\Delta \\phi=\\phi_{2}-\\phi_1\n",
     "$$\n",
     "\n",
-    "which clearly tells us, that the total intensity of two waves in not the sum of the two intensities, but contains an additional term, which depends on the phase difference between the two wave. This term $2\\sqrt{I_1 I_2}\\cos(\\Delta \\phi)$ is called the interference term."
+    "which now clearly tells us, that the total intensity of two waves in not the sum of the two intensities, but contains an additional term, which depends on the phase difference between the two wave. This term $2\\sqrt{I_1 I_2}\\cos(\\Delta \\phi)$ is called the interference term."
    ]
   },
   {
@@ -520,10 +500,19 @@
     "\n",
     "- $\\Delta \\phi=0,2\\pi,2\\pi m$: $I=4I_{0}$, where m is an integer\n",
     "\n",
-    "**Destructive Interference\n",
+    "\n",
+    "|<img src=\"img/w_0.png\" width=\"33%\"> <img src=\"img/w_0.png\" width=\"33%\"> <img src=\"img/sum_const.png\" width=\"33%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Constructive interference of two wave (left, middle) and the sumn of the two wave amplitudes.|\n",
+    "\n",
+    "\n",
+    "**Destructive Interference**\n",
     "\n",
     "- $\\Delta \\phi=\\pi,3\\pi,(2m-1)\\pi$: $I=0$, where m is an integer  \n",
     "\n",
+    "|<img src=\"img/w_0.png\" width=\"33%\"> <img src=\"img/w_pi.png\" width=\"33%\"> <img src=\"img/sum_destr.png\" width=\"33%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Destructive interference of two wave (left, middle) and the sumn of the two wave amplitudes.|\n",
     "\n",
     "**Sum of both Intensities**\n",
     "\n",
@@ -531,6 +520,52 @@
     "\n",
     "\n",
     "Note that a phase angle corresponds to length, which, when multiplied with $k$ gives the phase angle, i.e. $\\Delta \\phi=k\\Delta r$. Thus a phase angle of $2\\pi$ corresponds to a path difference of $\\Delta r=\\lambda$. All other relations follow from that. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Interference of Waves in Space"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Interference may give rise to distinct patterns in space, which can be used for lithography purposes, for example. If we superpose two plane waves with different directions of the wave propagation, we will in general obtain a stripe like intensity pattern as depicted below."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/plane_plane.png\" width=\"90%\"> |\n",
+    "|-|\n",
+    "| **Fig.:** Interference of two plane waves propagating under an angle of 45$^{\\circ}$. The two left graphs show the original waves. The two right the total amplitude and the intensity pattern.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The interference of the two plane wave shown above leads also to stripe pattern on a screen (think of the intensity pattern at z=10 µm for example)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If we use a spherical and a plane wave, we will find a circular shaped interference intensity due to the curvature of the wavefronts of the spherical wave. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/sphere_plane.png\" width=\"90%\"> |\n",
+    "|-|\n",
+    "| **Fig.:** Interference of a spherical wave and a plane wave (left amplitude, right intensity).|"
    ]
   }
  ],
