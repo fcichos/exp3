@@ -61,7 +61,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Due to the short wavelength in the optical range, interference is an extremely senstive tool to measures small differences in the optical path length. "
+    "Due to the short wavelength in the optical range, interference is an extremely senstive tool to measures small differences in the optical path length. This is used in a number of application culminating in the detection of gravitational waves on large length scales and single molecules on the other extreme."
    ]
   },
   {
@@ -69,6 +69,13 @@
    "metadata": {},
    "source": [
     "## Michelson Interferometer"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The Michelson interferometer is probably the most famous one due to the experiments by Michelson on the existance of th ether (a medium in which light was supposed to propagate) and nowadays also by the LIGO experiments for the detection of gravitational waves.The Michelson interferometer splits in incoming light wave with a beamsplitter (BS) into two equally intense waves that are directed towards two mirrors (M)."
    ]
   },
   {
@@ -84,7 +91,22 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "The light is reflected by the mirrors and joined again at the beamsplitter to propagate towards the screen. If the incident wave is a perfewct plane wave and the interferometer is aligned perfectly with both arms having the same length, you will observe a bright screen, which, when one are is elongated by half a wavelength is turin dark to show destructive interference. \n",
+    "Yet, this perfect alignment does not exist neither a perfect plane wave. Therefore the pattern observed at the screen is either a stripe or ring pattern. Note that if the screen would be completely dark due to desctructive interference, all light would be reflected back towards the laser. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "## Mach-Zehnder Interferometer"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Another important interferometer is the Mach Zehnder interferometer, which is sketched below. There two beamsplitters separate and unite the beams which finally end on two screens. The screens do both display interference patterns, which are complementary, meaning that the regions where the screens are bright on one side are dark on the other screen. This type of interfereometer is often used in integrated circuits and quantum information technology."
    ]
   },
   {
@@ -107,7 +129,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/sagnac.png\" width=\"40%\"> |\n",
+    "|<img src=\"img/sagnac.png\" width=\"50%\"> |\n",
     "|-|\n",
     "| **Fig.:** Sagnac interferometer.|"
    ]
@@ -120,11 +142,13 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "|<img src=\"img/thin_film.png\" width=\"60%\"> |\n",
+    "|-|\n",
+    "| **Fig.:** Thin film interference.|"
+   ]
   }
  ],
  "metadata": {
