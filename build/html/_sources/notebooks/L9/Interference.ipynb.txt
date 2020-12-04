@@ -18,19 +18,6 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<div class=\"alert alert-info\">\n",
-    "\n",
-    "**Coherence** \n",
-    "    \n",
-    "Two waves are called coherent, if they exihibit a fixed phase relation over time. A constant phase relation allows the observation of interference effects. \n",
-    " \n",
-    "</div>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
     "|<img src=\"img/coherence.png\" width=\"90%\"> |\n",
     "|-|\n",
     "| **Fig.:** Two waves of different frequency over time.|"
@@ -47,7 +34,62 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The temporal coherence of two waves is now defined by the time it takes for the two waves to obtain a ohase difference of $2\\pi$."
+    "The temporal coherence of two waves is now defined by the time it takes for the two waves to obtain a phase difference of $2\\pi$. The phase difference between two wave of frequency $\\nu_1$ and $\\nu_2$ is given by\n",
+    "\n",
+    "$$\n",
+    "\\Delta phi = 2\\pi (\\nu_2-\\nu_1)(t-t_0)\n",
+    "$$\n",
+    "\n",
+    "Here $t_0$ refers to the time, when thw two waves were perfectly in sync. Lets assume that the two frequencies are seperarated from a central frequency $\\nu_0$ such that\n",
+    "\n",
+    "$$\n",
+    "\\nu_1=\\nu_0-\\Delta \\nu/2\n",
+    "$$\n",
+    "$$\n",
+    "\\nu_2=\\nu_0-\\Delta \\nu/2\n",
+    "$$\n",
+    "\n",
+    "Inserting this into the first equation yields\n",
+    "\n",
+    "$$\n",
+    "\\Delta \\phi = 2\\pi \\Delta \\nu \\Delta t\n",
+    "$$\n",
+    "\n",
+    "with $\\Delta t=t-t_0$. We can now define the coherence time as the time interval over which the phase shift $\\Delta \\phi$ grows to $2\\pi$, i.e. $\\Delta \\phi=2\\pi$. The coherence time is thus\n",
+    "\n",
+    "$$\n",
+    "\\tau_{c}=\\Delta t =\\frac{1}{\\Delta \\nu}\n",
+    "$$\n",
+    "\n",
+    "Thus the temporal coherence and the frequency distribution of the light are intrisincly connected. Monochromatic light has $\\Delta nu=0$ and thus the coherence time is infinitely long. Light with a wide spectrum (white light for example) therefore has and extremly short coherence time. \n",
+    "\n",
+    "The coherence time is also connected to a coherence length. The coherence length $L_c$ is given by the distance light travels within the coherence time $\\tau_c$, i.e. \n",
+    "\n",
+    "$$\n",
+    "L_c=c\\tau_c\n",
+    "$$\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "**Coherence** \n",
+    "    \n",
+    "Two waves are called coherent, if they exihibit a fixed phase relation over time. A constant phase relation allows the observation of interference effects. \n",
+    "\n",
+    "The coherence time $\\tau_c$ is given by\n",
+    "$$ \n",
+    "\\tau_{c}=\\Delta t =\\frac{1}{\\Delta \\nu}\n",
+    "$$\n",
+    "   \n",
+    "The coherence length $L_c$ is given by     \n",
+    "$$\n",
+    "L_c=c\\tau_c\n",
+    "$$\n",
+    "</div>"
    ]
   },
   {
@@ -61,7 +103,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Due to the short wavelength in the optical range, interference is an extremely senstive tool to measures small differences in the optical path length. This is used in a number of application culminating in the detection of gravitational waves on large length scales and single molecules on the other extreme."
+    "Due to the short wavelength in the optical range, interference is an extremely senstive tool to measures small differences in the optical path length. This is used in a number of application culminating in the detection of gravitational waves on large length scales and single molecules on the other extreme. The examples below all use the **interference of two partial waves**. "
    ]
   },
   {
@@ -129,6 +171,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "The Sagnac interferometer is a special type of interferometer which uses a clockwise and counter-clockwise propagating beam in a system as shown below. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "|<img src=\"img/sagnac.png\" width=\"50%\"> |\n",
     "|-|\n",
     "| **Fig.:** Sagnac interferometer.|"
@@ -138,16 +187,126 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Thin Film Interference"
+    "The two counter propagating rotation directions of light propagation allow us to rotate at the frequency $\\Omega$ the interferometer around an axis perpendicular on the interferometer plane. In this case both light waves travel different distance. \n",
+    "\n",
+    "The distance is either longer or shorter by \n",
+    "\n",
+    "$$\n",
+    "dx=\\Omega r dt\n",
+    "$$\n",
+    "\n",
+    "if we consider a short time intervall $dt$ and a circular interferometer with a radius $r$. The time interval is given by $dt=dl/c$.\n",
+    "To obtain the path length we have to intergrate over one round\n",
+    "\n",
+    "$$\n",
+    "x=\\int dx = \\frac{\\omega}{c}2A\n",
+    "$$\n",
+    "\n",
+    "where $A$ corresponds to the area encircled by the light path on a radius $r$.\n",
+    "\n",
+    "The final phase shift of the two wave propagating in the different direction is then \n",
+    "\n",
+    "$$\n",
+    "\\Delta \\phi =\\frac{2\\pi}{\\lambda}2 x=\\frac{8\\pi}{\\lambda c}\\Omega \n",
+    "$$\n",
+    "\n",
+    "If the axis of rotation has now the angle $\\theta$ with the normal to the plane $A$, the phase shift becomes\n",
+    "\n",
+    "$$\n",
+    "\\Delta \\phi =\\frac{2\\pi}{\\lambda}2 x=\\frac{8\\pi}{\\lambda c}\\Omega \n",
+    "$$\n",
+    "\n",
+    "Thus the Sagnac interferometer can be used as a gyroscope. This is actually its main application, for example in military airplanes. \n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/thin_film.png\" width=\"60%\"> |\n",
+    "## Double slit"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Our next example will just consider two tiny slits in a wall, which let two waves pass. The waves can travel in all directions. We will actually consider this later in the section as Huygens waves.\n",
+    "The two waves travel towards a screen, which is far away from the double slit. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/double_slit.png\" width=\"400px%\"> |\n",
     "|-|\n",
-    "| **Fig.:** Thin film interference.|"
+    "| **Fig.:** Double Slit.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "When you consider the image, you recognize that the light from the lower slit has to travel a distance $\\Delta s$ farther as compared to the wave from the upper slit. This path length difference is given by\n",
+    "\n",
+    "$$\n",
+    "\\Delta s =d\\sin(\\theta)\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can now decide under which conditions we observe constructure or destructive interference.\n",
+    "\n",
+    "**constructive interference**\n",
+    "$$d\\sin(\\theta)=m\\lambda, m=0,1,\\ldots $$\n",
+    "\n",
+    "**destructive interference**\n",
+    "$$d\\sin(\\theta)=\\left (m+\\frac{1}{2}\\right )\\lambda, m=0,1,\\ldots $$\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Having the angles for the constructive and destructive interference on the screen, we would also like to have the intensity distribution, which we can calculate from two spherical waves\n",
+    "\n",
+    "The total amplitude of the two waves is given by\n",
+    "\n",
+    "$$\n",
+    "U=U_1+ U_2 = A e^{-ikr}+A e^{-ikr+i\\phi}\n",
+    "$$\n",
+    "\n",
+    "For simplicity we have given thw two waves the same amplitude $A$. Also the distance dependence of the amplitude of a spherical wave is put into the amplitude so that we don't have to write it explicity every time.\n",
+    "\n",
+    "The intensity is then the magnitude square if the total amplitude \n",
+    "\n",
+    "$$\n",
+    "I=|U|^2=4I_{0}\\cos^2(\\phi/2)\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Given that we know the pathlength difference $\\Delta s$ we can also express the intensity as a function of the angle $\\theta$ at which we observe the interference on the screen.\n",
+    "\n",
+    "$$\n",
+    "I=4I_0 \\cos^2\\left ( \\frac{k \\Delta s}{2}\\right)=4I_0 \\cos^2\\left ( \\frac{\\pi d \\sin(\\theta)}{\\lambda}\\right)\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/double_slit_int.png\" width=\"800px%\"> |\n",
+    "|-|\n",
+    "| **Fig.:** Double slit interference pattern for two different wavelength (532 nm, 700 nm) and two different slit separations (left: 3 µm, right: 5 µm).|"
    ]
   }
  ],

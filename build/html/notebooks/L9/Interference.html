@@ -277,7 +277,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#Michelson-Interferometer">Michelson Interferometer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Sagnac-Interferometer">Sagnac Interferometer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Thin-Film-Interference">Thin Film Interference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Double-slit">Double slit</a></li>
 </ul>
 </li>
 </ul>
@@ -285,7 +285,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L10/overview_10.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L10/Interference.html">Thin Film Interference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Two-Wave-Interference">Two Wave Interference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Multiple-Wave-Interference">Multiple Wave Interference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../L10/Interference.html#Fabry-Perot-Interferometer">Fabry Perot Interferometer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../L10/Interference.html#Anti-Reflection-Coating">Anti-Reflection Coating</a></li>
@@ -394,22 +393,18 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L9/Interference.ipynb`_</span></a>.
+<p>This page was generated from <a href="#id5"><span class="problematic" id="id6">`source/notebooks/L9/Interference.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L9/Interference.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
 <div class="section" id="Coherence">
 <h1>Coherence<a class="headerlink" href="#Coherence" title="Permalink to this headline">¶</a></h1>
 <p>One of the important properties e have assumed in the calculation of interference during the last lecture has been coherence. Coherence denotes the phase relation between two waves.</p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Coherence</strong></p>
-<p>Two waves are called coherent, if they exihibit a fixed phase relation over time. A constant phase relation allows the observation of interference effects.</p>
-</div>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="36efaf6b84ff42b78a6630e1d886f65d" class="no-scaled-link" src="../../_images/coherence.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="515f3b5ac62047e59e0500d8fc82da59" class="no-scaled-link" src="../../_images/coherence.png" style="width: 90%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -418,11 +413,38 @@
 </tbody>
 </table>
 <p>The above image shows the timetrace of the amplitude of two wave with slightly different frequency. Due to the frequency, the waves run out of phase and have acquired a phase different of <span class="math notranslate nohighlight">\(\pi\)</span> after <span class="math notranslate nohighlight">\(40\)</span> fs.</p>
-<p>The temporal coherence of two waves is now defined by the time it takes for the two waves to obtain a ohase difference of <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
+<p>The temporal coherence of two waves is now defined by the time it takes for the two waves to obtain a phase difference of <span class="math notranslate nohighlight">\(2\pi\)</span>. The phase difference between two wave of frequency <span class="math notranslate nohighlight">\(\nu_1\)</span> and <span class="math notranslate nohighlight">\(\nu_2\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[\Delta phi = 2\pi (\nu_2-\nu_1)(t-t_0)\]</div>
+<p>Here <span class="math notranslate nohighlight">\(t_0\)</span> refers to the time, when thw two waves were perfectly in sync. Lets assume that the two frequencies are seperarated from a central frequency <span class="math notranslate nohighlight">\(\nu_0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\nu_1=\nu_0-\Delta \nu/2\]</div>
+<div class="math notranslate nohighlight">
+\[\nu_2=\nu_0-\Delta \nu/2\]</div>
+<p>Inserting this into the first equation yields</p>
+<div class="math notranslate nohighlight">
+\[\Delta \phi = 2\pi \Delta \nu \Delta t\]</div>
+<p>with <span class="math notranslate nohighlight">\(\Delta t=t-t_0\)</span>. We can now define the coherence time as the time interval over which the phase shift <span class="math notranslate nohighlight">\(\Delta \phi\)</span> grows to <span class="math notranslate nohighlight">\(2\pi\)</span>, i.e. <span class="math notranslate nohighlight">\(\Delta \phi=2\pi\)</span>. The coherence time is thus</p>
+<div class="math notranslate nohighlight">
+\[\tau_{c}=\Delta t =\frac{1}{\Delta \nu}\]</div>
+<p>Thus the temporal coherence and the frequency distribution of the light are intrisincly connected. Monochromatic light has <span class="math notranslate nohighlight">\(\Delta nu=0\)</span> and thus the coherence time is infinitely long. Light with a wide spectrum (white light for example) therefore has and extremly short coherence time.</p>
+<p>The coherence time is also connected to a coherence length. The coherence length <span class="math notranslate nohighlight">\(L_c\)</span> is given by the distance light travels within the coherence time <span class="math notranslate nohighlight">\(\tau_c\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[L_c=c\tau_c\]</div>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Coherence</strong></p>
+<p>Two waves are called coherent, if they exihibit a fixed phase relation over time. A constant phase relation allows the observation of interference effects.</p>
+<p>The coherence time <span class="math notranslate nohighlight">\(\tau_c\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[\tau_{c}=\Delta t =\frac{1}{\Delta \nu}\]</div>
+<p>The coherence length <span class="math notranslate nohighlight">\(L_c\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[L_c=c\tau_c\]</div>
+</div>
 </div>
 <div class="section" id="Interferometers">
 <h1>Interferometers<a class="headerlink" href="#Interferometers" title="Permalink to this headline">¶</a></h1>
-<p>Due to the short wavelength in the optical range, interference is an extremely senstive tool to measures small differences in the optical path length. This is used in a number of application culminating in the detection of gravitational waves on large length scales and single molecules on the other extreme.</p>
+<p>Due to the short wavelength in the optical range, interference is an extremely senstive tool to measures small differences in the optical path length. This is used in a number of application culminating in the detection of gravitational waves on large length scales and single molecules on the other extreme. The examples below all use the <strong>interference of two partial waves</strong>.</p>
 <div class="section" id="Michelson-Interferometer">
 <h2>Michelson Interferometer<a class="headerlink" href="#Michelson-Interferometer" title="Permalink to this headline">¶</a></h2>
 <p>The Michelson interferometer is probably the most famous one due to the experiments by Michelson on the existance of th ether (a medium in which light was supposed to propagate) and nowadays also by the LIGO experiments for the detection of gravitational waves.The Michelson interferometer splits in incoming light wave with a beamsplitter (BS) into two equally intense waves that are directed towards two mirrors (M).</p>
@@ -431,7 +453,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="7aca407a9015402ba10944b4ed9f08b6" class="no-scaled-link" src="../../_images/michelson.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="7aaaef6ef77446a890be1c6ee44fe055" class="no-scaled-link" src="../../_images/michelson.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -450,7 +472,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="d4730ac348d841e5970cc4e6cdb32104" class="no-scaled-link" src="../../_images/mach.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="9d81bf21ef2d47659417b00a0beb05d2" class="no-scaled-link" src="../../_images/mach.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -461,12 +483,13 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 </div>
 <div class="section" id="Sagnac-Interferometer">
 <h2>Sagnac Interferometer<a class="headerlink" href="#Sagnac-Interferometer" title="Permalink to this headline">¶</a></h2>
+<p>The Sagnac interferometer is a special type of interferometer which uses a clockwise and counter-clockwise propagating beam in a system as shown below.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="b12e7fb0d3684011ab657bc8a5f1641e" class="no-scaled-link" src="../../_images/sagnac.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="2a9da746b48248ba8e3b29bf24c53d73" class="no-scaled-link" src="../../_images/sagnac.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -474,19 +497,69 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 </tr>
 </tbody>
 </table>
+<p>The two counter propagating rotation directions of light propagation allow us to rotate at the frequency <span class="math notranslate nohighlight">\(\Omega\)</span> the interferometer around an axis perpendicular on the interferometer plane. In this case both light waves travel different distance.</p>
+<p>The distance is either longer or shorter by</p>
+<div class="math notranslate nohighlight">
+\[dx=\Omega r dt\]</div>
+<p>if we consider a short time intervall <span class="math notranslate nohighlight">\(dt\)</span> and a circular interferometer with a radius <span class="math notranslate nohighlight">\(r\)</span>. The time interval is given by <span class="math notranslate nohighlight">\(dt=dl/c\)</span>. To obtain the path length we have to intergrate over one round</p>
+<div class="math notranslate nohighlight">
+\[x=\int dx = \frac{\omega}{c}2A\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> corresponds to the area encircled by the light path on a radius <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>The final phase shift of the two wave propagating in the different direction is then</p>
+<div class="math notranslate nohighlight">
+\[\Delta \phi =\frac{2\pi}{\lambda}2 x=\frac{8\pi}{\lambda c}\Omega\]</div>
+<p>If the axis of rotation has now the angle <span class="math notranslate nohighlight">\(\theta\)</span> with the normal to the plane <span class="math notranslate nohighlight">\(A\)</span>, the phase shift becomes</p>
+<div class="math notranslate nohighlight">
+\[\Delta \phi =\frac{2\pi}{\lambda}2 x=\frac{8\pi}{\lambda c}\Omega\]</div>
+<p>Thus the Sagnac interferometer can be used as a gyroscope. This is actually its main application, for example in military airplanes.</p>
 </div>
-<div class="section" id="Thin-Film-Interference">
-<h2>Thin Film Interference<a class="headerlink" href="#Thin-Film-Interference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Double-slit">
+<h2>Double slit<a class="headerlink" href="#Double-slit" title="Permalink to this headline">¶</a></h2>
+<p>Our next example will just consider two tiny slits in a wall, which let two waves pass. The waves can travel in all directions. We will actually consider this later in the section as Huygens waves. The two waves travel towards a screen, which is far away from the double slit.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="9ceabdce781d4db8a1e4fa5a188e71d4" class="no-scaled-link" src="../../_images/thin_film.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><a href="#id1"><span class="problematic" id="id2">|c812a216a38c4d5194eca46c6442caaa|</span></a></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Thin film interference.</p></td>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Double Slit.</p></td>
+</tr>
+</tbody>
+</table>
+<p>When you consider the image, you recognize that the light from the lower slit has to travel a distance <span class="math notranslate nohighlight">\(\Delta s\)</span> farther as compared to the wave from the upper slit. This path length difference is given by</p>
+<div class="math notranslate nohighlight">
+\[\Delta s =d\sin(\theta)\]</div>
+<p>We can now decide under which conditions we observe constructure or destructive interference.</p>
+<p><strong>constructive interference</strong></p>
+<div class="math notranslate nohighlight">
+\[d\sin(\theta)=m\lambda, m=0,1,\ldots\]</div>
+<p><strong>destructive interference</strong></p>
+<div class="math notranslate nohighlight">
+\[d\sin(\theta)=\left (m+\frac{1}{2}\right )\lambda, m=0,1,\ldots\]</div>
+<p>Having the angles for the constructive and destructive interference on the screen, we would also like to have the intensity distribution, which we can calculate from two spherical waves</p>
+<p>The total amplitude of the two waves is given by</p>
+<div class="math notranslate nohighlight">
+\[U=U_1+ U_2 = A e^{-ikr}+A e^{-ikr+i\phi}\]</div>
+<p>For simplicity we have given thw two waves the same amplitude <span class="math notranslate nohighlight">\(A\)</span>. Also the distance dependence of the amplitude of a spherical wave is put into the amplitude so that we don’t have to write it explicity every time.</p>
+<p>The intensity is then the magnitude square if the total amplitude</p>
+<div class="math notranslate nohighlight">
+\[I=|U|^2=4I_{0}\cos^2(\phi/2)\]</div>
+<p>Given that we know the pathlength difference <span class="math notranslate nohighlight">\(\Delta s\)</span> we can also express the intensity as a function of the angle <span class="math notranslate nohighlight">\(\theta\)</span> at which we observe the interference on the screen.</p>
+<div class="math notranslate nohighlight">
+\[I=4I_0 \cos^2\left ( \frac{k \Delta s}{2}\right)=4I_0 \cos^2\left ( \frac{\pi d \sin(\theta)}{\lambda}\right)\]</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><a href="#id3"><span class="problematic" id="id4">|10a8979969744a26a2c15d1f87c9ba3f|</span></a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Double slit interference pattern for two different wavelength (532 nm, 700 nm) and two different slit separations (left: 3 µm, right: 5 µm).</p></td>
 </tr>
 </tbody>
 </table>
@@ -516,7 +589,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Dec 03, 2020.
+        Last updated on Dec 04, 2020.
       </span>
 
     </p>
