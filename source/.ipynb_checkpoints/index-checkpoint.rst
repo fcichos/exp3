@@ -17,6 +17,20 @@ In this Experimental Physics 3 course, we will dive into to basic experiments an
 The fields of optics and quantum mechanics are nowadays very active research areas with a dynamically devloping field of optical technologies, high resolution microscopy and quantum information. All this builds on the fundations that are tackled in this course.
 
 
+Glassbow Challenge Pictures
+---------------------------
+
+The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank Shetty Kalavara, Thomas de Paula Barbosa, Theo Häußler**. 
+
+.. image:: img/GlB1.png
+   :width: 30%
+.. image:: img/GlB2.jpg
+   :width: 30%
+.. image:: img/GlB7.jpg
+   :width: 30%
+
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Course Information:
