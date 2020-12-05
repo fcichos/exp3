@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lecture Contents &mdash; Experimental Physics 3 1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Diffraction" href="../../notebooks/L10/Diffraction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Experimental Physics 3
+          
+
+          
+            
+            <img src="../../_static/mona_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/website.html">This Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/schedule.html">Course Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/exam.html">Exams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#books">Books</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#molecular-nanophotonics-group">Molecular Nanophotonics Group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/instructor.html">Instructors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/overview.html#lecture-contents">Lecture Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/Intro/Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/Introduction2Jupyter.html#Kernels">Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/Introduction2Jupyter.html#Notebook-documents">Notebook documents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/Intro/NotebookEditor.html">Notebook editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/NotebookEditor.html#Edit-mode">Edit mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/NotebookEditor.html#Command-mode">Command mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/NotebookEditor.html#Keyboard-navigation">Keyboard navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/NotebookEditor.html#Running-code">Running code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/NotebookEditor.html#Managing-the-kernel">Managing the kernel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/Intro/EditCells.html">Entering code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/Intro/EditCells.html#Entering-Markdown">Entering Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/EditCells.html#Markdown-basics">Markdown basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/EditCells.html#Headings">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/EditCells.html#Embedded-code">Embedded code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/EditCells.html#LaTeX-equations">LaTeX equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/EditCells.html#Images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/Intro/EditCells.html#Videos">Videos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 1:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview_1.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L1/Geometrical%20Optics.html">Geometrical Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L1/Geometrical%20Optics.html#Assumptions">Assumptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L1/Reflection.html">Reflection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L1/Reflection.html#Law-of-Reflection">Law of Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L1/Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L1/Refraction.html">Refraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L1/Refraction.html#Refractive-Index">Refractive Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L1/Refraction.html#Snells-Law">Snells Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L1/Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction%20Explorer.html">EXP3 Snippets – Refraction Explorer</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L2/overview_2.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L2/Optical%20Elements.html">Optical Elements Part I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L2/Optical%20Elements.html#Mirrors">Mirrors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L2/Optical%20Elements.html#Plane-Mirrors">Plane Mirrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L2/Optical%20Elements.html#Concave-Mirrors">Concave Mirrors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L3/overview_3.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html">Optical Elements Part II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Prisms">Prisms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Deflection-angle">Deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Minimum-deflection-angle">Minimum deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Lenses">Lenses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Refraction-at-spherical-surfaces">Refraction at spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Image-Construction">Image Construction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L3/Optical%20Elements.html#Lens-types">Lens types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L4/Optical%20Elements.html">Optical Elements Part III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L4/Optical%20Elements.html#Thick-lens">Thick lens</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L4/Rainbow.html">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L4/Rainbow.html#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L4/Rainbow.html#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L4/Rainbow.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L4/Rainbow.html#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 5:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L5/overview_5.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L5/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L5/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L5/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L5/Optical%20Instruments.html#The-Eye">The Eye</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 6:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L6/overview_6.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L6/Magnifying%20Glass.html">Magnifying Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L6/Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L6/Microscope.html#Modern-microscopy">Modern microscopy</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 7:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L7/overview_7.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L7/Imaging%20Errors.html">Imaging Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L7/Imaging%20Errors.html#Chromatic-Aberrations">Chromatic Aberrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L7/Imaging%20Errors.html#Spherical-Aberration">Spherical Aberration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L7/Imaging%20Errors.html#Coma">Coma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L7/Imaging%20Errors.html#Astigmatism">Astigmatism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L7/Imaging%20Errors.html#Field-Curvature">Field Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L7/Imaging%20Errors.html#Distortions">Distortions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 8:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L8/overview_8.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html">Wave Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Postulates-of-Wave-Optics">Postulates of Wave Optics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Wave-equation">Wave equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Intensity-of-waves">Intensity of waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Monochromatic-wave">Monochromatic wave</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Complex-Amplitude">Complex Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Wavefronts">Wavefronts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Spherical-Waves">Spherical Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L8/Wave%20Optics.html#Interference">Interference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Wave%20Explorer.html">EXP3 Snippets: Wave Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-Waves">Plane Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-wave-propagation">Plane wave propagation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-Waves">Spherical Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-wave-propagation">Spherical wave propagation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 9:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L9/overview_9.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L9/Interference.html">Coherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L9/Interference.html#Interferometers">Interferometers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L9/Interference.html#Michelson-Interferometer">Michelson Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L9/Interference.html#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L9/Interference.html#Sagnac-Interferometer">Sagnac Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L9/Interference.html#Double-slit">Double slit</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 10:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L10/overview_10.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L10/Interference.html">Thin Film Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L10/Interference.html#Multiple-Wave-Interference">Multiple Wave Interference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L10/Interference.html#Fabry-Perot-Interferometer">Fabry Perot Interferometer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L10/Interference.html#Anti-Reflection-Coating">Anti-Reflection Coating</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/L10/Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L10/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../notebooks/L10/Diffraction.html#Diffraction-pattern-of-a-single-slit">Diffraction pattern of a single slit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L10/Diffraction.html#Farfield-vs. nearfield">Farfield vs. nearfield</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../notebooks/L10/Diffraction.html#Comparison-to-the-analytical-solution">Comparison to the analytical solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 11:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lecture Contents</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Experimental Physics 3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Lecture Contents</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/fcichos/exp3/blob/master//source/lectures/L11/overview_11.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="lecture-contents">
+<h1>Lecture Contents<a class="headerlink" href="#lecture-contents" title="Permalink to this headline">¶</a></h1>
+<p>In Lecture 11 we look at multi-wave interference again, anti-reflection coatings and explore the diffraction of light including Huygens principle.</p>
+<a class="reference internal image-reference" href="../../_images/slides10.png"><img alt="../../_images/slides10.png" src="../../_images/slides10.png" style="width: 600px;" /></a>
+<p>Lecture 11 slides for download <a class="reference download internal" download="" href="../../_downloads/3335f51560893c54296ff2e0d0f6602f/Lecture 11.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../notebooks/L10/Diffraction.html" class="btn btn-neutral float-left" title="Diffraction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Frank Cichos
+      <span class="lastupdated">
+        Last updated on Dec 05, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
