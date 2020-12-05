@@ -17,6 +17,7 @@ The course will be mainly build on a number of excellent books on electrodynamic
     * Saleh/Teich: Fundamentals of Photonics, Wiley, 2007
     * Jackson: Classical Electrodynamics, Wiley, 1998
     * Hecht: Optics, Pearson, 2016
+    * My handwritten lecture notes for download :download:`pdf <notes.pdf>`
 
 2. **Quantum Mechanics**
 
