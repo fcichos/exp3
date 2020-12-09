@@ -149,7 +149,23 @@
     "d=\\frac{(2m-1)\\lambda_{max}}{2n}\\approx 75\\, {\\rm nm}\n",
     "$$\n",
     "\n",
-    "So for film thickness of water thinner than 75 nm, there is no constructive interference of the reflected light from the two boundaries in the visible region anymore. There will be still a reflection but no specific color. If the film gets even thinner, the intensity of the reflected light is further diminished by desctructive interference and whe obtain no reflection as shown on the right side of the above figure for a $d=10$ nm film. Such thin films, which do not show any reflection are called **Newton black films**."
+    "So for film thickness of water thinner than 75 nm, there is no constructive interference of the reflected light from the two boundaries in the visible region anymore. There will be still a reflection but no specific color. If the film gets even thinner, the intensity of the reflected light is further diminished by desctructive interference and whe obtain no reflection as shown on the right side of the above figure for a $d=10$ nm film. Such thin films, which do not show any reflection are called **Newton black films**. You might have seen them, if you look closer at soap bubbles. They will show regions, which look like holes, but of course there are no holes in soap bubbles. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If the film gets thicker, e.g. $d=1$ µm or even $d=100$ µm, more than one constructive interference fits into the visible wavelength range. Due to that, the film may appear to have mixed colors or even look white. Below are the diagrams for those film thicknesses. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/1µm_film.png\" width=\"30%\"> <img src=\"img/100µm_film.png\" width=\"30%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Reflection from a 1 µm (left) and a 100 µm (right)thin water film.|"
    ]
   },
   {
