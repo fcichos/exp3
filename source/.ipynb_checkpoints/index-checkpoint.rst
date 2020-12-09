@@ -10,7 +10,7 @@ Welcome to the Experimental Physics 3 Course!
 In this Experimental Physics 3 course, we will dive into to basic experiments and mathematical descriptions related to light propagation, electromagnetic waves and its material counter part of matter waves. In particular we will have a look at 
 
 * Geometrical Optics
-* Wave Optics
+* Wave Optics1
 * Electromagnetic Waves
 * Matter Waves and Quantum Mechanics
 
@@ -138,7 +138,16 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    :caption: Lecture 11:
    
    lectures/L11/overview_11.rst
-
+   notebooks/L11/Interference.ipynb  
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 11:
+   
+   lectures/L12/overview_12.rst
+   notebooks/L12/Diffraction.ipynb    
+   
+   
 Indices and tables
 ==================
 

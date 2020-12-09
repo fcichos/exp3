@@ -138,7 +138,16 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    :caption: Lecture 11:
    
    lectures/L11/overview_11.rst
-
+   notebooks/L11/Interference.ipynb  
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 11:
+   
+   lectures/L12/overview_12.rst
+   notebooks/L12/Diffraction.ipynb    
+   
+   
 Indices and tables
 ==================
 
