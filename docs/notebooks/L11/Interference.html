@@ -286,9 +286,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L10/overview_10.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L10/Interference.html">Thin Film Interference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L10/Interference.html#Multiple-Wave-Interference">Multiple Wave Interference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Fabry-Perot-Interferometer">Fabry Perot Interferometer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Newton-Rings">Newton Rings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Anti-Reflection-Coating">Anti-Reflection Coating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
 </ul>
 </li>
 </ul>
@@ -297,9 +296,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L11/overview_11.html">Lecture Contents</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Fabry Perot Interferometer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#Newton-Rings">Newton Rings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Anti-Reflection-Coating">Anti-Reflection Coating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Anti-Reflection-Coating">Anti-Reflection Coating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Bragg-reflection">Bragg reflection</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Lecture 11:</span></p>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 12:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L12/overview_12.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L12/Diffraction.html">Diffraction</a><ul>
@@ -381,6 +383,237 @@
             
   
 <style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -409,12 +642,41 @@
 </div>
 <div class="section" id="Fabry-Perot-Interferometer">
 <h1>Fabry Perot Interferometer<a class="headerlink" href="#Fabry-Perot-Interferometer" title="Permalink to this headline">¶</a></h1>
+<p>We will now have a look at some applications of the multiwave interference also with changing amplitude. One of the is the Fabry-Perot interferometer, which essentially consists of two mirrors, which are brought to a distance <span class="math notranslate nohighlight">\(d\)</span> as shown below.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="a50152a79e9d4ebf978edce18c45beee" class="no-scaled-link" src="../../_images/perot1.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="56f24e2282ee4575a0b858eac2ba864b" class="no-scaled-link" src="../../_images/fabry_perot.png" style="width: 60%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Fabry-Perot Interferometer.</p></td>
+</tr>
+</tbody>
+</table>
+<p>If light enters the Fabry Perot interferometer with an amplitude <span class="math notranslate nohighlight">\(A_0\)</span>. It is transmitted with a reduced amplitude. The initial amplitude has to be multiplied with the transmission factor <span class="math notranslate nohighlight">\(t_1\)</span>. It travels further until it hits the sescond mirror, where it is reflected and transmitted as well. The reduced amplitude due to reflection is expressed by <span class="math notranslate nohighlight">\(r_2\)</span>, while the transmission is introducing another factor <span class="math notranslate nohighlight">\(t_2\)</span>. This means that the first transmitted wave has the
+amplitude</p>
+<div class="math notranslate nohighlight">
+\[U_1=A_0t_1 t_2\]</div>
+<p>The second transmitted wave now has a decreased amplitude as compared to the first one and reads</p>
+<div class="math notranslate nohighlight">
+\[U_2=A_0t_1 t_2 r_1 r_2 e^{i\phi}=U_1 r_1 r_2 e^{i\phi}\]</div>
+<p>We could now continue like that, but we see already at this point the similarity to the multiwave interference with decreasing amplitude we have talked about in the last lecture. We would observe interference of all transmitted waves</p>
+<p>We just have to insert the corresponding expression, i.e. <span class="math notranslate nohighlight">\(\sqrt{I_0}=A_0 t_1 t_2\)</span> and <span class="math notranslate nohighlight">\(h=r_1r_2e^{i\phi}\)</span> or <span class="math notranslate nohighlight">\(r=r_1 r_2\)</span>. We may even insert the phase shift</p>
+<div class="math notranslate nohighlight">
+\[\phi=\frac{2\pi}{\lambda} \Delta s = \frac{2\pi}{\lambda} 2d\cos(\theta)\]</div>
+<p>Our final formula would thus look like</p>
+<div class="math notranslate nohighlight">
+\[I=|U|^2=\frac{I_{0}}{|1-re^{i\phi}|^2}=\frac{I_0}{(1-r)^2+4r\sin^2\left (\frac{2\pi}{\lambda} d\cos(\theta)\right)}\]</div>
+<p>and gives now the intensity as calculated during the last lecture.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="217af5a118b24f16aec8456d899dab51" class="no-scaled-link" src="../../_images/perot1.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -422,12 +684,17 @@
 </tr>
 </tbody>
 </table>
+<p>Yet, we know now that <span class="math notranslate nohighlight">\(r=r_1 r_2\)</span> is the factor by which the amplitude decreases, which also enters the Finesse</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}=\frac{\pi \sqrt{r}}{1-r}\]</div>
+<p>The better the reflectivity of the mirrors (which means <span class="math notranslate nohighlight">\(r\rightarrow 1\)</span>), the higher is the Finess and the sharper are the interference peaks observed in the Fabry-Perot interferometer.</p>
+<p>Let us discuss the form of the interference peeks and the distance a bit more in detail.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="9eb9d86282584f8d9d51372b220d97df" class="no-scaled-link" src="../../_images/perot_spectral1.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="8030ab6f0a974c00a01c16e50c65fbe7" class="no-scaled-link" src="../../_images/perot_spectral.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -441,6 +708,33 @@
 </div>
 <div class="section" id="Anti-Reflection-Coating">
 <h1>Anti-Reflection Coating<a class="headerlink" href="#Anti-Reflection-Coating" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Bragg-reflection">
+<h2>Bragg reflection<a class="headerlink" href="#Bragg-reflection" title="Permalink to this headline">¶</a></h2>
+<p>The Bragg reflection is a typical example in which we assume that the amplitude of the waves interfering is constant. Yet, there might by also situations where this is not true. So Bragg reflections could be both.</p>
+<p>The image below shows the experiment from the lecture, where we had a stack of acrylic sheets, with constant separation. A microwave is incident to the stack. Each sheet is reflecting a tiny fraction of the wave so that the transmitted wave by a sheet is almost the original one.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="37131ba679b249f390e73f8c27ed15ab" class="no-scaled-link" src="../../_images/multi_wave_lecture.png" style="width: 40%;" /> <img alt="b17060941e7d45fabce4f7f054a4819a" class="no-scaled-link" src="../../_images/butterfly_lecture.png" style="width: 40%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Microwave reflection from a stack of acrylic glass sheets. Butterfly wing reflection corresponding to a 3D Bragg reflection from a complex structured dielectric lattice.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -466,7 +760,7 @@
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Dec 09, 2020.
+        Last updated on Dec 12, 2020.
       </span>
 
     </p>
