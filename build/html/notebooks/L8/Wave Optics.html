@@ -277,9 +277,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../L9/Interference.html#Michelson-Interferometer">Michelson Interferometer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L9/Interference.html#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L9/Interference.html#Sagnac-Interferometer">Sagnac Interferometer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L9/Interference.html#Double-slit">Double slit</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/Interference.html#Double-Slit-Interference">Double Slit Interference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 10:</span></p>
 <ul>
@@ -417,7 +417,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="7ec3da97c6b3485d8dcdb086a22c583d" class="no-scaled-link" src="../../_images/spectrum1.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="29eb1396d2ca4fcbaee9b597d2fa2089" class="no-scaled-link" src="../../_images/spectrum1.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -437,14 +437,14 @@
 \[\nabla^2 u - \frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
-\[\nabla^2 )\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\]</div>
+\[\nabla^2 =\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\]</div>
 <p>is the Laplace operator. The wave equation is a linear differential equation, which means that the superposition principle is valid. This means, that if we have found two solution <span class="math notranslate nohighlight">\(u_1(\vec{r},t)\)</span> and <span class="math notranslate nohighlight">\(u_2(\vec{r},t)\)</span> being solutions of the wave equation, then <span class="math notranslate nohighlight">\(u(\vec{r},t)=a_1 u_1(\vec{r},t)+a_2*u_2(\vec{r},t)\)</span> is a solution as well (<span class="math notranslate nohighlight">\(a_1,a_2\)</span> being constants)</p>
 </div>
 <div class="section" id="Intensity-of-waves">
 <h3>Intensity of waves<a class="headerlink" href="#Intensity-of-waves" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight">
 \[I(\vec{r},t)=2\langle u^2(\vec{r},t)\rangle\]</div>
-<p>which is given in units <span class="math notranslate nohighlight">\([\frac{W}{m^2}]\)</span>. The <span class="math notranslate nohighlight">\(\langle \ldots \rangle\)</span> denotes a time average over one cycle of the oscillation of <span class="math notranslate nohighlight">\(u\)</span>. This is extremely short. For light of 600 nm wavelength, one cycle just lasts 2 femtoseconds.</p>
+<p>which is given in units <span class="math notranslate nohighlight">\(\left[\frac{W}{m^2}\right]\)</span>. The <span class="math notranslate nohighlight">\(\langle \ldots \rangle\)</span> denotes a time average over one cycle of the oscillation of <span class="math notranslate nohighlight">\(u\)</span>. This is extremely short. For light of 600 nm wavelength, one cycle just lasts 2 femtoseconds.</p>
 <p>The optical power of a wave is obtained when integrating the intensity over an area <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[P=\int_A I(\vec{r},t) dA\]</div>
@@ -465,7 +465,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="9281b6739802423d834974d76c9b82cb" class="no-scaled-link" src="../../_images/wave.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="b86cc269f190421781eaf1c825a0aaa6" class="no-scaled-link" src="../../_images/wave.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -484,7 +484,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="3e86a9f93fc643bdbb22b684da40e372" class="no-scaled-link" src="../../_images/complex_rep.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="09661f7913f54e57afef1fb9532aa8ca" class="no-scaled-link" src="../../_images/complex_rep.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -492,6 +492,9 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p>A phasor displays the complex amplitude with magnitude and phase as a vector in the complex plane.</p>
+</div>
 <p>This complex wavefunction is related to the real wavefunction by</p>
 <div class="math notranslate nohighlight">
 \[u(\vec{r},t)=Re\lbrace U(\vec{r},t)\rbrace=\frac{1}{2}\left [ U(\vec{r},t)+U^*(\vec{r},t)\right ]\]</div>
@@ -542,7 +545,7 @@ k_{0z}\\
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="82e4586feef1474e9a7f930493046503" class="no-scaled-link" src="../../_images/plane_wave.png" style="width: 45%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="8e9481ff54204edaa4d8fb7c9a157ea8" class="no-scaled-link" src="../../_images/plane_wave.png" style="width: 45%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -571,7 +574,7 @@ k_{0}=\frac{\omega}{c_{0}}
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="884df28f45044225a8ae5f46f7a7bbf2" class="no-scaled-link" src="../../_images/plane_prop.mov" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="536231f994294c758152c05ebb466914" class="no-scaled-link" src="../../_images/plane_prop.mov" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -594,7 +597,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="e8168d9161ed41f4bfb4b2488ef9146f" class="no-scaled-link" src="../../_images/spherical_wave.png" style="width: 80%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="7f6a2245d11e43059a6acee1d2bccae4" class="no-scaled-link" src="../../_images/spherical_wave.png" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -608,7 +611,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="795bc20b1a51419a9f961cfe77facede" class="no-scaled-link" src="../../_images/out.mov" style="width: 30%;" /> <img alt="ff08fa28a1b24a889692dd7628e4fcdb" class="no-scaled-link" src="../../_images/in.mov" style="width: 30%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="3e1552af64e2495b949d4a3f0c88e04d" class="no-scaled-link" src="../../_images/out.mov" style="width: 30%;" /> <img alt="27ddb217bde34ae29e951567bc606369" class="no-scaled-link" src="../../_images/in.mov" style="width: 30%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -663,7 +666,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="af50103fd4d44059b107c8b718e8560c" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="9c5c367c4d254e0d82d5f2d857c9361f" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="a864a32977bb468cb10507dfc756f0d0" class="no-scaled-link" src="../../_images/sum_const.png" style="width: 33%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="01e7a9cc46494e34b7ef25caaffbc5fe" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="82678ed7964c48438cd272deaea682d8" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="81282676727f41449ddfd7ca6e928c18" class="no-scaled-link" src="../../_images/sum_const.png" style="width: 33%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -680,7 +683,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="666c10febf2e42f59d520bed3008c0eb" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="ab5732b9c9bd45afbc97801b41b743d8" class="no-scaled-link" src="../../_images/w_pi.png" style="width: 33%;" /> <img alt="895e5714f39743e08efd7b4d4d7ae5b4" class="no-scaled-link" src="../../_images/sum_destr.png" style="width: 33%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="9a7b8ffa10f84b649c0711fcde1e476e" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="d5c85e196ad64fe9bc0be0391c8893db" class="no-scaled-link" src="../../_images/w_pi.png" style="width: 33%;" /> <img alt="a911dd94f4644e8b86710dcef701014f" class="no-scaled-link" src="../../_images/sum_destr.png" style="width: 33%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -699,7 +702,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="007a86533d3741a6bf823cba55b83ef0" class="no-scaled-link" src="../../_images/plane_plane.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="521100bba5cf4e9380f5d5d6e4d0d2ba" class="no-scaled-link" src="../../_images/plane_plane.png" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -714,7 +717,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="8137833c287d46cfbba1304d882e85c5" class="no-scaled-link" src="../../_images/sphere_plane.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="538a0a675895474fb45819a81808c26b" class="no-scaled-link" src="../../_images/sphere_plane.png" style="width: 90%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -748,7 +751,7 @@ I &amp;= &amp;|U|^2\</p>
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Dec 12, 2020.
+        Last updated on Dec 22, 2020.
       </span>
 
     </p>

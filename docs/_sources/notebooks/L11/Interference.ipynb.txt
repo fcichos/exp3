@@ -18,7 +18,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/fabry_perot.png\" width=\"60%\">|\n",
+    "|<img src=\"img/fabry_perot.png\" width=\"50%\">|\n",
     "|-|\n",
     "| **Fig.:** Fabry-Perot Interferometer.|"
    ]
@@ -110,7 +110,7 @@
     "The difference between neighboring frequencies is then\n",
     "\n",
     "$$\n",
-    "\\delta nu=\\nu_{m+1}-\\nu_m=\\frac{c}{2d}\n",
+    "\\delta \\nu=\\nu_{m+1}-\\nu_m=\\frac{c}{2d}\n",
     "$$\n",
     "\n",
     "This quantity $\\delta \\nu$ or $\\delta \\lambda$ is called **free spectral range** as it indicates the \"space\" we have until the next frequency delivers a constructive interference maximum for the next integer $m$. In this range, we would like to resolve two different frequencies. So let us assume we would like to resolve two frequencies $\\nu_a$ and $\\nu_b$ with the same order of the interference $m$, then we have to find a criterium, that tells us, that we can still seperate the two frequencies. We use as a measure the width of the individual peaks.\n",
@@ -147,7 +147,16 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/perot_spectral.png\" width=\"40%\">|\n",
+    "|<img src=\"img/perot_spectral.png\" width=\"60%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Fabry Perot Interferometer.|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/fabry_perot_lecture1.png\" width=\"40%\"> <img src=\"img/fabry_perot_lecture2.png\" width=\"40%\">|\n",
     "|-|\n",
     "| **Fig.:** Fabry Perot Interferometer.|"
    ]
@@ -157,6 +166,15 @@
    "metadata": {},
    "source": [
     "## Newton Rings"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "|<img src=\"img/newton_rings_lecture.png\" width=\"80%\">|\n",
+    "|-|\n",
+    "| **Fig.:** Fabry Perot Interferometer.|"
    ]
   },
   {

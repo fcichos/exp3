@@ -66,7 +66,7 @@
     "where \n",
     "\n",
     "$$\n",
-    "\\nabla^2 )\\frac{\\partial^2}{\\partial x^2}+\\frac{\\partial^2}{\\partial y^2}+\\frac{\\partial^2}{\\partial z^2}\n",
+    "\\nabla^2 =\\frac{\\partial^2}{\\partial x^2}+\\frac{\\partial^2}{\\partial y^2}+\\frac{\\partial^2}{\\partial z^2}\n",
     "$$\n",
     "\n",
     "is the Laplace operator. The wave equation is a linear differential equation, which means that the superposition principle is valid. This means, that if we have found two solution $u_1(\\vec{r},t)$ and $u_2(\\vec{r},t)$ being solutions of the wave equation, then $u(\\vec{r},t)=a_1 u_1(\\vec{r},t)+a_2*u_2(\\vec{r},t)$ is a solution as well ($a_1,a_2$ being constants)"
@@ -82,7 +82,7 @@
     "I(\\vec{r},t)=2\\langle u^2(\\vec{r},t)\\rangle\n",
     "$$\n",
     "\n",
-    "which is given in units $[\\frac{W}{m^2}]$. The $\\langle \\ldots \\rangle$ denotes a time average over one cycle of the oscillation of $u$. This is extremely short. For light of 600 nm wavelength, one cycle just lasts 2 femtoseconds.\n",
+    "which is given in units $\\left[\\frac{W}{m^2}\\right]$. The $\\langle \\ldots \\rangle$ denotes a time average over one cycle of the oscillation of $u$. This is extremely short. For light of 600 nm wavelength, one cycle just lasts 2 femtoseconds.\n",
     "\n",
     "The optical power of a wave is obtained when integrating the intensity over an area $A$.\n",
     "\n",
@@ -151,6 +151,17 @@
     "|<img src=\"img/complex_rep.png\" width=\"50%\"> |\n",
     "|-|\n",
     "| **Fig.:** Phasor diagram of the complex amplitude $U(r)$ (left) and $U(t)$ (right).|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "A phasor displays the complex amplitude with magnitude and phase as a vector in the complex plane. \n",
+    " \n",
+    "</div>"
    ]
   },
   {
@@ -540,7 +551,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/plane_plane.png\" width=\"90%\"> |\n",
+    "|<img src=\"img/plane_plane.png\" width=\"80%\"> |\n",
     "|-|\n",
     "| **Fig.:** Interference of two plane waves propagating under an angle of 45$^{\\circ}$. The two left graphs show the original waves. The two right the total amplitude and the intensity pattern.|"
    ]

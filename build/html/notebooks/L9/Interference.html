@@ -277,9 +277,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#Michelson-Interferometer">Michelson Interferometer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Sagnac-Interferometer">Sagnac Interferometer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Double-slit">Double slit</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="#Double-Slit-Interference">Double Slit Interference</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 10:</span></p>
 <ul>
@@ -417,7 +417,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="5e9ea28a38cc44818eb05bf84af2362e" class="no-scaled-link" src="../../_images/coherence.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="deb164b1d3a54f8b8556fa5d4fa49636" class="no-scaled-link" src="../../_images/coherence.png" style="width: 90%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -428,7 +428,7 @@
 <p>The above image shows the timetrace of the amplitude of two wave with slightly different frequency. Due to the frequency, the waves run out of phase and have acquired a phase different of <span class="math notranslate nohighlight">\(\pi\)</span> after <span class="math notranslate nohighlight">\(40\)</span> fs.</p>
 <p>The temporal coherence of two waves is now defined by the time it takes for the two waves to obtain a phase difference of <span class="math notranslate nohighlight">\(2\pi\)</span>. The phase difference between two wave of frequency <span class="math notranslate nohighlight">\(\nu_1\)</span> and <span class="math notranslate nohighlight">\(\nu_2\)</span> is given by</p>
 <div class="math notranslate nohighlight">
-\[\Delta phi = 2\pi (\nu_2-\nu_1)(t-t_0)\]</div>
+\[\Delta \phi = 2\pi (\nu_2-\nu_1)(t-t_0)\]</div>
 <p>Here <span class="math notranslate nohighlight">\(t_0\)</span> refers to the time, when thw two waves were perfectly in sync. Lets assume that the two frequencies are seperarated from a central frequency <span class="math notranslate nohighlight">\(\nu_0\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\nu_1=\nu_0-\Delta \nu/2\]</div>
@@ -466,7 +466,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="f5ca1c7e44e846dbba0d0f2448b0fe28" class="no-scaled-link" src="../../_images/michelson.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="d6c49170abbc4cf08f6df0f50cf34bb6" class="no-scaled-link" src="../../_images/michelson.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -485,11 +485,24 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="ae4e59d3cde241d78031108d0f253dbd" class="no-scaled-link" src="../../_images/mach.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="a87d8ad78ffb4323a01ef1bf0bc7d601" class="no-scaled-link" src="../../_images/mach.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Fig.:</strong> Mach Zehnder interferometer.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="c835462862554202b3ac35428e153f68" class="no-scaled-link" src="../../_images/machz_lecture.png" style="width: 30%;" /> <img alt="417681e8713a48de939241bdb4a36f7c" class="no-scaled-link" src="../../_images/machz_lecture_pat.png" style="width: 30%;" /> <img alt="b3a7d26483a54a3d910f0520edbddaa5" class="no-scaled-link" src="../../_images/machz_lecture_vortex.png" style="width: 30%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Mach Zehnder interferometer used in the lecture. The <strong>left</strong> image shows the general layout (compare with sketch). The <strong>middle</strong> image shows the interference pattern obtained. Note that the two interference patterns are complementary. The pattern is circular as the incident wave is not a plane wave, but a Gaussian beam. The <strong>right</strong> image show a vortex like pattern, if a special waveplate is inserted that gives a special phase delay.</p></td>
 </tr>
 </tbody>
 </table>
@@ -502,7 +515,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="f2cdce4fb6a2461e8b1127ed7e5a3473" class="no-scaled-link" src="../../_images/sagnac.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="49763086956d481ea463ff6368aa0558" class="no-scaled-link" src="../../_images/sagnac.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -526,32 +539,36 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 \[\Delta \phi =\frac{2\pi}{\lambda}2 x=\frac{8\pi}{\lambda c}\Omega\]</div>
 <p>Thus the Sagnac interferometer can be used as a gyroscope. This is actually its main application, for example in military airplanes.</p>
 </div>
-<div class="section" id="Double-slit">
-<h2>Double slit<a class="headerlink" href="#Double-slit" title="Permalink to this headline">¶</a></h2>
-<p>Our next example will just consider two tiny slits in a wall, which let two waves pass. The waves can travel in all directions. We will actually consider this later in the section as Huygens waves. The two waves travel towards a screen, which is far away from the double slit.</p>
+</div>
+<div class="section" id="Double-Slit-Interference">
+<h1>Double Slit Interference<a class="headerlink" href="#Double-Slit-Interference" title="Permalink to this headline">¶</a></h1>
+<p>Our next example will just consider two tiny slits in a screen, which lets two waves pass. The transmitted waves can travel in all directions. The two arrows in the sketch below, demnote two propagation directions and the correponding wavefronts. The two arrows thus represent two wavevectors. The overall situation is actually a bit more complicated and we will address this with the help of spherical waves later in the section about Huygens waves.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="f43521920afd43068144ae5236c9b06f" class="no-scaled-link" src="../../_images/double_slit.png" style="width: 400px;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="bf9d0d94d7324b309326f832c92a3fce" class="no-scaled-link" src="../../_images/double_slit.png" style="width: 400px;" /></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Double Slit.</p></td>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Double Slit .</p></td>
 </tr>
 </tbody>
 </table>
 <p>When you consider the image, you recognize that the light from the lower slit has to travel a distance <span class="math notranslate nohighlight">\(\Delta s\)</span> farther as compared to the wave from the upper slit. This path length difference is given by</p>
 <div class="math notranslate nohighlight">
 \[\Delta s =d\sin(\theta)\]</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the distance between the two slits and <span class="math notranslate nohighlight">\(\theta\)</span> the angle the two directions make with the horizontal direction.</p>
 <p>We can now decide under which conditions we observe constructure or destructive interference.</p>
 <p><strong>constructive interference</strong></p>
 <div class="math notranslate nohighlight">
 \[d\sin(\theta)=m\lambda, m=0,1,\ldots\]</div>
+<p>For constructive interference the waves have to have a path length difference, which is an integer multiple <span class="math notranslate nohighlight">\(m\)</span> of the wavelength.</p>
 <p><strong>destructive interference</strong></p>
 <div class="math notranslate nohighlight">
 \[d\sin(\theta)=\left (m+\frac{1}{2}\right )\lambda, m=0,1,\ldots\]</div>
+<p>For destructive interference the wave have a pathlength difference of an odd multiple of half the wavelength as given above.</p>
 <p>Having the angles for the constructive and destructive interference on the screen, we would also like to have the intensity distribution, which we can calculate from two spherical waves</p>
 <p>The total amplitude of the two waves is given by</p>
 <div class="math notranslate nohighlight">
@@ -563,13 +580,13 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 <p>Given that we know the pathlength difference <span class="math notranslate nohighlight">\(\Delta s\)</span> we can also express the intensity as a function of the angle <span class="math notranslate nohighlight">\(\theta\)</span> at which we observe the interference on the screen.</p>
 <div class="math notranslate nohighlight">
 \[I=4I_0 \cos^2\left ( \frac{k \Delta s}{2}\right)=4I_0 \cos^2\left ( \frac{\pi d \sin(\theta)}{\lambda}\right)\]</div>
-<p>The two graphs below show the intensity as a function of <span class="math notranslate nohighlight">\(\sin(\theta)\)</span>, for two different doubles slits at different distance. The larger the slit separation <span class="math notranslate nohighlight">\(d\)</span>, the closer are the neighboring peaks for a single color. Also if we shorten the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>, the individual peaks of constructive interference come closer.</p>
+<p>The two graphs below show the intensity as a function of <span class="math notranslate nohighlight">\(\sin(\theta)\)</span>, for two different doubles slits at different distance.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="5c37a4227cf94033a5cf4aa95828c3ee" class="no-scaled-link" src="../../_images/double_slit_int.png" style="width: 800px;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="672d570d56dc4cbfb9541b8c14052cb5" class="no-scaled-link" src="../../_images/double_slit_int.png" style="width: 800px;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -577,7 +594,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 </tr>
 </tbody>
 </table>
-</div>
+<p>The larger the slit separation <span class="math notranslate nohighlight">\(d\)</span>, the closer are the neighboring peaks for a single color. Also if we shorten the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>, the individual peaks of constructive interference come closer.</p>
 </div>
 
 
@@ -603,7 +620,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Dec 12, 2020.
+        Last updated on Dec 22, 2020.
       </span>
 
     </p>
