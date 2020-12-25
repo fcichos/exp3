@@ -100,7 +100,7 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    lectures/L6/overview_6.rst
    notebooks/L6/Magnifying Glass.ipynb
    notebooks/L6/Microscope.ipynb
-   notebooks/L6/Telescope.pynb
+   notebooks/L6/Telescope.ipynb
 
 
 .. toctree::
@@ -145,9 +145,20 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    :caption: Lecture 12:
    
    lectures/L12/overview_12.rst
-   notebooks/L12/Diffraction.ipynb    
+   notebooks/L12/Diffraction.ipynb       
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 13:
    
+   lectures/L13/overview_13.rst
    
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 14:
+   
+   lectures/L14/overview_14.rst
+
 Indices and tables
 ==================
 
