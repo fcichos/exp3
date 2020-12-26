@@ -297,7 +297,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Fabry Perot Interferometer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#Newton-Rings">Newton Rings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#Bragg-reflection">Bragg reflection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Bragg-Mirros,-Photonic-Crystals-and-Anti-Reflection-Coating">Bragg Mirros, Photonic Crystals and Anti-Reflection Coating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Bragg-Mirrors,-Anti-Reflection-Coating-and-Photonic-Crystals">Bragg Mirrors, Anti-Reflection Coating and Photonic Crystals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Bragg-Mirror">Bragg Mirror</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Antireflection-Coating">Antireflection Coating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Photonic-Crystals">Photonic Crystals</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 12:</span></p>
 <ul>
@@ -389,237 +394,6 @@
             
   
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
-    border: none;
-    padding: 0 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    background: #f5f5f5;
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -654,7 +428,7 @@ div.rendered_html tbody tr:hover {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="dcde796fa6344771b932abf9098d881e" class="no-scaled-link" src="../../_images/fabry_perot.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="5a5d9a17475c4683b1300d3462036cf0" class="no-scaled-link" src="../../_images/fabry_perot.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -682,7 +456,7 @@ amplitude</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="7f7bd595c96f4fb6b55a326873bd4ecb" class="no-scaled-link" src="../../_images/perot1.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="31e4d78d4d064cd29ee5cc37fd6feb60" class="no-scaled-link" src="../../_images/perot1.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -726,7 +500,7 @@ still seperate the two frequencies. We use as a measure the width of the individ
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="42f386e0afd941fcbbb318dd84a58039" class="no-scaled-link" src="../../_images/perot_spectral.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="9a3dfda1e23446e2a28fdeeab7ad9765" class="no-scaled-link" src="../../_images/perot_spectral.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -734,53 +508,20 @@ still seperate the two frequencies. We use as a measure the width of the individ
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="ec383bb7088e405abb327b5c4afb3a90" class="no-scaled-link" src="../../_images/fabry_perot_lecture1.png" style="width: 40%;" /> <img alt="982299c886ef4e4fb4f3b84a5322090f" class="no-scaled-link" src="../../_images/fabry_perot_lecture2.png" style="width: 40%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Fabry Perot Interferometer and interferebnce pattern observed in the lecture .</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<figure><p><img alt="f4a4121cbfd940ae9e8ec4d16e28772a" class="no-scaled-link" src="../../_images/fabry_perot_lecture1.png" style="width: 45%;" /> <img alt="3d719034d49948cead0c19479231996d" class="no-scaled-link" src="../../_images/fabry_perot_lecture2.png" style="width: 45%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Fabry Perot Interferometer and interferebnce pattern observed in the lecture.</p>
+</figcaption></figure></div>
 <div class="section" id="Newton-Rings">
 <h1>Newton Rings<a class="headerlink" href="#Newton-Rings" title="Permalink to this headline">¶</a></h1>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="4cdde90082304e9a9d554e77093e47eb" class="no-scaled-link" src="../../_images/newton_rings_lecture.png" style="width: 80%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Observation of Newton Rings using white light in the lecture.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<figure><p><img alt="cc56aaeaa1ec499ea52edd7e4d238d4c" class="no-scaled-link" src="../../_images/newton_rings_lecture.png" style="width: 80%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Observation of Newton Rings using white light in the lecture.</p>
+</figcaption></figure></div>
 <div class="section" id="Bragg-reflection">
 <h1>Bragg reflection<a class="headerlink" href="#Bragg-reflection" title="Permalink to this headline">¶</a></h1>
 <p>The Bragg reflection is a typical example in which we assume that the amplitude of the waves interfering is constant. Remember the image below, which we already discussed in the previous lecture</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="13241cf6ef5d4a189394436f3e5e1cac" class="no-scaled-link" src="../../_images/Bragg_reflection.png" style="width: 60%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Bragg reflection.</p></td>
-</tr>
-</tbody>
-</table>
-<p>We obtained earlier, that constructive interference will occur if the path difference <span class="math notranslate nohighlight">\(\Delta s\)</span> of neighboring waves (e.g. <span class="math notranslate nohighlight">\(U_1\)</span> and <span class="math notranslate nohighlight">\(U_2\)</span>) in just an integer multiple of the wavelength <span class="math notranslate nohighlight">\(\Delta s=m\lambda\)</span>. For the picture above, we may easily calculate the pathlength difference (the distance between the blue lines <span class="math notranslate nohighlight">\(\Delta s_1+\Delta s_2\)</span>), which is given by the angle of incidence <span class="math notranslate nohighlight">\(\theta\)</span> (note that it is measured to the plane and not to the normal here!)
+<figure><p><img alt="95858606ed02436d9f9a3624a547a300" class="no-scaled-link" src="../../_images/Bragg_reflection.png" style="width: 60%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Bragg reflection.</p>
+</figcaption></figure><p>We obtained earlier, that constructive interference will occur if the path difference <span class="math notranslate nohighlight">\(\Delta s\)</span> of neighboring waves (e.g. <span class="math notranslate nohighlight">\(U_1\)</span> and <span class="math notranslate nohighlight">\(U_2\)</span>) in just an integer multiple of the wavelength <span class="math notranslate nohighlight">\(\Delta s=m\lambda\)</span>. For the picture above, we may easily calculate the pathlength difference (the distance between the blue lines <span class="math notranslate nohighlight">\(\Delta s_1+\Delta s_2\)</span>), which is given by the angle of incidence <span class="math notranslate nohighlight">\(\theta\)</span> (note that it is measured to the plane and not to the normal here!)
 and the distance between the horizontal planes <span class="math notranslate nohighlight">\(d\)</span>. According to that we find that</p>
 <div class="math notranslate nohighlight">
 \[\Delta s=\Delta s_1+\Delta s_2 =2 d\sin(\theta)\]</div>
@@ -793,75 +534,37 @@ and the distance between the horizontal planes <span class="math notranslate noh
 </div>
 <p>This law of Bragg reflection is the foundation for the structural analysis using X-rays, for example. If we assume that the periodic arrangement of objects is a lattice of atoms, the the reflection is microscopically related to the scattering of the X-rays on the atoms in the lattice. The atoms thereby act as sources of spherical waves, which in the far-field (infinite distance) can be treated as plane waves interfering. If we observe therefore a constructive interference from such a lattice
 structure under an angle <span class="math notranslate nohighlight">\(\theta\)</span>, we may deduce the lattice constant <span class="math notranslate nohighlight">\(d\)</span> when we know the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="15a40d4fcc0f4fa480fd7c71da43b165" class="no-scaled-link" src="../../_images/Lattice_reflection.png" style="width: 50%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Bragg reflection principle.</p></td>
-</tr>
-</tbody>
-</table>
-<p>In a real atomic lattice, atoms are arranged in more complex periodic structures than shown in 2 dimensions above. In X-ray scattering pattern is therefore a chracteristic dot pattern on the surface of a sphere. You will extend this picture later in the course on <em>Solid State Physics</em>. More generally you may see X-ray scattering also as diffraction on a 3-dimensional grating.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="93b27035568243daac8e6a24cfeb9d16" class="no-scaled-link" src="../../_images/xray.png" style="width: 60%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> One of the first recorded X-ray scattering patterns from a platinum lattice.</p></td>
-</tr>
-</tbody>
-</table>
-<p>The image below shows the experiment from the lecture, where the periodic structure is given by a stack of acrylic sheets, with constant separation. A microwave is incident to the stack. Each sheet is reflecting a tiny fraction of the wave so that the transmitted wave by a sheet is almost the original one.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="a021d1a2064946aaa937c12744d3b8db" class="no-scaled-link" src="../../_images/multi_wave_lecture.png" style="width: 60%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Microwave reflection from a stack of acrylic glass sheets. Butterfly wing reflection corresponding to a 3D Bragg reflection from a complex structured dielectric lattice.</p></td>
-</tr>
-</tbody>
-</table>
-<p>As a result we obtained for certain angles constructive interference in reflection, which is a Bragg reflection as well. Note that we used here Microwaves as radiation, as these waves have a wavelength of several centimeters. We may therefore arrange the objects at a distance of centimeters (have a look at the Bragg equation again).</p>
+<figure><p><img alt="f6d6bca8a6f04d829dcfd16706d18774" class="no-scaled-link" src="../../_images/Lattice_reflection.png" style="width: 50%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Bragg reflection principle on a lattice.</p>
+</figcaption></figure><p>In a real atomic lattice, atoms are arranged in more complex periodic structures than shown in 2 dimensions above. In X-ray scattering pattern is therefore a chracteristic dot pattern on the surface of a sphere. You will extend this picture later in the course on <em>Solid State Physics</em>. More generally you may see X-ray scattering also as diffraction on a 3-dimensional grating.</p>
+<figure><p><img alt="eb2a169c3fe742e4941291effb7f6fa4" class="no-scaled-link" src="../../_images/xray.png" style="width: 60%;" /></p>
+<figcaption><p><strong>Fig.:</strong> One of the first recorded X-ray scattering patterns from a platinum lattice.</p>
+</figcaption></figure><p>The image below shows the experiment from the lecture, where the periodic structure is given by a stack of acrylic sheets, with constant separation. A microwave is incident to the stack. Each sheet is reflecting a tiny fraction of the wave so that the transmitted wave by a sheet is almost the original one.</p>
+<figure><p><img alt="e59a505f86e34c8184b34210d5dda6c7" class="no-scaled-link" src="../../_images/multi_wave_lecture.png" style="width: 65%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Microwave reflection from a stack of acrylic glass sheets.</p>
+</figcaption></figure><p>As a result we obtained for certain angles constructive interference in reflection, which is a Bragg reflection as well. Note that we used here Microwaves as radiation, as these waves have a wavelength of several centimeters. We may therefore arrange the objects at a distance of centimeters (have a look at the Bragg equation again).</p>
 </div>
-<div class="section" id="Bragg-Mirros,-Photonic-Crystals-and-Anti-Reflection-Coating">
-<h1>Bragg Mirros, Photonic Crystals and Anti-Reflection Coating<a class="headerlink" href="#Bragg-Mirros,-Photonic-Crystals-and-Anti-Reflection-Coating" title="Permalink to this headline">¶</a></h1>
-<p>We may also prepare structure, which are periodic and act on optical waves, i.e. on waves in the visible regions. There we create stacks of materials with different refractive index. At each interface waves are reflected. As compared to the X-ray situation, light is also refracted. This</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="c99895ce5812499a9783565ee2e8d493" class="no-scaled-link" src="../../_images/multilayer_optics.png" style="width: 60%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Optical multilayer structure of layers with different refractive index.</p></td>
-</tr>
-</tbody>
-</table>
-<p><img alt="9594d0c2bea34f1881999061752c2c5f" class="no-scaled-link" src="../../_images/butterfly_lecture.png" style="width: 40%;" /></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
+<div class="section" id="Bragg-Mirrors,-Anti-Reflection-Coating-and-Photonic-Crystals">
+<h1>Bragg Mirrors, Anti-Reflection Coating and Photonic Crystals<a class="headerlink" href="#Bragg-Mirrors,-Anti-Reflection-Coating-and-Photonic-Crystals" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Bragg-Mirror">
+<h2>Bragg Mirror<a class="headerlink" href="#Bragg-Mirror" title="Permalink to this headline">¶</a></h2>
+<p>We may also prepare structure, which are periodic and act on optical waves, i.e. on waves in the visible regions. There we create stacks of materials with different refractive index. At each interface waves are reflected. As compared to the X-ray situation, light is also refracted before it propagates further to the next interface. During propagation not only the path length but the optical path length is of importance as the wavelength is changed when the refractive index is changed.</p>
+<figure><p><img alt="fec35027cfa04911bfb7caa8512962c8" class="no-scaled-link" src="../../_images/multilayer_optics.png" style="width: 60%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Periodic optical multilayer structure of layers with different refractive index.</p>
+</figcaption></figure><p>Using such structures high reflectivities can be achieved in certain wavelength ranges even though the materials used are transparent. The propagation through such a multilayer stack can be formalized into matrix operations, which can simplify the calculation. Note that also phase jumps at the boundaries upon reflection have to be taken into accout. The overall calculations go beyond our scope here.</p>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
+<div class="section" id="Antireflection-Coating">
+<h2>Antireflection Coating<a class="headerlink" href="#Antireflection-Coating" title="Permalink to this headline">¶</a></h2>
+<p>While we do not consider the periodic multilayer structures, we may consider another important applications. We wish to calculate the thickness and the optimal refractive index of a single layer that we would like to deposit on glass to reduce the reflection of the glass air interface. Such an antireflection coating is quite common, though, most antireflection coatings involve multiple layers.</p>
+<figure><p><img alt="c10957d2bfc94674ba542d0426fe8dd5" class="no-scaled-link" src="../../_images/anti_reflection.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Setup for our calculation of he anti-reflection coating.</p>
+</figcaption></figure><p>The sketch above shows the setup we would like to consider to calculate the thickness <span class="math notranslate nohighlight">\(d_1\)</span> of the layer as well as its refractive index <span class="math notranslate nohighlight">\(n_2\)</span> such that we get zero reflection from the underlying glass <span class="math notranslate nohighlight">\(n_3\)</span>.</p>
 </div>
-</div>
+<div class="section" id="Photonic-Crystals">
+<h2>Photonic Crystals<a class="headerlink" href="#Photonic-Crystals" title="Permalink to this headline">¶</a></h2>
+<figure><p><img alt="44d27f8dffd041c6ac6109d2c19762a7" class="no-scaled-link" src="../../_images/butterfly_wings.png" style="width: 80%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Butterfly wing reflection corresponding to a 3D Bragg reflection from a complex structured dielectric lattice.</p>
+</figcaption></figure></div>
 </div>
 
 

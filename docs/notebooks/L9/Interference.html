@@ -295,11 +295,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L11/overview_11.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html">Fabry Perot Interferometer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Newton-Rings">Newton Rings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L11/Interference.html#Bragg-reflection">Bragg reflection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Newton-Rings">Newton Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Bragg-reflection">Bragg reflection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Bragg-Mirrors,-Anti-Reflection-Coating-and-Photonic-Crystals">Bragg Mirrors, Anti-Reflection Coating and Photonic Crystals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Interference.html#Bragg-Mirror">Bragg Mirror</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Interference.html#Antireflection-Coating">Antireflection Coating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Interference.html#Photonic-Crystals">Photonic Crystals</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Bragg-Mirros,-Photonic-Crystals-and-Anti-Reflection-Coating">Bragg Mirros, Photonic Crystals and Anti-Reflection Coating</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 12:</span></p>
 <ul>
@@ -419,13 +422,25 @@
 </div>
 <div class="section" id="Coherence">
 <h1>Coherence<a class="headerlink" href="#Coherence" title="Permalink to this headline">¶</a></h1>
-<p>One of the important properties e have assumed in the calculation of interference during the last lecture has been coherence. Coherence denotes the phase relation between two waves.</p>
+<style>
+figure {
+  border: 1px #cccccc solid;
+  padding: 4px;
+  margin: auto;
+}
+
+figcaption {
+  background-color: #eeeeee;
+  color: black;
+  padding: 2px;
+}
+</style><p>One of the important properties e have assumed in the calculation of interference during the last lecture has been coherence. Coherence denotes the phase relation between two waves.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="a3271aec5f244a1fa334d95eae14b824" class="no-scaled-link" src="../../_images/coherence.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="6beb953bebaa42a299ba508f0372c79d" class="no-scaled-link" src="../../_images/coherence.png" style="width: 90%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -475,7 +490,7 @@ waves</strong>.</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="95b9a1cbd8a44e1abc4cf826d6855b27" class="no-scaled-link" src="../../_images/michelson.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="790911a19c904bf1a920579c5e169a52" class="no-scaled-link" src="../../_images/michelson.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -494,7 +509,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="7e6722d786bd45bf8994d91e4882ab3d" class="no-scaled-link" src="../../_images/mach.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="1ff46589c9ea470aae586e316a5b2c67" class="no-scaled-link" src="../../_images/mach.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -502,7 +517,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 </tr>
 </tbody>
 </table>
-<figure><p><img alt="173a6226c56f47559680d30cef261365" class="no-scaled-link" src="../../_images/machz_lecture.png" style="width: 32%;" /> <img alt="cdaf9c8cc1744b4883de9f4314e83209" class="no-scaled-link" src="../../_images/machz_lecture_pat.png" style="width: 32%;" /> <img alt="eb56201aef6b4f65936144ee91b6c082" class="no-scaled-link" src="../../_images/machz_lecture_vortex.png" style="width: 32%;" /></p>
+<figure><p><img alt="bdb0ac8960524bf08a4bd6318b940720" class="no-scaled-link" src="../../_images/machz_lecture.png" style="width: 32%;" /> <img alt="b5b0fd94b87f4fe195893da211f4ffe8" class="no-scaled-link" src="../../_images/machz_lecture_pat.png" style="width: 32%;" /> <img alt="d00ced460e9144b4ab30d774550f5823" class="no-scaled-link" src="../../_images/machz_lecture_vortex.png" style="width: 32%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Mach Zehnder interferometer used in the lecture. The <strong>left</strong> image shows the general layout (compare with sketch). The <strong>middle</strong> image shows the interference pattern obtained. Note that the two interference patterns are complementary. The pattern is circular as the incident wave is not a plane wave, but a Gaussian beam. The <strong>right</strong> image show a vortex like pattern, if a special waveplate is inserted that gives a special phase delay.</p>
 </figcaption></figure></div>
 <div class="section" id="Sagnac-Interferometer">
@@ -513,7 +528,7 @@ a stripe or ring pattern. Note that if the screen would be completely dark due t
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="4a614ffc38bb44768ffe1b51645bcac0" class="no-scaled-link" src="../../_images/sagnac.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="f821c46835d44763a5b50089061a3080" class="no-scaled-link" src="../../_images/sagnac.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -547,7 +562,7 @@ of spherical waves later in the section about Huygens waves.</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="bb54b21412c441f3b4a3e48b263aca6c" class="no-scaled-link" src="../../_images/double_slit.png" style="width: 400px;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="798e62d362a649058468946b20ed60a6" class="no-scaled-link" src="../../_images/double_slit.png" style="width: 400px;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -580,20 +595,9 @@ of spherical waves later in the section about Huygens waves.</p>
 <div class="math notranslate nohighlight">
 \[I=4I_0 \cos^2\left ( \frac{k \Delta s}{2}\right)=4I_0 \cos^2\left ( \frac{\pi d \sin(\theta)}{\lambda}\right)\]</div>
 <p>The two graphs below show the intensity as a function of <span class="math notranslate nohighlight">\(\sin(\theta)\)</span>, for two different doubles slits at different distance.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="455d251e7444451cb6e1beaec2cd0b88" class="no-scaled-link" src="../../_images/double_slit_int.png" style="width: 800px;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Double slit interference pattern for two different wavelength (532 nm, 700 nm) and two different slit separations (left: 3 µm, right: 5 µm).</p></td>
-</tr>
-</tbody>
-</table>
-<p>The larger the slit separation <span class="math notranslate nohighlight">\(d\)</span>, the closer are the neighboring peaks for a single color. Also if we shorten the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>, the individual peaks of constructive interference come closer.</p>
+<figure><p><img alt="20f9d29df17b46688164b3fcb11a078a" class="no-scaled-link" src="../../_images/double_slit_int.png" style="width: 800px;" /></p>
+<figcaption><p><strong>Fig.:</strong> Double slit interference pattern for two different wavelength (532 nm, 700 nm) and two different slit separations (left: 3 µm, right: 5 µm)</p>
+</figcaption></figure><p>The larger the slit separation <span class="math notranslate nohighlight">\(d\)</span>, the closer are the neighboring peaks for a single color. Also if we shorten the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>, the individual peaks of constructive interference come closer.</p>
 </div>
 
 
