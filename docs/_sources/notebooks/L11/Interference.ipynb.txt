@@ -181,7 +181,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Bragg reflection"
+    "## Bragg reflection"
    ]
   },
   {
