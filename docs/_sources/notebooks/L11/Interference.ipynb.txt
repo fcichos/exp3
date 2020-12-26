@@ -217,7 +217,7 @@
     "\n",
     "**Bragg reflection**\n",
     "    \n",
-    "A Bragg reflection occurs on a periodic arrangement of reflecting objects with a spacing $d$ undern an incident angle $\\theta$ to the plane if \n",
+    "A Bragg reflection occurs on a periodic arrangement of reflecting objects with a spacing $d$ under an incident angle $\\theta$ to the plane if \n",
     "    \n",
     "$$\n",
     "\\Delta s=2 d\\sin(\\theta)=m\\lambda\n",
@@ -240,8 +240,8 @@
    "metadata": {},
    "source": [
     "<figure>\n",
-    "  <img src=\"img/Lattice_reflection.png\" width=\"50%\">  \n",
-    "  <figcaption>**Fig.:** Bragg reflection principle on a lattice.\n",
+    "  <img src=\"img/Lattice_reflection.png\" width=\"60%\">  \n",
+    "  <figcaption>**Fig.:** Bragg reflection on a lattice. \n",
     "  </figcaption>\n",
     "</figure>"
    ]
@@ -271,7 +271,7 @@
     "The image below shows the experiment from the lecture, where the periodic structure is given by a stack of acrylic sheets, with constant separation. A microwave is incident to the stack. Each sheet is reflecting a tiny fraction of the wave so that the transmitted wave by a sheet is almost the original one.\n",
     "\n",
     "<figure>\n",
-    "  <img src=\"img/multi_wave_lecture.png\" width=\"65%\">  \n",
+    "  <img src=\"img/multi_wave_lecture.png\" width=\"75%\">  \n",
     "  <figcaption>**Fig.:** Microwave reflection from a stack of acrylic glass sheets.\n",
     "  </figcaption>\n",
     "</figure>\n",
@@ -322,7 +322,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Antireflection Coating"
+    "### Anti-Reflection Coating"
    ]
   },
   {
@@ -347,7 +347,72 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The sketch above shows the setup we would like to consider to calculate the thickness $d_1$ of the layer as well as its refractive index $n_2$ such that we get zero reflection from the underlying glass $n_3$."
+    "The sketch above shows the setup we would like to consider to calculate the thickness $d_1$ of the layer as well as its refractive index $n_2$ such that we get zero reflection from the underlying glass $n_3$. At each of the interfaces, we have a reflectance $R_n=|r_n|^2$, where $r_n$ are the reflection coefficients. We would like to use this setup and calculate the anti-reflection layer properties for normal incidence.\n",
+    "\n",
+    "**Thickness of the coating**\n",
+    "\n",
+    "To calculate the thickness of the coating, we just have to consider the destructive interference condition. For this we first need to assume $n_1<n_2<n_3$, since that assures that there is the same phase jump of $\\pi$ at the first and the second interface, so we do not need to consider it. The destructive interference is then realized by\n",
+    "\n",
+    "$$\n",
+    "2k d_1=(2m+1)\\pi\n",
+    "$$\n",
+    "\n",
+    "Here $k$ is the wavenumber in the thin film and $m=0,1,\\ldots$ is an integer. Just inserting $k=2\\pi/\\lambda$ yields\n",
+    "\n",
+    "$$\n",
+    "\\frac{4\\pi}{\\lambda} d_1=(2m+1)\\pi\n",
+    "$$\n",
+    "\n",
+    "or finally the thickness of the layer\n",
+    "\n",
+    "$$\n",
+    "d_1=(2m+1)\\frac{\\lambda}{4}\n",
+    "$$\n",
+    "\n",
+    "We are free to chose the order of the destructive interference $m$ so we just choose $m=0$. In this case, we obtain a film thickness of \n",
+    "\n",
+    "$$\n",
+    "d_1=\\frac{\\lambda}{4}\n",
+    "$$\n",
+    "\n",
+    "Note that the wavelength $\\lambda$ corresponds to the wavelength of light in the material with the refractive index $n_2$ and not the original wavelength on vacuum. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Refractive index of the coating**\n",
+    "\n",
+    "To get real destructive interference, we need the two reflected waves we are considering to cancel completely also in intensity. This means that\n",
+    "\n",
+    "$$\n",
+    "R_1 I_0=(1-R_1)R_2 I_0\n",
+    "$$\n",
+    "\n",
+    "Typically $R_1$ and $R_2$ are small (only a few percent are reflected). Thus we may assume that $R_1 R_2\\approx 0$ and therefroe\n",
+    "\n",
+    "$$\n",
+    "R_1 I_0\\approx R_2 I_0\n",
+    "$$\n",
+    "\n",
+    "or $R_1\\approxR_2$. We next need to relate the refractive indices to the reflection coefficient. We will derive the exact formulas later in the electromagnetic wave chapter, but for now we may use the reflectance for normal incidence when the light is coming from the medium with $n_1$ to the medium $n_2$. This is given by\n",
+    "\n",
+    "$$\n",
+    "R_1=\\left |\\frac{n_2-n_1}{n_1+n_2}\\right|^2\n",
+    "$$\n",
+    "\n",
+    "Our anti-reflection condition for the intenisties is thus\n",
+    "\n",
+    "\\frac{n_2-n_1}{n_1+n_2}=\\frac{n_3-n_2}{n_2+n_3}\n",
+    "\n",
+    "from which you find by transformation\n",
+    "\n",
+    "$$\n",
+    "n2=\\sqrt{n_1 n_3}\n",
+    "$$\n",
+    "\n",
+    "The refractive index for a anti-reflection coating is thus given as the square root of the product of the neighboring materials refractive indices. Thus for example, if we use $n_1=1$ (air) and $n_3=1.5$ (glass), then we obtain $n_2=1.22$ for the appropriate coating refractive index. Unfortunately refractive indices rely on materials and are not completely arbitrary. Therefore, we have to choose one of the robust materials, that is closest to this value, which is in this case $MgF_2$ with $n_2=1.38$, which brings down reflection far enough. Better performance is obtained with multilayer structures.\n"
    ]
   },
   {
