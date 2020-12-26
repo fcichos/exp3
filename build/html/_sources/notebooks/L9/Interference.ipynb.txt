@@ -103,6 +103,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "Interferometers are measurement devices that slit a light wave into two waves, put them on different path to reunite them later. \n",
     "Due to the short wavelength in the optical range, interference is an extremely senstive tool to measures small differences in the optical path length. This is used in a number of application culminating in the detection of gravitational waves on large length scales and single molecules on the other extreme. The examples below all use the **interference of two partial waves**. \n"
    ]
   },
@@ -164,9 +165,10 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "|<img src=\"img/machz_lecture.png\" width=\"30%\"> <img src=\"img/machz_lecture_pat.png\" width=\"30%\"> <img src=\"img/machz_lecture_vortex.png\" width=\"30%\">|\n",
-    "|----------------|\n",
-    "| **Fig.:** Mach Zehnder interferometer used in the lecture. The **left** image shows  the general layout (compare with sketch). The **middle** image shows the interference pattern obtained. Note that the two interference patterns are complementary. The pattern is circular as the incident wave is not a plane wave, but a Gaussian beam. The **right** image show a vortex like pattern, if a special waveplate is inserted that gives a special phase delay.|"
+    "<figure>\n",
+    "  <img src=\"img/machz_lecture.png\" width=\"32%\"> <img src=\"img/machz_lecture_pat.png\" width=\"32%\"> <img src=\"img/machz_lecture_vortex.png\" width=\"32%\">\n",
+    "  <figcaption>**Fig.:** Mach Zehnder interferometer used in the lecture. The **left** image shows  the general layout (compare with sketch). The **middle** image shows the interference pattern obtained. Note that the two interference patterns are complementary. The pattern is circular as the incident wave is not a plane wave, but a Gaussian beam. The **right** image show a vortex like pattern, if a special waveplate is inserted that gives a special phase delay.</figcaption>\n",
+    "</figure>\n"
    ]
   },
   {
