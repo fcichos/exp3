@@ -8,6 +8,26 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<style>\n",
+    "figure {\n",
+    "  border: 1px #cccccc solid;\n",
+    "  padding: 4px;\n",
+    "  margin: auto;\n",
+    "  align: center;\n",
+    "}\n",
+    "\n",
+    "figcaption {\n",
+    "  background-color: #eeeeee;\n",
+    "  color: black;\n",
+    "  padding: 2px;\n",
+    "}\n",
+    "</style>"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": 2,
    "metadata": {},
