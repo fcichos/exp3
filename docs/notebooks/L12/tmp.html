@@ -804,16 +804,21 @@ The above exception was the direct cause of the following exception:
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="mf">10e-6</span><span class="p">)),(</span><span class="n">aperture</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">delta</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mf">0.61</span><span class="o">*</span><span class="mf">532e-9</span><span class="o">/</span><span class="mf">5e-6</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="mf">10e-6</span><span class="p">)),(</span><span class="n">aperture</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="mf">10e-6</span><span class="p">)),(</span><span class="n">aperture</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="mf">10e-6</span><span class="p">)),(</span><span class="n">aperture</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="c1">#plt.annotate(r&#39;$0.61 \lambda/R$&#39;,xy=(0.61*532e-9/5e-6,0),xytext=(0.06,0.4),arrowprops={&quot;width&quot;:1,&quot;headwidth&quot;:5})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">0.61</span><span class="o">*</span><span class="mf">532e-9</span><span class="o">/</span><span class="mf">5e-6</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\sin(\theta)$&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$I/I_0$&quot;</span><span class="p">)</span>
-
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -825,13 +830,17 @@ The above exception was the direct cause of the following exception:
 <div class="highlight"><pre>
 &lt;ipython-input-7-aca6c6987ac4&gt;:6: RuntimeWarning: invalid value encountered in true_divide
   return((2*sp.j1(x)/x)**2)
+&lt;ipython-input-7-aca6c6987ac4&gt;:6: RuntimeWarning: invalid value encountered in true_divide
+  return((2*sp.j1(x)/x)**2)
+&lt;ipython-input-7-aca6c6987ac4&gt;:6: RuntimeWarning: invalid value encountered in true_divide
+  return((2*sp.j1(x)/x)**2)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L12_tmp_7_1.png" class="no-scaled-link" src="../../_images/notebooks_L12_tmp_7_1.png" style="width: 421px; height: 280px;" />
+<img alt="../../_images/notebooks_L12_tmp_7_1.png" class="no-scaled-link" src="../../_images/notebooks_L12_tmp_7_1.png" style="width: 460px; height: 340px;" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
