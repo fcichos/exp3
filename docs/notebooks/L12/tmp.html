@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Diffraction &mdash; Experimental Physics 3 1 documentation</title>
+  <title>&lt;no title&gt; &mdash; Experimental Physics 3 1 documentation</title>
   
 
   
@@ -39,9 +39,7 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lecture Contents" href="../../lectures/L13/overview_13.html" />
-    <link rel="prev" title="Lecture Contents" href="../../lectures/L12/overview_12.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -305,13 +303,13 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 12:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L12/overview_12.html">Lecture Contents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Diffraction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Huygens-Principle">Huygens Principle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Single-Slit-diffraction">Single Slit diffraction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Circular-Aperture">Circular Aperture</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
 </ul>
 </li>
 </ul>
@@ -370,14 +368,14 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Diffraction</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L12/Diffraction.ipynb" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L12/tmp.ipynb" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -647,27 +645,11 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L12/Diffraction.ipynb`_</span></a>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L12/Diffraction.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L12/tmp.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L12/tmp.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<div class="section" id="Diffraction">
-<h1>Diffraction<a class="headerlink" href="#Diffraction" title="Permalink to this headline">¶</a></h1>
-<style>
-figure {
-  border: 1px #cccccc solid;
-  padding: 4px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-figcaption {
-  background-color: #eeeeee;
-  color: black;
-  padding: 2px;
-}
-</style><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -698,152 +680,176 @@ figcaption {
 </pre></div>
 </div>
 </div>
-<div class="section" id="Huygens-Principle">
-<h2>Huygens Principle<a class="headerlink" href="#Huygens-Principle" title="Permalink to this headline">¶</a></h2>
-<p>The Huygens principle states, that each point of a wavefront is the source of a spherical wave in forward direction. This means nothing else, that any wave can be expanded into a superposition of spherical waves, which is the fundamental of Mie scattering for example. Yet, the overall statement of this principle seems a bit unphysical. Classically, accelerated charges are the source of electromagnetic waves. If there is no accelerated charge, there is no wave. Yet, the Huygens principle is in
-accord with quantum field theory.</p>
-<figure><p><img alt="f3ae80a8ed4e44c1b72b7c433e86b406" class="no-scaled-link" src="../../_images/huygens.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Huygens principle for a plane wave incident with a wave vector <span class="math notranslate nohighlight">\(\vec{k}\)</span>.</p>
-</figcaption></figure><p>The sketch above illustrates the Huygens principle, but we may also check that numerically. The graphs below were calculated to illustrate Huygens principle using spherical waves placed in a line close to each other.</p>
-<figure><p><img alt="c56d16a7c17046aa809f373aebf8e584" class="no-scaled-link" src="../../_images/huygens_num.png" style="width: 100%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Huygens principle used to create a plane wave from a set of spherical waves. The graph on the left shows the amplitude of a single spherical wave of a wavelength <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm. If we arange 500 spherical wave sources along the x-direction very densely and they all are in phase since the represent the phase of the incident plane wave at <span class="math notranslate nohighlight">\(z=0\)</span>, we can recreate the plane wavefronts for <span class="math notranslate nohighlight">\(z&gt;0\)</span> (middle) and the constant intensity (right).</p>
-</figcaption></figure><p>We have already dealt with all of the mathematics describing this situation. We have earlier looked at the interference of multiple waves with the same amplitude. In this case we have <span class="math notranslate nohighlight">\(N\)</span> spherical waves arranged along the x-axis at <span class="math notranslate nohighlight">\(z=0\)</span> with neighboring sources at a distance <span class="math notranslate nohighlight">\(d\)</span>. If we consider the interference at infinite distance, the phase difference between the neighboring waves is given by <span class="math notranslate nohighlight">\(\Delta \phi=2\pi/\lambda d\sin(\theta)\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle
-with the z-direction. Thus all <span class="math notranslate nohighlight">\(N\)</span> waves give according to our previous calculations an intensity pattern</p>
-<div class="math notranslate nohighlight">
-\[I=I_0 \frac{\sin^2\left (N\frac{\pi}{\lambda}d\sin(\theta)\right)}{\sin^2\left (\frac{\pi}{\lambda}d\sin(\theta)\right)}\]</div>
-<p>This is again our starting point for the next calculations concernign a single slit, which confines the range of Huygens waves emitted to a region along the x-direction. This interference of Huygens waves is termed diffraction, yet the physical principle behind is interference. Our second calculation will have a look at many slits arranged along the x-direction, which is then called a diffraction grating. The latter is an indispensible tool for spectroscopy.</p>
-</div>
-<div class="section" id="Single-Slit-diffraction">
-<h2>Single Slit diffraction<a class="headerlink" href="#Single-Slit-diffraction" title="Permalink to this headline">¶</a></h2>
-<p>We would like to apply this formula to study the diffraction of an incident plane wave (wavevector <span class="math notranslate nohighlight">\(k\)</span>) on a single slit of width <span class="math notranslate nohighlight">\(b\)</span>. Along this slit opening we place a number of Huygens sources. The sketch below has 3 Huygens sources. We may generalize that to <span class="math notranslate nohighlight">\(N\)</span> sources.</p>
-<figure><p><img alt="f1ead9678c6540a8864e215857bf7c36" class="no-scaled-link" src="../../_images/single_slit.png" style="width: 400px;" /></p>
-<figcaption><p><strong>Fig.:</strong></p>
-</figcaption></figure><p>We will devide the slit into segments of width <span class="math notranslate nohighlight">\(\Delta b\)</span> such that we have <span class="math notranslate nohighlight">\(N=b/\Delta b\)</span> Huygens sources with an amplitude <span class="math notranslate nohighlight">\(A_0=\sqrt{I_0}\)</span> along the slit. We may then apply the formula from teh previous section for the multi-wave interference using <span class="math notranslate nohighlight">\(d=\Delta b\)</span>. We obtain</p>
-<div class="math notranslate nohighlight">
-\[I=I_0 \frac{\sin^2\left (\pi\frac{b}{\lambda}\sin(\theta)\right)}{\sin^2\left (\pi\frac{\Delta b}{\lambda}\sin(\theta)\right)}\]</div>
-<p>where we can replace the <span class="math notranslate nohighlight">\(\Delta b\)</span> in the denominator by <span class="math notranslate nohighlight">\(\Delta b=N/b\)</span> to yield</p>
-<div class="math notranslate nohighlight">
-\[I=I_0 \frac{\sin^2\left (\pi\frac{b}{\lambda}\sin(\theta)\right)}{\sin^2\left (\pi\frac{b}{N\lambda}\sin(\theta)\right)}\]</div>
-<p>Substituting <span class="math notranslate nohighlight">\(x=\pi \frac{b}{\lambda}\sin(\theta)\)</span></p>
-<p>then gives</p>
-<div class="math notranslate nohighlight">
-\[I=I_0\frac{\sin^2(x)}{\sin^2(x/N)}\]</div>
-<p>Since we do not have a finite number <span class="math notranslate nohighlight">\(N\)</span> sources in the slit, we have to consider the limit of the above formula for <span class="math notranslate nohighlight">\(N\rightarrow\infty\)</span>, which we have to calculate for the denominator. There with increasing <span class="math notranslate nohighlight">\(N\)</span> the argument of the sine function becomes very small and we can use our small angle expansion of the sine function to yield</p>
-<div class="math notranslate nohighlight">
-\[\sin^2\left (\frac{x}{N}\right) \approx \frac{x^2}{N^2}\]</div>
-<p>and therefore</p>
-<div class="math notranslate nohighlight">
-\[I(\theta)=I_s\frac{\sin^2\left (\pi \frac{b}{\lambda}\sin(\theta)\right)}{\left( \pi \frac{b}{\lambda}\sin(\theta)\right)^2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(I_s=N^2I_0\)</span>. The function <span class="math notranslate nohighlight">\(sin(x)/x\)</span> is often abbrevated as <span class="math notranslate nohighlight">\(\sinc(x)\)</span>, which is the sinus cardinalis. Let’s have a look at some of the properties of the intensity distribution with the help of some python code.</p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Single Slit Diffraction</strong></p>
-<p>The intensity distribution generated by the diffraction of monochromatic light on a single slit and observed in the far field is given by</p>
-<div class="math notranslate nohighlight">
-\[I(\theta)=I_s\frac{\sin^2\left (\pi \frac{b}{\lambda}\sin(\theta)\right)}{\left( \pi \frac{b}{\lambda}\sin(\theta)\right)^2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength of the light and <span class="math notranslate nohighlight">\(b\)</span> the width of the slit. The angle of observation is given by <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
-</div>
-<p><strong>Function definition</strong></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[93]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">def</span> <span class="nf">single_slit</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">wl</span><span class="p">):</span>
-    <span class="n">d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="n">wl</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="n">d</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<p><strong>Parameter definition</strong></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[96]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wl</span><span class="o">=</span><span class="mf">532e-9</span>
-<span class="n">b</span><span class="o">=</span><span class="mf">5e-6</span>
-<span class="n">theta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<p><strong>Plotting</strong></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span><span class="n">single_slit</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="mf">532e-9</span><span class="p">),</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;532 nm&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span><span class="n">single_slit</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="mf">700e-9</span><span class="p">),</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;700 nm&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;first minimum&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span><span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">),</span><span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">headwidth</span><span class="o">=</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\sin(\theta)$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$I/I_s$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span><span class="n">single_slit</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="mf">532e-9</span><span class="p">),</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;532 nm&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span><span class="n">single_slit</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="mf">700e-9</span><span class="p">),</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;700 nm&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\sin(\theta)$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$I/I_s$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">5e-6</span><span class="p">,</span><span class="mf">5e-6</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">5e-6</span><span class="p">,</span><span class="mf">5e-6</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">r</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+&lt;ipython-input-5-e0517961e834&gt;:5: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
+  r=np.array([X,Y,0])
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+
+<span></span><span class="kn">import</span> <span class="nn">scipy.special</span> <span class="k">as</span> <span class="nn">sp</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">aperture</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">,</span><span class="n">R</span><span class="o">=</span><span class="mf">5e-6</span><span class="p">,</span><span class="n">wl</span><span class="o">=</span><span class="mf">532e-9</span><span class="p">):</span>
+
+    <span class="n">theta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">z</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">/</span><span class="n">wl</span>
+
+    <span class="k">return</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">j1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">caperture</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="mf">10e-6</span><span class="p">,</span><span class="n">R</span><span class="o">=</span><span class="mf">5e-6</span><span class="p">,</span><span class="n">wl</span><span class="o">=</span><span class="mf">532e-9</span><span class="p">):</span>
+
+    <span class="n">theta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">z</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">/</span><span class="n">wl</span>
+
+    <span class="k">return</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">j1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">p</span><span class="o">=</span><span class="n">caperture</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="mf">10e-6</span><span class="p">)),(</span><span class="n">aperture</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$0.61\lambda/R$&#39;</span><span class="p">,</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.61</span><span class="o">*</span><span class="mf">532e-9</span><span class="o">/</span><span class="mf">5e-6</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.4</span><span class="p">),</span><span class="n">arrowprops</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;headwidth&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">},</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\sin(\theta)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$I/I_0$&quot;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L12_Diffraction_17_0.png" class="no-scaled-link" src="../../_images/notebooks_L12_Diffraction_17_0.png" style="width: 910px; height: 335px;" />
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-red-fg">AttributeError</span>: &#39;numpy.ndarray&#39; object has no attribute &#39;arctan&#39;
+
+The above exception was the direct cause of the following exception:
+
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-9-a11d2ad0487a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> plt<span class="ansi-blue-fg">.</span>subplot<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>np<span class="ansi-blue-fg">.</span>sin<span class="ansi-blue-fg">(</span>np<span class="ansi-blue-fg">.</span>arctan<span class="ansi-blue-fg">(</span>r<span class="ansi-blue-fg">/</span><span class="ansi-cyan-fg">10e-6</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">(</span>aperture<span class="ansi-blue-fg">(</span>r<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>lw<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> plt<span class="ansi-blue-fg">.</span>annotate<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">r&#39;$0.61\lambda/R$&#39;</span><span class="ansi-blue-fg">,</span>xy<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0.61</span><span class="ansi-blue-fg">*</span><span class="ansi-cyan-fg">532e-9</span><span class="ansi-blue-fg">/</span><span class="ansi-cyan-fg">5e-6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>xytext<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0.06</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0.4</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>arrowprops<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#34;width&#34;</span><span class="ansi-blue-fg">:</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;headwidth&#34;</span><span class="ansi-blue-fg">:</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span>fontsize<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">16</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> plt<span class="ansi-blue-fg">.</span>xlim<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0.0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0.4</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: loop of ufunc does not support argument 0 of type numpy.ndarray which has no callable arctan method
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_L12_tmp_5_1.png" class="no-scaled-link" src="../../_images/notebooks_L12_tmp_5_1.png" style="width: 836px; height: 365px;" />
 </div>
 </div>
-<p>The two plots show the characteristic diffraction pattern of a single slit, which is an oscillating function, decaying in amplitude. The oscillation is defined by the numerator and the decaying amplitude by the denominator. The left graph displays the diffraction pattern as a function of <span class="math notranslate nohighlight">\(\sin(\theta)\)</span> for two different wavelength for a slit width of <span class="math notranslate nohighlight">\(b=5\, {\rm \mu m}\)</span>. The right graph displays the diffraction of the same wavelength for only half the slit width
-<span class="math notranslate nohighlight">\(b=2.5\, {\rm \mu m}\)</span>. Looking at these graphs, we can make the following observations</p>
-<ul class="simple">
-<li><p>longer wavelength show a wider diffraction pattern</p></li>
-<li><p>small slit width creates a wider diffraction pattern</p></li>
-</ul>
-<p>We can also quantify these observation by calculating the minima of the oscillating denominator. The denomintor becomes zero whenever the argument of the sine square function is <span class="math notranslate nohighlight">\(\pi\)</span>. From this it easily follows that</p>
-<div class="math notranslate nohighlight">
-\[\sin(\theta)=\frac{\lambda}{b}\]</div>
-<p>to have a minimum in the intensity of slit diffraction. This type of dependency, i.e. wavelength divided by the dimension of the diffracting object, is valid in general even though it migh show up with diffreent numerical prefactors for other diffracting geometries.</p>
-<figure><p><img alt="0e4d12ac977e40e6a77b57f1d8c35405" class="no-scaled-link" src="../../_images/slit_diff_min.png" style="width: 600px;" /></p>
-<figcaption><p><strong>Fig.:</strong> Diffraction patterns as a function of the sine of the diffraction angle. The minima of the diffraction pattern in this plot are at integer multiples of <span class="math notranslate nohighlight">\(\lambda/b\)</span>.</p>
-</figcaption></figure><figure><p><img alt="eae8b1e339974929a5339e5740fa3c8c" class="no-scaled-link" src="../../_images/single_slit1.png" style="width: 40%;" /> <img alt="cace22ddaa9c40ad81308fc7ff80ce20" class="no-scaled-link" src="../../_images/single_slit2.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Diffraction patterns on a single slit as observed in the lecture. The left image shows the diffraction patter for red light, while the right image combines two different wavelength (red, blue), where one clearly recognizes the wider diffraction peaks for the longer red wavelength.</p>
-</figcaption></figure></div>
-<div class="section" id="Circular-Aperture">
-<h2>Circular Aperture<a class="headerlink" href="#Circular-Aperture" title="Permalink to this headline">¶</a></h2>
-<p>A similar but a bit more involved calculation can be done for a circular aperture. The result of this calculation is</p>
-<div class="math notranslate nohighlight">
-\[I(\theta)=I_0\left( \frac{2J_1(x)}{x} \right )^2\]</div>
-<p>with</p>
-<div class="math notranslate nohighlight">
-\[x=\frac{2\pi R}{\lambda}\sin(\theta)\]</div>
-<p>where <span class="math notranslate nohighlight">\(J_1\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Bessel_function">Bessel function</a> of first kind, <span class="math notranslate nohighlight">\(R\)</span> is the radius of the aperture. The Bessel function is similar to the sine function and oscillating function but has its zeros at <span class="math notranslate nohighlight">\(x_1=1.22 \pi\)</span>, <span class="math notranslate nohighlight">\(x_2=2.23 \pi\)</span> and so on.</p>
-<figure><p><img alt="f782304e8dc041248cd5c0e3bcd15c79" class="no-scaled-link" src="../../_images/circ_ap.png" style="width: 80%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Diffraction pattern of a circular aperture of radius <span class="math notranslate nohighlight">\(5\)</span> µm. The minima of the diffraction pattern in this plot are at integer multiples of <span class="math notranslate nohighlight">\(0.61\lambda/R\)</span>.</p>
-</figcaption></figure><p>According to the zeros of the numerator, we can again obtain the sine of the angle under which the first minimum in the intensity occurs in radial direction from the center of the diffraction pattern. We just have to set</p>
-<div class="math notranslate nohighlight">
-\[x_1=1.22\pi=\frac{2\pi R}{\lambda}\sin(\theta_1)\]</div>
-<p>which yields</p>
-<div class="math notranslate nohighlight">
-\[\sin(\theta_1)=0.61\frac{\lambda}{R}\]</div>
-<p>We recognize the same dependence as before: wavelength divided by the dimension of the diffracting element. The width of the diffraction peak in the center is well defined by this first minimum. This minimum therefore defines the radius of the so called <strong>Airy disc</strong>. In the language of microscopy, it defines the size of a resolution element which is termed <strong>resel</strong>.</p>
-<p><strong>Diffraction on the Eye-Iris</strong></p>
-<p>The above description gives us some nice insight into diffraction effects which occur on the aperture of the eye - the iris. So lets do some quick estimate.</p>
-<p>The aperture of the iris has a radius of <span class="math notranslate nohighlight">\(R=2.5\)</span> mm giving us for a wavelength of <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm the sine of the diffraction angle to be</p>
-<div class="math notranslate nohighlight">
-\[\sin(\theta_1)=0.61\frac{532\, {\rm nm}}{2.5\, {\rm mm}}=0.00013\]</div>
-<p>If we multiply this value with the diameter of the eye (roughly 2 cm), we obtain the size of the <strong>Airy disc</strong> on the “screen”, which is the retina.</p>
-<div class="math notranslate nohighlight">
-\[2\,{\rm cm}\sin(\theta_1)=2.59\, {\mu m}\]</div>
-<p>So the width of the diffraction pattern of light on the retina is roughly 2.59 µm, which corresponds well to the distance between light sensitive cell in the eye around the fovea. In this region we find densities of aroiund <span class="math notranslate nohighlight">\(150.000\)</span> cells per square millimeter, which gives a distance of 2.58 µm. It is not usefull to spend a larger amount of cells on a region of an Airy disc, as it does not increase the resolution but requires the cells to be more sensitive, as they have to share the
-intensity.</p>
-<div class="section" id="Resolution-of-an-Optical-Microscope">
-<h3>Resolution of an Optical Microscope<a class="headerlink" href="#Resolution-of-an-Optical-Microscope" title="Permalink to this headline">¶</a></h3>
-<p>We may spin this idea a bit further and use the diffraction pattern of a circular aperature to define the resolution of a microscope.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
 </div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">r</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2e-6</span><span class="p">,</span><span class="mf">2e-6</span><span class="p">,</span><span class="mi">301</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="mf">10e-6</span><span class="p">)),(</span><span class="n">aperture</span><span class="p">(</span><span class="n">r</span><span class="p">)),</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#plt.annotate(r&#39;$0.61 \lambda/R$&#39;,xy=(0.61*532e-9/5e-6,0),xytext=(0.06,0.4),arrowprops={&quot;width&quot;:1,&quot;headwidth&quot;:5})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\sin(\theta)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$I/I_0$&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+&lt;ipython-input-7-aca6c6987ac4&gt;:6: RuntimeWarning: invalid value encountered in true_divide
+  return((2*sp.j1(x)/x)**2)
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/notebooks_L12_tmp_7_1.png" class="no-scaled-link" src="../../_images/notebooks_L12_tmp_7_1.png" style="width: 421px; height: 280px;" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
 </div>
 </div>
 
@@ -852,15 +858,6 @@ intensity.</p>
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../lectures/L13/overview_13.html" class="btn btn-neutral float-right" title="Lecture Contents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../../lectures/L12/overview_12.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
