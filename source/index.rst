@@ -151,13 +151,18 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    :caption: Lecture 13:
    
    lectures/L13/overview_13.rst
+   notebooks/L13/Diffraction Grating.ipynb
+   notebooks/L13/Fresnel Zones.ipynb 
    
 .. toctree::
    :maxdepth: 2
    :caption: Lecture 14:
    
    lectures/L14/overview_14.rst
-
+   notebooks/L14/Diffraction Integral.ipynb
+   notebooks/L14/Electromagnetic Optics.ipynb 
+   
+   
 Indices and tables
 ==================
 
