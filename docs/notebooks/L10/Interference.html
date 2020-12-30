@@ -309,22 +309,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L12/overview_12.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L12/Diffraction.html">Diffraction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Diffraction-pattern-of-a-single-slit">Diffraction pattern of a single slit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L12/Diffraction.html#Farfield-vs. nearfield">Farfield vs. nearfield</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L12/Diffraction.html#Comparison-to-the-analytical-solution">Comparison to the analytical solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L12/Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Diffraction-grating">Diffraction grating</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 13:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L13/overview_13.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Diffraction%20Grating.html">Diffraction Grating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Fresnel%20Zones.html">Diffraction Integral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Fresnel%20Zones.html#Fresnel-Approximation">Fresnel Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Fresnel%20Zones.html#Fraunhofer-Approximation">Fraunhofer Approximation</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 14:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L14/overview_14.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Diffraction%20Integral.html">Fresnel Zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Electromagnetic%20Optics.html">Fresnel Zones</a></li>
 </ul>
 
             
@@ -441,7 +448,7 @@ figcaption {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="06d718c4b49c417092da0fa020d25f21" class="no-scaled-link" src="../../_images/thin_film.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="16538b5797ec4ab188371bfc368ac72f" class="no-scaled-link" src="../../_images/thin_film.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -502,7 +509,7 @@ figcaption {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="c0c0e444608146a2b1ac3a798df61ad5" class="no-scaled-link" src="../../_images/100nm_film.png" style="width: 40%;" /> <img alt="8839b354e73245b194d424ab6b10088c" class="no-scaled-link" src="../../_images/10nm_film.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="5a8a4cbb275c4be497232d5a8f7c6088" class="no-scaled-link" src="../../_images/100nm_film.png" style="width: 40%;" /> <img alt="71601349857e404db03c0fe18caa1c6b" class="no-scaled-link" src="../../_images/10nm_film.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -521,7 +528,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="72fd6f4c4d6843b6a89babf20ce736f1" class="no-scaled-link" src="../../_images/1µm_film.png" style="width: 40%;" /> <img alt="079cf1ac89a2495db439a09fa94cb580" class="no-scaled-link" src="../../_images/100µm_film.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="455d97037ca84b4ea6853116601e5b9e" class="no-scaled-link" src="../../_images/1µm_film.png" style="width: 40%;" /> <img alt="bfce20c5d1004c72b4cb9f1d6bd7a328" class="no-scaled-link" src="../../_images/100µm_film.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -534,7 +541,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="8cc8498ae4b745d48586d96dd05b6edb" class="no-scaled-link" src="../../_images/soap_film_lecture.png" style="width: 45%;" /> <img alt="4e326735d13c4f6694a48ca6595d28eb" class="no-scaled-link" src="../../_images/soap_film_lecture1.png" style="width: 45%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="95e14f97dd4f4ca1932317b6e55b95eb" class="no-scaled-link" src="../../_images/soap_film_lecture.png" style="width: 45%;" /> <img alt="b16f524a365b4893ac97c1e42c9d582b" class="no-scaled-link" src="../../_images/soap_film_lecture1.png" style="width: 45%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -578,7 +585,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="fb65b79d8ff042198d98d39b910b7137" class="no-scaled-link" src="../../_images/multi_wave.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="ce57173c3831448a9932ac121e2c2f71" class="no-scaled-link" src="../../_images/multi_wave.png" style="width: 90%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -622,7 +629,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="61a0f06291fa4217b27feda126012ee6" class="no-scaled-link" src="../../_images/multi_wave_decreasing.png" style="width: 70%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="417dcdfebf734a069072258d8d247e73" class="no-scaled-link" src="../../_images/multi_wave_decreasing.png" style="width: 70%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -652,7 +659,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="da96602d8e5f43308212b2b6a59f3968" class="no-scaled-link" src="../../_images/perot.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="7fb9dd22779647708457d8f3438df990" class="no-scaled-link" src="../../_images/perot.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -687,7 +694,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Dec 27, 2020.
+        Last updated on Dec 30, 2020.
       </span>
 
     </p>
