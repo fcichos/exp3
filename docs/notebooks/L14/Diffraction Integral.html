@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Fresnel Zones &mdash; Experimental Physics 3 1 documentation</title>
+  <title>Diffraction Integral &mdash; Experimental Physics 3 1 documentation</title>
   
 
   
@@ -320,17 +320,22 @@
 <p class="caption"><span class="caption-text">Lecture 13:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L13/overview_13.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L13/Diffraction%20Grating.html">Diffraction Grating</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L13/Fresnel%20Zones.html">Diffraction Integral</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L13/Fresnel%20Zones.html#Fresnel-Approximation">Fresnel Approximation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L13/Fresnel%20Zones.html#Fraunhofer-Approximation">Fraunhofer Approximation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Diffraction%20Grating.html">Diffraction Grating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Properties-of-the-diffraction-pattern">Properties of the diffraction pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Position-of-the-Main-Peaks">Position of the Main Peaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Influence-of-the-Slit-Width">Influence of the Slit Width</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Influence-on-the-Slit-Number">Influence on the Slit Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Spectral-resolution">Spectral resolution</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Fresnel%20Zones.html">Fresnel Zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Fresnel%20Zones.html#Fresnel-Zone-Plate">Fresnel Zone Plate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Fresnel%20Zones.html#Babinets-Principle">Babinets Principle</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lecture 14:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L14/overview_14.html">Lecture Contents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Fresnel Zones</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Diffraction Integral</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Electromagnetic%20Optics.html">Fresnel Zones</a></li>
 </ul>
 
@@ -378,7 +383,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Fresnel Zones</li>
+      <li>Diffraction Integral</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -427,8 +432,8 @@
 <p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L14/Diffraction Integral.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L14/Diffraction Integral.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<div class="section" id="Fresnel-Zones">
-<h1>Fresnel Zones<a class="headerlink" href="#Fresnel-Zones" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Diffraction-Integral">
+<h1>Diffraction Integral<a class="headerlink" href="#Diffraction-Integral" title="Permalink to this headline">¶</a></h1>
 <style>
 figure {
   border: 1px #cccccc solid;
@@ -443,7 +448,27 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style></div>
+</style><p>In the last section about Fresnel zones and the zone plate we have considered how different path contribute to the intensity at a point on the optical axis. We would like to generalize this idea to an integral formulation allowing us to calculate any kind of diffraction pattern.</p>
+<figure><p><img alt="9caad155332e4a8c83eac4bdc0f62b06" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Diffraction integral.</p>
+</figcaption></figure><p>Assume we have a light source <span class="math notranslate nohighlight">\(S\)</span> as in the image above, which sends out a spherical wave (does not need to be a spherical wave). The spatial amplitude of this wave at the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> at a tiny aperture element <span class="math notranslate nohighlight">\(d\sigma\)</span></p>
+<div class="math notranslate nohighlight">
+\[U_s(x,y)=U_0(x,y)e^{i\phi(x,y)}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[U_0=\frac{A}{R}=\frac{A}{\sqrt{g^2+x^2+y^2}}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\phi(x,y)=(-k R)\]</div>
+<p>This is the amplitude of the Huygens wave, which eminates from the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> to propagate towards the screen at <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span>. This Huygens wave contributes a fraction of an amplitude <span class="math notranslate nohighlight">\(dU_p\)</span> to the total amplitude in point <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span>, which is given by</p>
+<div class="math notranslate nohighlight">
+\[dU_p=C\frac{U_s d\sigma}{r}e^{-ikr}\]</div>
+<p>with <span class="math notranslate nohighlight">\(C=i\cos(\theta)/\lambda\)</span> as found in a more detailed calculation.</p>
+<p>The total amplitude at the point <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span> is then given by the integral over all contributions.</p>
+<div class="math notranslate nohighlight">
+\[U_p=\iint C U_s\frac{e^{-ikr}}{r}dx dy\]</div>
+<p>with <span class="math notranslate nohighlight">\(dxdy=d\sigma\)</span>. The integral runs over all positions in the aperature plane <span class="math notranslate nohighlight">\((x,y)\)</span> where we have an opening.</p>
+</div>
 
 
            </div>
@@ -468,7 +493,7 @@ figcaption {
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Dec 30, 2020.
+        Last updated on Jan 01, 2021.
       </span>
 
     </p>
