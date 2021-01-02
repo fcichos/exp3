@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fresnel Zones" href="Electromagnetic%20Optics.html" />
+    <link rel="next" title="Electromagnetic Waves" href="Electromagnetic%20Optics.html" />
     <link rel="prev" title="Lecture Contents" href="../../lectures/L14/overview_14.html" /> 
 </head>
 
@@ -335,8 +335,24 @@
 <p class="caption"><span class="caption-text">Lecture 14:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L14/overview_14.html">Lecture Contents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Diffraction Integral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Electromagnetic%20Optics.html">Fresnel Zones</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Diffraction Integral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Fresnel-Approximation">Fresnel Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Fraunhofer-Approximation">Fraunhofer Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Babinet’s-Principle">Babinet’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Electromagnetic%20Optics.html">Electromagnetic Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Electromagnetic%20Optics.html#Electromagnetic-Spectrum">Electromagnetic Spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Electromagnetic%20Optics.html#Maxwell-Equations">Maxwell Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Electromagnetic%20Optics.html#Plane-Waves,-Spherical-Waves">Plane Waves, Spherical Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Electromagnetic%20Optics.html#Polarization-of-EM-Waves">Polarization of EM Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Electromagnetic%20Optics.html#Linear-Polarized-Waves">Linear Polarized Waves</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -429,7 +445,7 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L14/Diffraction Integral.ipynb`_</span></a>.
+<p>This page was generated from <a href="#id5"><span class="problematic" id="id6">`source/notebooks/L14/Diffraction Integral.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L14/Diffraction Integral.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
 <div class="section" id="Diffraction-Integral">
@@ -449,7 +465,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>In the last section about Fresnel zones and the zone plate we have considered how different path contribute to the intensity at a point on the optical axis. We would like to generalize this idea to an integral formulation allowing us to calculate any kind of diffraction pattern.</p>
-<figure><p><img alt="9caad155332e4a8c83eac4bdc0f62b06" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
+<figure><p><img alt="f1ff2efe80e54114b75197690bf1f21a" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction integral.</p>
 </figcaption></figure><p>Assume we have a light source <span class="math notranslate nohighlight">\(S\)</span> as in the image above, which sends out a spherical wave (does not need to be a spherical wave). The spatial amplitude of this wave at the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> at a tiny aperture element <span class="math notranslate nohighlight">\(d\sigma\)</span></p>
 <div class="math notranslate nohighlight">
@@ -463,11 +479,100 @@ figcaption {
 <p>This is the amplitude of the Huygens wave, which eminates from the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> to propagate towards the screen at <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span>. This Huygens wave contributes a fraction of an amplitude <span class="math notranslate nohighlight">\(dU_p\)</span> to the total amplitude in point <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span>, which is given by</p>
 <div class="math notranslate nohighlight">
 \[dU_p=C\frac{U_s d\sigma}{r}e^{-ikr}\]</div>
-<p>with <span class="math notranslate nohighlight">\(C=i\cos(\theta)/\lambda\)</span> as found in a more detailed calculation.</p>
+<p>with <span class="math notranslate nohighlight">\(C=i\cos(\theta)/\lambda\)</span> as found in a more detailed calculation and called the obliquity factor.</p>
 <p>The total amplitude at the point <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span> is then given by the integral over all contributions.</p>
 <div class="math notranslate nohighlight">
 \[U_p=\iint C U_s\frac{e^{-ikr}}{r}dx dy\]</div>
-<p>with <span class="math notranslate nohighlight">\(dxdy=d\sigma\)</span>. The integral runs over all positions in the aperature plane <span class="math notranslate nohighlight">\((x,y)\)</span> where we have an opening.</p>
+<p>with <span class="math notranslate nohighlight">\(dxdy=d\sigma\)</span>. The integral runs over all positions in the aperature plane <span class="math notranslate nohighlight">\((x,y)\)</span> where we have an opening. This integral is called the <strong>Fresnel-Kirchhoff</strong> diffraction integral and allows us to calculate complicate scalar diffraction patterns.</p>
+<div class="section" id="Fresnel-Approximation">
+<h2>Fresnel Approximation<a class="headerlink" href="#Fresnel-Approximation" title="Permalink to this headline">¶</a></h2>
+<p>The diffracion integral does not always need to be calculated in completely, but we may use approxaimations to obtain diffraction patterns in different regimes. The first approximation, we would like to have a short look at is the <strong>Fresnel approximation</strong>, which yields the diffraction pattern in the <strong>near field</strong>.</p>
+<p>The distance <span class="math notranslate nohighlight">\(r\)</span> from the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> to the point <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span> can be written as</p>
+<p><span class="math">\begin{eqnarray}
+r&=&\sqrt{z_0^2+(x-x^{\prime})^2+(y-y^{\prime})^2}\\
+&\approx & z_0\left (1+ \frac{(x-x^{\prime})^2}{2z_0^2} + \frac{(y-y^{\prime})^2}{2z_0^2}+\ldots \right)
+\end{eqnarray}</span></p>
+<p>The second line assumes that <span class="math notranslate nohighlight">\(\cos(\theta)=z_0/r\approx 1\)</span> and <span class="math notranslate nohighlight">\(C=i/\lambda\)</span>. We thus consider small diffraction angles. Using this approximation we find for the amplitude of the wave at a point <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span></p>
+<div class="math notranslate nohighlight">
+\[U(x^{\prime},y^{\prime},z_0)=i\frac{e^{-ikz_0}}{\lambda z_0}\iint U_{s}(x,y)\exp\left [ -\frac{ik}{2z_0}\left ((x-x^{\prime})^2+(y-y^{\prime})^2 \right )\right ]dx dy\]</div>
+<p>As the integration is over <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>, we may draw out all screen coordinate elements such that</p>
+<div class="math notranslate nohighlight">
+\[U(x^{\prime},y^{\prime},z_0)=i\frac{e^{-ikz_0}}{\lambda z_0} e^{-\frac{ik}{2z_0}(x^{\prime 2}+y^{\prime 2})}
+\iint U_{s}(x,y)e^{ -\frac{ik}{2z_0}(x^2+y^2)}
+e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
+<p>This is the <strong>Fresnel approximation</strong>.</p>
+</div>
+<div class="section" id="Fraunhofer-Approximation">
+<h2>Fraunhofer Approximation<a class="headerlink" href="#Fraunhofer-Approximation" title="Permalink to this headline">¶</a></h2>
+<p>If we further assume that the aperture is small as compared to the distance at which we observe the diffraction pattern, we can further simplify the Fresnel approximation to yield the Fraunhofer approximation giving the diffraction patter in the far field. The condition is</p>
+<div class="math notranslate nohighlight">
+\[z_0\gg\frac{1}{\lambda}(x^2+y^2)\]</div>
+<p>In this case we can neglect the term</p>
+<div class="math notranslate nohighlight">
+\[e^{ -\frac{ik}{2z_0}(x^2+y^2)} \approx 1\]</div>
+<p>which results in</p>
+<div class="math notranslate nohighlight">
+\[U(x^{\prime},y^{\prime},z_0)=i\frac{e^{-ikz_0}}{\lambda z_0} e^{-\frac{ik}{2z_0}(x^{\prime 2}+y^{\prime 2})}
+\iint U_{s}(x,y)
+e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
+<figure><p><img alt="790eb831bb494aac965b0fa5c0a3223f" class="no-scaled-link" src="../../_images/near_far_field.png" style="width: 90%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Diffraction pattern of a slit in the near field (Fresnel diffraction, left) and the far field (Fraunhofer diffraction, right).</p>
+</figcaption></figure><p>While these formulas provide the mathematical tools, we may obtain a more intuitive idea about the different approximation in the following way. Consider the image below, where we would like to know about the diffraction intensity of a slit of width <span class="math notranslate nohighlight">\(b\)</span> at the optical axis at a distance <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<figure><p><img alt="fbc211bcd658433fbf8230af5320e354" class="no-scaled-link" src="../../_images/diffraction.png" style="width: 55%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Illustration of the importance of additional geometrical path length difference for the discrimination of Fresnel (near-field) and Fraunhofer (far-field) diffraction.</p>
+</figcaption></figure><p>The waves from the center of the slit and the edge have to travel towards that point a different pathlength, whcih we may calculate to</p>
+<p>:nbsphinx-math:<a href="#id1"><span class="problematic" id="id2">`</span></a>begin{eqnarray}
+Delta s &amp;=&amp;  sqrt{frac{b^2}{4}+D^2}-D\</p>
+<blockquote>
+<div><p>&amp;=&amp; Dsqrt{frac{b^2}{4D^2}+1}-D</p>
+</div></blockquote>
+<p>end{eqnarray}`</p>
+<p>We may develop the square root into a Taylor series and obtain</p>
+<p>:nbsphinx-math:<a href="#id3"><span class="problematic" id="id4">`</span></a>begin{eqnarray}
+Delta s &amp;=&amp; frac{b^2}{8D}-frac{b^4}{128 D^3}+O(4)\</p>
+<blockquote>
+<div><p>&amp;approx &amp; frac{b^2}{8D}</p>
+</div></blockquote>
+<p>end{eqnarray}`</p>
+<p>The second order correction term <span class="math notranslate nohighlight">\(\frac{b^2}{8D}\)</span> decreases quadratic with the distance <span class="math notranslate nohighlight">\(D\)</span> of the point, which means that at large distances, we can safely assume <span class="math notranslate nohighlight">\(\Delta s=0\)</span> on the axis, i.e. all waves arriving at that point have to travel the same distance. This corresponds to the far-field approximation. To be more specific we require</p>
+<div class="math notranslate nohighlight">
+\[\frac{b^2}{8D^2}&lt;\frac{\lambda}{8}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\frac{b^2}{\lambda D}&lt;1\]</div>
+<p>to be fullfilled to be in the far field.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}    F=\frac{b^2}{\lambda D}
+\begin{cases}
+    \ll 1 ,&amp;\textrm{Fraunhofer}\\
+    \approx 1,&amp; \textrm{Fresnel}\\
+    \gg 1, &amp; \textrm{Full vector}
+\end{cases}\end{split}\]</div>
+<p>This number <span class="math notranslate nohighlight">\(F\)</span> is called the Frensel number and gives us an idea by how far the dimensions of the opening contribute to the diffraction pattern rather than the direction of the wave propagation only.</p>
+</div>
+<div class="section" id="Babinet’s-Principle">
+<h2>Babinet’s Principle<a class="headerlink" href="#Babinet’s-Principle" title="Permalink to this headline">¶</a></h2>
+<p>The above considerations of diffraction have some intruiging consequence. Consider the two apertures in the image below.</p>
+<figure><p><img alt="c54e99b8293e405b8519fca6043e9408" class="no-scaled-link" src="../../_images/babinet.png" style="width: 60%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Two complementary apertures, which have the same diffraction pattern in the far field.</p>
+</figcaption></figure><p>The left aperture will create in the far field an amplitude distribution <span class="math notranslate nohighlight">\(U_h\)</span>, while the inverse aperture on the right will cause an amplitude <span class="math notranslate nohighlight">\(U_d\)</span>. If we combine both amplitudes in the far field, we obtain a total amplitude distribution</p>
+<div class="math notranslate nohighlight">
+\[U=U_h+U_d\]</div>
+<p>In the case when we have two complementary apertures, that total amplitude has to be zeor, when hole and dot are placed at the same position. We therefore obtain</p>
+<div class="math notranslate nohighlight">
+\[U_h=-U_d\]</div>
+<p>and therefore</p>
+<div class="math notranslate nohighlight">
+\[I_h=I_d\]</div>
+<p>This is the Principle of Babinet which states:</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Babinet’s Principle</strong></p>
+<p>The far field diffraction intensity distribution of complementary apertures is the same.</p>
+</div>
+<p>The images below show an experimental demonstration of Babinet’s principle on a slit and a wire.</p>
+<figure><p><img alt="dc124ebaaf534450835be5d762045fe5" class="no-scaled-link" src="../../_images/babinet_exp.png" style="width: 90%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Babinet’s principle demonstrated experimentally on a slit (left) and a wire (right).</p>
+</figcaption></figure></div>
 </div>
 
 
@@ -478,7 +583,7 @@ figcaption {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Electromagnetic%20Optics.html" class="btn btn-neutral float-right" title="Fresnel Zones" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Electromagnetic%20Optics.html" class="btn btn-neutral float-right" title="Electromagnetic Waves" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../../lectures/L14/overview_14.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -493,7 +598,7 @@ figcaption {
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 01, 2021.
+        Last updated on Jan 02, 2021.
       </span>
 
     </p>
