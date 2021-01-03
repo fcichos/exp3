@@ -589,13 +589,6 @@
    "source": [
     "While we considered before the spacing between two diffraction patterns resulting from wo incoherent point-like light sources. The definition of the resolution by Abbe refers to two coherent light sources. If we have two coherent light sources, we cannot just sum up both intensity distributions, but we have to calculate the total amplitude first before we may determine the total intensity. "
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {

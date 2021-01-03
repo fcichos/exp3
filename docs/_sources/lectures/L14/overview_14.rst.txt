@@ -1,8 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 12 we explore the diffraction of light including Huygens principle. We study the diffraction of a slit, a circular aperture as well as of a grating.
-
+In Lecture 14 we explore the diffraction integral and the discrimination between Fresnel and Fraunhofer diffraction. We also start with Electromagnetic Optics.
 
 
 
@@ -10,4 +9,4 @@ In Lecture 12 we explore the diffraction of light including Huygens principle. W
    :width: 600
    
 
-Lecture 11 slides for download :download:`pdf <Lecture 12.pdf>`
+Lecture 14 slides for download :download:`pdf <Lecture 14.pdf>`
