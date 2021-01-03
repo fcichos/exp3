@@ -345,11 +345,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#Plane-Waves,-Spherical-Waves">Plane Waves, Spherical Waves</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Plane-waves">Plane waves</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#Polarization-of-EM-Waves">Polarization of EM Waves</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Linear-Polarized-Waves">Linear Polarized Waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Spherical-Waves">Spherical Waves</a></li>
 </ul>
 </li>
 </ul>
@@ -470,19 +467,23 @@ figcaption {
 <div class="section" id="Electromagnetic-Spectrum">
 <h2>Electromagnetic Spectrum<a class="headerlink" href="#Electromagnetic-Spectrum" title="Permalink to this headline">¶</a></h2>
 <p>While most of our considerations are focused on electromagnetic waves in the visible region, all of them can be generalized to other regions of the very broad electromagnetic spectrum. The electromagnetic theory is scale free, meaning that the same effect on specific structures occur also at smaller scales if you scale the wavelength of the wave.</p>
-<figure><p><img alt="da05b968e8044b28beec594ca1f56afe" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
+<figure><p><img alt="9ec6a24686434a02a23d0f6bb45847fb" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Electromagnetic wave spectrum with its specific regions.</p>
 </figcaption></figure><div class="section" id="Maxwell-Equations">
 <h3>Maxwell Equations<a class="headerlink" href="#Maxwell-Equations" title="Permalink to this headline">¶</a></h3>
 <p>To obtain a wave equation in terms of electric and magnetic fields we need Maxwell’s equations. We will consider them in vacumm, i.e. for zero charge <span class="math notranslate nohighlight">\(\rho=0\)</span> and current density</p>
 <div class="math notranslate nohighlight">
-\[\nabla \times \vec{E}=-\frac{\partial \vec{B}}{\partial t}\]</div>
+\[\nabla \times \vec{E}=-\frac{\partial \vec{B}}{\partial t}
+\tag{ME.1}\]</div>
 <div class="math notranslate nohighlight">
-\[\nabla\cdot\vec{E}=0\]</div>
+\[\nabla\cdot\vec{E}=0
+\tag{ME.2}\]</div>
 <div class="math notranslate nohighlight">
-\[\nabla\times \vec{B}=\epsilon_0\mu_0\frac{\partial \vec{E}}{\partial t}\]</div>
+\[\nabla\times \vec{B}=\epsilon_0\mu_0\frac{\partial \vec{E}}{\partial t}
+\tag{ME.3}\]</div>
 <div class="math notranslate nohighlight">
-\[\nabla\cdot \vec{B}=0\]</div>
+\[\nabla\cdot \vec{B}=0
+\tag{ME.4}\]</div>
 <p>We will take the first of the four equations and apply another rotation <span class="math notranslate nohighlight">\(\nabla \times\)</span> to both sides</p>
 <div class="math notranslate nohighlight">
 \[\nabla\times\nabla\times = -\nabla \times \frac{\partial \vec{B}}{\partial t}\]</div>
@@ -517,8 +518,8 @@ wave equation</p>
 </div>
 <div class="section" id="Plane-Waves,-Spherical-Waves">
 <h2>Plane Waves, Spherical Waves<a class="headerlink" href="#Plane-Waves,-Spherical-Waves" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="Plane-waves">
-<h3>Plane waves<a class="headerlink" href="#Plane-waves" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="Plane-Waves">
+<h3>Plane Waves<a class="headerlink" href="#Plane-Waves" title="Permalink to this headline">¶</a></h3>
 <p>We will first have a look at elementary solutions of the wave equation again as we have done that in the wave optics sections. First of all we can write the solution of the wave equation as a product of a spatial and a temporal amplitude, i.e.</p>
 <p><span class="math">\begin{eqnarray}
 \vec{E}(\vec{r},t)&=&\mathcal{R}\lbrace \vec{E}(\vec{r})e^{-i\omega t}\rbrace\\
@@ -529,13 +530,42 @@ wave equation</p>
 \Delta \vec{E}(\vec{r})+\frac{\omega^2}{c^2}\vec{E}(\vec{r})=0
 \tag{Helmholtz Equation}
 \end{equation}</span></p>
-<p>The latter equation is known as the <strong>Helmholtz equation</strong>. It is the differential equation for the spatial amplitude of the wave.</p>
+<p>The latter equation is known as the <strong>Helmholtz equation</strong>. It is the differential equation for the spatial amplitude of the wave. We may also insert the solutions into the first and the third Maxwell equation which results in</p>
+<p><span class="math">\begin{eqnarray}
+\nabla \times \vec{E}&=&i\omega\vec{B}\\
+\nabla \times\vec{B} &=& -\epsilon_0\mu_0 i\omega \vec{E}
+\end{eqnarray}</span></p>
+<p>We obtain finally a plane wave with our knowledge from the wave optics section.</p>
+<p><span class="math">\begin{eqnarray}
+\vec{E}(\vec{r})&=&\vec{E}_{0}e^{i\vec{k}\cdot\vec{r}}\\
+\vec{B}(\vec{r})&=&\vec{B}_{0}e^{i\vec{k}\cdot\vec{r}}\\
+\end{eqnarray}</span></p>
+<p>Taking the rotation of those two equations yields</p>
+<p><span class="math">\begin{eqnarray}
+\vec{k}\times \vec{E}_{0}&=&\omega \vec{B}_0\\
+\vec{k}\times \vec{B}_{0}&=&-\frac{\omega}{c^2} \vec{E}_0
+\end{eqnarray}</span></p>
+<p>The latter two equations tell essentiall two things. First of all they state that the vectors <span class="math notranslate nohighlight">\(\vec{k}\)</span>, <span class="math notranslate nohighlight">\(\vec{E}_0\)</span> and <span class="math notranslate nohighlight">\(\vec{B}_{0}\)</span> stand perpendicular to each other. This is why electromagnetic waves are termed transverse waves. The physical quantity of a transverse wave change sperpendicular to its propagation direction.</p>
+<p>The second thing is that the ampolitudes of the two waves are not independent of each other but rather</p>
+<div class="math notranslate nohighlight">
+\[B_0=\frac{1}{c}E_0\]</div>
+<p>This is quite helpful, as we may just do calculations for the electric field and transfer them with the help of this conversion to the magnetic field.</p>
 </div>
-</div>
-<div class="section" id="Polarization-of-EM-Waves">
-<h2>Polarization of EM Waves<a class="headerlink" href="#Polarization-of-EM-Waves" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="Linear-Polarized-Waves">
-<h3>Linear Polarized Waves<a class="headerlink" href="#Linear-Polarized-Waves" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="Spherical-Waves">
+<h3>Spherical Waves<a class="headerlink" href="#Spherical-Waves" title="Permalink to this headline">¶</a></h3>
+<p>The situation is a bit more complicated for spherical waves and we wont do the detailed calculation here. A spherical wave is constructed with the help of an axuliary function</p>
+<div class="math notranslate nohighlight">
+\[\vec{A}(\vec{r})=A_0 U(\vec{r})\hat{x}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{x}\)</span> is the unit vector in the x-direction and</p>
+<div class="math notranslate nohighlight">
+\[U(\vec{r})=\frac{1}{r}e^{-ik r}\]</div>
+<p>is our scalar spherical wave we know from the wave optics section. The auxilary function is termed <strong>Vector potential</strong> and also fulfills an Helmholtz equation</p>
+<div class="math notranslate nohighlight">
+\[\Delta\vec{A}+k^2 \vec{A}=0\]</div>
+<p>A more detailed calculation finally leads to the following Electric and magnetic field vectors in spherical coordinates and for large distances <span class="math notranslate nohighlight">\(r\gg\lambda\)</span> or <span class="math notranslate nohighlight">\(k r\gg2\pi\)</span>.</p>
+<figure><p><img alt="e37f278aa90f4c19b8c31606ab1b7fcb" class="no-scaled-link" src="../../_images/spherical_wave1.png" style="width: 95%;" /></p>
+<figcaption><p><strong>Fig.:</strong> (Left) Definition of the unit vectors in a spherical coordinate system. (Right) Vectors of the electric and magnetic field for a spherical wave.</p>
+</figcaption></figure><p>The electric and magnetic fields are therefire tangential to the wavefront surface, which is a sphere. The propgation direction is always radial, so the spherical wave is also a transverse electromagnetic wave.</p>
 </div>
 </div>
 </div>
