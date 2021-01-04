@@ -84,11 +84,11 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "To obtain a wave equation in terms of electric and magnetic fields we need Maxwell's equations. We will consider them in vacumm, i.e. for zero charge $\\rho=0$ and current density \n",
+    "To obtain a wave equation in terms of electric $\\vec{E}$ and magnetic fields $\\vec{B}$ we need Maxwell's equations. We will consider them in vacumm, i.e. for zero charge $\\rho=0$ and current density. The electric and magnetic permeabilities of vacuum are given by $\\epsilon_0$ and $\\mu_0$. \n",
     "\n",
     "$$\n",
     "\\nabla \\times \\vec{E}=-\\frac{\\partial \\vec{B}}{\\partial t}\n",
-    "\\tag{ME.1}\n",
+    "\\label{eq:ME1}\\tag{ME.1}\n",
     "$$\n",
     "\n",
     "$$\n",
@@ -104,15 +104,14 @@
     "$$\n",
     "\\nabla\\cdot \\vec{B}=0\n",
     "\\tag{ME.4}\n",
-    "$$\n",
-    "\n"
+    "$$\n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We will take the first of the four equations and apply another rotation $\\nabla \\times$ to both sides\n",
+    "We will take the first (ME.1) of the four equations and apply another rotation $\\nabla \\times$ to both sides\n",
     "\n",
     "$$\n",
     "\\nabla\\times\\nabla\\times = -\\nabla \\times \\frac{\\partial \\vec{B}}{\\partial t}\n",
@@ -125,7 +124,7 @@
     "&=&-\\epsilon_0\\mu_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2}\n",
     "\\end{eqnarray}\n",
     "\n",
-    "where we used the third equation to replace the rotation of the magnetic field. We now have to expand the left side with the identity\n",
+    "where we used the third equation (ME.3) to replace the rotation of the magnetic field. We now have to expand the left side with the identity\n",
     "\n",
     "$$\n",
     "\\nabla\\times\\nabla\\times \\vec{E}=\\nabla(\\nabla\\cdot \\vec{E})-\\nabla(\\nabla \\vec{E})\n",
