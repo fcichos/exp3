@@ -40,6 +40,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lecture Contents" href="../../lectures/L15/overview_15.html" />
     <link rel="prev" title="Diffraction Integral" href="Diffraction%20Integral.html" /> 
 </head>
 
@@ -352,6 +353,17 @@
 </ul>
 </li>
 </ul>
+<p class="caption"><span class="caption-text">Lecture 15:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L15/overview_15.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L15/Polarization%20of%20EM%20Waves.html">Polarization of EM Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Polarization%20of%20EM%20Waves.html#Linearly-Polarized-Waves">Linearly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Polarization%20of%20EM%20Waves.html#Circularly-Polarized-Waves">Circularly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Polarization%20of%20EM%20Waves.html#Elliptically-Polarized">Elliptically Polarized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Polarization%20of%20EM%20Waves.html#Unpolarized-Light">Unpolarized Light</a></li>
+</ul>
+</li>
+</ul>
 
             
           
@@ -464,13 +476,13 @@ figcaption {
 }
 </style><p>So far we have looked at the propagation of light in form of ray’s and its description in Gemoetrical Optics. We made a number of assumtions that we formulated as postulates. We then extended this description by a scalar Wave Optics description to allow for a description of interference and diffraction, which can not be explained by Geometrical Optics. Yet concepts of refractive index and light matter interaction and the intensities are not covered by Wave Optics and also just postulates.</p>
 <p>Electromagnetic Optics allows us to define these missing things. We discover light as electromagnetic waves consisting of electric and magnetic fields, which allow us to describe the interaction with charges in atoms, which is the foundation for the refractive index for example. The new thing is therefore the fact that we now need vectors for the description of light.</p>
-<figure><p><img alt="ccbfefa1b6de4315886eae23f7b50dec" class="no-scaled-link" src="../../_images/vertical_pol.png" style="width: 45%;" /> <img alt="87b2f782c7864fbeb81a2f594640ea66" class="no-scaled-link" src="../../_images/horizontal_pol.png" style="width: 45%;" /></p>
+<figure><p><img alt="a9a18ddb50b549ff9656d94de9ab2a6a" class="no-scaled-link" src="../../_images/vertical_pol.png" style="width: 45%;" /> <img alt="94a17b2216a34274a8536ae38eb4a935" class="no-scaled-link" src="../../_images/horizontal_pol.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Demonstration of the vectorial nature of the electric field of electromagnetic waves with the help of a set of polarizers. (Left) The firstr polarizer on the right side of the image is transmitting only the vertical direction of the electric field. This vertical direction of the electric field is probed with the second polarizer. If pointing in the same direction, the intensity as measured with the meter behind is maximum. When probed with a second polarizer along the horizontal
 direction (Right), the detector shows zero intensity.</p>
 </figcaption></figure><div class="section" id="Electromagnetic-Spectrum">
 <h2>Electromagnetic Spectrum<a class="headerlink" href="#Electromagnetic-Spectrum" title="Permalink to this headline">¶</a></h2>
 <p>While most of our considerations are focused on electromagnetic waves in the visible region, all of them can be generalized to other regions of the very broad electromagnetic spectrum. The electromagnetic theory is scale free, meaning that the same effect on specific structures occur also at smaller scales if you scale the wavelength of the wave.</p>
-<figure><p><img alt="22373463beb84517a800db9c4aeb018b" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
+<figure><p><img alt="70ddc6eb012a430f895087d4974347f5" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Electromagnetic wave spectrum with its specific regions.</p>
 </figcaption></figure><div class="section" id="Maxwell-Equations">
 <h3>Maxwell Equations<a class="headerlink" href="#Maxwell-Equations" title="Permalink to this headline">¶</a></h3>
@@ -525,10 +537,11 @@ wave equation</p>
 <h3>Plane Waves<a class="headerlink" href="#Plane-Waves" title="Permalink to this headline">¶</a></h3>
 <p>We will first have a look at elementary solutions of the wave equation again as we have done that in the wave optics sections. First of all we can write the solution of the wave equation as a product of a spatial and a temporal amplitude, i.e.</p>
 <p><span class="math">\begin{eqnarray}
-\vec{E}(\vec{r},t)&=&\mathcal{R}\lbrace \vec{E}(\vec{r})e^{-i\omega t}\rbrace\\
-\vec{B}(\vec{r},t)&=&\mathcal{R}\lbrace \vec{B}(\vec{r})e^{-i\omega t}\rbrace
+\vec{\mathcal{E}}(\vec{r},t)&=&\mathcal{Re}\lbrace \vec{E}(\vec{r})e^{-i\omega t}\rbrace\\
+\vec{\mathcal{B}}(\vec{r},t)&=&\mathcal{Re}\lbrace \vec{B}(\vec{r})e^{-i\omega t}\rbrace
 \end{eqnarray}</span></p>
-<p>Inserting that into the wave equation, we can take the time derivative which yields for the electric field</p>
+<p>We use again the complex notation and remember that the measurable physical quantity <span class="math notranslate nohighlight">\(\vec{\mathcal{E}}\)</span> or <span class="math notranslate nohighlight">\(\vec{\mathcal{B}}\)</span> has to be a real valued quantity. Therefore we may calculate with the complex quantities, but finally need to calculate the real part (<span class="math notranslate nohighlight">\(\mathcal{Re}\)</span>) if required. In the following we will use the complex notation throughout the calculation and only refer to the real value if this is really useful. When inserting the complex ansatz above into the wave
+equation, we can take the time derivative which yields for the electric field</p>
 <p><span class="math">\begin{equation}
 \Delta \vec{E}(\vec{r})+\frac{\omega^2}{c^2}\vec{E}(\vec{r})=0
 \tag{Helmholtz Equation}
@@ -553,7 +566,7 @@ wave equation</p>
 <div class="math notranslate nohighlight">
 \[B_0=\frac{1}{c}E_0\]</div>
 <p>This is quite helpful, as we may just do calculations for the electric field and transfer them with the help of this conversion to the magnetic field.</p>
-<figure><p><img alt="43f0c98d5339402b975224859d711c8b" class="no-scaled-link" src="../../_images/plane_wave1.png" style="width: 90%;" /></p>
+<figure><p><img alt="66125330e2e247babbd0325ba688176e" class="no-scaled-link" src="../../_images/plane_wave1.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Plane wave propagating along the y-direction, with the electric field oscillating along the z-direction..</p>
 </figcaption></figure></div>
 <div class="section" id="Spherical-Waves">
@@ -573,7 +586,7 @@ wave equation</p>
 \vec{B}(\vec{r})&=& B_0 \sin(\theta) U(\vec{r}) \hat{\phi}
 \end{eqnarray}</span></p>
 <p>The electric and magnetic fields are therefire tangential to the wavefront surface, which is a sphere. The propgation direction is always radial, so the spherical wave is also a transverse electromagnetic wave.</p>
-<figure><p><img alt="ff51a84253d94f878af8920a4d139fa2" class="no-scaled-link" src="../../_images/spherical_wave1.png" style="width: 95%;" /></p>
+<figure><p><img alt="3c665cac4aa24591a4b4ff30ffbfb7f2" class="no-scaled-link" src="../../_images/spherical_wave1.png" style="width: 95%;" /></p>
 <figcaption><p><strong>Fig.:</strong> (Left) Definition of the unit vectors in a spherical coordinate system. (Right) Vectors of the electric and magnetic field for a spherical wave.</p>
 </figcaption></figure></div>
 </div>
@@ -586,6 +599,8 @@ wave equation</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../lectures/L15/overview_15.html" class="btn btn-neutral float-right" title="Lecture Contents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Diffraction%20Integral.html" class="btn btn-neutral float-left" title="Diffraction Integral" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -600,7 +615,7 @@ wave equation</p>
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 04, 2021.
+        Last updated on Jan 07, 2021.
       </span>
 
     </p>

@@ -162,6 +162,12 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    notebooks/L14/Diffraction Integral.ipynb
    notebooks/L14/Electromagnetic Optics.ipynb 
    
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 15:
+   
+   lectures/L15/overview_15.rst  
+   notebooks/L15/Polarization of EM Waves.ipynb
    
 Indices and tables
 ==================

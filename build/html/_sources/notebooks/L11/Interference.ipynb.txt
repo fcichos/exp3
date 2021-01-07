@@ -68,7 +68,9 @@
     "\n",
     "$$\n",
     "\\phi=\\frac{2\\pi}{\\lambda} \\Delta s = \\frac{2\\pi}{\\lambda} 2d\\cos(\\theta)\n",
-    "$$"
+    "$$\n",
+    "\n",
+    "which is calculated from the path length difference $\\Delta s$. Note that this path length difference between neighboring partial waves is $\\Delta s=2\\Delta s_1-\\Delta s_2=2d\\cos(\\theta)$."
    ]
   },
   {
@@ -116,7 +118,7 @@
     "\\phi=\\frac{4\\pi d}{\\lambda}\\cos(\\theta)\n",
     "$$\n",
     "\n",
-    "We would like to have a look at the transmission in the case of normal incidence $\\theta=0$, so that $\\phi=4\\pi d/\\lambda$. To obtain constructive interference in transmission, the phase angle needs to be an integer multiple of $2\\pi$, i.e. $\\phi=m 2\\pi$. This means that for a given thickness $d$ and a specific integer value $m$, the transmission is maximum for \n",
+    "We would like to have a look at the transmission in the case of normal incidence $\\theta=0$, so that $\\phi=4\\pi d/\\lambda$. To obtain constructive interference in transmission, the phase angle needs to be an integer multiple of $2\\pi$, i.e. $\\phi=m 2\\pi$ ($m=1,2,\\ldots$). This means that for a given thickness $d$ and a specific integer value $m$, the transmission is maximum for \n",
     "\n",
     "$$\n",
     "\\lambda_m=\\frac{2d}{m}\n",
@@ -153,9 +155,7 @@
     "$$\n",
     "\\mathcal{F}=\\frac{\\delta \\nu}{\\Delta \\nu}=\\frac{\\lambda}{\\delta \\lambda}\n",
     "$$\n",
-    "\n",
     "This means that the Finesse gives us a measure for the spectral resolution of a Fabry-Perot-Interferometer. It tells us by how much the free spectral range $\\delta \\nu $ is bigger than the width $\\Delta \\nu$ of the interference maximum.\n",
-    "\n",
     "More generally this is measured by the resolving power $\\mathcal{R}$, which is given for the Fabry-Perot-Interferometer\n",
     "\n",
     "$$\n",
