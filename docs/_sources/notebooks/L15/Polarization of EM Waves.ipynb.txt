@@ -110,7 +110,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The linear polarization state, independent of the polarization direction is also called **$\\pi$-polarization**. We will use this term later in the description of light-atom interaction."
+    "The linear polarization state, independent of the polarization direction is also called $\\pi$**-polarization**. We will use this term later in the description of light-atom interaction."
    ]
   },
   {
@@ -162,7 +162,7 @@
    "source": [
     "The consequence of that additional phase shift of one component is, that $E_y$ reaches its maximum amplitude at a different position $z$, when keeping the time fixed, i.e. making a snapshot. If $z$ is fixed, the above formulas describe a rotation of the electric field around the direction of $\\vec{k}$ (here z-direction). The third equation ensures that during rotation the magnitude of the electric field vector is unchanged und thus the end of the electric field vectors describes a circle  (bottom row of figure) around the direction of propagation.\n",
     "\n",
-    "Right circularly polarized light is also known as **$\\sigma^{+}$ polarization**, while left circularly polarized light is **$\\sigma_{-}$ polarization**.\n",
+    "Right circularly polarized light is also known as $\\sigma^{+}$ **polarization**, while left circularly polarized light is $\\sigma_{-}$ **polarization**.\n",
     "\n"
    ]
   },
