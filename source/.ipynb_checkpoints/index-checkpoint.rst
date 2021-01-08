@@ -168,6 +168,7 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    
    lectures/L15/overview_15.rst  
    notebooks/L15/Polarization of EM Waves.ipynb
+   notebooks/L15/Energy Transport.ipynb
    
 Indices and tables
 ==================
