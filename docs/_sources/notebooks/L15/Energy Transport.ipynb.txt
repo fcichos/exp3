@@ -139,7 +139,7 @@
     "\\begin{eqnarray}\n",
     "S=|\\vec{S}|&=&\\epsilon_0c^2|\\vec{E}||\\vec{B}|\\\\\n",
     "&=&\\epsilon_0 c E^2=I\n",
-    "\\end{}eqnarray\n",
+    "\\end{eqnarray}\n",
     "\n",
     "which is the same as the intensity. The magnitude of the Poynting vector describes the intensity of an electromagnetic wave or the nergy flow through an area. It therefore has the unit of an intensity, which is $W/m^2$. \n",
     "\n",
