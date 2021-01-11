@@ -39,7 +39,8 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Lecture Contents" href="../../lectures/L16/overview_16.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -376,6 +377,16 @@
 </ul>
 </li>
 </ul>
+<p class="caption"><span class="caption-text">Lecture 16:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L16/overview_16.html">Lecture Contents</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Electromagnetic Waves in Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Polarization-Charges">Polarization Charges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Refractive-index">Refractive index</a></li>
+</ul>
+</li>
+</ul>
 
             
           
@@ -444,237 +455,6 @@
             
   
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
-    border: none;
-    padding: 0 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    background: #f5f5f5;
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -717,29 +497,65 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style><p>Our next goal is the description of the propagation of electromagnetic fields in materials. This is the interesting part as materials help</p>
+</style><p>So far we have only considered electromagnetic waves in vacuum. We would now like to extend our description of electromagnetic waves to the propagation in materials. Before we do that, we will have a qiuck look the polarisation, i.e. the separation of change centers of atoms by electric fields.</p>
 <div class="section" id="Polarization-Charges">
 <h2>Polarization Charges<a class="headerlink" href="#Polarization-Charges" title="Permalink to this headline">¶</a></h2>
-<p>To introduce</p>
-<figure><p><img alt="13f5afb9c6da4087894c604c0e92bd8b" class="no-scaled-link" src="../../_images/atom.png" style="width: 40%;" /></p>
+<p>Let us construct a very crude atomic model, where an electronic charge <span class="math notranslate nohighlight">\(q\)</span> is smeared out over a spherical volume of radius <span class="math notranslate nohighlight">\(a\)</span>. The charge density of the charge cloud is then given by</p>
+<div class="math notranslate nohighlight">
+\[\rho=\frac{-q}{\frac{4}{3}\pi a^{3}}=-\frac{3q}{4\pi a^3}\]</div>
+<p>Inside this charge cloud sits our positive necleus in an electric field</p>
+<div class="math notranslate nohighlight">
+\[E(r)=-\frac{1}{4\pi\epsilon_0}\frac{qr}{a^3}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the center of the charge cloud. If we now apply an external field to this atom, the postive nucleus will be displaced from the center of the negative cloud by a distance <span class="math notranslate nohighlight">\(d\)</span> from the center such that the external forces on the charges will be belanced by the internal forces between the charge cloud and the nucleus.</p>
+<figure><p><img alt="6b8002f77ce647a0b9ff2eef2d8942a8" class="no-scaled-link" src="../../_images/atom.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
-</figcaption></figure><figure><p><img alt="792fe14ebaba4a49a7473c73d4fbfc4d" class="no-scaled-link" src="../../_images/sample.png" style="width: 60%;" /></p>
+</figcaption></figure><p>The external force is given by <span class="math notranslate nohighlight">\(F=qE_{\rm ex}\)</span> and the force balance therefore</p>
+<div class="math notranslate nohighlight">
+\[qE_{\rm ex}-\frac{1}{4\pi\epsilon_0}\frac{q^2d}{a^3}\]</div>
+<p>from which we find the distance</p>
+<div class="math notranslate nohighlight">
+\[d=4\pi \epsilon_0 a^3 \frac{E_{\rm ex}}{q}\]</div>
+<p>and finally also the dipole moment</p>
+<div class="math notranslate nohighlight">
+\[p=qd=4\pi\epsilon_0 a^3 E_{\rm ex}\]</div>
+<p>The dipole moment therefore increases in our crude model linearly with the external field and the slope of this linear increase is given by</p>
+<div class="math notranslate nohighlight">
+\[\alpha=4\pi \epsilon_0 a^3\]</div>
+<p>which is known as the electronic polarizability. Note, that the electronic polarizability depends on the volume of the atom here.</p>
+<p>In a material with many of those atomic dipoles a chain of dipoles as the first row in the Figure below creates a dipole, which is 4 times the atomic dipole. Overall, for <span class="math notranslate nohighlight">\(N\)</span> dipoles in a volume, we create a dipole density</p>
+<div class="math notranslate nohighlight">
+\[\vec{P}=N\vec{p}\]</div>
+<p>which is also known as polatization density. The dipole density is pointing in the same direction as the dipoles, which is from <span class="math notranslate nohighlight">\(-\)</span> to <span class="math notranslate nohighlight">\(+\)</span>. If the picture below shows a cylindrical piece of material with a cap of area <span class="math notranslate nohighlight">\(A\)</span> and a height <span class="math notranslate nohighlight">\(s\)</span>, then the dipole moment of this cylinder is given by</p>
+<div class="math notranslate nohighlight">
+\[p_{\rm cyl}=A s P\]</div>
+<p>The charges which sit at the cylinder caps are therefore given by</p>
+<div class="math notranslate nohighlight">
+\[q_{\rm end}=\frac{p_{\rm cyl}}{s}=A P\]</div>
+<p>and therefore the caps charge surface density is</p>
+<div class="math notranslate nohighlight">
+\[\sigma=\frac{q_{\rm end}}{A}=P\]</div>
+<p>The surface charge density is therefore given by the polarization density or more generally by</p>
+<div class="math notranslate nohighlight">
+\[\sigma=\vec{P}\hat{n}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{n}\)</span> is the surface normal. Thus <span class="math notranslate nohighlight">\(\vec{P}\)</span> and <span class="math notranslate nohighlight">\(\hat{n}\)</span> are anti-parallel on the negative side giving a negative charge and parallel on the positive side giving a positive charge density. These charges appearing at the surface are belonging to atoms. We call those charges <strong>bound</strong> charges in contrast to free charges. The surface density of bound charges is then <span class="math notranslate nohighlight">\(\sigma_b\)</span>.</p>
+<figure><p><img alt="1899c6eb06c843ffb7b2fa77d56b6845" class="no-scaled-link" src="../../_images/sample.png" style="width: 50%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
-</figcaption></figure></div>
+</figcaption></figure><p>The above relation between surface charge density and polarisation density is only true if all the induced bound charges inside the material cancel and the is no residual charge density inside the volume. However, if the surfaces charges on both ends of the cap are not equal and no excess charges present, there must be a volume charge inside the material, which creates a volume charge density of bound charges <span class="math notranslate nohighlight">\(\rho_b\)</span>. Thus in general we have</p>
+<div class="math notranslate nohighlight">
+\[\int \sigma_b dA +\int \rho_b dv=0\]</div>
+<p>which we can transform with Gauss theorem to</p>
+<div class="math notranslate nohighlight">
+\[\int \rho_b dv=-\int \sigma_b dA =-\int \vec{P}d\vec{A}\]</div>
+<p>and thus finally to</p>
+<div class="math notranslate nohighlight">
+\[\rho_b=-\nabla\cdot \vec{P}\]</div>
+<p>which states, that the sources of the polarisation density are the bound charges induced in the volume.</p>
+</div>
 <div class="section" id="Maxwell-Equations-in-Matter">
 <h2>Maxwell Equations in Matter<a class="headerlink" href="#Maxwell-Equations-in-Matter" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="Refractive-index">
 <h2>Refractive index<a class="headerlink" href="#Refractive-index" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 
@@ -748,6 +564,13 @@ figcaption {
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../lectures/L16/overview_16.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

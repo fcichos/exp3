@@ -32,7 +32,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Our next goal is the description of the propagation of electromagnetic fields in materials. This is the interesting part as materials help "
+    "So far we have only considered electromagnetic waves in vacuum. We would now like to extend our description of electromagnetic waves to the propagation in materials. \n",
+    "Before we do that, we will have a qiuck look the polarisation, i.e. the separation of change centers of atoms by electric fields."
    ]
   },
   {
@@ -46,7 +47,21 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "To introduce "
+    "Let us construct a very crude atomic model, where an electronic charge $q$ is smeared out over a spherical volume of radius $a$. The charge density of the charge cloud is then \n",
+    "given by \n",
+    "\n",
+    "$$\n",
+    "\\rho=\\frac{-q}{\\frac{4}{3}\\pi a^{3}}=-\\frac{3q}{4\\pi a^3}\n",
+    "$$\n",
+    "\n",
+    "Inside this charge cloud sits our positive necleus in an electric field \n",
+    "\n",
+    "$$\n",
+    "E(r)=-\\frac{1}{4\\pi\\epsilon_0}\\frac{qr}{a^3}\n",
+    "$$\n",
+    "\n",
+    "where $r$ is the distance from the center of the charge cloud.\n",
+    "If we now apply an external field to this atom, the postive nucleus will be displaced from the center of the negative cloud by a distance $d$ from the center such that the external forces on the charges will be belanced by the internal forces between the charge cloud and the nucleus. "
    ]
   },
   {
@@ -63,17 +78,107 @@
   {
    "cell_type": "markdown",
    "metadata": {},
-   "source": []
+   "source": [
+    "The external force is given by $F=qE_{\\rm ex}$ and the force balance therefore\n",
+    "\n",
+    "$$\n",
+    "qE_{\\rm ex}-\\frac{1}{4\\pi\\epsilon_0}\\frac{q^2d}{a^3}\n",
+    "$$\n",
+    "\n",
+    "from which we find the distance \n",
+    "\n",
+    "$$\n",
+    "d=4\\pi \\epsilon_0 a^3 \\frac{E_{\\rm ex}}{q}\n",
+    "$$\n",
+    "\n",
+    "and finally also the dipole moment \n",
+    "\n",
+    "$$\n",
+    "p=qd=4\\pi\\epsilon_0 a^3 E_{\\rm ex}\n",
+    "$$\n",
+    "\n",
+    "The dipole moment therefore increases in our crude model linearly with the external field and the slope of this linear increase is given by\n",
+    "\n",
+    "$$\n",
+    "\\alpha=4\\pi \\epsilon_0 a^3\n",
+    "$$\n",
+    "\n",
+    "which is known as the electronic polarizability. Note, that the electronic polarizability depends on the volume of the atom here.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "In a material with many of those atomic dipoles a chain of dipoles as the first row in the Figure below creates a dipole, which is 4 times the atomic dipole. Overall, for $N$ dipoles in a volume, we create a dipole density \n",
+    "\n",
+    "$$\n",
+    "\\vec{P}=N\\vec{p}\n",
+    "$$\n",
+    "\n",
+    "which is also known as polatization density. The dipole density is pointing in the same direction as the dipoles, which is from $-$ to $+$. If the picture below shows a cylindrical piece of material with a cap of area $A$ and a height $s$, then the dipole moment of this cylinder is given by\n",
+    "\n",
+    "$$\n",
+    "p_{\\rm cyl}=A s P\n",
+    "$$\n",
+    "\n",
+    "The charges which sit at the cylinder caps are therefore given by\n",
+    "\n",
+    "$$\n",
+    "q_{\\rm end}=\\frac{p_{\\rm cyl}}{s}=A P\n",
+    "$$\n",
+    "\n",
+    "and therefore the caps charge surface density is \n",
+    "\n",
+    "$$\n",
+    "\\sigma=\\frac{q_{\\rm end}}{A}=P\n",
+    "$$\n",
+    "\n",
+    "The surface charge density is therefore given by the polarization density or more generally by\n",
+    "\n",
+    "$$\n",
+    "\\sigma=\\vec{P}\\hat{n}\n",
+    "$$\n",
+    "\n",
+    "where $\\hat{n}$ is the surface normal. Thus $\\vec{P}$ and $\\hat{n}$ are anti-parallel on the negative side giving a negative charge and parallel on the positive side giving a positive charge density.\n",
+    "These charges appearing at the surface are belonging to atoms. We call those charges **bound** charges in contrast to free charges. The surface density of bound charges is then $\\sigma_b$."
+   ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
     "<figure>\n",
-    "      <img src=\"img/sample.png\" width=\"60%\">\n",
+    "      <img src=\"img/sample.png\" width=\"50%\">\n",
     "  <figcaption>**Fig.:** Polarization of an electric cloud of an atom.\n",
     "  </figcaption>\n",
     "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The above relation between surface charge density and polarisation density is only true if all the induced bound charges inside the material cancel and the is no residual charge density inside the volume. However, if the surfaces charges on both ends of the cap are not equal and no excess charges present, there must be a volume charge inside the material, which creates a volume charge density of bound charges $\\rho_b$. Thus in general we have\n",
+    "\n",
+    "$$\n",
+    "\\int \\sigma_b dA +\\int \\rho_b dv=0\n",
+    "$$\n",
+    "\n",
+    "which we can transform with Gauss theorem to\n",
+    "\n",
+    "$$\n",
+    "\\int \\rho_b dv=-\\int \\sigma_b dA =-\\int \\vec{P}d\\vec{A}\n",
+    "$$\n",
+    "\n",
+    "and thus finally to\n",
+    "\n",
+    "$$\n",
+    "\\rho_b=-\\nabla\\cdot \\vec{P}\n",
+    "$$\n",
+    "\n",
+    "which states, that the sources of the polarisation density are the bound charges induced in the volume."
    ]
   },
   {
@@ -89,13 +194,6 @@
    "source": [
     "## Refractive index"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
