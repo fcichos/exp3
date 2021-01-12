@@ -381,9 +381,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L16/overview_16.html">Lecture Contents</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Electromagnetic Waves in Matter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Polarization-Charges">Polarization Charges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Polarization-Charges">Polarization Charges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Linear-Dielectrics">Linear Dielectrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Magnetic-Properties">Magnetic Properties</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Refractive-index">Refractive index</a></li>
 </ul>
 </li>
 </ul>
@@ -507,7 +510,7 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[E(r)=-\frac{1}{4\pi\epsilon_0}\frac{qr}{a^3}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the center of the charge cloud. If we now apply an external field to this atom, the postive nucleus will be displaced from the center of the negative cloud by a distance <span class="math notranslate nohighlight">\(d\)</span> from the center such that the external forces on the charges will be belanced by the internal forces between the charge cloud and the nucleus.</p>
-<figure><p><img alt="6b8002f77ce647a0b9ff2eef2d8942a8" class="no-scaled-link" src="../../_images/atom.png" style="width: 40%;" /></p>
+<figure><p><img alt="006dac23871c467f9c39825e419df305" class="no-scaled-link" src="../../_images/atom.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>The external force is given by <span class="math notranslate nohighlight">\(F=qE_{\rm ex}\)</span> and the force balance therefore</p>
 <div class="math notranslate nohighlight">
@@ -538,7 +541,7 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[\sigma=\vec{P}\hat{n}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{n}\)</span> is the surface normal. Thus <span class="math notranslate nohighlight">\(\vec{P}\)</span> and <span class="math notranslate nohighlight">\(\hat{n}\)</span> are anti-parallel on the negative side giving a negative charge and parallel on the positive side giving a positive charge density. These charges appearing at the surface are belonging to atoms. We call those charges <strong>bound</strong> charges in contrast to free charges. The surface density of bound charges is then <span class="math notranslate nohighlight">\(\sigma_b\)</span>.</p>
-<figure><p><img alt="1899c6eb06c843ffb7b2fa77d56b6845" class="no-scaled-link" src="../../_images/sample.png" style="width: 50%;" /></p>
+<figure><p><img alt="733c774dfd5b4a2aa00b4966936cf92f" class="no-scaled-link" src="../../_images/sample.png" style="width: 50%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>The above relation between surface charge density and polarisation density is only true if all the induced bound charges inside the material cancel and the is no residual charge density inside the volume. However, if the surfaces charges on both ends of the cap are not equal and no excess charges present, there must be a volume charge inside the material, which creates a volume charge density of bound charges <span class="math notranslate nohighlight">\(\rho_b\)</span>. Thus in general we have</p>
 <div class="math notranslate nohighlight">
@@ -550,12 +553,97 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[\rho_b=-\nabla\cdot \vec{P}\]</div>
 <p>which states, that the sources of the polarisation density are the bound charges induced in the volume.</p>
+<p>The divergence of the total electric field with free charges in vacuum was given by</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{E}=\frac{\rho}{\epsilon_0}\]</div>
+<p>where the charge density in vaucuum refers to free chrages that are not bound to atoms. In a material we now also have to consider the boundar charges, which create the polarisation density and therefore</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{E}=\frac{\rho_{\rm f}+\rho_{\rm b}}{\epsilon_0}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_f\)</span> refers to the free charges. Inserting now <span class="math notranslate nohighlight">\(\rho_b=-\nabla\cdot \vec{P}\)</span>, we can rewrite this Maxwell equation as</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot(\epsilon_0\vec{E}+\vec{P})=\rho_f\]</div>
+<p>The term in the parenthesis can now be defined as a new quantity, for which the original equation (divergence of the electric field is the free charge density) is valid again. This quantity is the displacement field <span class="math notranslate nohighlight">\(\vec{D}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\vec{D}=\epsilon_0 \vec{E}+vec{P}\]</div>
+<p>for which</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{D} =\rho_f\]</div>
+<p>is valid.</p>
+<div class="section" id="Linear-Dielectrics">
+<h3>Linear Dielectrics<a class="headerlink" href="#Linear-Dielectrics" title="Permalink to this headline">¶</a></h3>
+<p>Based on our previous findings of the dipole density and its dependence on the exlectric field <span class="math notranslate nohighlight">\(\vec{E}\)</span>, we can also write down</p>
+<div class="math notranslate nohighlight">
+\[\vec{P}=\epsilon_0\chi\vec{E}\]</div>
+<p>where we introduced a response function, which is the electronic sucesptibility <span class="math notranslate nohighlight">\(\chi\)</span>. Since the relation between <span class="math notranslate nohighlight">\(\vec{P}\)</span> and <span class="math notranslate nohighlight">\(\vec{E}\)</span> is linear, we call those materials linear materials. Remember, that this linearity is based on the crude atomic model we introduced. In general, this is not true and materials have a nonlinear response to external electric fields. These nonlinearities are subject of the field <strong>nonlinear optics</strong>.</p>
+<p>Within the linear approximation we can now express the displacement field also via the susceptibility <span class="math notranslate nohighlight">\(\chi\)</span> or even a new quantity <span class="math notranslate nohighlight">\(\epsilon\)</span>, which is the electronic permittivity.</p>
+<div class="math notranslate nohighlight">
+\[\vec{D}=\epsilon_0 \vec{E}+\vec{P}=\epsilon_0 (1+\chi)\vec{E}=\epsilon \vec{E}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\epsilon=\epsilon_0 (1+\chi)
+\tag{electronic permittivity}\]</div>
+<p>The ratio</p>
+<div class="math notranslate nohighlight">
+\[\frac{\epsilon}{\epsilon_0}=1+\chi=\epsilon_r\]</div>
+<p>is called the dielectric constant, even though this number is a function of the frequency of the electromagnetic field. The dielectric function is a material property, which describes the interacion of electric fields with the dielectric material and thus also the interaction with of dielectrics with electromagnetic waves.</p>
+</div>
+<div class="section" id="Magnetic-Properties">
+<h3>Magnetic Properties<a class="headerlink" href="#Magnetic-Properties" title="Permalink to this headline">¶</a></h3>
+<p>Similar arguments as before can also be made for magnetic materials even though there are no free magnetic monopoles. For completeness we provide a relation between the magnetic flux density <span class="math notranslate nohighlight">\(\vec{B}\)</span> and the magnetic field <span class="math notranslate nohighlight">\(\vec{H}\)</span> here.</p>
+<p>The flux density <span class="math notranslate nohighlight">\(\vec{B}\)</span> is related to the magnetic field by</p>
+<div class="math notranslate nohighlight">
+\[\vec{B}=\mu_0(1+\chi_m)\vec{H}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\chi_m\)</span> is the magnetic susceptibility.</p>
+<p>The quantity equivalent to the polarization density is the magnetization <span class="math notranslate nohighlight">\(\vec{M}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\mu_0}\vec{B}=\vec{H}+\vec{M}\]</div>
+<p>which is the density of the magnetic dipole moments.</p>
+</div>
 </div>
 <div class="section" id="Maxwell-Equations-in-Matter">
 <h2>Maxwell Equations in Matter<a class="headerlink" href="#Maxwell-Equations-in-Matter" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="Refractive-index">
-<h2>Refractive index<a class="headerlink" href="#Refractive-index" title="Permalink to this headline">¶</a></h2>
+<p>We can now write down the Maxwell equation in Matter including possible charges as well as currents.</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times \vec{E}=-\frac{\partial \vec{B}}{\partial t}
+\label{eq:ME1}\tag{ME.1}\]</div>
+<div class="math notranslate nohighlight">
+\[\nabla\cdot\vec{D}=\rho_f
+\tag{ME.2}\]</div>
+<div class="math notranslate nohighlight">
+\[\nabla\times \vec{H}=\frac{\partial \vec{D}}{\partial t}+\vec{j}_f
+\tag{ME.3}\]</div>
+<div class="math notranslate nohighlight">
+\[\nabla\cdot \vec{B}=0
+\tag{ME.4}\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\vec{j}_f\)</span> is the current density of free charges and <span class="math notranslate nohighlight">\(\rho_f\)</span> resembles the free charge density. In case of an insulator with no free charges both quantities are zero.</p>
+<p>In addition, we have the electric displacement field <span class="math notranslate nohighlight">\(\vec{D}=\epsilon \vec{E}\)</span> and the magnetic flux density <span class="math notranslate nohighlight">\(\vec{B}=\mu \vec{H}\)</span>, where the material coefficients are given by</p>
+<p><span class="math">\begin{eqnarray}
+\epsilon&=&\epsilon_0 \epsilon_r\\
+\mu&=&\mu_0 \mu_r\\
+\end{eqnarray}</span></p>
+<p>Applying the same procedure as during the derivation of the wave equation, we can get the wave equation in matter for <span class="math notranslate nohighlight">\(\vec{j}_f=0\)</span> and <span class="math notranslate nohighlight">\(\rho_f=0\)</span>, which reads</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 \vec{E}}{\partial \vec{r}^2}-\frac{1}{v^2} \frac{\partial^2\vec{E}}{\partial t^2}=0\]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is the speed of light in the medium. This phase velocity is now given by</p>
+<div class="math notranslate nohighlight">
+\[v^2=\frac{c^2}{\epsilon\mu}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[v=\frac{1}{\sqrt{\epsilon_0 \mu_0}}\frac{1}{\sqrt{\epsilon_r\mu_r}}=\frac{c}{\sqrt{\epsilon_r\mu_r}}\]</div>
+<p>The speed of light in a medium is thus reduced by a factor <span class="math notranslate nohighlight">\(\sqrt{\epsilon_r\mu_r}\)</span> as compared to the speed of light in vacuum <span class="math notranslate nohighlight">\(c\)</span>. For non-magnetic materials, the magnetic permeability is <span class="math notranslate nohighlight">\(\mu_r=1\)</span> and we have</p>
+<div class="math notranslate nohighlight">
+\[\frac{c}{v}=\sqrt{\epsilon_r}=n
+\tag{refractive index}\]</div>
+<p>which provides us with a definition of the <strong>refractive index</strong> <span class="math notranslate nohighlight">\(n\)</span>. As we have walked our way from the polarization of a single atom in an electric field via bound charges to the dielectric function <span class="math notranslate nohighlight">\(\epsilon_r\)</span>, we now know that the refractive index is the result of the polarizability of atoms.</p>
+<p>The refractive index is commonly found to be <span class="math notranslate nohighlight">\(n\ge1\)</span> for common materials. However, as the square of the phase velocity in the material is defined as <span class="math notranslate nohighlight">\(v^2=\frac{c^2}{\epsilon\mu}\)</span>, i.e. by the product of <span class="math notranslate nohighlight">\(\epsilon\mu\)</span>, the solution is in general given by</p>
+<div class="math notranslate nohighlight">
+\[v=\pm\frac{c}{\sqrt{\epsilon\mu}}
+\tag{general phase velocity}\]</div>
+<p>and it turns out that</p>
+<div class="math notranslate nohighlight">
+\[v=-\frac{c}{\sqrt{\epsilon\mu}}
+\tag{negative refraction}\]</div>
+<p>must be selected if <span class="math notranslate nohighlight">\(\mu_r&lt;0\)</span> and <span class="math notranslate nohighlight">\(\epsilon_r&lt;0\)</span>. In this case, the refractive index is negative which leads to a number of exciting possibilities. Materials, which have such unusual refractive properties need to be designed in a specific way since they also need to have specific magnetic properties. Such materials usually belong to the field of meta-materials as they include smaller subunits that are specifically arranged.</p>
 </div>
 </div>
 
@@ -580,7 +668,7 @@ figcaption {
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 11, 2021.
+        Last updated on Jan 12, 2021.
       </span>
 
     </p>
