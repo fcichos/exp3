@@ -32,7 +32,53 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Method by Fizeau"
+    "## Rotating Mirror Method by Foucault"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<figure>\n",
+    "      <img src=\"img/mirror.png\" width=\"70%\">\n",
+    "  <figcaption>**Fig.:** .\n",
+    "  </figcaption>\n",
+    "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Path length difference\n",
+    "\n",
+    "$$\n",
+    "\\Delta s =2(f+b)\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\Delta \\alpha=2\\pi\\nu \\Delta t\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\Delta x = 2 \\Delta \\alpha a\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\Delta \\alpha=\\frac{\\Delta x}{2a}\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\frac{\\Delta x}{2a}=2\\pi\\nu \\Delta t\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\Delta t=\\frac{\\Delta x}{2a}\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "c=\\frac{\\Delta s}{\\Delta t}=\\frac{8\\pi (f+b)a}{\\Delta x}\n",
+    "$$"
    ]
   },
   {
@@ -41,6 +87,35 @@
    "source": [
     "## Phase Method"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<figure>\n",
+    "      <img src=\"img/phase.png\" width=\"70%\">\n",
+    "  <figcaption>**Fig.:** .\n",
+    "  </figcaption>\n",
+    "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Path length difference \n",
+    "\n",
+    "$$\n",
+    "\\Delta s = s_2-s_1\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {

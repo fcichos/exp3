@@ -40,13 +40,6 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Polarization Charges and Currents"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
     "Let us construct a very crude atomic model, where an electronic charge $q$ is smeared out over a spherical volume of radius $a$. The charge density of the charge cloud is then \n",
     "given by \n",
     "\n",

@@ -381,20 +381,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L16/overview_16.html">Lecture Contents</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Speed%20of%20Light%20Measurements.html">Measurements of the Speed of Light</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Speed%20of%20Light%20Measurements.html#Method-by-Fizeau">Method by Fizeau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Speed%20of%20Light%20Measurements.html#Rotating-Mirror-Method-by-Foucault">Rotating Mirror Method by Foucault</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Speed%20of%20Light%20Measurements.html#Phase-Method">Phase Method</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Electromagnetic Waves in Matter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Polarization-Charges-and-Currents">Polarization Charges and Currents</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Dielectrics-Polarization">Dielectrics Polarization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Magnetization">Magnetization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Dielectrics-Polarization">Dielectrics Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Magnetization">Magnetization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Wave-Equation-and-Refractive-Index">Wave Equation and Refractive Index</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#Wave-Equation-and-Refractive-Index">Wave Equation and Refractive Index</a></li>
 </ul>
 </li>
 </ul>
@@ -509,8 +506,6 @@ figcaption {
   padding: 2px;
 }
 </style><p>So far we have only considered electromagnetic waves in vacuum. We would now like to extend our description of electromagnetic waves to the propagation in materials. Before we do that, we will have a qiuck look the polarisation, i.e. the separation of change centers of atoms by electric fields.</p>
-<div class="section" id="Polarization-Charges-and-Currents">
-<h2>Polarization Charges and Currents<a class="headerlink" href="#Polarization-Charges-and-Currents" title="Permalink to this headline">¶</a></h2>
 <p>Let us construct a very crude atomic model, where an electronic charge <span class="math notranslate nohighlight">\(q\)</span> is smeared out over a spherical volume of radius <span class="math notranslate nohighlight">\(a\)</span>. The charge density of the charge cloud is then given by</p>
 <div class="math notranslate nohighlight">
 \[\rho=\frac{-q}{\frac{4}{3}\pi a^{3}}=-\frac{3q}{4\pi a^3}\]</div>
@@ -518,7 +513,7 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[E(r)=-\frac{1}{4\pi\epsilon_0}\frac{qr}{a^3}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the center of the charge cloud. If we now apply an external field to this atom, the postive nucleus will be displaced from the center of the negative cloud by a distance <span class="math notranslate nohighlight">\(d\)</span> from the center such that the external forces on the charges will be belanced by the internal forces between the charge cloud and the nucleus.</p>
-<figure><p><img alt="2a2b86498ef34e9d8d04c8d0ea554283" class="no-scaled-link" src="../../_images/atom.png" style="width: 40%;" /></p>
+<figure><p><img alt="50270562e0044001a533e073734f0e2d" class="no-scaled-link" src="../../_images/atom.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>The external force is given by <span class="math notranslate nohighlight">\(F=qE_{\rm ex}\)</span> and the force balance therefore</p>
 <div class="math notranslate nohighlight">
@@ -549,7 +544,7 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[\sigma=\vec{P}\hat{n}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{n}\)</span> is the surface normal. Thus <span class="math notranslate nohighlight">\(\vec{P}\)</span> and <span class="math notranslate nohighlight">\(\hat{n}\)</span> are anti-parallel on the negative side giving a negative charge and parallel on the positive side giving a positive charge density. These charges appearing at the surface are belonging to atoms. We call those charges <strong>bound</strong> charges in contrast to free charges. The surface density of bound charges is then <span class="math notranslate nohighlight">\(\sigma_b\)</span>.</p>
-<figure><p><img alt="b5aa7ffb462a436b8f4efc7031b0b3ff" class="no-scaled-link" src="../../_images/sample.png" style="width: 50%;" /></p>
+<figure><p><img alt="0d63daeb09e4474ca5d240943feb1ddc" class="no-scaled-link" src="../../_images/sample.png" style="width: 50%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>The above relation between surface charge density and polarisation density is only true if all the induced bound charges inside the material cancel and the is no residual charge density inside the volume. However, if the surfaces charges on both ends of the cap are not equal and no excess charges present, there must be a volume charge inside the material, which creates a volume charge density of bound charges <span class="math notranslate nohighlight">\(\rho_b\)</span>. Thus in general we have</p>
 <div class="math notranslate nohighlight">
@@ -578,7 +573,7 @@ figcaption {
 \[\nabla \cdot \vec{D} =\rho_f\]</div>
 <p>is valid.</p>
 <div class="section" id="Dielectrics-Polarization">
-<h3>Dielectrics Polarization<a class="headerlink" href="#Dielectrics-Polarization" title="Permalink to this headline">¶</a></h3>
+<h2>Dielectrics Polarization<a class="headerlink" href="#Dielectrics-Polarization" title="Permalink to this headline">¶</a></h2>
 <p>Based on our previous findings of the dipole density and its dependence on the exlectric field <span class="math notranslate nohighlight">\(\vec{E}\)</span>, we can also write down</p>
 <div class="math notranslate nohighlight">
 \[\vec{P}=\epsilon_0\chi\vec{E}\]</div>
@@ -596,7 +591,7 @@ figcaption {
 <p>is called the dielectric constant, even though this number is a function of the frequency of the electromagnetic field. The dielectric function is a material property, which describes the interacion of electric fields with the dielectric material and thus also the interaction with of dielectrics with electromagnetic waves.</p>
 </div>
 <div class="section" id="Magnetization">
-<h3>Magnetization<a class="headerlink" href="#Magnetization" title="Permalink to this headline">¶</a></h3>
+<h2>Magnetization<a class="headerlink" href="#Magnetization" title="Permalink to this headline">¶</a></h2>
 <p>Similar arguments as before can also be made for magnetic materials even though there are no free magnetic monopoles. For completeness we provide a relation between the magnetic flux density <span class="math notranslate nohighlight">\(\vec{B}\)</span> and the magnetic field <span class="math notranslate nohighlight">\(\vec{H}\)</span> here.</p>
 <p>The flux density <span class="math notranslate nohighlight">\(\vec{B}\)</span> is related to the magnetic field by</p>
 <div class="math notranslate nohighlight">
@@ -606,10 +601,8 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[\frac{1}{\mu_0}\vec{B}=\vec{H}+\vec{M}\]</div>
 <p>which is the density of the magnetic dipole moments.</p>
-</div>
-</div>
 <div class="section" id="Maxwell-Equations-in-Matter">
-<h2>Maxwell Equations in Matter<a class="headerlink" href="#Maxwell-Equations-in-Matter" title="Permalink to this headline">¶</a></h2>
+<h3>Maxwell Equations in Matter<a class="headerlink" href="#Maxwell-Equations-in-Matter" title="Permalink to this headline">¶</a></h3>
 <p>We can now write down the Maxwell equation in Matter including possible charges as well as currents.</p>
 <div class="math notranslate nohighlight">
 \[\nabla \times \vec{E}=-\frac{\partial \vec{B}}{\partial t}
@@ -629,8 +622,10 @@ figcaption {
 \epsilon&=&\epsilon_0 \epsilon_r\\
 \mu&=&\mu_0 \mu_r\\
 \end{eqnarray}</span></p>
+</div>
+</div>
 <div class="section" id="Wave-Equation-and-Refractive-Index">
-<h3>Wave Equation and Refractive Index<a class="headerlink" href="#Wave-Equation-and-Refractive-Index" title="Permalink to this headline">¶</a></h3>
+<h2>Wave Equation and Refractive Index<a class="headerlink" href="#Wave-Equation-and-Refractive-Index" title="Permalink to this headline">¶</a></h2>
 <p>Applying the same procedure as during the derivation of the wave equation, we can get the wave equation in matter for <span class="math notranslate nohighlight">\(\vec{j}_f=0\)</span> and <span class="math notranslate nohighlight">\(\rho_f=0\)</span>, which reads</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial^2 \vec{E}}{\partial \vec{r}^2}-\frac{1}{v^2} \frac{\partial^2\vec{E}}{\partial t^2}=0\]</div>
@@ -656,7 +651,6 @@ figcaption {
 <p>must be selected if <span class="math notranslate nohighlight">\(\mu_r&lt;0\)</span> and <span class="math notranslate nohighlight">\(\epsilon_r&lt;0\)</span>. In this case, the refractive index is negative which leads to a number of exciting possibilities. Materials, which have such unusual refractive properties need to be designed in a specific way since they also need to have specific magnetic properties. Such materials belong to the field of <strong>meta-materials</strong> as they include smaller subunits that are specifically arranged.</p>
 </div>
 </div>
-</div>
 
 
            </div>
@@ -679,7 +673,7 @@ figcaption {
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 12, 2021.
+        Last updated on Jan 13, 2021.
       </span>
 
     </p>
