@@ -495,7 +495,7 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L17/Dispersion and Absorption.ipynb`_</span></a>.
+<p>This page was generated from <a href="#id5"><span class="problematic" id="id6">`source/notebooks/L17/Dispersion and Absorption.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L17/Dispersion and Absorption.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
 <div class="section" id="Dispersion-and-Absorption">
@@ -515,7 +515,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>We would like to have a closer look at what happens with our atom in the electric field of a light wave. First of all, our toy atom is very small (around 0.1 nm) which is much smaller than the wavelength of ligth (500 nm). Thus the electric field appears to homogeneous over the cross section of the atom and seems to change over time with <span class="math notranslate nohighlight">\(E(t)=E_0 e^{-i\omega t}\)</span>.</p>
-<figure><p><img alt="13c2a058626b484dba7e501dec666682" class="no-scaled-link" src="../../_images/polarization.png" style="width: 60%;" /></p>
+<figure><p><img alt="04c9e2bb2ad54348bece1494a523eabc" class="no-scaled-link" src="../../_images/polarization.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>Lets assume the electric field being aligned with the x-direction, then we can write down the equation of motion for the displacement of the two charges in the atom</p>
 <div class="math notranslate nohighlight">
@@ -543,14 +543,38 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[n=1+\frac{Nq^2}{2\epsilon_0 m}\frac{(\omega_0^2-\omega^2)-i\sigma\omega}{(\omega_0^2-\omega^2)^2+\omega^2\sigma^2}=n-i\kappa\]</div>
 <p>The refractive index therefore has a real and imaginary part, which we can derive from the above formuala. We would like to a have a look at the consequences of those two coefficients <span class="math notranslate nohighlight">\(n_r,\kappa\)</span> for the propagation of the light wave.</p>
+<figure><p><img alt="74779d03598e4e33a8b139840fe9aaf7" class="no-scaled-link" src="../../_images/nr.png" style="width: 40%;" /> <img alt="594f1e4cbd26423db28458c5acd6d4b4" class="no-scaled-link" src="../../_images/kappa.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Real and imaginary part of the refractive index as a function of the frequency. The vertical dashed line is located at <span class="math notranslate nohighlight">\(\omega=\omega_0\)</span>.</p>
+</figcaption></figure><p>The two plots above show the frequency dependence of the real and imaginary part of the refractive index. The freuency dependence arises from the coupling to the resonance of the damped harmonic oscillator of our crude atomic model . Around the resonance, the are strong changes to be expected for the real part and the imaginary part. The real part has a dispersive shape being larger than 1 at lower frequencies and smaller than one (!) above the resonance. The imaginary part has the shape of a
+Lorentzian curve around the resonance frequency, where the full width at half maximum (<strong>FWHM</strong>) of the curve us given by the damping coefficient <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
 <div class="section" id="Absorption">
 <h2>Absorption<a class="headerlink" href="#Absorption" title="Permalink to this headline">¶</a></h2>
 <p>We will first analyze the effect of <span class="math notranslate nohighlight">\(\kappa\)</span>, which is the imaginary part of the refractive index.</p>
 <div class="math notranslate nohighlight">
-\[E(z)=Ee^{ik z}=E_0e^{-in k_0 z}\]</div>
+\[E(z)=Ee^{-ik z}=E_0e^{-in k_0 z}\]</div>
+<p>Inserting the complex refractive index yields</p>
+<div class="math notranslate nohighlight">
+\[E(z)=E_0e^{-i(n-i\kappa) k_0 z} =E_0 e^{-i n_r k_0 z}e^{-\kappa k_0 z}\]</div>
+<p>The imaginary part is creating a new real factor, which is inducating an electric field amplitude, that decays with the distance.</p>
+<p>If we calculate the intensity we find</p>
+<p>:nbsphinx-math:<a href="#id1"><span class="problematic" id="id2">`</span></a>begin{eqnarray}
+I&amp;=&amp;epsilon_0 c E^2=epsilon_0 c left | E_0 e^{-in_r k_0 z }e^{-kappa k_0 z} right <a href="#id3"><span class="problematic" id="id4">|</span></a>^2\</p>
+<blockquote>
+<div><p>&amp;=&amp;e^{-2kappa k_0 z}=e^{-alpha z}</p>
+</div></blockquote>
+<p>end{eqnarray}`</p>
+<p>where <span class="math notranslate nohighlight">\(\alpha=2k_0 z\)</span> is the absorption coefficient. The intensity of the wave is therefore decaying exponentially with the distance <span class="math notranslate nohighlight">\(z\)</span> and the corresponding law for the relative intensity</p>
+<div class="math notranslate nohighlight">
+\[\frac{I}{I_0}= e^{-\alpha z}
+\tag{Lambert Beer Law}\]</div>
+<p>is called <strong>Lambert-Beers law</strong>.</p>
+<figure><p><img alt="d65a69fc2c414295be8beb383b0b7cd1" class="no-scaled-link" src="../../_images/absorption_exp.png" style="width: 44%;" /> <img alt="71fa4cd4952b495899f9dfcfb54e3e28" class="no-scaled-link" src="../../_images/lambert_exp.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong> .</p>
+</figcaption></figure><p>As the coefficient <span class="math notranslate nohighlight">\(\kappa\)</span> shows the indicated frequency dependence, the absorption coefficient is also reflecting this strong absorption close to the resonances but weaker absorption far away from it. Since common materials have not only a single but many of hose resonances, the absorption behavior could be quite complex. It is however characteristic for each substance, which makes absorption spectroscopy a invaluable tool to study the composition of materials.</p>
 </div>
 <div class="section" id="Dispersion">
 <h2>Dispersion<a class="headerlink" href="#Dispersion" title="Permalink to this headline">¶</a></h2>
+<p>Besides the frequency dependence of the imaginary part of the refractive index, the real part has also a very pronanounced feature. This has consequences for the propagation speed of the wavefronts (phase velocity) or the speed of whole groups of waves, which is described by the group velocity <span class="math notranslate nohighlight">\(v_g\)</span>.</p>
 </div>
 </div>
 

@@ -109,13 +109,6 @@
     "\\Delta s = s_2-s_1\n",
     "$$"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
