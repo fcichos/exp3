@@ -184,6 +184,7 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    
    lectures/L17/overview_17.rst  
    notebooks/L17/Dispersion and Absorption.ipynb
+   notebooks/L17/Reflection and Refraction.ipynb
 
 
    
