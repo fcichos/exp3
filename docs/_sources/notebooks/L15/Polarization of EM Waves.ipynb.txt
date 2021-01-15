@@ -70,7 +70,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Light is called lineraly polarized if the electric field vector oscillates in a single plane during light propagation. The picture below, which we introduced earlier for a plane wave shows such a linearly polarized wave.\n",
+    "Light is called linearly polarized if the electric field vector oscillates in a single plane during light propagation. The picture below, which we introduced earlier for a plane wave shows such a linearly polarized wave.\n",
     "\n",
     "<figure>\n",
     "      <img src=\"img/plane_wave.png\" width=\"90%\">\n",
@@ -124,7 +124,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "In circukar polarized light, the end of the electric field vector describe a circle around the propagation direction. This means the elecric field vector is rotating around the propagation direction."
+    "In circular polarized light, the end of the electric field vector describe a circle around the propagation direction. This means the elecric field vector is rotating around the propagation direction."
    ]
   },
   {
@@ -263,7 +263,7 @@
     "\\vec{E}_t(z,t)=(\\vec{E}(z,t)\\cdot \\hat{e}_p)\\hat{e}_p=E(z,t)\\cos(\\theta)\\hat{e}_p\n",
     "$$\n",
     "\n",
-    "where $\\theta$ is the angle between the electric field vector and the polarizers orientation. This means the the intensity of a lineraly polarized wave transmitted through a linear polarizer only disappears if polarizer and electric field are orthogonal ($\\theta=90{^\\circ}$)"
+    "where $\\theta$ is the angle between the electric field vector and the polarizers orientation. This means the the intensity of a linearly polarized wave transmitted through a linear polarizer only disappears if polarizer and electric field are orthogonal ($\\theta=90{^\\circ}$)"
    ]
   },
   {

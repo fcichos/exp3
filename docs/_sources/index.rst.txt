@@ -178,6 +178,14 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    notebooks/L16/Speed of Light Measurements.ipynb
    notebooks/L16/EM Waves in Matter.ipynb
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 17:
+   
+   lectures/L17/overview_17.rst  
+   notebooks/L17/Dispersion and Absorption.ipynb
+
+
    
    
 Indices and tables
