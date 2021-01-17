@@ -408,7 +408,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#Boundary-Condition">Boundary Condition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Reflection/Refraction">Reflection/Refraction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
 </ul>
 </li>
 </ul>
@@ -495,237 +494,6 @@
             
   
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
-    border: none;
-    padding: 0 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    background: #f5f5f5;
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -768,37 +536,106 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style><figure><p><img alt="db18ee2409174dca815ca95ed51f82db" class="no-scaled-link" src="../../_images/setup_k.png" style="width: 40%;" /></p>
+</style><p>Before we have a look at the behavior of electromagnetic waves at boundaries, we would like to setup the stage for those consideraations. For this purpose we need to define the geometry we are referring to and also have a look at the electric fields (and magnetic fields) that will be present. The sketch below shows the wavevectors of the incident <span class="math notranslate nohighlight">\(\vec{k}_I\)</span>, reflected <span class="math notranslate nohighlight">\(\vec{k}_R\)</span> and transmitted <span class="math notranslate nohighlight">\(\vec{k}_T\)</span> waves in the two materials with the refractive indices <span class="math notranslate nohighlight">\(n_1\)</span> and
+<span class="math notranslate nohighlight">\(n_2\)</span>.</p>
+<figure><p><img alt="07176765bf8a40a5b8fdd2686d9451b1" class="no-scaled-link" src="../../_images/setup_k.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
-</figcaption></figure><div class="math notranslate nohighlight">
-\[\vec{E}_{\rm inc}=\vec{E}_I e^{i(\omega_I t -\vec{k}_I\cdot \vec{r})}\]</div>
+</figcaption></figure><p>These wavevectors are connected to the following plane waves, we will consider. We will first assume that these three waves have different frequencies as well, even though we may guess that they have the same as they all stem from the incident wave.</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_{\rm ref}=\vec{E}_R e^{i(\omega_R t -\vec{k}_R\cdot \vec{r})}\]</div>
+\[\vec{E}_{\rm inc}=\vec{E}_I e^{i(\omega_I t -\vec{k}_I\cdot \vec{r})}
+\tag{incident}\]</div>
 <div class="math notranslate nohighlight">
-\[\vec{E}_{\rm tra}=\vec{E}_T e^{i(\omega_T t -\vec{k}_T\cdot \vec{r})}\]</div>
-<figure><p><img alt="e88d66a17f0942699e9fc1501203b33c" class="no-scaled-link" src="../../_images/pol_decomp.png" style="width: 70%;" /></p>
+\[\vec{E}_{\rm ref}=\vec{E}_R e^{i(\omega_R t -\vec{k}_R\cdot \vec{r})}
+\tag{reflected}\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{E}_{\rm tra}=\vec{E}_T e^{i(\omega_T t -\vec{k}_T\cdot \vec{r})}
+\tag{transmitted}\]</div>
+<p>What we have to consider, however, is the direction of polarization of their electric or magnetic fields. This is important and shall not be confused in the following. We will differentiate between</p>
+<ul class="simple">
+<li><p><strong>p-polarized light:</strong> electric field is in the plane of incidence (given by the k-vector and the surface normal), also called transverse magnetic (TM)</p></li>
+<li><p><strong>s-polarized light:</strong> electric field is perpendicular to the plane of incidence, also called transverse electric (TE)</p></li>
+</ul>
+<p>This is sketched in the image below.</p>
+<figure><p><img alt="eb791503182340a98a699c314f192b04" class="no-scaled-link" src="../../_images/pol_decomp.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
-</figcaption></figure><div class="section" id="Boundary-Condition">
+</figcaption></figure><p>To apply the boundary conditions, we will further need to split thesse polarisation vectors into components, which are <strong>parallel</strong> (<span class="math notranslate nohighlight">\(||\)</span>) or <strong>perpendicular</strong> (<span class="math notranslate nohighlight">\(\perp\)</span>) to the interface. This is required as we will have boundary conditions for the electric and magnetic fields either parallel or perpendicular to the interface. The s-polarisation, for example, has an electric field, which is always parallel to the interface, while the p-polarization comprises both components.</p>
+<div class="section" id="Boundary-Condition">
 <h2>Boundary Condition<a class="headerlink" href="#Boundary-Condition" title="Permalink to this headline">¶</a></h2>
-<figure><p><img alt="e40fcf46f2b5430e84af7e1b8b72322f" class="no-scaled-link" src="../../_images/boundary.png" style="width: 70%;" /></p>
+<p>The boundary conditions fo rthe electric or magnetic field passing an interface are derived from the Maxwell equations. As I assume you have don this already in the electro- and magnetostatics lectures, I will only resume shortly here.</p>
+<figure><p><img alt="43a4096133724a44ac005c919cbaf8ce" class="no-scaled-link" src="../../_images/boundary.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
-</figcaption></figure></div>
+</figcaption></figure><p>Let us take the divergence of the displacement field <span class="math notranslate nohighlight">\(\nabla \cdot \vec{D}=\rho_f\)</span> which is equal to the density of free charges. When integrating both sides over the volume</p>
+<div class="math notranslate nohighlight">
+\[\int\nabla \vec{D} dV=\int \rho_f dV\]</div>
+<p>we can apply Gauss’ theorem and replace the volume integral over the divergence with an integral over closed surface of that volume</p>
+<div class="math notranslate nohighlight">
+\[\oint \vec{D} d\vec{A}= q_f\]</div>
+<p>where <span class="math notranslate nohighlight">\(d\vec{A}\)</span> is a vector standing perpendicular on the surface element <span class="math notranslate nohighlight">\(dA\)</span> and <span class="math notranslate nohighlight">\(q_f\)</span> are the free charges in the volume. If we now consider a volume, which has the shape of a pillbox as displayed in the above sketch on the left side, we may let the height of the volume contract to zero and write the surface integral as</p>
+<div class="math notranslate nohighlight">
+\[(\vec{D}_2-\vec{D}_1)\cdot \hat{n}=q_f/A=\sigma_f\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the cap area of the cylinder and <span class="math notranslate nohighlight">\(\hat{n}\)</span> is a unit vector directed from material 2 to material 1. As the unit vector <span class="math notranslate nohighlight">\(\hat{n}\)</span> is perpendicular to the interface, this states that the difference in the normal components of the displacement field is due to free surfaces charges. Thus in the case of no free charges at the interface (<span class="math notranslate nohighlight">\(\sigma_f=0\)</span>), the normal components of the displacement field is conserved across the interface.</p>
+<div class="math notranslate nohighlight">
+\[D_{1\perp}=D_{1\perp}
+\tag{for $\sigma_f=0$}\]</div>
+<p>This also says that there is a jump in the normal electric field component</p>
+<div class="math notranslate nohighlight">
+\[\frac{E_{1\perp}}{E_{2\perp}}=\frac{\epsilon_2}{\epsilon_1}\]</div>
+<p>as <span class="math notranslate nohighlight">\(D=\epsilon E\)</span>. A similar calculation can also be done with the magnetic flux density <span class="math notranslate nohighlight">\(\nabla \cdot \vec{B}=0\)</span>, which yields tha the normal component of the flux density is conserved as well, but the magnetic field normal component has a jump according to the magnetic permeabilities <span class="math notranslate nohighlight">\(\mu_1,\mu_2\)</span>.</p>
+<p>The right sketch in the above Figure indicates the calculations that yield the boundary conditions for the parallel components of the electric and magnetic field. Here we use the Maxwell equation</p>
+<div class="math notranslate nohighlight">
+\[\nabla \times \vec{E}=-\frac{\partial \vec{B}}{\partial t}\]</div>
+<p>Integrating both sides over an area allows us to use Stokes theorem, stating that the integral over the rotation of an electric field can be transformed into a closed loop integral over the electric field.</p>
+<div class="math notranslate nohighlight">
+\[\oint \vec{E} d\vec{l}=-\frac{\partial}{\partial t}\int \vec{B}d\vec{A}\]</div>
+<p>Letting the area go to zero as well, we find</p>
+<div class="math notranslate nohighlight">
+\[\hat{n} \times (\vec{E}_2-\vec{E}_1)=0\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[E_{2||}=E_{1||}\]</div>
+<p>saying that the tangential component of the electric field is conserved. In the case of zero surface currentsm, this is also true for the magnetic field (<span class="math notranslate nohighlight">\(\vec{H}\)</span>) components along the interface.</p>
+</div>
 <div class="section" id="Reflection/Refraction">
 <h2>Reflection/Refraction<a class="headerlink" href="#Reflection/Refraction" title="Permalink to this headline">¶</a></h2>
+<p>We can now continue to calculate the mathcing of frequency and wavevector at the interface as well consider the amplitudes of the electric and magnetic fields.</p>
 <div class="section" id="Frequency-and-Wavevector-Matching">
 <h3>Frequency and Wavevector Matching<a class="headerlink" href="#Frequency-and-Wavevector-Matching" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="Field-Amplitude-Matching">
-<h3>Field Amplitude Matching<a class="headerlink" href="#Field-Amplitude-Matching" title="Permalink to this headline">¶</a></h3>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
+<p>Recalling the above formulas for the incident, reflected and transmitted plane waves, we can explicitely write down the components of the wavevectors of the three waves in our cordinate system</p>
+<figure><p><img alt="e9a50bc5408a48b4bd7843f62fbf4e98" class="no-scaled-link" src="../../_images/coordinates.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>According to that drawing, we have</p>
+<p><span class="math">\begin{eqnarray}
+\vec{k}_I &=& k_I \cos(\theta_I)\hat{e}_x+k_I \sin(\theta_I)\hat{e}_z\\
+\vec{k}_R &=& -k_R \cos(\theta_R)\hat{e}_x+k_R \sin(\theta_R)\hat{e}_z\\
+\vec{k}_T &=& k_T \cos(\theta_T)\hat{e}_x+k_T \sin(\theta_T)\hat{e}_z
+\end{eqnarray}</span></p>
+<p>Note that the component <span class="math notranslate nohighlight">\(\hat{e}_x\)</span> always provides the wavevector component perpendicular to the interface, while <span class="math notranslate nohighlight">\(\hat{e}_z\)</span> is the tangential (parallel) component. The total field in both sides is given by</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}=\vec{E}_{\rm inc}+\vec{E}_{\rm ref}
+\tag{$x&lt;0$}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}=\vec{E}_{\rm tra}
+\tag{$x&gt;0$}\]</div>
+<p>on the other side. We now want that those field mathc according to our previously described boundary conditions.</p>
+<p>This matching of the field shall be valid at all times, which directly requires</p>
+<div class="math notranslate nohighlight">
+\[\omega_I=\omega_R=\omega_T
+\tag{frequency mathcing}\]</div>
+<p>This is what we already guessed. Along the interface we also need to have a phase mathcing of the waves as already discussed in the wave optics chapter. This means that</p>
+<div class="math notranslate nohighlight">
+\[\vec{k}_I\cdot \vec{r}=\vec{k}_R\cdot \vec{r}=\vec{k}_T\cdot \vec{r}\]</div>
+<p>at all positions <span class="math notranslate nohighlight">\(\vec{r}\)</span> that belong to the interface (i.e. <span class="math notranslate nohighlight">\(x=0\)</span>). Therefore <span class="math notranslate nohighlight">\(\vec{r}=\lbrace 0,y,z \rbrace\)</span> and the equalities yield</p>
+<div class="math notranslate nohighlight">
+\[k_I\sin(\theta_I)=k_R\sin(\theta_R)=k_T\sin(\theta_T)\]</div>
+<p>Since the magnitude of the wavevector of the incidenet and the reflected light is the same (both wave travel in the same material), we immediately find</p>
+<p><span class="math notranslate nohighlight">\(\theta_I=\theta_R\)</span></p>
+<p>For the incident and the transmitted wave we have to take the change of the wavenumber into account, which gives.</p>
+<p><span class="math">\begin{eqnarray}
+n_1 k_0\sin(\theta_I) &=& n_2 k_0\sin(\theta_T)\\
+n_1 \sin(\theta_I) &=& n_2 \sin(\theta_T)
+\end{eqnarray}</span></p>
+<p>which is Snells law. Snells law is the result of the conservation of the parallel component of the wavevector across an interface, while the normal component has to have a jump according to the refractive indices.</p>
 </div>
 </div>
 </div>
