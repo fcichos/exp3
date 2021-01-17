@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Reflection and Refraction of Electromagnetic Waves &mdash; Experimental Physics 3 1 documentation</title>
+  <title>Fresnel Equations &mdash; Experimental Physics 3 1 documentation</title>
   
 
   
@@ -407,7 +407,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
 </ul>
 </li>
 </ul>
@@ -416,13 +415,19 @@
 <p class="caption"><span class="caption-text">Lecture 18:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L18/overview_18.html">Lecture Contents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Reflection and Refraction of Electromagnetic Waves</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Reflection/Refraction">Reflection/Refraction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Glass-to-Air">Glass to Air</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Fresnel-Equations">Fresnel Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Brewster-Angle">Brewster Angle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Total-Internal-Reflection,-Evanescent-Waves">Total Internal Reflection, Evanescent Waves</a></li>
 </ul>
 </li>
 </ul>
@@ -471,7 +476,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Reflection and Refraction of Electromagnetic Waves</li>
+      <li>Fresnel Equations</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -494,237 +499,6 @@
             
   
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
-    border: none;
-    padding: 0 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    background: #f5f5f5;
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -748,11 +522,11 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L18/Reflection and Refraction.ipynb`_</span></a>.
+<p>This page was generated from <a href="#id3"><span class="problematic" id="id4">`source/notebooks/L18/Reflection and Refraction.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L18/Reflection and Refraction.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<div class="section" id="Reflection-and-Refraction-of-Electromagnetic-Waves">
-<h1>Reflection and Refraction of Electromagnetic Waves<a class="headerlink" href="#Reflection-and-Refraction-of-Electromagnetic-Waves" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Fresnel-Equations">
+<h1>Fresnel Equations<a class="headerlink" href="#Fresnel-Equations" title="Permalink to this headline">¶</a></h1>
 <style>
 figure {
   border: 1px #cccccc solid;
@@ -767,34 +541,38 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style><div class="section" id="Reflection/Refraction">
-<h2>Reflection/Refraction<a class="headerlink" href="#Reflection/Refraction" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="Frequency-and-Wavevector-Matching">
-<h3>Frequency and Wavevector Matching<a class="headerlink" href="#Frequency-and-Wavevector-Matching" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="Field-Amplitude-Matching">
-<h3>Field Amplitude Matching<a class="headerlink" href="#Field-Amplitude-Matching" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="Fresnel-Equations">
-<h2>Fresnel Equations<a class="headerlink" href="#Fresnel-Equations" title="Permalink to this headline">¶</a></h2>
-<figure><p><img alt="59d598a438cd4fb6b69427fd4fad27ce" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 70%;" /></p>
+</style><p>In the last lecture, we have discussed the mathcing of the frequency and the wavevector at an interface between the two materials. We no also need to have a look at the matching of the electric field amplitudes at the boundaries.</p>
+<div class="section" id="Reflection">
+<h2>Reflection<a class="headerlink" href="#Reflection" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Air-to-Glass">
+<h3>Air to Glass<a class="headerlink" href="#Air-to-Glass" title="Permalink to this headline">¶</a></h3>
+<figure><p><img alt="bc945640bf3c446f8df451479950d0be" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure></div>
+<div class="section" id="Glass-to-Air">
+<h3>Glass to Air<a class="headerlink" href="#Glass-to-Air" title="Permalink to this headline">¶</a></h3>
+<figure><p><img alt="5f32af7ee4ab4d04a686ed11dc966644" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
-</figcaption></figure><figure><p><img alt="950c91edaa3341c2908b0718b2594db5" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 70%;" /></p>
-<figcaption><p><strong>Fig.:</strong></p>
-</figcaption></figure><figure><p><img alt="64a7bead6a644c3a870592fa6aa70bb7" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 70%;" /></p>
-<figcaption><p><strong>Fig.:</strong></p>
-</figcaption></figure><figure><p><img alt="7f17a5a4915144be9034f1a7a3cdcc00" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 70%;" /></p>
-<figcaption><p><strong>Fig.:</strong></p>
-</figcaption></figure><div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
+</figcaption></figure></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
+<div class="section" id="Transmission">
+<h2>Transmission<a class="headerlink" href="#Transmission" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Air to Glass<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<figure><p><img alt="64fe0fa517764656904718e64e792a61" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure></div>
+<div class="section" id="id2">
+<h3>Glass to Air<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<figure><p><img alt="24eb1cad922d4dbbb3b8152c2ea250c2" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure></div>
 </div>
+<div class="section" id="Brewster-Angle">
+<h2>Brewster Angle<a class="headerlink" href="#Brewster-Angle" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="Total-Internal-Reflection,-Evanescent-Waves">
+<h2>Total Internal Reflection, Evanescent Waves<a class="headerlink" href="#Total-Internal-Reflection,-Evanescent-Waves" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
