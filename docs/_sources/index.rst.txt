@@ -191,7 +191,7 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    :caption: Lecture 18:
    
    lectures/L18/overview_18.rst  
-   notebooks/L18/Reflection and Refraction.ipynb
+   notebooks/L18/Fresnel Equations.ipynb
 
 
    

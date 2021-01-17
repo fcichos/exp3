@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 17 we have a look at the dispersion and absorption and start to have a look across the propagation of light across boundaries between media.
+In Lecture 18 we will derive the Fresnel equations and discuss their meaning. We will have a look at more complex materials that are birefringent and at metals.
 
 
 
@@ -9,4 +9,4 @@ In Lecture 17 we have a look at the dispersion and absorption and start to have 
    :width: 600
 
 
-Lecture 17 slides for download :download:`pdf <Lecture 17.pdf>`.
+Lecture 18 slides for download :download:`pdf <Lecture 18.pdf>`.
