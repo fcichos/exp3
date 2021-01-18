@@ -544,27 +544,79 @@ figcaption {
 </style><p>In the last lecture, we have discussed the mathcing of the frequency and the wavevector at an interface between the two materials. We no also need to have a look at the matching of the electric field amplitudes at the boundaries.</p>
 <div class="section" id="Reflection">
 <h2>Reflection<a class="headerlink" href="#Reflection" title="Permalink to this headline">¶</a></h2>
+<p><strong>s-polarized light</strong></p>
+<p>We would first like to have a look at light that is polarized perpendicular to the incident plane - so-called spolarized light. According to our previous definition, s-polarized light is directed along the y-axis of our coordinate system. The incident light amplitude is therefore written as</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}_I=E_I\hat{e}_y\]</div>
+<p>This electric field vector is perpendicular to the plane of incidence. With this polarization the reflected and the refracted electric field also have to have this polarizations and thus</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}_R=E_{R}\hat{e}_y\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}_T=E_{T}\hat{e}_y\]</div>
+<p>From this it also follows that at the boundary, the incident and the reflected field must be the same as the transmitted field in our matching condition. This is due to the fact that s-polarized light it always parallel to the interface.</p>
+<div class="math notranslate nohighlight">
+\[E_I+E_R=E_T
+\tag{matching}\]</div>
+<p>The magnetic field lies then in the plane of incidence as it is perpendicular to <span class="math notranslate nohighlight">\(\vec{k}_I\)</span> and <span class="math notranslate nohighlight">\(\vec{E}_I\)</span>. It has components parallel <span class="math notranslate nohighlight">\(||\)</span> and perpendicular <span class="math notranslate nohighlight">\(\perp\)</span> to the interface. The tangential components as well as the perpendicular ones are conserved so we can write for the tangential ones</p>
+<div class="math notranslate nohighlight">
+\[B_I\cos(\theta_I)-B_R\cos(\theta_R)=B_T\cos(\theta_T)\]</div>
+<p>Given the fact that</p>
+<div class="math notranslate nohighlight">
+\[\vec{B}=\frac{1}{v}(\hat{v}\times \vec{E})\]</div>
+<p>and that all three vectors are orthogonal we can use the relation <span class="math notranslate nohighlight">\(B=E/v\)</span> for the magnetic and electric field amplitudes and <span class="math notranslate nohighlight">\(\theta_I=\theta_R\)</span> to obtain</p>
+<div class="math notranslate nohighlight">
+\[\vec{E_I-E_r}{v_1}\cos(\theta_I)=\frac{E_T}{v_2}\cos(\theta_T)\]</div>
+<p>With the help of the condition <em>matching</em> above we can replace the transmitted electric field <span class="math notranslate nohighlight">\(E_T\)</span> and using <span class="math notranslate nohighlight">\(v_1=c/n_1\)</span> and <span class="math notranslate nohighlight">\(v_2=c/n_2\)</span> we finally find</p>
+<div class="math notranslate nohighlight">
+\[\frac{E_R}{E_I}=\frac{n_1\cos(\theta_I)-n_2\cos(\theta_T)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=r_s
+\tag{Fresnel Coefficient $r_s$}\]</div>
+<p>This is the <strong>Fresnel coefficient for the reflection of s-polarized light</strong> <span class="math notranslate nohighlight">\(r_s\)</span>. If we replace not the transmitted but the refletec electric field in the formula above, we may obtain the <strong>Fresnel coefficient for the transmission of s-polarized light</strong> <span class="math notranslate nohighlight">\(t_s\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=t_s
+\tag{Fresnel Coefficient $t_s$}\]</div>
+<p><strong>p-polarized light</strong></p>
+<p>If the electric field is parallel to the plane of incidence, the we need to split it into parallel <span class="math notranslate nohighlight">\(||\)</span> and perpendicular <span class="math notranslate nohighlight">\(\perp\)</span> components. The incident field may be written as</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}_I=-E_I\sin(\theta_I)\hat{e}_x+E_I\cos(\theta_I)\hat{e}_z\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{e}_z\)</span> and <span class="math notranslate nohighlight">\(\hat{e}_x\)</span> are the unit vectors in the z- and x-direction, respectively. The first term is the normal component to the boundary and the second the parallel component. We may pick our the parallel part, for which we know that the electric field is just continuous across the interface.</p>
+<div class="math notranslate nohighlight">
+\[E_I\cos(\theta_I)+E_R\cos(\theta_R)=E_T\cos(\theta_T)\]</div>
+<p>Now the magnetic field is perpendicular to the plane of incidence and we may write</p>
+<div class="math notranslate nohighlight">
+\[B_I-B_R=B_T\]</div>
+<p>for the matching condition of the magnetic field. From this follows that</p>
+<div class="math notranslate nohighlight">
+\[\frac{E_I-E_R}{v_1}=\frac{E_T}{v_2}\]</div>
+<p>We may now replace again the transmitted field, which results finally in the <strong>Fresnel coefficient for the reflection of p-polarized light</strong> <span class="math notranslate nohighlight">\(r_p\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{E_R}{E_I}=\frac{n_2\cos(\theta_I)-n_1\cos(\theta_T)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=r_p
+\tag{Fresnel Coefficient $r_p$}\]</div>
+<p>Finally, we may also do the same for the <strong>Fresnel coefficient of the transmission of p-polarized light</strong> <span class="math notranslate nohighlight">\(t_p\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=t_p
+\tag{Fresnel Coefficient $t_p$}\]</div>
 <div class="section" id="Air-to-Glass">
 <h3>Air to Glass<a class="headerlink" href="#Air-to-Glass" title="Permalink to this headline">¶</a></h3>
-<figure><p><img alt="cf329b305c2544f2abc18469cd01b3a4" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 70%;" /></p>
-<figcaption><p><strong>Fig.:</strong></p>
+<figure><p><img alt="5d47218a80fe4313b8e18fb63caf2985" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure></div>
 <div class="section" id="Glass-to-Air">
 <h3>Glass to Air<a class="headerlink" href="#Glass-to-Air" title="Permalink to this headline">¶</a></h3>
-<figure><p><img alt="e022f1f34679475c8f307d482a90c2c5" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 70%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
+<figure><p><img alt="f2a06d1146ea4b439742602e85fe0490" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure></div>
 </div>
 <div class="section" id="Transmission">
 <h2>Transmission<a class="headerlink" href="#Transmission" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>Air to Glass<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<figure><p><img alt="80595d3b8b5b4c5593944d9416d04b10" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 70%;" /></p>
+<figure><p><img alt="4bf5179b63d6424480de7fc06cf53aef" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure></div>
 <div class="section" id="id2">
 <h3>Glass to Air<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<figure><p><img alt="71fe6dd16bf5430db8441c6bc736a10f" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 70%;" /></p>
+<figure><p><img alt="58da85dc0d3f4f7685cb5b33366c99a1" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure></div>
 </div>
@@ -597,7 +649,7 @@ figcaption {
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 17, 2021.
+        Last updated on Jan 18, 2021.
       </span>
 
     </p>

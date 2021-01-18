@@ -195,7 +195,6 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
 
 
    
-   
 Indices and tables
 ==================
 
