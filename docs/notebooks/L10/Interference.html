@@ -408,7 +408,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
 </ul>
 </li>
 </ul>
@@ -417,13 +416,19 @@
 <p class="caption"><span class="caption-text">Lecture 18:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L18/overview_18.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L18/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Fresnel-Equations">Fresnel Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Brewster-Angle">Brewster Angle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Total-Internal-Reflection,-Evanescent-Waves">Total Internal Reflection, Evanescent Waves</a></li>
 </ul>
 </li>
 </ul>
@@ -542,7 +547,7 @@ figcaption {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="63270691806e45288183291e15e14e7a" class="no-scaled-link" src="../../_images/thin_film.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="f3a8e880bd8c458fb7fe106b59c0c0a1" class="no-scaled-link" src="../../_images/thin_film.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -603,7 +608,7 @@ figcaption {
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="c6f89168f4da4c1096646ee496813500" class="no-scaled-link" src="../../_images/100nm_film.png" style="width: 40%;" /> <img alt="98082f6d21bc4b89a34a3b046bf89d3a" class="no-scaled-link" src="../../_images/10nm_film.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="7ed5c43bd227427ba9e0fd85bf8ddcdb" class="no-scaled-link" src="../../_images/100nm_film.png" style="width: 40%;" /> <img alt="f94a3fb5e7a3463c986b08decf7cc169" class="no-scaled-link" src="../../_images/10nm_film.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -622,7 +627,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="d4bedecb9c6d40a0beb537502559fbe8" class="no-scaled-link" src="../../_images/1µm_film.png" style="width: 40%;" /> <img alt="ec2d2bb7a1b24175b881b4c303ed1e53" class="no-scaled-link" src="../../_images/100µm_film.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="03b64a461e0c4d388fa112ba02ac16c0" class="no-scaled-link" src="../../_images/1µm_film.png" style="width: 40%;" /> <img alt="849797418dda426e8a5fa8ea7442d888" class="no-scaled-link" src="../../_images/100µm_film.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -635,7 +640,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="83f9e2085b3647d88d666f086549f4e5" class="no-scaled-link" src="../../_images/soap_film_lecture.png" style="width: 45%;" /> <img alt="214fcd7f912d4bf6bc556403a6aa9b44" class="no-scaled-link" src="../../_images/soap_film_lecture1.png" style="width: 45%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="8da31665389a49d1989e0953b7e06ec3" class="no-scaled-link" src="../../_images/soap_film_lecture.png" style="width: 45%;" /> <img alt="526983a105df4821bd145d5f2cd1985e" class="no-scaled-link" src="../../_images/soap_film_lecture1.png" style="width: 45%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -679,7 +684,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="1857b1388e5b4c93a10ad327ae61dbb4" class="no-scaled-link" src="../../_images/multi_wave.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="61848d94b15a447ba7f97d2a7968e72b" class="no-scaled-link" src="../../_images/multi_wave.png" style="width: 90%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -723,7 +728,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="739ce340be8246bd8e7e4bf63acb62ed" class="no-scaled-link" src="../../_images/multi_wave_decreasing.png" style="width: 70%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="8ff416c7eb89422a988c5e457cadbb02" class="no-scaled-link" src="../../_images/multi_wave_decreasing.png" style="width: 70%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -753,7 +758,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="00023cbf7855475799a6033725314075" class="no-scaled-link" src="../../_images/perot.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="b2a08506f30f4be1984ac6e3ac45dde9" class="no-scaled-link" src="../../_images/perot.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -788,7 +793,7 @@ called <strong>Newton black films</strong>. You might have seen them, if you loo
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 17, 2021.
+        Last updated on Jan 21, 2021.
       </span>
 
     </p>

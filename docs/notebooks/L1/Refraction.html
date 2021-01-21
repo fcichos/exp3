@@ -408,7 +408,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
 </ul>
 </li>
 </ul>
@@ -417,13 +416,19 @@
 <p class="caption"><span class="caption-text">Lecture 18:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L18/overview_18.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L18/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Fresnel-Equations">Fresnel Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Brewster-Angle">Brewster Angle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Total-Internal-Reflection,-Evanescent-Waves">Total Internal Reflection, Evanescent Waves</a></li>
 </ul>
 </li>
 </ul>
@@ -535,7 +540,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="00958234fbe44c68b37d1c5ffdd399a1" class="no-scaled-link" src="../../_images/snell.png" style="width: 59%;" /> <img alt="ed096d046f454033876cb8849bb6e545" class="no-scaled-link" src="../../_images/refraction_law.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="0aa405221d884200a6fe4c1a4a36533c" class="no-scaled-link" src="../../_images/snell.png" style="width: 59%;" /> <img alt="48f7d69f1dc04c79998e14766810e27f" class="no-scaled-link" src="../../_images/refraction_law.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -562,7 +567,7 @@ n_1 \sin(\theta_1)=n_2 \sin(\theta_2)
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="79921a57b24346bda16d3f55715f7bf7" class="no-scaled-link" src="../../_images/angles.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="63e9cf348b75437796415f9a5d1f52cc" class="no-scaled-link" src="../../_images/angles.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -584,7 +589,7 @@ has several important applications.</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="08b7360ce20e4d1d8d294393ca931b83" class="no-scaled-link" src="../../_images/tir.png" style="width: 50%;" /> <img alt="2d0ce4120e4f44ed9ab5c9fd03e5b5d3" class="no-scaled-link" src="../../_images/tir_disk.png" style="width: 49%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="6736c75218b3434abe9ff7f8d3216c89" class="no-scaled-link" src="../../_images/tir.png" style="width: 50%;" /> <img alt="213c4d9ed5124a58936bd1fe8e1629ea" class="no-scaled-link" src="../../_images/tir_disk.png" style="width: 49%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -605,7 +610,7 @@ has several important applications.</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="1624e598387c465eb44531a7ad3b36b7" class="no-scaled-link" src="../../_images/basin_tir.png" style="width: 59%;" /> <img alt="d8defde0f6d74e1ca5d179defd6b8e24" class="no-scaled-link" src="../../_images/tir_basin.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="6277cd6c9c0a4f11954661f5fc87d17d" class="no-scaled-link" src="../../_images/basin_tir.png" style="width: 59%;" /> <img alt="0fed0fc78e534fa98517740d49da7d5d" class="no-scaled-link" src="../../_images/tir_basin.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -621,7 +626,7 @@ front of the fiber at a maximum angle <span class="math notranslate nohighlight"
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="8b7df8a15354490799010db0dae749cc" class="no-scaled-link" src="../../_images/fiber.png" style="width: 59%;" /> <img alt="5a664aed5fba4054b82a91e123cc9715" class="no-scaled-link" src="../../_images/tir_rod.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="4bb64e0c6512473f9f7e3f447b59dbcd" class="no-scaled-link" src="../../_images/fiber.png" style="width: 59%;" /> <img alt="76b62cb84af348b497c76c39b0adfbbe" class="no-scaled-link" src="../../_images/tir_rod.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -660,7 +665,7 @@ NA=\sin(\theta_a)=\sqrt{n_1^2-n_2^{2}}
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 17, 2021.
+        Last updated on Jan 21, 2021.
       </span>
 
     </p>

@@ -408,7 +408,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
 </ul>
 </li>
 </ul>
@@ -417,13 +416,19 @@
 <p class="caption"><span class="caption-text">Lecture 18:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L18/overview_18.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L18/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Fresnel-Equations">Fresnel Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Brewster-Angle">Brewster Angle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Fresnel%20Equations.html#Total-Internal-Reflection,-Evanescent-Waves">Total Internal Reflection, Evanescent Waves</a></li>
 </ul>
 </li>
 </ul>
@@ -518,7 +523,7 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id3"><span class="problematic" id="id4">`source/notebooks/L8/Wave Optics.ipynb`_</span></a>.
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L8/Wave Optics.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L8/Wave Optics.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
 <div class="section" id="Wave-Optics">
@@ -529,7 +534,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="105d1a6923784d6db4cf0714774d616a" class="no-scaled-link" src="../../_images/spectrum1.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="70ecfaf4ab004084bbab6dba74866059" class="no-scaled-link" src="../../_images/spectrum1.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -577,7 +582,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="9ecd48f54da44e8db4d382b729ea8d9c" class="no-scaled-link" src="../../_images/wave.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="1424b51acfee4b05bbd0aeaf83c5038d" class="no-scaled-link" src="../../_images/wave.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -596,7 +601,7 @@
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="ba0fd76861b243f8963182075c0c7b95" class="no-scaled-link" src="../../_images/complex_rep.png" style="width: 50%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="08aa0806dbbf4e1d82233d3e3fed5604" class="no-scaled-link" src="../../_images/complex_rep.png" style="width: 50%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -657,7 +662,7 @@ k_{0z}\\
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="eeeb9686f6d1477986e5768feb8f673d" class="no-scaled-link" src="../../_images/plane_wave2.png" style="width: 45%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="098f7121a97640f8b74fdf5424713226" class="no-scaled-link" src="../../_images/plane_wave2.png" style="width: 45%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -686,7 +691,7 @@ k_{0}=\frac{\omega}{c_{0}}
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="f989fe9635a341b982d218481c5c249c" class="no-scaled-link" src="../../_images/plane_prop.mov" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="73cb8ea7b8074d94bfc6707c9f0a81f2" class="no-scaled-link" src="../../_images/plane_prop.mov" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -709,7 +714,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="c7fc4322f09b463fac36b9a7b5fd2e06" class="no-scaled-link" src="../../_images/spherical_wave1.png" style="width: 80%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="57b8a50df3a94d61af817cc947809934" class="no-scaled-link" src="../../_images/spherical_wave1.png" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -723,7 +728,7 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="ef977870db184e10b168107cc1127256" class="no-scaled-link" src="../../_images/out.mov" style="width: 30%;" /> <img alt="3cb2086918814ac9bc1667e58577372c" class="no-scaled-link" src="../../_images/in.mov" style="width: 30%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="f638f42fdb3249b6be9ba592f23c409b" class="no-scaled-link" src="../../_images/out.mov" style="width: 30%;" /> <img alt="62f571581fa9407abf6700849f20f3a3" class="no-scaled-link" src="../../_images/in.mov" style="width: 30%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -739,13 +744,11 @@ U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
 <div class="math notranslate nohighlight">
 \[U(\vec{r})=U_{1}(\vec{r})+U_{2}(\vec{r})\]</div>
 <p>To calculate the intensity of the total wave, we have to calculate therfore the magnitude square of the sum of the two waves.</p>
-<p>:nbsphinx-math:<a href="#id1"><span class="problematic" id="id2">`</span></a>begin{eqnarray}
-I &amp;= &amp;|U|^2\</p>
-<blockquote>
-<div><p>&amp;= &amp;|U_1+U_2|\
-&amp;= &amp;|U_1|^2+|U_2|^2+U^{*}_1 U_2 + U_1 U^{*}_1</p>
-</div></blockquote>
-<p>end{eqnarray}`</p>
+<p><span class="math">\begin{eqnarray}
+I &= &|U|^2\\
+&= &|U_1+U_2|\\
+&= &|U_1|^2+|U_2|^2+U^{*}_1 U_2 + U_1 U^{*}_1
+\end{eqnarray}</span></p>
 <p>which results in two terms, which resemble to be the sum of the two waves. Yet, there are two additional cross-term, which say that the resulting intensity is not just the sum of the two intensities in case the two terms do not cancel out.</p>
 <p>If we use</p>
 <div class="math notranslate nohighlight">
@@ -778,7 +781,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="6c08c9368aec456cb960fa99393a6e71" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="bfc65cf4290b42569dc18118380aa4c3" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="22e5636448a04e68946caa5d6dc829b4" class="no-scaled-link" src="../../_images/sum_const.png" style="width: 33%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="4ac4bf4d427c40c282d3efe39efce5d8" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="26015fb4e8414023811ad05696a25cb3" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="e0af5c113ec7498b992c59db5037df52" class="no-scaled-link" src="../../_images/sum_const.png" style="width: 33%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -802,7 +805,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="ec325a3345e543718506f742fcb90f44" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="1178c245fdd44d14af90ebdeec208f4e" class="no-scaled-link" src="../../_images/w_pi.png" style="width: 33%;" /> <img alt="c601faa1a5384fe2b61ce77711f4357d" class="no-scaled-link" src="../../_images/sum_destr.png" style="width: 33%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="61798843b29e4c39ad447b6893534a6d" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="55b3e6b9694a445a8667044d8cc91019" class="no-scaled-link" src="../../_images/w_pi.png" style="width: 33%;" /> <img alt="b9067d9c1b794ffebf0fd8fcbf171659" class="no-scaled-link" src="../../_images/sum_destr.png" style="width: 33%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -831,7 +834,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="6f6ad10f14844e2d8e02b92c33c05582" class="no-scaled-link" src="../../_images/plane_plane.png" style="width: 80%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="b5de82d220414ce29d76b8d6895e72d0" class="no-scaled-link" src="../../_images/plane_plane.png" style="width: 80%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -846,7 +849,7 @@ I &amp;= &amp;|U|^2\</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="d38ca3094d2b41a39b275a6e4997a4df" class="no-scaled-link" src="../../_images/sphere_plane.png" style="width: 90%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="f6b365bb53b540a9ba9148714b230f0a" class="no-scaled-link" src="../../_images/sphere_plane.png" style="width: 90%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -880,7 +883,7 @@ I &amp;= &amp;|U|^2\</p>
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 17, 2021.
+        Last updated on Jan 21, 2021.
       </span>
 
     </p>

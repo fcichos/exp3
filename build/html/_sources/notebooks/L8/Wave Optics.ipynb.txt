@@ -445,8 +445,8 @@
     "\n",
     "\\begin{eqnarray}\n",
     "I &= &|U|^2\\\\\n",
-    "  &= &|U_1+U_2|\\\\\n",
-    "  &= &|U_1|^2+|U_2|^2+U^{*}_1 U_2 + U_1 U^{*}_1  \n",
+    "&= &|U_1+U_2|\\\\\n",
+    "&= &|U_1|^2+|U_2|^2+U^{*}_1 U_2 + U_1 U^{*}_1  \n",
     "\\end{eqnarray}\n",
     "\n",
     "which results in two terms, which resemble to be the sum of the two waves. Yet, there are two additional cross-term, which say that the resulting intensity is not just the sum of the two intensities in case the two terms do not cancel out."
