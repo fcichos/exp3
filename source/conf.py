@@ -42,7 +42,7 @@ extensions = [
 
 # Add any paths that contain templates here, relative to this directory.
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
-templates_path = ['_templates']
+templates_paths = ['_templates']
 
 mathjax_config = {
 'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
@@ -59,11 +59,11 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_css_files = [
-    'custom.css',
-]
+    'css/custom.css',
+    ]
 
 def setup(app):
-    app.add_stylesheet('theme_overrides.css')
+    app.add_css_file('./xtheme_overrides.css')
 
 # html_logo = 'img/HY-logo-2017.png'
 

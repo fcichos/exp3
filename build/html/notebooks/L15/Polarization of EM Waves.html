@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Polarization of EM Waves &mdash; Experimental Physics 3 1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/./xtheme_overrides.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Energy Transport and Momentum Transport of EM Waves" href="Energy%20Transport.html" />
+    <link rel="prev" title="Lecture Contents" href="../../lectures/L15/overview_15.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Experimental Physics 3
+          
+
+          
+            
+            <img src="../../_static/mona_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/website.html">This Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/schedule.html">Course Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/exam.html">Exams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#books">Books</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#molecular-nanophotonics-group">Molecular Nanophotonics Group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/instructor.html">Instructors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Course Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lectures/Intro/overview.html#lecture-contents">Lecture Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Kernels">Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-documents">Notebook documents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/NotebookEditor.html">Notebook editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Edit-mode">Edit mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Command-mode">Command mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Keyboard-navigation">Keyboard navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Running-code">Running code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Managing-the-kernel">Managing the kernel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/EditCells.html">Entering code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/EditCells.html#Entering-Markdown">Entering Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Markdown-basics">Markdown basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Headings">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Embedded-code">Embedded code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#LaTeX-equations">LaTeX equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Videos">Videos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 1:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L1/overview_1.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Geometrical%20Optics.html">Geometrical Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Geometrical%20Optics.html#Assumptions">Assumptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Reflection.html">Reflection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Law-of-Reflection">Law of Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Refraction.html">Refraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Refractive-Index">Refractive Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Snells-Law">Snells Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction%20Explorer.html">EXP3 Snippets – Refraction Explorer</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L2/overview_2.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/Optical%20Elements.html">Optical Elements Part I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements.html#Mirrors">Mirrors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements.html#Plane-Mirrors">Plane Mirrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements.html#Concave-Mirrors">Concave Mirrors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L3/overview_3.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/Optical%20Elements.html">Optical Elements Part II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements.html#Prisms">Prisms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements.html#Deflection-angle">Deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements.html#Minimum-deflection-angle">Minimum deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements.html#Lenses">Lenses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements.html#Refraction-at-spherical-surfaces">Refraction at spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements.html#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements.html#Image-Construction">Image Construction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements.html#Lens-types">Lens types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Optical%20Elements.html">Optical Elements Part III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Optical%20Elements.html#Thick-lens">Thick lens</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Rainbow.html">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 5:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L5/overview_5.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L5/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L5/Optical%20Instruments.html#The-Eye">The Eye</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 6:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L6/overview_6.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L6/Magnifying%20Glass.html">Magnifying Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L6/Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Microscope.html#Modern-microscopy">Modern microscopy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L6/Telescope.html">Telescope</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 7:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L7/overview_7.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L7/Imaging%20Errors.html">Imaging Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Imaging%20Errors.html#Chromatic-Aberrations">Chromatic Aberrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Imaging%20Errors.html#Spherical-Aberration">Spherical Aberration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Imaging%20Errors.html#Coma">Coma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Imaging%20Errors.html#Astigmatism">Astigmatism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Imaging%20Errors.html#Field-Curvature">Field Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Imaging%20Errors.html#Distortions">Distortions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 8:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L8/overview_8.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L8/Wave%20Optics.html">Wave Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Wave%20Optics.html#Postulates-of-Wave-Optics">Postulates of Wave Optics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L8/Wave%20Optics.html#Wave-equation">Wave equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L8/Wave%20Optics.html#Intensity-of-waves">Intensity of waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L8/Wave%20Optics.html#Monochromatic-wave">Monochromatic wave</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../L8/Wave%20Optics.html#Complex-Amplitude">Complex Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../L8/Wave%20Optics.html#Wavefronts">Wavefronts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Wave%20Optics.html#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Wave%20Optics.html#Spherical-Waves">Spherical Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Wave%20Optics.html#Interference">Interference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Wave%20Explorer.html">EXP3 Snippets: Wave Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-Waves">Plane Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-wave-propagation">Plane wave propagation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-Waves">Spherical Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-wave-propagation">Spherical wave propagation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 9:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L9/overview_9.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/Interference.html">Coherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/Interference.html#Interferometers">Interferometers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L9/Interference.html#Michelson-Interferometer">Michelson Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L9/Interference.html#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L9/Interference.html#Sagnac-Interferometer">Sagnac Interferometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/Interference.html#Double-Slit-Interference">Double Slit Interference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 10:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L10/overview_10.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/Interference.html">Thin Film Interference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/Interference.html#Multiple-Wave-Interference">Multiple Wave Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 11:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L11/overview_11.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html">Fabry Perot Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Newton-Rings">Newton Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Bragg-Reflection">Bragg Reflection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Interference.html#Bragg-Mirrors,-Anti-Reflection-Coating-and-Photonic-Crystals">Bragg Mirrors, Anti-Reflection Coating and Photonic Crystals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Interference.html#Bragg-Mirror">Bragg Mirror</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Interference.html#Anti-Reflection-Coating">Anti-Reflection Coating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Interference.html#Photonic-Crystals">Photonic Crystals</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 12:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L12/overview_12.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L12/Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L12/Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 13:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L13/overview_13.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Diffraction%20Grating.html">Diffraction Grating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Properties-of-the-diffraction-pattern">Properties of the diffraction pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Position-of-the-Main-Peaks">Position of the Main Peaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Influence-of-the-Slit-Width">Influence of the Slit Width</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Influence-on-the-Slit-Number">Influence on the Slit Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Diffraction%20Grating.html#Spectral-resolution">Spectral resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Fresnel%20Zones.html">Fresnel Zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Fresnel%20Zones.html#Fresnel-Zone-Plate">Fresnel Zone Plate</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 14:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L14/overview_14.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Diffraction%20Integral.html">Diffraction Integral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Diffraction%20Integral.html#Fresnel-Approximation">Fresnel Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Diffraction%20Integral.html#Fraunhofer-Approximation">Fraunhofer Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Diffraction%20Integral.html#Babinet’s-Principle">Babinet’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Electromagnetic%20Optics.html">Electromagnetic Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Electromagnetic%20Optics.html#Electromagnetic-Spectrum">Electromagnetic Spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L14/Electromagnetic%20Optics.html#Maxwell-Equations">Maxwell Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Electromagnetic%20Optics.html#Plane-Waves,-Spherical-Waves">Plane Waves, Spherical Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L14/Electromagnetic%20Optics.html#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L14/Electromagnetic%20Optics.html#Spherical-Waves">Spherical Waves</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 15:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L15/overview_15.html">Lecture Contents</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Polarization of EM Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Linearly-Polarized-Waves">Linearly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Circularly-Polarized-Waves">Circularly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Elliptically-Polarized">Elliptically Polarized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unpolarized-Light">Unpolarized Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Analyzing-Polarization">Analyzing Polarization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Law-of-Malus">Law of Malus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Energy%20Transport.html">Energy Transport and Momentum Transport of EM Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Energy%20Transport.html#Energy-Transport">Energy Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Energy%20Transport.html#Momentum-Transport-and-Radiation-Pressure">Momentum Transport and Radiation Pressure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Energy%20Transport.html#Radiation-Pressure-measurements">Radiation Pressure measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Energy%20Transport.html#Comet-Tails">Comet Tails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Energy%20Transport.html#Optical-Tweezers-and-Magneto-optical-Traps">Optical Tweezers and Magneto-optical Traps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 16:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L16/overview_16.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Speed%20of%20Light%20Measurements.html">Measurements of the Speed of Light</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Speed%20of%20Light%20Measurements.html#Rotating-Mirror-Method-by-Foucault">Rotating Mirror Method by Foucault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Speed%20of%20Light%20Measurements.html#Phase-Method">Phase Method</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/EM%20Waves%20in%20Matter.html">Electromagnetic Waves in Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/EM%20Waves%20in%20Matter.html#Dielectrics-Polarization">Dielectrics Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/EM%20Waves%20in%20Matter.html#Magnetization">Magnetization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/EM%20Waves%20in%20Matter.html#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/EM%20Waves%20in%20Matter.html#Wave-Equation-and-Refractive-Index">Wave Equation and Refractive Index</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 17:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L17/overview_17.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L17/Dispersion%20and%20Absorption.html">Dispersion and Absorption</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Dispersion%20and%20Absorption.html#Absorption">Absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Dispersion%20and%20Absorption.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L17/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 18:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L18/overview_18.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Field-Amplitude-Matching">Field Amplitude Matching</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L18/Reflection%20and%20Refraction.html#Fresnel-Equations">Fresnel Equations</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Experimental Physics 3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Polarization of EM Waves</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L15/Polarization of EM Waves.ipynb" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="admonition note">
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`source/notebooks/L15/Polarization of EM Waves.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree/source/notebooks/L15/Polarization of EM Waves.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+</div>
+<div class="section" id="Polarization-of-EM-Waves">
+<h1>Polarization of EM Waves<a class="headerlink" href="#Polarization-of-EM-Waves" title="Permalink to this headline">¶</a></h1>
+<style>
+figure {
+  border: 1px #cccccc solid;
+  padding: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  background-color: #eeeeee;
+  color: black;
+  padding: 2px;
+}
+</style><p>The vectorial nature of electric and magnetic fields are the new property that we inserted into our description of wave propagation. Elecric and magnetic fields, while propagating along a certain direction, have a specific direction in the lab frame, which can change over time in specific ways. This stationary state of the direcion of the elecric field vector is termed <strong>polarization</strong>. You may also use teh magnetic field to define polarization, by commonly this is done using the electric field
+direction.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Polarization of Electromagnetic Waves</strong></p>
+<p>The polarization of an electromagnetic wave is defined by the direction of its elecric field vector in our laboratory frame.</p>
+</div>
+<p>We differentiate between different states of polarization, e.g. linear, circular, elliptical polarization. But we may, depending on the properties of the light source also have unpolarized light.</p>
+<p>The polarization of light is important for many applications including for example 3D cinema or TV. The polarization state is commonly changed when light interacts with matter, therefore polarization is also a very important tool to characterize materials. For example, the technique of <strong>ellipsometry</strong> is studying the polarization state of light reflected from a material therby gaining important information about the electronic properties of the material. This is an important tool on solid-state
+physics. The polarization of light is also important for interence as two wave of orthogonal directions of the elecric field cannot interference (please check this idea yourself). It can be also used to encode information for quantum cryptography.</p>
+<p>In the following sections we will shortly define these different polarization states.</p>
+<div class="section" id="Linearly-Polarized-Waves">
+<h2>Linearly Polarized Waves<a class="headerlink" href="#Linearly-Polarized-Waves" title="Permalink to this headline">¶</a></h2>
+<p>Light is called linearly polarized if the electric field vector oscillates in a single plane during light propagation. The picture below, which we introduced earlier for a plane wave shows such a linearly polarized wave.</p>
+<figure><p><img alt="4d18b97b10ad4109a49d4e964e3a7abe" class="no-scaled-link" src="../../_images/plane_wave1.png" style="width: 90%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Plane wave propagating along the y-direction, with the electric field oscillating along the z-direction.</p>
+</figcaption></figure><p>We can generalize this description a bit more. Our plane wave shall be given by</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}=\vec{E}_0e^{i(\omega t-kz)}\]</div>
+<p>The wave propagates along the z-direction. The polarization is given by the vector <span class="math notranslate nohighlight">\(\vec{E}_0\)</span>. This vector can be split into its components along the x- and the y-direction</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}_0=E_{0x}\hat{e}_x+E_{oy}\hat{e}_y\]</div>
+<p>For a linearly polarized elecromagnetic wave, the magnitude of <span class="math notranslate nohighlight">\(E_{0x}\)</span> and <span class="math notranslate nohighlight">\(E_{0y}\)</span> are fixed over time, such that the angle of the electric field vector with the x-axis, for example, is fixed in time. This also requires that the phase of the total electric field components is the same, i.e.</p>
+<p><span class="math">\begin{eqnarray}
+E_{x}&=&E_{0x}e^{i(\omega t-kz)}\\
+E_{y}&=&E_{0y}e^{i(\omega t-kz)}\\
+\end{eqnarray}</span></p>
+<p>The linear polarization state, independent of the polarization direction is also called <span class="math notranslate nohighlight">\(\pi\)</span><strong>-polarization</strong>. We will use this term later in the description of light-atom interaction.</p>
+</div>
+<div class="section" id="Circularly-Polarized-Waves">
+<h2>Circularly Polarized Waves<a class="headerlink" href="#Circularly-Polarized-Waves" title="Permalink to this headline">¶</a></h2>
+<p>In circular polarized light, the end of the electric field vector describe a circle around the propagation direction. This means the elecric field vector is rotating around the propagation direction.</p>
+<figure><p><img alt="e6fc5221ab8441c98acd896bc4016a05" class="no-scaled-link" src="../../_images/circular.png" style="width: 90%;" /></p>
+<figcaption><p><strong>Fig.:</strong> (Left) Left and right (right) circularly polarized waves. The vectors display the direction of the electric field only for clarity. The left circularly polarized wave has a counter-clockwise rotating field vector with respect to the propagation direction. The right circularly polarized a clockwise rotating field vector.</p>
+</figcaption></figure><p>To obtain circularly polarized light we can consider our two polarization components again but with an additional phase shift of <span class="math notranslate nohighlight">\(\pm\pi/2\)</span> of one of the components (here the y-component) together with constraining the amplitude of the components to teh same value.</p>
+<p><span class="math">\begin{eqnarray}
+E_{x}&=&E_{0x}e^{i(\omega t-kz)}\\
+E_{y}&=&E_{0y}e^{i(\omega t-kz\pm\frac{\pi}{2})}\\
+E_{0y}&=&E_{0x}
+\end{eqnarray}</span></p>
+<p>The consequence of that additional phase shift of one component is, that <span class="math notranslate nohighlight">\(E_y\)</span> reaches its maximum amplitude at a different position <span class="math notranslate nohighlight">\(z\)</span>, when keeping the time fixed, i.e. making a snapshot. If <span class="math notranslate nohighlight">\(z\)</span> is fixed, the above formulas describe a rotation of the electric field around the direction of <span class="math notranslate nohighlight">\(\vec{k}\)</span> (here z-direction). The third equation ensures that during rotation the magnitude of the electric field vector is unchanged und thus the end of the electric field vectors
+describes a circle (bottom row of figure) around the direction of propagation.</p>
+<p>Right circularly polarized light is also known as <span class="math notranslate nohighlight">\(\sigma^{+}\)</span> <strong>polarization</strong>, while left circularly polarized light is <span class="math notranslate nohighlight">\(\sigma_{-}\)</span> <strong>polarization</strong>.</p>
+</div>
+<div class="section" id="Elliptically-Polarized">
+<h2>Elliptically Polarized<a class="headerlink" href="#Elliptically-Polarized" title="Permalink to this headline">¶</a></h2>
+<p>If both components of the electric field carry an additional phase delay <span class="math notranslate nohighlight">\(\delta_1\)</span> and <span class="math notranslate nohighlight">\(\delta_2\)</span> and both component amplitudes are different <span class="math notranslate nohighlight">\(E_0x\neq E_0y\)</span>, then we find elliptically polarized light</p>
+<p><span class="math">\begin{eqnarray}
+E_{x}&=&E_{0x}e^{i(\omega t-kz+\delta_1)}\\
+E_{y}&=&E_{0y}e^{i(\omega t-kz+\delta_2)}\\
+E_{0y}&\neq&E_{0x}
+\end{eqnarray}</span></p>
+<p>which means that the end point of the electric field vector describes an ellipse around the propagation direction.</p>
+<figure><p><img alt="2f11f5cf33f94aefa6e39389fb98578d" class="no-scaled-link" src="../../_images/elliptical.png" style="width: 60%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Elliptical polarization.</p>
+</figcaption></figure><p>The ellipse is then described by</p>
+<div class="math notranslate nohighlight">
+\[\frac{E_x(z,t)^2}{E_{0x}^2}+\frac{E_y(z,t)^2}{E_{0y}^2}-\frac{2E_{x}(z,t)E_y(z,t)}{E_{0x}E_{0y}}\cos(\delta)=\sin^2(\delta)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\delta=\delta_2-\delta_1\)</span>. The ellipse is in general not oriented along a specific axis but has an angle <span class="math notranslate nohighlight">\(\Psi\)</span> with the x-axis, which is fixed in time. This angle can be calculated by</p>
+<div class="math notranslate nohighlight">
+\[\tan(2\Psi)=\frac{2E_{0x}E_{0y}}{E^2_{0x}-E_{0y}^2}\cos(\delta)\]</div>
+<p>The circular polarized state is a special case of the elliptically polarized state of light.</p>
+</div>
+<div class="section" id="Unpolarized-Light">
+<h2>Unpolarized Light<a class="headerlink" href="#Unpolarized-Light" title="Permalink to this headline">¶</a></h2>
+<p>Unpolarized light is obtained when the electric field vector fluctuates in polarization statistically.</p>
+</div>
+<div class="section" id="Analyzing-Polarization">
+<h2>Analyzing Polarization<a class="headerlink" href="#Analyzing-Polarization" title="Permalink to this headline">¶</a></h2>
+<p>The polarization state of light is analyzed with the help of polarizers. These can be thin polymeric films, where the order of the polymer chain in the film provides a preferential axis or polarizers can also be made of other birefringent materials like Mica, for example. Those materials are called anisotropic as they have a refractive index, which depends on the direction of the electric field in the material. Depending on the design of the polarizer, you may generate linearly polarized light,
+you may change the polarization direction or even create circularly polarized light. We will cover aisotropic materials in a later lecture.</p>
+<figure><p><img alt="e758af297ac34e228b32844cf321b081" class="no-scaled-link" src="../../_images/lin_pol.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Sketch for the action of a linear polarizer. The red arrow is the electric field vector of the incident wave.<span class="math notranslate nohighlight">\(\hat{e}_p\)</span> denotes the orientation of the polarizer and the blue arrow the transmitted electric field.</p>
+</figcaption></figure><p>In mathematical terms, a <em>linear polarizer</em> projects the electric field vector to a specific direction. If <span class="math notranslate nohighlight">\(\vec{E}(z,t)\)</span> is our electric field vector of the electromagnetic wave and <span class="math notranslate nohighlight">\(\hat{e}_{p}\)</span> is the unit vector in the polarization direction the resulting electric field after the light has trasmitted through the polarizer is given by</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}_t(z,t)=(\vec{E}(z,t)\cdot \hat{e}_p)\hat{e}_p=E(z,t)\cos(\theta)\hat{e}_p\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the electric field vector and the polarizers orientation. This means the the intensity of a linearly polarized wave transmitted through a linear polarizer only disappears if polarizer and electric field are orthogonal (<span class="math notranslate nohighlight">\(\theta=90{^\circ}\)</span>)</p>
+<div class="section" id="Law-of-Malus">
+<h3>Law of Malus<a class="headerlink" href="#Law-of-Malus" title="Permalink to this headline">¶</a></h3>
+<p>The above description is also the essence of the <strong>Law of Malus</strong>, which concerns the transmission intensity. Taking the magnitude square of the left and the right side of the above equation yields</p>
+<div class="math notranslate nohighlight">
+\[I_t=I_0\cos^2(\theta)\]</div>
+<p>If follows that the intensity drops to <span class="math notranslate nohighlight">\(50\)</span> %, when we adjust an angle of <span class="math notranslate nohighlight">\(45^{\circ}\)</span>. As soon as we have a lecture in the lecture hall again, we will have a look at some nice demonstrations that illustrate Malu’s law similar to the picture below.</p>
+<figure><p><img alt="30e7a7be4dd648e3a1dbdf862d565525" class="no-scaled-link" src="../../_images/malus.png" style="width: 90%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Demonstration of Malu’s law using two or three polarizers.</p>
+</figcaption></figure></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Energy%20Transport.html" class="btn btn-neutral float-right" title="Energy Transport and Momentum Transport of EM Waves" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../lectures/L15/overview_15.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Frank Cichos
+      <span class="lastupdated">
+        Last updated on Jan 17, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
