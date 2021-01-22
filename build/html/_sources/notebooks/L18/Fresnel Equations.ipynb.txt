@@ -203,9 +203,18 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "Lets discuss the results we obtained with the help of specifc examples. We will consider the interface between air ($n_1=1$) and glass ($n_2=1.5$) and vary the angle of incidence. The transmission angle can the be obtained from Snell's law $n_1\\sin(\\theta_I)=n_2\\sin(\\theta_T)$. Besides the Frensel coefficients, we plot also the phase. This phase gives us an idea about possible phase changes upon reflection and refraction. We have previously assume for example, that under normal incidence we obtain a phase jump of $\\pi$ upon reflection when coming from air to glass. This is something we may check now. \n",
+    "\n",
+    "To do so, we just represent the complex Fresnel coefficients as $r_s=|r_s|e^{i\\phi}$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "<figure>\n",
     "      <img src=\"img/reflection_air_glass.png\" width=\"70%\">\n",
-    "  <figcaption>**Fig.:** Polarization of an electric cloud of an atom.\n",
+    "  <figcaption>**Fig.:** Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an air($n_1=1$)/glass($n_2=1.5$) interface. \n",
     "  </figcaption>\n",
     "</figure>"
    ]
@@ -214,7 +223,42 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "The above graph displays the reflection coefficients $r_s,r_p$ as a function of the angle of incidence. The value of $r_s$ is negative for the whole range indicating the there is a phase jump by an angle of $\\pi$ as we assumed already in the thin film interference section. This phase jump is also confirmed in the second plot on the right. \n",
+    "Note that that reflection coefficient for the parallel polarization $r_p$ is positive up to an angle of about $57^{\\circ}$. This also means that there is no phase jump for this component up to this angle. Beyond this angle we find also a phase jump of $\\phi$. Note that normal incidence $\\theta_I=0$ is a special point, where all incident electric field are tangential to the interface. So also $r_p$ will be negative at that point and for this incident angle there is no plane of incidence definition.\n",
+    "\n",
+    "The special angle where the $r_p=0$ is called the **Brewster Angle**. It is special since at this angle of incidence unpolarized light will be turned into completely s-polarized light in reflection. This also means that you can get rid of a reflection from an air/glass interface, when observing this interface with a linear polarizer."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<figure>\n",
+    "      <img src=\"img/Brewster.png\" width=\"40%\">\n",
+    "  <figcaption>**Fig.:** Reflections observed with linear polarizer.\n",
+    "  </figcaption>\n",
+    "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The Brewster angle arises from the fact that the dipoles which are induced by the incident light in the material oscillate along the direction of the reflected light. We will see later that dipoles do not emit light along its oscillation direction and hence, there is no reflection for the in plane polarization. \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "### Glass to Air"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If we invert the order of the materials and have light incindent to a glass/air interface."
    ]
   },
   {
