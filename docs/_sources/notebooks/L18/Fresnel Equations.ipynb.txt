@@ -213,7 +213,7 @@
    "metadata": {},
    "source": [
     "<figure>\n",
-    "      <img src=\"img/reflection_air_glass.png\" width=\"70%\">\n",
+    "      <img src=\"img/reflection_air_glass.png\" width=\"90%\">\n",
     "  <figcaption>**Fig.:** Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an air($n_1=1$)/glass($n_2=1.5$) interface. \n",
     "  </figcaption>\n",
     "</figure>"
@@ -224,9 +224,10 @@
    "metadata": {},
    "source": [
     "The above graph displays the reflection coefficients $r_s,r_p$ as a function of the angle of incidence. The value of $r_s$ is negative for the whole range indicating the there is a phase jump by an angle of $\\pi$ as we assumed already in the thin film interference section. This phase jump is also confirmed in the second plot on the right. \n",
-    "Note that that reflection coefficient for the parallel polarization $r_p$ is positive up to an angle of about $57^{\\circ}$. This also means that there is no phase jump for this component up to this angle. Beyond this angle we find also a phase jump of $\\phi$. Note that normal incidence $\\theta_I=0$ is a special point, where all incident electric field are tangential to the interface. So also $r_p$ will be negative at that point and for this incident angle there is no plane of incidence definition.\n",
+    "Note that that reflection coefficient for the parallel polarization $r_p$ is positive up to an angle of about $56^{\\circ}$. This also means that there is no phase jump for this component up to this angle. Beyond this angle we find also a phase jump of $\\phi$. Note that normal incidence $\\theta_I=0$ is a special point, where all incident electric field are tangential to the interface. So also $r_p$ will be negative at that point and for this incident angle there is no plane of incidence definition.\n",
     "\n",
-    "The special angle where the $r_p=0$ is called the **Brewster Angle**. It is special since at this angle of incidence unpolarized light will be turned into completely s-polarized light in reflection. This also means that you can get rid of a reflection from an air/glass interface, when observing this interface with a linear polarizer."
+    "The special angle where the $r_p=0$ is called the **Brewster Angle**. It is special since at this angle of incidence unpolarized light will be turned into completely s-polarized light in reflection. This also means that you can get rid of a reflection from an air/glass interface, when observing this interface with a linear polarizer.\n",
+    "\n"
    ]
   },
   {
@@ -244,7 +245,41 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The Brewster angle arises from the fact that the dipoles which are induced by the incident light in the material oscillate along the direction of the reflected light. We will see later that dipoles do not emit light along its oscillation direction and hence, there is no reflection for the in plane polarization. \n"
+    "Following the Fresnel formula for $r_p$, the reflection coefficient becomes zero when $n_2\\cos(\\theta_I)=n_1\\cos(\\theta_T)$. Using Snells law as well, we find that \n",
+    "\n",
+    "$$\n",
+    "\\theta_I+\\theta_T=\\frac{\\pi}{2}\n",
+    "$$\n",
+    "\n",
+    "and thus the following definition for the Brewster angle ($\\theta_B$)\n",
+    "\n",
+    "$$\n",
+    "\\tan(\\theta_B)=\\frac{n_2}{n_1}\n",
+    "$$\n",
+    "\n",
+    "The Brewster angle arises from the fact that the dipoles which are induced by the incident light in the material oscillate along the direction of the reflected light. We will see later that dipoles do not emit light along its oscillation direction and hence, there is no reflection for the in plane polarization. \n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-info\">\n",
+    "\n",
+    "**Brewester Angle**\n",
+    "\n",
+    "The Brewster angle is the angle under which the reflection of light with a polarization in the plane of incidence vanishes.\n",
+    "    \n",
+    "$$\n",
+    "\\tan(\\theta_B)=\\frac{n_2}{n_1}\n",
+    "$$\n",
+    "\n",
+    "\n",
+    "\n",
+    "    \n",
+    "</div>"
    ]
   },
   {
@@ -266,7 +301,7 @@
    "metadata": {},
    "source": [
     "<figure>\n",
-    "      <img src=\"img/reflection_glass_air.png\" width=\"70%\">\n",
+    "      <img src=\"img/reflection_glass_air.png\" width=\"90%\">\n",
     "  <figcaption>**Fig.:** \n",
     "  </figcaption>\n",
     "</figure>\n"
@@ -291,7 +326,7 @@
    "metadata": {},
    "source": [
     "<figure>\n",
-    "      <img src=\"img/transmission_air_glass.png\" width=\"70%\">\n",
+    "      <img src=\"img/transmission_air_glass.png\" width=\"90%\">\n",
     "  <figcaption>**Fig.:** \n",
     "  </figcaption>\n",
     "</figure>"
@@ -309,7 +344,7 @@
    "metadata": {},
    "source": [
     "<figure>\n",
-    "      <img src=\"img/transmission_glass_air.png\" width=\"70%\">\n",
+    "      <img src=\"img/transmission_glass_air.png\" width=\"90%\">\n",
     "  <figcaption>**Fig.:** \n",
     "  </figcaption>\n",
     "</figure>"

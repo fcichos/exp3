@@ -615,19 +615,31 @@ figcaption {
 <p>Lets discuss the results we obtained with the help of specifc examples. We will consider the interface between air (<span class="math notranslate nohighlight">\(n_1=1\)</span>) and glass (<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) and vary the angle of incidence. The transmission angle can the be obtained from Snell’s law <span class="math notranslate nohighlight">\(n_1\sin(\theta_I)=n_2\sin(\theta_T)\)</span>. Besides the Frensel coefficients, we plot also the phase. This phase gives us an idea about possible phase changes upon reflection and refraction. We have previously assume for example, that under normal
 incidence we obtain a phase jump of <span class="math notranslate nohighlight">\(\pi\)</span> upon reflection when coming from air to glass. This is something we may check now.</p>
 <p>To do so, we just represent the complex Fresnel coefficients as <span class="math notranslate nohighlight">\(r_s=|r_s|e^{i\phi}\)</span></p>
-<figure><p><img alt="b9d33bd7269f4b6cb7798b7cdcc2cb7e" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 70%;" /></p>
+<figure><p><img alt="c92bea0783f04412b6200717f8d20a83" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an air(<span class="math notranslate nohighlight">\(n_1=1\)</span>)/glass(<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) interface.</p>
-</figcaption></figure><p>The above graph displays the reflection coefficients <span class="math notranslate nohighlight">\(r_s,r_p\)</span> as a function of the angle of incidence. The value of <span class="math notranslate nohighlight">\(r_s\)</span> is negative for the whole range indicating the there is a phase jump by an angle of <span class="math notranslate nohighlight">\(\pi\)</span> as we assumed already in the thin film interference section. This phase jump is also confirmed in the second plot on the right. Note that that reflection coefficient for the parallel polarization <span class="math notranslate nohighlight">\(r_p\)</span> is positive up to an angle of about <span class="math notranslate nohighlight">\(57^{\circ}\)</span>. This
+</figcaption></figure><p>The above graph displays the reflection coefficients <span class="math notranslate nohighlight">\(r_s,r_p\)</span> as a function of the angle of incidence. The value of <span class="math notranslate nohighlight">\(r_s\)</span> is negative for the whole range indicating the there is a phase jump by an angle of <span class="math notranslate nohighlight">\(\pi\)</span> as we assumed already in the thin film interference section. This phase jump is also confirmed in the second plot on the right. Note that that reflection coefficient for the parallel polarization <span class="math notranslate nohighlight">\(r_p\)</span> is positive up to an angle of about <span class="math notranslate nohighlight">\(56^{\circ}\)</span>. This
 also means that there is no phase jump for this component up to this angle. Beyond this angle we find also a phase jump of <span class="math notranslate nohighlight">\(\phi\)</span>. Note that normal incidence <span class="math notranslate nohighlight">\(\theta_I=0\)</span> is a special point, where all incident electric field are tangential to the interface. So also <span class="math notranslate nohighlight">\(r_p\)</span> will be negative at that point and for this incident angle there is no plane of incidence definition.</p>
 <p>The special angle where the <span class="math notranslate nohighlight">\(r_p=0\)</span> is called the <strong>Brewster Angle</strong>. It is special since at this angle of incidence unpolarized light will be turned into completely s-polarized light in reflection. This also means that you can get rid of a reflection from an air/glass interface, when observing this interface with a linear polarizer.</p>
-<figure><p><img alt="735b689abf5643119642e895755b5b76" class="no-scaled-link" src="../../_images/Brewster.png" style="width: 40%;" /></p>
+<figure><p><img alt="97d769b8efcb4c87bdf38fd09719feb0" class="no-scaled-link" src="../../_images/Brewster.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Reflections observed with linear polarizer.</p>
-</figcaption></figure><p>The Brewster angle arises from the fact that the dipoles which are induced by the incident light in the material oscillate along the direction of the reflected light. We will see later that dipoles do not emit light along its oscillation direction and hence, there is no reflection for the in plane polarization.</p>
+</figcaption></figure><p>Following the Fresnel formula for <span class="math notranslate nohighlight">\(r_p\)</span>, the reflection coefficient becomes zero when <span class="math notranslate nohighlight">\(n_2\cos(\theta_I)=n_1\cos(\theta_T)\)</span>. Using Snells law as well, we find that</p>
+<div class="math notranslate nohighlight">
+\[\theta_I+\theta_T=\frac{\pi}{2}\]</div>
+<p>and thus the following definition for the Brewster angle (<span class="math notranslate nohighlight">\(\theta_B\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[\tan(\theta_B)=\frac{n_2}{n_1}\]</div>
+<p>The Brewster angle arises from the fact that the dipoles which are induced by the incident light in the material oscillate along the direction of the reflected light. We will see later that dipoles do not emit light along its oscillation direction and hence, there is no reflection for the in plane polarization.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Brewester Angle</strong></p>
+<p>The Brewster angle is the angle under which the reflection of light with a polarization in the plane of incidence vanishes.</p>
+<div class="math notranslate nohighlight">
+\[\tan(\theta_B)=\frac{n_2}{n_1}\]</div>
+</div>
 </div>
 <div class="section" id="Glass-to-Air">
 <h3>Glass to Air<a class="headerlink" href="#Glass-to-Air" title="Permalink to this headline">¶</a></h3>
 <p>If we invert the order of the materials and have light incindent to a glass/air interface.</p>
-<figure><p><img alt="0d1594ea6d914c7cb55f25b4aae27b81" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 70%;" /></p>
+<figure><p><img alt="adf002fc267140869b9251ff76525fb9" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure></div>
 </div>
@@ -635,12 +647,12 @@ also means that there is no phase jump for this component up to this angle. Beyo
 <h2>Transmission<a class="headerlink" href="#Transmission" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>Air to Glass<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<figure><p><img alt="d8e88adcc3b149bd9872f8864b3f6ba8" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 70%;" /></p>
+<figure><p><img alt="8088452954a24d6288aa0beb4ab748b5" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure></div>
 <div class="section" id="id2">
 <h3>Glass to Air<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<figure><p><img alt="1310893602a44cdf8e9be8d142705fff" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 70%;" /></p>
+<figure><p><img alt="651ad6bbf7884987ad2780fd75f5dd29" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure></div>
 </div>
