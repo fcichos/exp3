@@ -29,11 +29,100 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "Metals have free charges, which modify the propagation of light. Their influence is large and gives metals their characteristic reflection and color. \n",
+    "In this case, we have to include the free charge density $\\rho_f$ and the current density $\\vec{j}$ in the Maxwell equations and derive the wave equation accordingly. Instead of modifying the wave equation, we would like to go a different way here. We would like to derive the dielectric function for metals based on a microscopic description, which is only approximate but captures some basic features."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Drude Model"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The mode we would liek to put forward is the Drude model. It considers the motion of a charge in the electromagnetic field of a wave. As compared to our previous attempts on bound electrons in atoms, there is no direct restoring force for the free charges in the metal. The equation of motion therefore looks as\n",
+    "\n",
+    "$$\n",
+    "m_e\\frac{d^2\\vec{r}}{dt^2}+m_e\\Gamma \\frac{d\\vec{r}}{dt}=e\\vec{E}_0 e^{i\\omega t}\n",
+    "$$\n",
+    "\n",
+    "Here, the coefficient $\\Gamma$ is given by\n",
+    "\n",
+    "$$\n",
+    "\\Gamma=\\frac{v_f}{l}=\\frac{1}{\\tau}\n",
+    "$$\n",
+    "\n",
+    "where $v_f$ is the so-called Fermi energy and $l$ is the mean free path electrons travel before colliding with a lattice site inside the metal. To obtain an expression for the refractive index, we use again the ansatz\n",
+    "\n",
+    "$$\n",
+    "\\vec{r}=\\vec{r}_0 e^{i\\omega t}\n",
+    "$$\n",
+    "\n",
+    "\n",
+    "\n",
+    "$$\n",
+    "n^2=\\epsilon_r(\\omega)=1-\\frac{\\omega_p^2}{\\omega^2-i\\Gamma \\omega}\n",
+    "$$\n",
+    "\n",
+    "with \n",
+    "\n",
+    "$$\n",
+    "\\omega_p=\\sqrt{\\frac{Ne^2}{\\epsilon_0 m}}\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$\n",
+    "n=n_r-i\\kappa\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "n^2=n_r^2-\\kappa^2-2i n_r \\kappa=\\epsilon^{\\prime}+i\\epsilon^{\\prime\\prime}\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\epsilon^{\\prime}=n_r^2-\\kappa^2=\\frac{1+\\tau^2 (\\omega^2-\\omega_p^2)}{1+\\omega^2\\tau^2}\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "-\\epsilon^{\\prime\\prime}=2n_r\\kappa=\\frac{\\omega_p^2\\tau}{\\omega(1+\\omega^2\\tau^2)}\n",
+    "$$\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$\n",
+    "\\vec{j}=\\sigma \\vec{E}=N e \\vec{v}\n",
+    "$$\n",
+    "\n",
+    "\n",
+    "$$\n",
+    "\\sigma=\\epsilon_0 \\omega_p^2\\frac{\\tau(1+i\\omega\\tau)}{1+\\omega^2\\tau^2}\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\epsilon^{\\prime}=1-\\frac{\\mathcal{R}(\\sigma)\\tau}{\\epsilon_0}\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "-\\epsilon^{\\prime\\prime}=\\frac{\\mathcal{Im}(\\sigma)}{\\epsilon_0 \\omega^2 \\tau}\n",
+    "$$\n",
+    "\n",
+    "\n"
+   ]
   }
  ],
  "metadata": {
