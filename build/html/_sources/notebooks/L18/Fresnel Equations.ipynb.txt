@@ -345,7 +345,7 @@
    "source": [
     "<figure>\n",
     "      <img src=\"img/reflection_glass_air.png\" width=\"90%\">\n",
-    "  <figcaption>**Fig.:** \n",
+    "  <figcaption>**Fig.:** Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an glass ($n_1=1.5$) /air ($n_2=1$) interface. \n",
     "  </figcaption>\n",
     "</figure>\n"
    ]
@@ -362,7 +362,7 @@
    "metadata": {},
    "source": [
     "<figure>\n",
-    "      <img src=\"img/tir_exp1.png\" width=\"50%\">\n",
+    "      <img src=\"img/tir_exp1.png\" width=\"60%\">\n",
     "  <figcaption>**Fig.:** Total internal reflection of microwaves by a prism.\n",
     "  </figcaption>\n",
     "</figure>"
@@ -402,7 +402,7 @@
    "source": [
     "<figure>\n",
     "      <img src=\"img/transmission_air_glass.png\" width=\"90%\">\n",
-    "  <figcaption>**Fig.:** \n",
+    "  <figcaption>**Fig.:** Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an air($n_1=1$)/glass($n_2=1.5$) interface. \n",
     "  </figcaption>\n",
     "</figure>"
    ]
@@ -427,7 +427,7 @@
    "source": [
     "<figure>\n",
     "      <img src=\"img/transmission_glass_air.png\" width=\"90%\">\n",
-    "  <figcaption>**Fig.:** \n",
+    "  <figcaption>**Fig.:** Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an glass ($n_1=1.5$) /air ($n_2=1$) interface. \n",
     "  </figcaption>\n",
     "</figure>"
    ]
@@ -544,7 +544,7 @@
     "and measures the distance on which the electric field decayed to $1/e$. The plot below shows that the decay length for the electric field amplitude quickly drops with increasing incident angle \n",
     "\n",
     "<figure>\n",
-    "      <img src=\"img/decay_length.png\" width=\"40%\">\n",
+    "      <img src=\"img/decay_length.png\" width=\"50%\">\n",
     "  <figcaption>**Fig.:** Decay length of the electric field amplitude in the transmission region for total internal reflection at a glass/air interface with a wavelength of 532 nm.\n",
     "  </figcaption>\n",
     "</figure>\n",
@@ -563,7 +563,7 @@
    "metadata": {},
    "source": [
     "<figure>\n",
-    "      <img src=\"img/tir_exp2.png\" width=\"40%\">\n",
+    "      <img src=\"img/tir_exp2.png\" width=\"60%\">\n",
     "  <figcaption>**Fig.:** Total internal reflection of microwaves by a prism (left).\n",
     "  </figcaption>\n",
     "</figure>"

@@ -193,6 +193,13 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    lectures/L18/overview_18.rst  
    notebooks/L18/Fresnel Equations.ipynb
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 19:
+   
+   lectures/L19/overview_19.rst  
+   notebooks/L19/Anisotropic Materials.ipynb
+   notebooks/L19/Metals.ipynb
 
    
 Indices and tables
