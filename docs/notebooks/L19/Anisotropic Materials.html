@@ -434,7 +434,15 @@
 <p class="caption"><span class="caption-text">Lecture 19:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L19/overview_19.html">Lecture Contents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Anisotropic Materials</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Half-Wave-Plate">Half Wave Plate</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Metals.html">Metals</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Metals.html#Drude-Model">Drude Model</a></li>
 </ul>
@@ -550,8 +558,10 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style><p>So war we have only discussed isotropic materials, meaning that the speed of light was independent by the direction of light propagation in the material. Often, the light propagation is, however, often not isotropic as the underlying materials have an anisotropic structure.</p>
-<figure><p><img alt="294edb3afdbc440a8695686cae670776" class="no-scaled-link" src="../../_images/anisotropy.png" style="width: 60%;" /></p>
+</style><div class="section" id="Light-propagation">
+<h2>Light propagation<a class="headerlink" href="#Light-propagation" title="Permalink to this headline">¶</a></h2>
+<p>So war we have only discussed isotropic materials, meaning that the speed of light was independent by the direction of light propagation in the material. Often, the light propagation is, however, not isotropic as the underlying materials have an anisotropic structure.</p>
+<figure><p><img alt="0e4b4feb2e4f4ccaa5fcfafcf18868e8" class="no-scaled-link" src="../../_images/anisotropy.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>Just consider the above molecule <span class="math notranslate nohighlight">\(C_2H_4\)</span> (Ethen), where the two carbon atoms are bound by a double bond. In an external electric field aligned along that bond, we certinly expect the electrons to be more easily displaced over a larger distance, when the field is aligned parallel to the double bond. The dipole induced will therefore depend on the orientation of molecule and electric field. We therefore need to express the electronic polarizability <span class="math notranslate nohighlight">\(\alpha\)</span> for the calculation of the
 dipole moment <span class="math notranslate nohighlight">\(\vec{p}=\alpha \vec{E}\)</span> as a tensor <span class="math notranslate nohighlight">\(\overleftrightarrow{a}\)</span>.</p>
@@ -588,7 +598,7 @@ D_3 \\
 \end{pmatrix}\end{split}\]</div>
 <p>From this it becomes evident, that the displacement field <span class="math notranslate nohighlight">\(\vec{D}\)</span> is not anymore parallel to the electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span>. This also means now, that the wavevector <span class="math notranslate nohighlight">\(\vec{k}\)</span> is now perpendicular to the displacement field and not to the electric field. The magnetic field is still directed along the same direction and thus the Poynting vector is not parallel to the wavevector. Energy and phasefronts flow in different directions.The sketch below indicates the relations of the
 vectors.</p>
-<figure><p><img alt="4a444349c36c404f9add812adf5193a5" class="no-scaled-link" src="../../_images/fields.png" style="width: 35%;" /></p>
+<figure><p><img alt="57eda2b3da1b476facded406b4fffcb1" class="no-scaled-link" src="../../_images/fields.png" style="width: 35%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>The tensorial nature of the dielectric function has now consequences for the propagation of light. In general different symmetries are considered. If we have for example two of the diagonal elements be equal to each other</p>
 <div class="math notranslate nohighlight">
@@ -598,7 +608,7 @@ vectors.</p>
 \[\epsilon_{11}\neq\epsilon_{22}\neq\epsilon_{33}\neq\epsilon_{11}\]</div>
 <p>we call the material <strong>biaxial</strong> and the material has two optical axes. We will have a look at the meaning of an optical axis a bit later.</p>
 <p>A tensor as the dielectric tensor (similar to the tensor of inertia) can be geometrically represented by an ellipsoid with three different half axes as depicted below. This can be done for the refractive index or the dielectric tensor. When doing so with the refractive index, we obtain an index ellipsoid, where the half-axes correspond to the three refractive indices <span class="math notranslate nohighlight">\(n_1=\sqrt{\epsilon_{11}}\)</span>, <span class="math notranslate nohighlight">\(n_2=\sqrt{\epsilon_{22}}\)</span> and <span class="math notranslate nohighlight">\(n_3=\sqrt{\epsilon_{33}}\)</span>.</p>
-<figure><p><img alt="5f68e58ea6384559bb8451fd635187e4" class="no-scaled-link" src="../../_images/index_tensor.png" style="width: 30%;" /></p>
+<figure><p><img alt="6217c41a9d3e4e60aaf43a3a7ea9c526" class="no-scaled-link" src="../../_images/index_tensor.png" style="width: 30%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>To find out the relevant refractive indices for a certain propagation direction on now undertakes the following steps:</p>
 <ul class="simple">
@@ -609,13 +619,62 @@ vectors.</p>
 <li><p>a <span class="math notranslate nohighlight">\(\vec{D}\)</span> field along those half-axes propages with the corresponding refractive index <span class="math notranslate nohighlight">\(n_o\)</span> (ordinary), <span class="math notranslate nohighlight">\(n_e\)</span> (extra_ordinary)</p></li>
 </ul>
 <p>An <strong>optical axis</strong> is now a propagation direction, for which the refractive index does not depend on the direction of the electric field. For a biaxial material, there are two distinct directions for a propagation, while there is only one for uniaxial.</p>
-<p>Considering now in more detail the propagation of light as a function of the direction of light propagation one obtains a dispersion relation (how the wavenumber depends on teh direction for a given frequency of light). This surface is the so-called <strong>k-surface</strong>, which in general consists of 2 sheets.</p>
-<p>This k-surface has in the plane (here x-z plane) a circular and an elliptical shape, where the circular shape corresponds to the ordinary refractive index and the elliptical to the extra-ordinary refractive index. The image below shows the situation for the situation of a uniaxial material.</p>
-<figure><p><img alt="9199359a7b2f4508ba38223efb20ed9d" class="no-scaled-link" src="../../_images/k-surface.png" style="width: 40%;" /></p>
+<p>Considering now in more detail the propagation of light as a function of the direction of light propagation one obtains a dispersion relation (how the wavenumber depends on teh direction for a given frequency of light). This surface is the so-called <strong>k-surface</strong>, which in general consists of 2 sheets. This k-surface is obtained from Maxwells equations</p>
+<p><span class="math">\begin{eqnarray}
+\vec{k}\times \vec{H}& = &-\omega \vec{D}\\
+\vec{k}\times\vec{E}=\omega \mu_0 \vec{H}
+\end{eqnarray}</span></p>
+<p>which leads to</p>
+<div class="math notranslate nohighlight">
+\[\vec{k}\times(\vec{k}\times\vec{E})+\omega^2\mu_0 \epsilon_0 \overleftrightarrow{\epsilon_r} \vec{E}=0\]</div>
+<p>This equation leads to a system of equations for the components of the wavevector (<span class="math notranslate nohighlight">\(\vec{k}=\{k_1,k_2,k_3\}\)</span>) that define the k-surface for a given frequency.</p>
+<p>This k-surface has, for a uniaxial material, in the plane (here x-z plane) a circular and an elliptical shape, where the circular shape corresponds to the ordinary refractive index and the elliptical to the extra-ordinary refractive index. In the unixial case both surfaces intersect along the optical axis. The image below shows the situation for the situation of a uniaxial material.</p>
+<figure><p><img alt="87827cf068f34037a201b4e6574e0c4b" class="no-scaled-link" src="../../_images/k-surface.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>If we select now a specific direction of propagation for the light with the direction of <span class="math notranslate nohighlight">\(\vec{k}\)</span>, the intersections of the k-surface with the k-vector deliver the solutions for the refractive indices. From the figure above, it becomes obvious, that the electric field vector must be perpendicular to the plane in the case of the ordinary refractive index. Only in this case, the wavevector can be rotated in the above sketch such that the direction of the electric field does not change. If
 the electric field is within the plane of the above sketch, the field direction with respect to the crystal structure changes and therefore the refractive index changes.</p>
 <p>Therefore the <strong>extra-ordinary</strong> refractive index is valid for the p-polarization and the ordinary refractive index is valid for the <strong>s-polarization</strong>.</p>
+<figure><p><img alt="8e9eba11647b4498bbd0f91687c44065" class="no-scaled-link" src="../../_images/birefringence.png" style="width: 55%;" /> <img alt="89d0d2da538f47c6be981e238ec540f2" class="no-scaled-link" src="../../_images/birefringence_exp.png" style="width: 37%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Birefringence.</p>
+</figcaption></figure><p>Let’s discuss the sketches above, which show the general case of <strong>birefringence</strong>. The image on the left side shows an interface between air on the bottom and the anisotropic material on the top. The wavevector is incident from below and is normal zo the surface. Its direction will intersect both k-surfaces and thereby select the ordinary refractive index and the extra-ordinary refractive index for the two different polarization directions. Both waves propgate in the same direction, so their
+wavefronts are perpendicular to the k-vectors as shown in the middle sketch. Yet, the Poynting vectors go in different direction. The Poynting vector, which points in the direction of energy propagation, is always perpendicular to the k-surface, since the k-surface is an isoenergy surface <em>(think about that for a moment)</em>. This means that the beam is split into two beams with parallel wavefronts as indicated. This phenomenon is called birefringence and separates two orthogonal polarizations into
+two beams as indicated.</p>
+<p>This effect is probably best visible, when you put a birefringent material like the common calcit crystal on a newpaper or book. You will immediately see the birefringence in the double images as in the figure above to the right.</p>
+<p>The different refractive index for both polarizations make those materials very suitable for the creating polarizing optical elements like beam splitters. A selection of different polarizing beam splitters is shown in the image below.</p>
+<figure><p><img alt="92fbfda604cb4a8db05ddbb06a1386ea" class="no-scaled-link" src="../../_images/polarizers.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Polarizing beam splitters.</p>
+</figcaption></figure></div>
+<div class="section" id="Wave-retarders">
+<h2>Wave retarders<a class="headerlink" href="#Wave-retarders" title="Permalink to this headline">¶</a></h2>
+<p>Anisotropic materials can now but cut in specific way, for example such that the optical axis is parallel to the interface as in the picture below. Under these circumstances at normal incidence both wavevectors and both Poynting vectors of the polarizations propagate along the same direction. Yet, the p-polarization has a lower phase velocity (long k-vector) than the s-polarization. If now the incident light has now elecric field components parallel and perpedicular to the optical axis which are
+of same amplitude, then one component of the incident polarization is delayed in its phase with respect to the other comonent.</p>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}=(E_{0x}\hat{e}_x +E_{0y}\hat{e}_y)e^{i(\omega t -k z)}\]</div>
+<p>be the incident electric field of the plane wave travelling along the z-direction with <span class="math notranslate nohighlight">\(E_{0x}=E_{0y}\)</span> and the optical axis aligned along the y-axis. Then each vector component of the wave travels with a different wavevector</p>
+<p><span class="math">\begin{eqnarray}
+E_x & = & E_{0x}e^{i(\omega t -n_e k_0 z)}\\
+E_y & = & E_{0y}e^{i(\omega t -n_o k_0 z)}
+\end{eqnarray}</span></p>
+<p>After a material of thickness <span class="math notranslate nohighlight">\(d\)</span> both components have accumulated a phase shift of</p>
+<div class="math notranslate nohighlight">
+\[\Delta \phi=(n_e-n_o)k_0 d\]</div>
+<div class="section" id="Quarter-Wave-Plate">
+<h3>Quarter Wave Plate<a class="headerlink" href="#Quarter-Wave-Plate" title="Permalink to this headline">¶</a></h3>
+<figure><p><img alt="f18222f144b84e8aa1b670edf7f1f807" class="no-scaled-link" src="../../_images/retarder.png" style="width: 50%;" /> <img alt="ea1a1b85c88745dabe502792a0e07b31" class="no-scaled-link" src="../../_images/circ_pol.png" style="width: 45%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Sketch of the conditions for a wave retarder.</p>
+</figcaption></figure><p>If we design now a material of a certain thickness such that the phase shift is <span class="math notranslate nohighlight">\(\Delta \phi=\pi/2\)</span>, then the light exiting the material will be circularly polarized as in the sketch on the right side. The minimum thickness of the crystal is then</p>
+<div class="math notranslate nohighlight">
+\[d=\frac{\pi}{2}\frac{1}{k_0(n_e-n_o)}=\frac{\lambda}{4(n_e-n_o)}\]</div>
+<p>The crystal thickness is, however, not restricted to this minimal thickness, but to any thickness which creates a phase difference of <span class="math notranslate nohighlight">\(\pi/2\)</span>. Such an optical element which is generating a phase difference of <span class="math notranslate nohighlight">\(\pi/2\)</span> between the different electric field components with respect to the optical axis is called a <strong>Quarter Wave Plate</strong>, since the phase difference corresponds to a quarter wavelength.</p>
+<p>If the two elecric field components are not of equal amplitude, then a quarter wave plate will generate elliptically polarized light. Note that if you send circular polarization to a QWP, linearly polarized light will be created.</p>
+</div>
+<div class="section" id="Half-Wave-Plate">
+<h3>Half Wave Plate<a class="headerlink" href="#Half-Wave-Plate" title="Permalink to this headline">¶</a></h3>
+<p>The phase difference between the two elecric field components could also be adjusted to be half a wavelength of <span class="math notranslate nohighlight">\(\pi\)</span>. In this case, one of the components is flipped in its orientation with respect to the other. This is happening for the component perpendicular to the optical axis. If the incident electric field vectors makes an angle of <span class="math notranslate nohighlight">\(45^{°}\)</span> to the optical axis, the field vector after the half wave plate will be rotated by <span class="math notranslate nohighlight">\(90^{°}\)</span>. For any other angle of incidence, the
+angle between the incident and the outgoing linear polarization will correspond to twice the angle between the optical axis and the incident polarization.</p>
+</div>
+</div>
 </div>
 
 
