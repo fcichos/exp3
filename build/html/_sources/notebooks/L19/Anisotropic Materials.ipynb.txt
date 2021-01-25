@@ -29,38 +29,167 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 1,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "application/vnd.jupyter.widget-view+json": {
-       "model_id": "14084b7a83a042fda8748876dca32af3",
-       "version_major": 2,
-       "version_minor": 0
-      },
-      "text/plain": [
-       "Canvas(height=200, width=200)"
-      ]
-     },
-     "metadata": {},
-     "output_type": "display_data"
-    }
-   ],
    "source": [
-    "from ipycanvas import Canvas\n",
-    "\n",
-    "canvas = Canvas(width=200, height=200)\n",
-    "canvas"
+    "So war we have only discussed isotropic materials, meaning that the speed of light was independent by the direction of light propagation in the material. Often, the light propagation is, however, often not isotropic as the underlying materials have an anisotropic structure."
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "<figure>\n",
+    "      <img src=\"img/anisotropy.png\" width=\"60%\">\n",
+    "  <figcaption>**Fig.:** \n",
+    "  </figcaption>\n",
+    "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Just consider the above molecule $C_2H_4$ (Ethen), where the two carbon atoms are bound by a double bond. In an external electric field aligned along that bond, we certinly expect the electrons to be more easily displaced over a larger distance, when the field is aligned parallel to the double bond. The dipole induced will therefore depend on the orientation of molecule and electric field. We therefore need to express the electronic polarizability $\\alpha$ for the calculation of the dipole moment $\\vec{p}=\\alpha \\vec{E}$ as a tensor $\\overleftrightarrow{a}$.\n",
+    "\n",
+    "$$\n",
+    "\\overleftrightarrow{a}=\n",
+    "\\begin{pmatrix}\n",
+    "\\alpha_{11} & \\alpha_{12} & \\alpha_{13} \\\\\n",
+    "\\alpha_{21} & \\alpha_{22} & \\alpha_{23} \\\\\n",
+    "\\alpha_{31} & \\alpha_{32} & \\alpha_{33} \n",
+    "\\end{pmatrix}\n",
+    "$$\n",
+    "\n",
+    "Consequently also the susceptibility $\\chi$, the dielectric function $\\epsilon_r$ and refractive index $n$ will be tensors in anisotropic materials. The entries of these tensors now depend on the choice of the coordinate system, since the polarisabilities are connected to the structures. Accordingly, there is also coordinate system in which the tensor becomes completely diagonal.\n",
+    "\n",
+    "$$\n",
+    "\\overleftrightarrow{\\epsilon_r}=\n",
+    "\\begin{pmatrix}\n",
+    "\\epsilon_{11} & 0 & 0 \\\\\n",
+    "0 & \\epsilon_{22} & 0 \\\\\n",
+    "0 & 0 & \\epsilon_{33} \n",
+    "\\end{pmatrix}\n",
+    "$$\n",
+    "\n",
+    "This coordinate systems is the principle coordinate system of the tensor. \n",
+    "The electric displacement field $\\vec{D}$ is related to the electric field $\\vec{E}$ by\n",
+    "\n",
+    "$$\n",
+    "\\vec{D}=\\epsilon_0 \\overleftrightarrow{\\epsilon_r} \\vec{E}\n",
+    "$$\n",
+    "\n",
+    "and in the principle coordinate system of the tensor we obtain\n",
+    "\n",
+    "$$\n",
+    "\\begin{pmatrix}\n",
+    "D_1 \\\\\n",
+    "D_2 \\\\\n",
+    "D_3 \\\\\n",
+    "\\end{pmatrix}\n",
+    "=\n",
+    "\\begin{pmatrix}\n",
+    "\\epsilon_0\\epsilon_{11} E_1\\\\\n",
+    "\\epsilon_0\\epsilon_{22} E_2\\\\\n",
+    "\\epsilon_0\\epsilon_{33} E_3\\\\\n",
+    "\\end{pmatrix}\n",
+    "$$\n",
+    "\n",
+    "From this it becomes evident, that the displacement field $\\vec{D}$ is not anymore parallel to the electric field $\\vec{E}$. This also means now, that the wavevector $\\vec{k}$ is now perpendicular to the displacement field and not to the electric field. The magnetic field is still directed along the same direction and thus the Poynting vector is not parallel to the wavevector. Energy and phasefronts flow in different directions.The sketch below indicates the relations of the vectors.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<figure>\n",
+    "      <img src=\"img/fields.png\" width=\"35%\">\n",
+    "  <figcaption>**Fig.:** \n",
+    "  </figcaption>\n",
+    "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The tensorial nature of the dielectric function has now consequences for the propagation of light. In general different symmetries are considered. If we have for example two of the diagonal elements be equal to each other \n",
+    "\n",
+    "$$\n",
+    "\\epsilon_{11}=\\epsilon_{22}\\neq\\epsilon_{33}\n",
+    "$$\n",
+    "\n",
+    "then we call the material **uniaxial**. The system has one optical axis. In case \n",
+    "\n",
+    "$$\n",
+    "\\epsilon_{11}\\neq\\epsilon_{22}\\neq\\epsilon_{33}\\neq\\epsilon_{11}\n",
+    "$$\n",
+    "\n",
+    "we call the material **biaxial** and the material has two optical axes. We will have a look at the meaning of an optical axis a bit later. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A tensor as the dielectric tensor (similar to the tensor of inertia) can be geometrically represented by an ellipsoid with three different half axes as depicted below. This can be done for the refractive index or the dielectric tensor. When doing so with the refractive index, we obtain an index ellipsoid, where the half-axes correspond to the three refractive indices $n_1=\\sqrt{\\epsilon_{11}}$, $n_2=\\sqrt{\\epsilon_{22}}$ and $n_3=\\sqrt{\\epsilon_{33}}$."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<figure>\n",
+    "  <img src=\"img/index_tensor.png\" width=\"30%\">\n",
+    "  <figcaption>**Fig.:** \n",
+    "  </figcaption>\n",
+    "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "To find out the relevant refractive indices for a certain propagation direction on now undertakes the following steps:\n",
+    "\n",
+    "- chose a direction of light propagation with the direction of the wavevector $\\vec{k}$\n",
+    "- construct a plane perpendicular to the wavevector \n",
+    "- take the intersection of this plane with the ellisoid, which is in general an ellipse\n",
+    "- the ellipse has a long and a short axis, which correspond to the direction of the so-called normal modes\n",
+    "- a $\\vec{D}$ field along those half-axes propages with the corresponding refractive index $n_o$ (ordinary), $n_e$ (extra_ordinary)\n",
+    "\n",
+    "An **optical axis** is now a propagation direction, for which the refractive index does not depend on the direction of the electric field. For a biaxial material, there are two distinct directions for a propagation, while there is only one for uniaxial. \n",
+    "\n",
+    "Considering now in more detail the propagation of light as a function of the direction of light propagation one obtains a dispersion relation (how the wavenumber depends on teh direction for a given frequency of light). This surface is the so-called **k-surface**, which in general consists of 2 sheets. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This k-surface has in the plane (here x-z plane) a circular and an elliptical shape, where the circular shape corresponds to the ordinary refractive index and the elliptical to the extra-ordinary refractive index. The image below shows the situation for the situation of a uniaxial material."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<figure>\n",
+    "  <img src=\"img/k-surface.png\" width=\"40%\">\n",
+    "  <figcaption>**Fig.:** \n",
+    "  </figcaption>\n",
+    "</figure>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If we select now a specific direction of propagation for the light with the direction of $\\vec{k}$, the intersections of the k-surface with the k-vector deliver the solutions for the refractive indices. From the figure above, it becomes obvious, that the electric field vector must be perpendicular to the plane in the case of the ordinary refractive index. Only in this case, the wavevector can be rotated in the above sketch such that the direction of the electric field does not change. \n",
+    "If the electric field is within the plane of the above sketch, the field direction with respect to the crystal structure changes and therefore the refractive index changes. \n",
+    "\n",
+    "Therefore the **extra-ordinary** refractive index is valid for the p-polarization and the ordinary refractive index is valid for the **s-polarization**.\n"
+   ]
   }
  ],
  "metadata": {

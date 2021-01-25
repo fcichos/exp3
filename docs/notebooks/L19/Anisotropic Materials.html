@@ -508,237 +508,6 @@
             
   
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
-    border: none;
-    padding: 0 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    background: #f5f5f5;
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -781,33 +550,72 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style><div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">ipycanvas</span> <span class="kn">import</span> <span class="n">Canvas</span>
-
-<span class="n">canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<span class="n">canvas</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "14084b7a83a042fda8748876dca32af3", "version_major": 2, "version_minor": 0}</script></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
+</style><p>So war we have only discussed isotropic materials, meaning that the speed of light was independent by the direction of light propagation in the material. Often, the light propagation is, however, often not isotropic as the underlying materials have an anisotropic structure.</p>
+<figure><p><img alt="294edb3afdbc440a8695686cae670776" class="no-scaled-link" src="../../_images/anisotropy.png" style="width: 60%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>Just consider the above molecule <span class="math notranslate nohighlight">\(C_2H_4\)</span> (Ethen), where the two carbon atoms are bound by a double bond. In an external electric field aligned along that bond, we certinly expect the electrons to be more easily displaced over a larger distance, when the field is aligned parallel to the double bond. The dipole induced will therefore depend on the orientation of molecule and electric field. We therefore need to express the electronic polarizability <span class="math notranslate nohighlight">\(\alpha\)</span> for the calculation of the
+dipole moment <span class="math notranslate nohighlight">\(\vec{p}=\alpha \vec{E}\)</span> as a tensor <span class="math notranslate nohighlight">\(\overleftrightarrow{a}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\overleftrightarrow{a}=
+\begin{pmatrix}
+\alpha_{11} &amp; \alpha_{12} &amp; \alpha_{13} \\
+\alpha_{21} &amp; \alpha_{22} &amp; \alpha_{23} \\
+\alpha_{31} &amp; \alpha_{32} &amp; \alpha_{33}
+\end{pmatrix}\end{split}\]</div>
+<p>Consequently also the susceptibility <span class="math notranslate nohighlight">\(\chi\)</span>, the dielectric function <span class="math notranslate nohighlight">\(\epsilon_r\)</span> and refractive index <span class="math notranslate nohighlight">\(n\)</span> will be tensors in anisotropic materials. The entries of these tensors now depend on the choice of the coordinate system, since the polarisabilities are connected to the structures. Accordingly, there is also coordinate system in which the tensor becomes completely diagonal.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\overleftrightarrow{\epsilon_r}=
+\begin{pmatrix}
+\epsilon_{11} &amp; 0 &amp; 0 \\
+0 &amp; \epsilon_{22} &amp; 0 \\
+0 &amp; 0 &amp; \epsilon_{33}
+\end{pmatrix}\end{split}\]</div>
+<p>This coordinate systems is the principle coordinate system of the tensor. The electric displacement field <span class="math notranslate nohighlight">\(\vec{D}\)</span> is related to the electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[\vec{D}=\epsilon_0 \overleftrightarrow{\epsilon_r} \vec{E}\]</div>
+<p>and in the principle coordinate system of the tensor we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+D_1 \\
+D_2 \\
+D_3 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\epsilon_0\epsilon_{11} E_1\\
+\epsilon_0\epsilon_{22} E_2\\
+\epsilon_0\epsilon_{33} E_3\\
+\end{pmatrix}\end{split}\]</div>
+<p>From this it becomes evident, that the displacement field <span class="math notranslate nohighlight">\(\vec{D}\)</span> is not anymore parallel to the electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span>. This also means now, that the wavevector <span class="math notranslate nohighlight">\(\vec{k}\)</span> is now perpendicular to the displacement field and not to the electric field. The magnetic field is still directed along the same direction and thus the Poynting vector is not parallel to the wavevector. Energy and phasefronts flow in different directions.The sketch below indicates the relations of the
+vectors.</p>
+<figure><p><img alt="4a444349c36c404f9add812adf5193a5" class="no-scaled-link" src="../../_images/fields.png" style="width: 35%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>The tensorial nature of the dielectric function has now consequences for the propagation of light. In general different symmetries are considered. If we have for example two of the diagonal elements be equal to each other</p>
+<div class="math notranslate nohighlight">
+\[\epsilon_{11}=\epsilon_{22}\neq\epsilon_{33}\]</div>
+<p>then we call the material <strong>uniaxial</strong>. The system has one optical axis. In case</p>
+<div class="math notranslate nohighlight">
+\[\epsilon_{11}\neq\epsilon_{22}\neq\epsilon_{33}\neq\epsilon_{11}\]</div>
+<p>we call the material <strong>biaxial</strong> and the material has two optical axes. We will have a look at the meaning of an optical axis a bit later.</p>
+<p>A tensor as the dielectric tensor (similar to the tensor of inertia) can be geometrically represented by an ellipsoid with three different half axes as depicted below. This can be done for the refractive index or the dielectric tensor. When doing so with the refractive index, we obtain an index ellipsoid, where the half-axes correspond to the three refractive indices <span class="math notranslate nohighlight">\(n_1=\sqrt{\epsilon_{11}}\)</span>, <span class="math notranslate nohighlight">\(n_2=\sqrt{\epsilon_{22}}\)</span> and <span class="math notranslate nohighlight">\(n_3=\sqrt{\epsilon_{33}}\)</span>.</p>
+<figure><p><img alt="5f68e58ea6384559bb8451fd635187e4" class="no-scaled-link" src="../../_images/index_tensor.png" style="width: 30%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>To find out the relevant refractive indices for a certain propagation direction on now undertakes the following steps:</p>
+<ul class="simple">
+<li><p>chose a direction of light propagation with the direction of the wavevector <span class="math notranslate nohighlight">\(\vec{k}\)</span></p></li>
+<li><p>construct a plane perpendicular to the wavevector</p></li>
+<li><p>take the intersection of this plane with the ellisoid, which is in general an ellipse</p></li>
+<li><p>the ellipse has a long and a short axis, which correspond to the direction of the so-called normal modes</p></li>
+<li><p>a <span class="math notranslate nohighlight">\(\vec{D}\)</span> field along those half-axes propages with the corresponding refractive index <span class="math notranslate nohighlight">\(n_o\)</span> (ordinary), <span class="math notranslate nohighlight">\(n_e\)</span> (extra_ordinary)</p></li>
+</ul>
+<p>An <strong>optical axis</strong> is now a propagation direction, for which the refractive index does not depend on the direction of the electric field. For a biaxial material, there are two distinct directions for a propagation, while there is only one for uniaxial.</p>
+<p>Considering now in more detail the propagation of light as a function of the direction of light propagation one obtains a dispersion relation (how the wavenumber depends on teh direction for a given frequency of light). This surface is the so-called <strong>k-surface</strong>, which in general consists of 2 sheets.</p>
+<p>This k-surface has in the plane (here x-z plane) a circular and an elliptical shape, where the circular shape corresponds to the ordinary refractive index and the elliptical to the extra-ordinary refractive index. The image below shows the situation for the situation of a uniaxial material.</p>
+<figure><p><img alt="9199359a7b2f4508ba38223efb20ed9d" class="no-scaled-link" src="../../_images/k-surface.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>If we select now a specific direction of propagation for the light with the direction of <span class="math notranslate nohighlight">\(\vec{k}\)</span>, the intersections of the k-surface with the k-vector deliver the solutions for the refractive indices. From the figure above, it becomes obvious, that the electric field vector must be perpendicular to the plane in the case of the ordinary refractive index. Only in this case, the wavevector can be rotated in the above sketch such that the direction of the electric field does not change. If
+the electric field is within the plane of the above sketch, the field direction with respect to the crystal structure changes and therefore the refractive index changes.</p>
+<p>Therefore the <strong>extra-ordinary</strong> refractive index is valid for the p-polarization and the ordinary refractive index is valid for the <strong>s-polarization</strong>.</p>
 </div>
 
 
@@ -833,7 +641,7 @@ figcaption {
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 23, 2021.
+        Last updated on Jan 25, 2021.
       </span>
 
     </p>
