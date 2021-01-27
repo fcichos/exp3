@@ -40,6 +40,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lecture Contents" href="../../lectures/L20/overview_20.html" />
     <link rel="prev" title="Anisotropic Materials" href="Anisotropic%20Materials.html" /> 
 </head>
 
@@ -433,11 +434,29 @@
 <p class="caption"><span class="caption-text">Lecture 19:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L19/overview_19.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Anisotropic%20Materials.html">Anisotropic Materials</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Metals</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Drude-Model">Drude Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Metals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Drude-Model">Drude Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Dielectric-function">Dielectric function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Conductivity">Conductivity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lecture 20:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L20/overview_20.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L20/Dipole%20Radiation.html">Dipole Radiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L20/Quantum%20Mechanics.html">Quantum Mechanics</a></li>
 </ul>
 
             
@@ -553,7 +572,7 @@ figcaption {
 description, which is only approximate but captures some basic features.</p>
 <div class="section" id="Drude-Model">
 <h2>Drude Model<a class="headerlink" href="#Drude-Model" title="Permalink to this headline">¶</a></h2>
-<p>The mode we would liek to put forward is the Drude model. It considers the motion of a charge in the electromagnetic field of a wave. As compared to our previous attempts on bound electrons in atoms, there is no direct restoring force for the free charges in the metal. The equation of motion therefore looks as</p>
+<p>The model we would like to put forward is the Drude model. It considers the motion of a charge in the electromagnetic field of a wave. As compared to our previous attempts on bound electrons in atoms, there is no direct restoring force for the free charges in the metal. The equation of motion therefore looks as</p>
 <div class="math notranslate nohighlight">
 \[m_e\frac{d^2\vec{r}}{dt^2}+m_e\Gamma \frac{d\vec{r}}{dt}=e\vec{E}_0 e^{i\omega t}\]</div>
 <p>Here, the coefficient <span class="math notranslate nohighlight">\(\Gamma\)</span> is given by</p>
@@ -562,27 +581,49 @@ description, which is only approximate but captures some basic features.</p>
 <p>where <span class="math notranslate nohighlight">\(v_f\)</span> is the so-called Fermi energy and <span class="math notranslate nohighlight">\(l\)</span> is the mean free path electrons travel before colliding with a lattice site inside the metal. To obtain an expression for the refractive index, we use again the ansatz</p>
 <div class="math notranslate nohighlight">
 \[\vec{r}=\vec{r}_0 e^{i\omega t}\]</div>
+<p>from which we obtain an expression for <span class="math notranslate nohighlight">\(\vec{r}_0\)</span>. With his solution we can again calculate the polarization density and finally also the dielectric function</p>
 <div class="math notranslate nohighlight">
-\[n^2=\epsilon_r(\omega)=1-\frac{\omega_p^2}{\omega^2-i\Gamma \omega}\]</div>
+\[\epsilon_r(\omega)=n^2=1-\frac{\omega_p^2}{\omega^2-i\Gamma \omega}\]</div>
 <p>with</p>
 <div class="math notranslate nohighlight">
 \[\omega_p=\sqrt{\frac{Ne^2}{\epsilon_0 m}}\]</div>
+<p>which is called the <strong>plasma frequency</strong>. It is a characteristic for each metal, since the density of free charges in the metal enters the equation. It is located in the UV region of the electromagnetic spectrum.</p>
+<div class="section" id="Dielectric-function">
+<h3>Dielectric function<a class="headerlink" href="#Dielectric-function" title="Permalink to this headline">¶</a></h3>
+<p>With our previous definition of the complex refractive index we may now analyze the result of the dielectric function in terms of the Drude model. Using</p>
 <div class="math notranslate nohighlight">
 \[n=n_r-i\kappa\]</div>
+<p>the dielectric function, which is the square of the refractive index, is given by</p>
 <div class="math notranslate nohighlight">
 \[n^2=n_r^2-\kappa^2-2i n_r \kappa=\epsilon^{\prime}+i\epsilon^{\prime\prime}\]</div>
+<p>We can therefore relatex the real part</p>
 <div class="math notranslate nohighlight">
-\[\epsilon^{\prime}=n_r^2-\kappa^2=\frac{1+\tau^2 (\omega^2-\omega_p^2)}{1+\omega^2\tau^2}\]</div>
+\[\epsilon^{\prime}=n_r^2-\kappa^2=1-\frac{\tau^2 (\omega^2-\omega_p^2)}{1+\omega^2\tau^2}\]</div>
+<p>and the imaginary part</p>
 <div class="math notranslate nohighlight">
-\[-\epsilon^{\prime\prime}=2n_r\kappa=\frac{\omega_p^2\tau}{\omega(1+\omega^2\tau^2)}\]</div>
+\[\epsilon^{\prime\prime}=2n_r\kappa=\frac{\omega_p^2\tau}{\omega(1+\omega^2\tau^2)}\]</div>
+<p>of the dielectric function <span class="math notranslate nohighlight">\(\epsilon=\epsilon^{\prime}+i\epsilon^{\prime\prime}\)</span> to the refractive index components.</p>
+<figure><p><img alt="646861e06690435c8ecaf640dc54730f" class="no-scaled-link" src="../../_images/drude_dielectric.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Real (left) and imaginary part (right) of the dielectric function according to the Drude model. The dashed line in the left plot corresponds to the plasma frequency. The calculations are for Gold.</p>
+</figcaption></figure><p>The figure above shows the dielectric function for Gold as determined from the parameters <span class="math notranslate nohighlight">\(\omega_{p}=13.8\times 10^{15}\, \rm{s}^{-1}\)</span> and <span class="math notranslate nohighlight">\(\Gamma=1.075\times 10^{14}\, \rm{s}^{-1}\)</span>. The real value of the dielectric function is negative over the whole visible range stating that there is no propagating wave inside the matal. It just becomes positive below the plasma frequency. The imaginary part increases continuously with the wavelength.</p>
+</div>
+<div class="section" id="Conductivity">
+<h3>Conductivity<a class="headerlink" href="#Conductivity" title="Permalink to this headline">¶</a></h3>
+<p>Als we calculate the position <span class="math notranslate nohighlight">\(\vec{r}\)</span> of the electrons in the oscillating electric field, we may also obtain its velocity, which helps us to calculate a new quantity, which is the conductivity <span class="math notranslate nohighlight">\(\sigma\)</span> of the metal. This conductivity will be frequency dependent as well as the charges will not follow the electric field oscillations in the same way at different frequencies. The conductivity is following from Ohm’s law, which is given by</p>
 <div class="math notranslate nohighlight">
 \[\vec{j}=\sigma \vec{E}=N e \vec{v}\]</div>
+<p>where we explicity wrote the current density on the right side. Following this relation, the conductivity is obtained as</p>
 <div class="math notranslate nohighlight">
 \[\sigma=\epsilon_0 \omega_p^2\frac{\tau(1+i\omega\tau)}{1+\omega^2\tau^2}\]</div>
+<p>from the Drude model and we may express the real and imaginary parts of the dielectric function also in relation to the conductivity by</p>
 <div class="math notranslate nohighlight">
 \[\epsilon^{\prime}=1-\frac{\mathcal{R}(\sigma)\tau}{\epsilon_0}\]</div>
 <div class="math notranslate nohighlight">
-\[-\epsilon^{\prime\prime}=\frac{\mathcal{Im}(\sigma)}{\epsilon_0 \omega^2 \tau}\]</div>
+\[\epsilon^{\prime\prime}=\frac{\mathcal{Im}(\sigma)}{\epsilon_0 \omega^2 \tau}\]</div>
+<p>which readily tells us, that we obtain information on the conductivity at high frequencies from optical measurements.</p>
+<figure><p><img alt="3e844ff5a74744a89caca0a1efc269ac" class="no-scaled-link" src="../../_images/gold_np.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Backscattering and transmission through a 65 nm gold nanoparticle solution. The backscattering is green due to the surface plasmon resonance of the conduction band electrons, while the transission is red, since the green light is removed by scattering.</p>
+</figcaption></figure></div>
 </div>
 </div>
 
@@ -593,6 +634,8 @@ description, which is only approximate but captures some basic features.</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../lectures/L20/overview_20.html" class="btn btn-neutral float-right" title="Lecture Contents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Anisotropic%20Materials.html" class="btn btn-neutral float-left" title="Anisotropic Materials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -607,7 +650,7 @@ description, which is only approximate but captures some basic features.</p>
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Jan 23, 2021.
+        Last updated on Jan 27, 2021.
       </span>
 
     </p>

@@ -201,6 +201,15 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    notebooks/L19/Anisotropic Materials.ipynb
    notebooks/L19/Metals.ipynb
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 20:
+   
+   lectures/L20/overview_20.rst  
+   notebooks/L20/Dipole Radiation.ipynb
+   notebooks/L20/Quantum Mechanics.ipynb
+
+
    
 Indices and tables
 ==================
