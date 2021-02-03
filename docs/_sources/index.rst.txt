@@ -209,7 +209,17 @@ The awesome fotos of the Glassbow Challenge by **Tomasz Niewiadomski, Shashank S
    notebooks/L20/Dipole Radiation.ipynb
    notebooks/L20/Quantum Mechanics.ipynb
 
-
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 21:
+   
+   lectures/L21/overview_21.rst  
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 22:
+   
+   lectures/L22/overview_22.rst  
    
 Indices and tables
 ==================
