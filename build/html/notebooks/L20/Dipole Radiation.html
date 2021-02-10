@@ -457,6 +457,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L20/overview_20.html">Lecture Contents</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Dipole Radiation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Electric-field-of-an-accelerated-charge">Electric field of an accelerated charge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Energy-flow">Energy flow</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Quantum%20Mechanics.html">Introduction into Quantum Mechanics</a><ul>
@@ -817,11 +818,35 @@ figcaption {
 <div class="section" id="Electric-field-of-an-accelerated-charge">
 <h2>Electric field of an accelerated charge<a class="headerlink" href="#Electric-field-of-an-accelerated-charge" title="Permalink to this headline">¶</a></h2>
 <p>We will follow for the derivation of transverse electric field the basic steps of the derivation by Larmor. We consider a charge, which is initally at rest in the point <span class="math notranslate nohighlight">\(O\)</span> as sketched below. The charge is then accelerated for a very short period <span class="math notranslate nohighlight">\(\Delta t\)</span> to the point <span class="math notranslate nohighlight">\(O'\)</span> and reaches a final speed <span class="math notranslate nohighlight">\(u\)</span>, which is small as compared to the speed of light <span class="math notranslate nohighlight">\(u&lt;&lt;c\)</span>. The charge then moves with that speed up to a point <span class="math notranslate nohighlight">\(O''\)</span> for a time <span class="math notranslate nohighlight">\(t\)</span>.</p>
-<figure><p><img alt="3bddddb0a8e445b4ac3f181f47aa7ad1" class="no-scaled-link" src="../../_images/setup.png" style="width: 40%;" /></p>
+<figure><p><img alt="93fa99a72c1d47cb9780556f410f5676" class="no-scaled-link" src="../../_images/setup.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>What will be important for our consideration is the fact that any information about a systems change of state is limited in its propagation to the speed of light. Thus, the information that the charge <span class="math notranslate nohighlight">\(q\)</span> has been accelerated has propagated from <span class="math notranslate nohighlight">\(O\)</span> a distance <span class="math notranslate nohighlight">\(r=c(t+\Delta t)\)</span>, when the charge has reached the point <span class="math notranslate nohighlight">\(O''\)</span>. The fact that the charge stopped accelerating, which is originating from point <span class="math notranslate nohighlight">\(O'\)</span> has traveled a distance <span class="math notranslate nohighlight">\(r'=ct\)</span>.</p>
 <p>Consider now the field line of the electric field that exists outside the outer circle which would trace back to point <span class="math notranslate nohighlight">\(O\)</span>. This field line has now moved with the charge and is inside the inner circle corresponding to the red line. This field line needs to be connected to the remaining part outside the outer circle, as it is the same field line. This the field line needs to bend accordingly in the shell between the circles as indicated by the red line.</p>
-<p>The bend part of the field vector can be decomposed into a field component perpendicular to the direction from <span class="math notranslate nohighlight">\(O\)</span> and one parallel to this radial direction. The perpendicular component is the new thing and we would like to calculate it.</p>
+<p>The bend part of the field vector can be decomposed into a field component perpendicular (<span class="math notranslate nohighlight">\(E_\perp\)</span>) to the direction from <span class="math notranslate nohighlight">\(O\)</span> and one parallel to this radial direction (<span class="math notranslate nohighlight">\(E_{||}\)</span>). The perpendicular component is the new thing and we would like to calculate it.</p>
+<p>The ratio of perpendicular and parallel component is then given by</p>
+<div class="math notranslate nohighlight">
+\[\frac{E_{\perp}}{E_{||}}=\frac{u_{\perp}t}{c\Delta t}=\frac{a_{\perp}\Delta t t }{c\Delta t}\]</div>
+<p>where the ratio of the electric fields is the same as of the velocity components. The velocity <span class="math notranslate nohighlight">\(u_{\perp}\)</span> thereby follows directly from the component of the acceleration perpendicular to the radial direction <span class="math notranslate nohighlight">\(a_{\perp}\)</span>. The result of this calculation is then independent of the time period <span class="math notranslate nohighlight">\(\Delta t\)</span> and we obtain</p>
+<div class="math notranslate nohighlight">
+\[E_{\perp}=\frac{a_{\perp}r}{c^2}E_{||}\]</div>
+<p>where we replaced the time <span class="math notranslate nohighlight">\(t\)</span> by <span class="math notranslate nohighlight">\(t=r/c\)</span>. To obtain <span class="math notranslate nohighlight">\(E_{\perp}\)</span> we now need to know the value of <span class="math notranslate nohighlight">\(E_{\parallel}\)</span>, which we can obtain by Gauss theorem considering the a “pillbox” around the boundary of the sphere eminating from <span class="math notranslate nohighlight">\(O\)</span>. Since the field lines from <span class="math notranslate nohighlight">\(O\)</span> are radially outwards, this calculation yields</p>
+<div class="math notranslate nohighlight">
+\[E_{\perp}=-\frac{a_{\perp}}{c^2}\frac{q}{4\pi \epsilon_0 r^2}=-\frac{a_{\perp} q}{c^24\pi \epsilon_0 r}\]</div>
+<p>This electric field that is generated is now not anymore radially poiting outwards from the soucre, but it is tengential to a sphere around <span class="math notranslate nohighlight">\(O\)</span>. It further decays with the distance as <span class="math notranslate nohighlight">\(1/r\)</span> and not <span class="math notranslate nohighlight">\(1/r^2\)</span> as the common Coulomb field. The distance dependence is consistent with the one developed earlier for spherical waves. As we know that this electic field <span class="math notranslate nohighlight">\(E_{\perp}\)</span> is tangential to the sphere surafec we may write down the radiated field of the accelerated charge as</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}(\vec{r},t)=-\frac{a_{\perp}q}{c^2 4\pi \epsilon_0 r}\hat{\theta}\]</div>
+<p>and thcorresponding magnetic field as</p>
+<div class="math notranslate nohighlight">
+\[\vec{B}(\vec{r},t)=\frac{\vec{E}}{c}=-\frac{a_{\perp}q}{c^3 4\pi \epsilon_0 r}\hat{\phi}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> and <span class="math notranslate nohighlight">\(\hat{\phi}\)</span> are the unit vectors along the polar and azimuthal direction.</p>
+<p>Note that in the above equation the electric field is observed at time <span class="math notranslate nohighlight">\(t\)</span> but the acceleration has happened a time <span class="math notranslate nohighlight">\(t-\frac{r}{c}\)</span> earlier as it propagates with finite speed. This will finally lead our wavelike propagation.</p>
+</div>
+<div class="section" id="Energy-flow">
+<h2>Energy flow<a class="headerlink" href="#Energy-flow" title="Permalink to this headline">¶</a></h2>
+<p>With the help of the poyting vector</p>
+<div class="math notranslate nohighlight">
+\[\vec{S}(\vec{r},t)=\frac{1}{\mu_0} \vec{E} \times \vec{B}\]</div>
+<p>we may now have a look at the energy flow from the accelerated charge.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -857,7 +882,7 @@ figcaption {
         
         &copy; Copyright 2020, Frank Cichos
       <span class="lastupdated">
-        Last updated on Feb 03, 2021.
+        Last updated on Feb 10, 2021.
       </span>
 
     </p>
