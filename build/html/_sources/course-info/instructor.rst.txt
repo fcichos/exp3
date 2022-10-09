@@ -16,16 +16,16 @@ Instructors
 
 |
 
-* Alexander Fischer
+* Dr. Tobias Thalheim
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 333a
+  * Office: 318
   * Phone: +0341 97 32570
   * Email: *firstname.lastname@physik.uni-leipzig.de*
 
 |
 
-* Nicola Söker
+* Dr. Markus Anton
 
   * Linnéstr. 5, 04103 Leipzig 
   * Office: 102a

@@ -6,27 +6,29 @@
 Instructors
 ===========
 
-Email: *lastname@physik.uni-leipzig.de*
 
 * Prof. Dr. Frank Cichos
 
   * Linnéstr. 5, 04103 Leipzig 
   * Office: 322
   * Phone: +0341 97 32571
+  * Email: *lastname@physik.uni-leipzig.de*
 
 |
 
-* Alexander Fischer
+* Dr. Tobias Thalheim
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 322
-  * Phone: +0341 97 32571
+  * Office: 318
+  * Phone: +0341 97 32570
+  * Email: *firstname.lastname@physik.uni-leipzig.de*
 
 |
 
-* Nicola Söker
+* Dr. Markus Anton
 
   * Linnéstr. 5, 04103 Leipzig 
-  * Office: 322
-  * Phone: +0341 97 32571
+  * Office: 102a
+  * Phone: +0341 97 32575
+  * Email: *firstname.lastname@studserv.uni-leipzig.de*
 

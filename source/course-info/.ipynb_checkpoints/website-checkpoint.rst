@@ -14,9 +14,7 @@ This Website
 
 This website will contain all the information that are required for our **Experimental Physics 3** course. It is not yet complete, but it will be updated each week and you will find new lectures every week. 
 All of the lectures will be made available as Jupyter notebooks and videos. 
-You will be guided from here to several resources that you can use to learn programming in Python. Thereby we will make use of some great tools in the web, like
-
-
+You will be guided from here to several resources that you can use to learn programming in Python. 
    
 
 
