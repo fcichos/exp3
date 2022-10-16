@@ -121,13 +121,12 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Optical Elements Part II</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Deflection-angle">Deflection angle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Minimum-deflection-angle">Minimum deflection angle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Dispersion">Dispersion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Refraction-at-spherical-surfaces">Refraction at spherical surfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Image-Construction">Image Construction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Lens-types">Lens types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Prism">Prism</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Deflection-angle">Deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Minimum-deflection-angle">Minimum deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Dispersion">Dispersion</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -488,6 +487,8 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
+<section id="Prism">
+<h2>Prism<a class="headerlink" href="#Prism" title="Permalink to this headline">¶</a></h2>
 <p>Prisms are wedge shaped optical elements made of a transparent material as, for example, of glass. A special form of such a prism is an isosceles prism with two sides of equal length. The two equal sides enclose an angle <span class="math notranslate nohighlight">\(\gamma\)</span>. When light is coupled into that prism light is refracted twice. First the incendent angle <span class="math notranslate nohighlight">\(\alpha_1\)</span> is changed into a refracted angle <span class="math notranslate nohighlight">\(\beta_1\)</span>. This refracted ray then hits the second interface under an angle <span class="math notranslate nohighlight">\(\beta_2\)</span> leading again to a
 refraction into the outgoing angle <span class="math notranslate nohighlight">\(\alpha_2\)</span>. What is now interesting is the total deflection of the incident ray, which is measured by the angle <span class="math notranslate nohighlight">\(\delta\)</span>.</p>
 <center><table class="docutils align-default">
@@ -495,7 +496,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="2c9a48c66af8495795054b9c7908d796" class="no-scaled-link" src="../../_images/prism.png" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="8420a3d42ed5493292521388e240f824" class="no-scaled-link" src="../../_images/prism.png" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -504,7 +505,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 </tbody>
 </table>
 </center><section id="Deflection-angle">
-<h2>Deflection angle<a class="headerlink" href="#Deflection-angle" title="Permalink to this headline">¶</a></h2>
+<h3>Deflection angle<a class="headerlink" href="#Deflection-angle" title="Permalink to this headline">¶</a></h3>
 <p>We can calculate the deflection angle <span class="math notranslate nohighlight">\(\delta\)</span> from a number of considerations. First consider the following relations between the angles in the prism and Snell’s law</p>
 <div class="math notranslate nohighlight">
 \[\beta_1=\sin^{-1}\left (\frac{n_0}{n_1}\sin(\alpha_1) \right)\]</div>
@@ -554,12 +555,12 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L2_Optical_Elements_II_7_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_7_0.png" style="width: 292px; height: 336px;" />
+<img alt="../../_images/notebooks_L2_Optical_Elements_II_8_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_8_0.png" style="width: 292px; height: 336px;" />
 </div>
 </div>
 </section>
 <section id="Minimum-deflection-angle">
-<h2>Minimum deflection angle<a class="headerlink" href="#Minimum-deflection-angle" title="Permalink to this headline">¶</a></h2>
+<h3>Minimum deflection angle<a class="headerlink" href="#Minimum-deflection-angle" title="Permalink to this headline">¶</a></h3>
 <p>If we now would like to know how the deflection angle changes with the incident angle <span class="math notranslate nohighlight">\(\alpha_1\)</span>, we calculate the derivative of the deflection angle <span class="math notranslate nohighlight">\(\delta\)</span> with respect to <span class="math notranslate nohighlight">\(\alpha_1\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\frac{\mathrm d\delta}{\mathrm d\alpha_1}=1+\frac{\mathrm d\alpha_2}{\mathrm d \alpha_1}.\]</div>
@@ -587,7 +588,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 \[\sin \left ( \frac{\delta_{\rm min}+\gamma}{2}\right )=n\sin\left (\frac{\gamma}{2}\right).\]</div>
 </section>
 <section id="Dispersion">
-<h2>Dispersion<a class="headerlink" href="#Dispersion" title="Permalink to this headline">¶</a></h2>
+<h3>Dispersion<a class="headerlink" href="#Dispersion" title="Permalink to this headline">¶</a></h3>
 <p>Very important applications now arise from the fact, that the refractive index is a material property, which depends on the color (frequency or wavelength) of light. We do not yet understand the origin of this dependence. The plots below show the wavelength dependence of three different glasses. You may find much more data on the refractive index of different materials in an <a class="reference external" href="https://refractiveindex.info/">online database</a>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -618,7 +619,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L2_Optical_Elements_II_14_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_14_0.png" style="width: 422px; height: 282px;" />
+<img alt="../../_images/notebooks_L2_Optical_Elements_II_15_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_15_0.png" style="width: 422px; height: 282px;" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -663,7 +664,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L2_Optical_Elements_II_16_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_16_0.png" style="width: 757px; height: 288px;" />
+<img alt="../../_images/notebooks_L2_Optical_Elements_II_17_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_17_0.png" style="width: 757px; height: 288px;" />
 </div>
 </div>
 <p>The plots have a general feature, which is that the refractive index is largest at small wavelength (blue colors), while it drops continuously with increasing wavelength towards the red (800 nm). If you would characterize the dependence by the slope, i.e., <span class="math notranslate nohighlight">\(\mathrm dn/\mathrm d\lambda\)</span> then all displayed curves show in the visible range</p>
@@ -689,7 +690,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="97a06a56bf984ea68c0331ecd7d6acd6" class="no-scaled-link" src="notebooks/L2/expimg/spectrum.png" style="width: 49%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="f8d5f512073843d1b8b69c4e0b143ffd" class="no-scaled-link" src="notebooks/L2/expimg/spectrum.png" style="width: 49%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -702,7 +703,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="d219fc5e0a2346dbb00cec74ba0549c3" class="no-scaled-link" src="../../_images/spectrum.jpeg" style="width: 49%;" /> <img alt="61a1e1584fcc49efba82e6a36ae99478" class="no-scaled-link" src="notebooks/L2/expimg/prism.png" style="width: 49%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="2259b001c6c24b0c93582d87bdbd084d" class="no-scaled-link" src="../../_images/spectrum.jpeg" style="width: 49%;" /> <img alt="6bd97e2c276b414bab07ca52518e8f61" class="no-scaled-link" src="notebooks/L2/expimg/prism.png" style="width: 49%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -716,7 +717,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="b2c6f826143446ecb93afbce84ef2694" class="no-scaled-link" src="../../_images/prism_spec_principle.jpeg" style="width: 40%;" /> <img alt="49c60b09948c44cd893df24e3cf08765" class="no-scaled-link" src="../../_images/prism_spectrometer.jpeg" style="width: 40%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="8f19004129ca4a089291769a762a25a9" class="no-scaled-link" src="../../_images/prism_spec_principle.jpeg" style="width: 40%;" /> <img alt="8797fefcf66240f6acb19bff881e2de7" class="no-scaled-link" src="../../_images/prism_spectrometer.jpeg" style="width: 40%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -731,7 +732,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="47be2b73e5bb43968db617825ab734b1" class="no-scaled-link" src="../../_images/diy_prism.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="9da7f3dbca844634989cd9f0a365bf54" class="no-scaled-link" src="../../_images/diy_prism.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -766,20 +767,16 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../../_images/notebooks_L2_Optical_Elements_II_27_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_27_0.png" style="width: 433px; height: 286px;" />
+<img alt="../../_images/notebooks_L2_Optical_Elements_II_28_0.png" class="no-scaled-link" src="../../_images/notebooks_L2_Optical_Elements_II_28_0.png" style="width: 433px; height: 286px;" />
 </div>
 </div>
 <p>The most important optical elements are lenses, which come in many different flavors. They consist of curved surfaces, which most commonly have the shape of a part of a spherical cap. It is, therefore, useful to have a look at the refraction at spherical surfaces.</p>
-</section>
-<section id="Refraction-at-spherical-surfaces">
-<h2>Refraction at spherical surfaces<a class="headerlink" href="#Refraction-at-spherical-surfaces" title="Permalink to this headline">¶</a></h2>
-<p>For our calculations of the refraction at spherical surfaces, we consider the sketch below.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="3cdde638f0e34abbafc5e7bbe02d2217" class="no-scaled-link" src="../../_images/curved_surface.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="2f1d90a8bb114f0c9eed1cfe988edfb0" class="no-scaled-link" src="../../_images/curved_surface.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -815,7 +812,7 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="5c247947a9734c0580fa10cff054925a" class="no-scaled-link" src="../../_images/image_curved.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="75d6b3d57a2349cbb855a525332eea9b" class="no-scaled-link" src="../../_images/image_curved.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -851,135 +848,10 @@ refraction into the outgoing angle <span class="math notranslate nohighlight">\(
 \[f=\frac{n_2}{n_2-n_1}R\]</div>
 <p>in the paraxial approximation.</p>
 </div>
-</section>
-<section id="Refraction-with-two-spherical-surfaces">
-<h2>Refraction with two spherical surfaces<a class="headerlink" href="#Refraction-with-two-spherical-surfaces" title="Permalink to this headline">¶</a></h2>
-<p>In our previous calculation we have found a linear relation between the incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> with the optical axis, the incident height of the ray <span class="math notranslate nohighlight">\(y\)</span> and the outgoing angle <span class="math notranslate nohighlight">\(\theta_2\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\theta_2=\frac{n_2-n_1}{n_2 R_1}y -\frac{n_1}{n_2}\theta_1.\]</div>
-<p>Remember that the refractive index <span class="math notranslate nohighlight">\(n_1\)</span> is the one of the medium from where we enter the lens with a refractive index <span class="math notranslate nohighlight">\(n_2\)</span>. The radius of the first spherical surface is <span class="math notranslate nohighlight">\(R_1\)</span>. For a lens as displayed below, we have to consider now a second refraction, where we take the outgoing angle of the first refraction as the incident angle and we have to reverse the use of the refractive indices. The radius of the second spherical surface is now <span class="math notranslate nohighlight">\(R_2\)</span> and its value will turn out
-to be negative as the curvature with respect to the optical axis has reversed.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="edcf8a06565c41328b6eeb722e4771c0" class="no-scaled-link" src="notebooks/L2/img/thin_lens.png" style="width: 40%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Refraction on two spherical surfaces.</p></td>
-</tr>
-</tbody>
-</table>
-<p>When applying our equation a second time, we also need the second height <span class="math notranslate nohighlight">\(y^{\prime}\)</span> for the calculation. For a <strong>thin lens</strong>, we now have a thickness <span class="math notranslate nohighlight">\(d&lt;&lt;R_1, R_2\)</span> much smaller than the radii of the spherical surfaces. From that we may assume that <span class="math notranslate nohighlight">\(y\approx y^{\prime}\)</span>, which means that the displacement in height of paraxial rays inside the lens can be neglected. If this is the case, we may just assume, that all refracting actions happening on a plane in the center of a lens,
-which is drawn above as the dashed line. This plane is the so-called <strong>principle plane</strong> of the thin lens and all image construction can be reduced to the plane.</p>
-<p>The result of the above calculation is leading to the imaging equation for the thin lens.</p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Imaging Equation Thin Lens</strong></p>
-<p>The sum of the inverse object and image distances equals the inverse focal length of the thin lens</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{a}+\frac{1}{b}\approx\frac{n_2-n_1}{n_1}\left (\frac{1}{R_1}-\frac{1}{R_2}\right )=\frac{1}{f},\]</div>
-<p>where the focal length of the thin lens is given by</p>
-<div class="math notranslate nohighlight">
-\[f=\frac{n_1}{n_2-n_1}\left ( \frac{R_1 R_2}{R_2 -R_1}\right)\]</div>
-<p>in the paraxial approximation.</p>
-</div>
-<p>The equation for the focal length has some important consequence. It says that if the difference of the refractive indices inside (<span class="math notranslate nohighlight">\(n_2\)</span>) and outside <span class="math notranslate nohighlight">\(n_1\)</span> get smaller, the focal length becomes larger and finally infinity. This can be nicely observed by placing a lens outside and inside a water filled basin as shown below.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="37043e7bf3d54a2da2642e55f8e21d2f" class="no-scaled-link" src="notebooks/L2/expimg/lens_contrast_out.png" style="width: 40%;" /> <img alt="f87b769a6b6244a68a06b547c2ab286c" class="no-scaled-link" src="notebooks/L2/expimg/lens_contrast_in.png" style="width: 40%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Focusing of parallel rays by a lens in air (<span class="math notranslate nohighlight">\(n_1=1\)</span>, left) and in water (<span class="math notranslate nohighlight">\(n_1=1.36\)</span>, right). The images clearly show the change in focal length between the two situations.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="Image-Construction">
-<h2>Image Construction<a class="headerlink" href="#Image-Construction" title="Permalink to this headline">¶</a></h2>
-<p>Images of objects can be now constructed if we refer to rays which do not emerge from a position on the optical axis only. In this case, we consider three different rays (two are actually enough). If we use as in the case of a concave mirror a central and a parallel ray, we will find a position where all rays cross on the other side. The conversion of the rays is exactly the same as in the case of a spherical mirror. The relation between the position of the object and the image along the optical
-axis is described by the imaging equation.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="7e804521d82e408d9a81cfc73e63a200" class="no-scaled-link" src="notebooks/L2/img/thin_lens_imaging.png" style="width: 40%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Image construction on a thin lens.</p></td>
-</tr>
-</tbody>
-</table>
-<p>Similar to the concave mirror, we may now also find out the image size or the magnification of the lens.</p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Magnification of a Lens</strong></p>
-<p>The magnification is given by</p>
-<div class="math notranslate nohighlight">
-\[M=\frac{h_{\rm image}}{h_{\rm object}}=-\frac{b}{a}=\frac{f}{f-a}\]</div>
-<p>where the negative sign is the result of the reverse orientation of the real images created by a lens.</p>
-</div>
-<p>According to our previous consideration <span class="math notranslate nohighlight">\(M&lt;0\)</span> corresponds to a reversed image, while it is upright as the object for <span class="math notranslate nohighlight">\(M&gt;0\)</span>. We, therefore, easily see the following:</p>
-<ul class="simple">
-<li><p>for <span class="math notranslate nohighlight">\(a&lt;f\)</span> the image is upright and magnified (image is virtual however)</p></li>
-<li><p>for <span class="math notranslate nohighlight">\(a&gt;f\)</span> the image is always reversed (image is real)</p></li>
-<li><p>for <span class="math notranslate nohighlight">\(2f&gt;a&gt;f\)</span> the image is magnified</p></li>
-<li><p>for <span class="math notranslate nohighlight">\(a&gt;2f\)</span> the image is shrinked</p></li>
-<li><p>for <span class="math notranslate nohighlight">\(a=f\)</span> the image appears at infinity with <span class="math notranslate nohighlight">\(M=\infty\)</span></p></li>
-</ul>
-<p>The image below shows the construction of images in 4 of the above cases for a bi-convex lens including the gerenation of a virtual image.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="a886d2628fff45aaa2d205931b66257c" class="no-scaled-link" src="notebooks/L2/img/image_construction.png" style="width: 80%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Image construction on a biconvex lens with a parallel and a central ray for different object distances.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="Lens-types">
-<h2>Lens types<a class="headerlink" href="#Lens-types" title="Permalink to this headline">¶</a></h2>
-<p>Depending on the radii of curvature and their sign, one can now construct different types of lenses, that are used in many applications. Modern microscopy lenses, for example, contain sometimes up to 20 different lenses with</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="45b8d6f111174d73aed389a675c0977d" class="no-scaled-link" src="notebooks/L2/img/lens_types.png" style="width: 40%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Different lens types.</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><img alt="a784e7d32b6f420e949626ac1b1d530e" class="no-scaled-link" src="notebooks/L2/expimg/convex_plane_thick.png" style="width: 32%;" /> <img alt="9905112f45b142c587087888a058131b" class="no-scaled-link" src="notebooks/L2/expimg/convex_plane_thin.png" style="width: 32%;" /> <img alt="8688ccf9d6c9445c844392f9c3ce3646" class="no-scaled-link" src="notebooks/L2/expimg/bi-concave_lens.png" style="width: 32%;" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Fig.:</strong> Focusing behavior of a few different lens types.</p></td>
-</tr>
-</tbody>
-</table>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></section>
+</section>
 </section>
 
 
