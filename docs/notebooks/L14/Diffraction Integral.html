@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diffraction Integral &mdash; Experimental Physics 3 1 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -18,7 +17,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -119,13 +118,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../L2/Optical%20Elements%20II.html">Optical Elements Part II</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Deflection-angle">Deflection angle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Minimum-deflection-angle">Minimum deflection angle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Dispersion">Dispersion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Refraction-at-spherical-surfaces">Refraction at spherical surfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Image-Construction">Image Construction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Lens-types">Lens types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Prism">Prism</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Deflection-angle">Deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Minimum-deflection-angle">Minimum deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -154,6 +152,27 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../L3/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L3/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Rainbow.html">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Optical%20Instruments.html#The-Eye">The Eye</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +229,7 @@
 <p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L14/Diffraction Integral.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L14/Diffraction Integral.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<section id="Diffraction-Integral">
+<div class="section" id="Diffraction-Integral">
 <h1>Diffraction Integral<a class="headerlink" href="#Diffraction-Integral" title="Permalink to this headline">¶</a></h1>
 <style>
 figure {
@@ -227,7 +246,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>In the last section about Fresnel zones and the zone plate we have considered how different path contribute to the intensity at a point on the optical axis. We would like to generalize this idea to an integral formulation allowing us to calculate any kind of diffraction pattern.</p>
-<figure><p><img alt="4cca5b131d3d46728331010e169e6f50" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
+<figure><p><img alt="68b9404f26aa44c4858eda72925da1b7" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction integral.</p>
 </figcaption></figure><p>Assume we have a light source <span class="math notranslate nohighlight">\(S\)</span> as in the image above, which sends out a spherical wave (does not need to be a spherical wave). The spatial amplitude of this wave at the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> at a tiny aperture element <span class="math notranslate nohighlight">\(d\sigma\)</span></p>
 <div class="math notranslate nohighlight">
@@ -246,7 +265,7 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[U_p=\iint C U_s\frac{e^{-ikr}}{r}dx dy\]</div>
 <p>with <span class="math notranslate nohighlight">\(dxdy=d\sigma\)</span>. The integral runs over all positions in the aperature plane <span class="math notranslate nohighlight">\((x,y)\)</span> where we have an opening. This integral is called the <strong>Fresnel-Kirchhoff</strong> diffraction integral and allows us to calculate complicate scalar diffraction patterns.</p>
-<section id="Fresnel-Approximation">
+<div class="section" id="Fresnel-Approximation">
 <h2>Fresnel Approximation<a class="headerlink" href="#Fresnel-Approximation" title="Permalink to this headline">¶</a></h2>
 <p>The diffracion integral does not always need to be calculated in completely, but we may use approxaimations to obtain diffraction patterns in different regimes. The first approximation, we would like to have a short look at is the <strong>Fresnel approximation</strong>, which yields the diffraction pattern in the <strong>near field</strong>.</p>
 <p>The distance <span class="math notranslate nohighlight">\(r\)</span> from the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> to the point <span class="math notranslate nohighlight">\(P(x^{\prime},y^{\prime})\)</span> can be written as</p>
@@ -263,8 +282,8 @@ r&=&\sqrt{z_0^2+(x-x^{\prime})^2+(y-y^{\prime})^2}\\
 \iint U_{s}(x,y)e^{ -\frac{ik}{2z_0}(x^2+y^2)}
 e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <p>This is the <strong>Fresnel approximation</strong>.</p>
-</section>
-<section id="Fraunhofer-Approximation">
+</div>
+<div class="section" id="Fraunhofer-Approximation">
 <h2>Fraunhofer Approximation<a class="headerlink" href="#Fraunhofer-Approximation" title="Permalink to this headline">¶</a></h2>
 <p>If we further assume that the aperture is small as compared to the distance at which we observe the diffraction pattern, we can further simplify the Fresnel approximation to yield the Fraunhofer approximation giving the diffraction patter in the far field. The condition is</p>
 <div class="math notranslate nohighlight">
@@ -277,10 +296,10 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 \[U(x^{\prime},y^{\prime},z_0)=i\frac{e^{-ikz_0}}{\lambda z_0} e^{-\frac{ik}{2z_0}(x^{\prime 2}+y^{\prime 2})}
 \iint U_{s}(x,y)
 e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
-<figure><p><img alt="25925137056445b99260d01f7160c01a" class="no-scaled-link" src="../../_images/near_far_field.png" style="width: 90%;" /></p>
+<figure><p><img alt="7bcafa2a4a03438a927456de765d6d34" class="no-scaled-link" src="../../_images/near_far_field.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction pattern of a slit in the near field (Fresnel diffraction, left) and the far field (Fraunhofer diffraction, right).</p>
 </figcaption></figure><p>While these formulas provide the mathematical tools, we may obtain a more intuitive idea about the different approximation in the following way. Consider the image below, where we would like to know about the diffraction intensity of a slit of width <span class="math notranslate nohighlight">\(b\)</span> at the optical axis at a distance <span class="math notranslate nohighlight">\(D\)</span>.</p>
-<figure><p><img alt="25c78a334b624a8483cbc91d38b53bd7" class="no-scaled-link" src="../../_images/diffraction.png" style="width: 55%;" /></p>
+<figure><p><img alt="b02241c60cff47d9a734cf8fbac94c53" class="no-scaled-link" src="../../_images/diffraction.png" style="width: 55%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Illustration of the importance of additional geometrical path length difference for the discrimination of Fresnel (near-field) and Fraunhofer (far-field) diffraction.</p>
 </figcaption></figure><p>The waves from the center of the slit and the edge have to travel towards that point a different pathlength, whcih we may calculate to</p>
 <p><span class="math">\begin{eqnarray}
@@ -307,11 +326,11 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 \gg 1, &amp; \textrm{Full vector}
 \end{cases}\end{split}\]</div>
 <p>This number <span class="math notranslate nohighlight">\(F\)</span> is called the Frensel number and gives us an idea by how far the dimensions of the opening contribute to the diffraction pattern rather than the direction of the wave propagation only.</p>
-</section>
-<section id="Babinet’s-Principle">
+</div>
+<div class="section" id="Babinet’s-Principle">
 <h2>Babinet’s Principle<a class="headerlink" href="#Babinet’s-Principle" title="Permalink to this headline">¶</a></h2>
 <p>The above considerations of diffraction have some intruiging consequence. Consider the two apertures in the image below.</p>
-<figure><p><img alt="44207333201f4441a3e1c8fc0e4a36b5" class="no-scaled-link" src="../../_images/babinet.png" style="width: 60%;" /></p>
+<figure><p><img alt="3b6f4b4c599443ae8ad1c55e43b4be6a" class="no-scaled-link" src="../../_images/babinet.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Two complementary apertures, which have the same diffraction pattern in the far field.</p>
 </figcaption></figure><p>The left aperture will create in the far field an amplitude distribution <span class="math notranslate nohighlight">\(U_h\)</span>, while the inverse aperture on the right will cause an amplitude <span class="math notranslate nohighlight">\(U_d\)</span>. If we combine both amplitudes in the far field, we obtain a total amplitude distribution</p>
 <div class="math notranslate nohighlight">
@@ -328,10 +347,10 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <p>The far field diffraction intensity distribution of complementary apertures is the same.</p>
 </div>
 <p>The images below show an experimental demonstration of Babinet’s principle on a slit and a wire.</p>
-<figure><p><img alt="03d6292a95ae4474aa02a10d88315e22" class="no-scaled-link" src="../../_images/babinet_exp.png" style="width: 90%;" /></p>
+<figure><p><img alt="59c3298a26334c43b99593281d14fa48" class="no-scaled-link" src="../../_images/babinet_exp.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Babinet’s principle demonstrated experimentally on a slit (left) and a wire (right).</p>
-</figcaption></figure></section>
-</section>
+</figcaption></figure></div>
+</div>
 
 
            </div>
@@ -342,7 +361,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020, Frank Cichos.
-      <span class="lastupdated">Last updated on Oct 16, 2022.
+      <span class="lastupdated">Last updated on Oct 19, 2022.
       </span></p>
   </div>
 

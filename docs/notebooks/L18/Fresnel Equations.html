@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fresnel Equations &mdash; Experimental Physics 3 1 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -18,7 +17,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -156,6 +155,27 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Rainbow.html">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Optical%20Instruments.html#The-Eye">The Eye</a></li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -209,7 +229,7 @@
 <p>This page was generated from <a href="#id3"><span class="problematic" id="id4">`/home/lectures/exp3/source/notebooks/L18/Fresnel Equations.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L18/Fresnel Equations.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<section id="Fresnel-Equations">
+<div class="section" id="Fresnel-Equations">
 <h1>Fresnel Equations<a class="headerlink" href="#Fresnel-Equations" title="Permalink to this headline">¶</a></h1>
 <style>
 figure {
@@ -226,7 +246,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>In the last lecture, we have discussed the mathcing of the frequency and the wavevector at an interface between the two materials. We no also need to have a look at the matching of the electric field amplitudes at the boundaries.</p>
-<section id="Reflection">
+<div class="section" id="Reflection">
 <h2>Reflection<a class="headerlink" href="#Reflection" title="Permalink to this headline">¶</a></h2>
 <p><strong>s-polarized light</strong></p>
 <p>We would first like to have a look at light that is polarized perpendicular to the incident plane - so-called spolarized light. According to our previous definition, s-polarized light is directed along the y-axis of our coordinate system. The incident light amplitude is therefore written as</p>
@@ -294,17 +314,17 @@ figcaption {
 \[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=t_p
 \tag{Fresnel Coefficient $t_p$}\]</div>
 </div>
-<section id="Air-to-Glass">
+<div class="section" id="Air-to-Glass">
 <h3>Air to Glass<a class="headerlink" href="#Air-to-Glass" title="Permalink to this headline">¶</a></h3>
 <p>Lets discuss the results we obtained with the help of specifc examples. We will consider the interface between air (<span class="math notranslate nohighlight">\(n_1=1\)</span>) and glass (<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) and vary the angle of incidence. The transmission angle can the be obtained from Snell’s law <span class="math notranslate nohighlight">\(n_1\sin(\theta_I)=n_2\sin(\theta_T)\)</span>. Besides the Frensel coefficients, we plot also the phase. This phase gives us an idea about possible phase changes upon reflection and refraction. We have previously assume for example, that under normal
 incidence we obtain a phase jump of <span class="math notranslate nohighlight">\(\pi\)</span> upon reflection when coming from air to glass. This is something we may check now.</p>
 <p>To do so, we just represent the complex Fresnel coefficients as <span class="math notranslate nohighlight">\(r_s=|r_s|e^{i\phi}\)</span></p>
-<figure><p><img alt="c66537c92de74f5bbf4f4f213d1251b8" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 90%;" /></p>
+<figure><p><img alt="5a5e4150cbb04e01ba07f8d1adc5d19a" class="no-scaled-link" src="../../_images/reflection_air_glass.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an air(<span class="math notranslate nohighlight">\(n_1=1\)</span>)/glass(<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) interface.</p>
 </figcaption></figure><p>The above graph displays the reflection coefficients <span class="math notranslate nohighlight">\(r_s,r_p\)</span> as a function of the angle of incidence. The value of <span class="math notranslate nohighlight">\(r_s\)</span> is negative for the whole range indicating the there is a phase jump by an angle of <span class="math notranslate nohighlight">\(\pi\)</span> as we assumed already in the thin film interference section. This phase jump is also confirmed in the second plot on the right. Note that that reflection coefficient for the parallel polarization <span class="math notranslate nohighlight">\(r_p\)</span> is positive up to an angle of about <span class="math notranslate nohighlight">\(56^{\circ}\)</span>. This
 also means that there is no phase jump for this component up to this angle. Beyond this angle we find also a phase jump of <span class="math notranslate nohighlight">\(\phi\)</span>. Note that normal incidence <span class="math notranslate nohighlight">\(\theta_I=0\)</span> is a special point, where all incident electric field are tangential to the interface. So also <span class="math notranslate nohighlight">\(r_p\)</span> will be negative at that point and for this incident angle there is no plane of incidence definition.</p>
 <p>The special angle where the <span class="math notranslate nohighlight">\(r_p=0\)</span> is called the <strong>Brewster Angle</strong>. It is special since at this angle of incidence unpolarized light will be turned into completely s-polarized light in reflection. This also means that you can get rid of a reflection from an air/glass interface, when observing this interface with a linear polarizer.</p>
-<figure><p><img alt="0e3bb3b1166d4988bc509391c9e8cd31" class="no-scaled-link" src="../../_images/Brewster.png" style="width: 40%;" /></p>
+<figure><p><img alt="4db2444729f344dea775b965e6b93a34" class="no-scaled-link" src="../../_images/Brewster.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Reflections observed with linear polarizer.</p>
 </figcaption></figure><p>Following the Fresnel formula for <span class="math notranslate nohighlight">\(r_p\)</span>, the reflection coefficient becomes zero when <span class="math notranslate nohighlight">\(n_2\cos(\theta_I)=n_1\cos(\theta_T)\)</span>. Using Snells law as well, we find that</p>
 <div class="math notranslate nohighlight">
@@ -320,13 +340,13 @@ also means that there is no phase jump for this component up to this angle. Beyo
 \[\tan(\theta_B)=\frac{n_2}{n_1}\]</div>
 </div>
 <p><strong>Brewsster Pyramid</strong></p>
-<figure><p><img alt="9a871f0002a1416dbf841cd4347f1663" class="no-scaled-link" src="notebooks/L18/img/brewster_exp1.png" style="width: 40%;" /> <img alt="44ba03bacc98429199d96e7c95dfabc3" class="no-scaled-link" src="notebooks/L18/img/brewster_exp2.png" style="width: 40%;" /></p>
+<figure><p><img alt="d541e551593f4175bb5f41885d90f2a4" class="no-scaled-link" src="notebooks/L18/img/brewster_exp1.png" style="width: 40%;" /> <img alt="723979fbe60e4925a085a97cc29e6a2a" class="no-scaled-link" src="notebooks/L18/img/brewster_exp2.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Reflections from a pyramid observed with linear polarizer. The pyramid sides are arranged at an angle, which corresponds to the Brewster angle. If polarized light in a certain direction is falling on the pyramid faces, the reflection disappears.</p>
 </figcaption></figure><p><strong>Reflection Removal</strong></p>
-<figure><p><img alt="a3351bb9f29a47139798076614e899aa" class="no-scaled-link" src="../../_images/brewster.gif" style="width: 50%;" /></p>
+<figure><p><img alt="6d910d05076c48479b1c6fc4eb1e3899" class="no-scaled-link" src="../../_images/brewster.gif" style="width: 50%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Reflections from surfaces which are observed under an angle are often partially polarized such that the observation with the help of a polarizer (e.g. in photography), can greatly reduce the highlights from reflections and make objects behind windows visible.</p>
-</figcaption></figure></section>
-<section id="Glass-to-Air">
+</figcaption></figure></div>
+<div class="section" id="Glass-to-Air">
 <h3>Glass to Air<a class="headerlink" href="#Glass-to-Air" title="Permalink to this headline">¶</a></h3>
 <p>If we invert the order of the materials and have light incindent to a glass/air interface we observe a new effect in the <strong>total internal reflection of light</strong>. First of all the p-polarization obtains now a phase shift by <span class="math notranslate nohighlight">\(pi\)</span> up to the Brewster angle, which is now at <span class="math notranslate nohighlight">\(33^{\circ}\)</span>, when it gets back in phase with the incident light. The s-polarized light has no phase jump at the interface, yet both components reach a magnitude of <span class="math notranslate nohighlight">\(1\)</span> at the critical angle of total internal
 reflection <span class="math notranslate nohighlight">\(\theta_C\)</span>. Starting from this incident angle, all light is reflected by the glass/air interface. As we know from the geometrical optics, the angle of total internal reflection is obtained when the transmission angle becomes <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p>
@@ -334,31 +354,31 @@ reflection <span class="math notranslate nohighlight">\(\theta_C\)</span>. Start
 \[\sin(\theta_C)=\frac{n_2}{n_1}
 \tag{$n_2&lt;n_1$}\]</div>
 <p>For the glass/air interface as shown below, this total internal reflection occurs for an angle <span class="math notranslate nohighlight">\(\theta_C=41.8^{\circ}\)</span>. While the magnitude of the reflections coefficient is then <span class="math notranslate nohighlight">\(1\)</span>, the phase of the reflected light changes continuously from <span class="math notranslate nohighlight">\(0^{\circ}\)</span> to <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p>
-<figure><p><img alt="1f3c1ae854184ceea49dfd216a0d17c0" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 90%;" /></p>
+<figure><p><img alt="5d7534a834034ebfad1bab9e69f1663f" class="no-scaled-link" src="../../_images/reflection_glass_air.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an glass (<span class="math notranslate nohighlight">\(n_1=1.5\)</span>) /air (<span class="math notranslate nohighlight">\(n_2=1\)</span>) interface.</p>
 </figcaption></figure><p>We will investigate the transmitted light in the case of total internal reflection below in the transmission section. You will see in the images below also, that the on the reflection side a standing interference pattern is observed, due to the superposition of incident and reflected wave.</p>
-<figure><p><img alt="b891dd13a4144ab183c989893f0f08b5" class="no-scaled-link" src="../../_images/tir_exp1.png" style="width: 60%;" /></p>
+<figure><p><img alt="158baad63c0247ff8c115b32d87d9bd0" class="no-scaled-link" src="../../_images/tir_exp1.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Total internal reflection of microwaves by a prism.</p>
-</figcaption></figure></section>
-</section>
-<section id="Transmission">
+</figcaption></figure></div>
+</div>
+<div class="section" id="Transmission">
 <h2>Transmission<a class="headerlink" href="#Transmission" title="Permalink to this headline">¶</a></h2>
 <p>As compared to the reflection, the transmission of light is more or less boring.</p>
-<section id="id1">
+<div class="section" id="id1">
 <h3>Air to Glass<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>The transmission of light from air to glass only changes weakly the intensity, except for large angles of incidence. Also the phase angle is not changed at all upon transmission.</p>
-<figure><p><img alt="ba039c52898b4db4bc79b499d9d40d31" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 90%;" /></p>
+<figure><p><img alt="6b56457fc17247d4b00031b1e0e9c941" class="no-scaled-link" src="../../_images/transmission_air_glass.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an air(<span class="math notranslate nohighlight">\(n_1=1\)</span>)/glass(<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) interface.</p>
-</figcaption></figure></section>
-<section id="id2">
+</figcaption></figure></div>
+<div class="section" id="id2">
 <h3>Glass to Air<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>The situation, however, becomes a bit more interesting the the case of the transmission of light from glass to air. The first thing we notice here is that the Fresnel coefficients for transmission <span class="math notranslate nohighlight">\(t_s,t_p\)</span> are both bigger than one and even grow to larger values at the edge of total internal reflection. This seems to say that the amplitude of the electric field that is transmitted is bigger than the one incident. This is in fact true, but does not violate energy conservation, but is rather
 resulting from the changed speed of light in the glass. We will have a closer look at the intensities down below.</p>
-<figure><p><img alt="f9b3a6103dda43c0b06ab5dadb4ccda4" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 90%;" /></p>
+<figure><p><img alt="044d0cfa9d4340bab00825bbc4b037fe" class="no-scaled-link" src="../../_images/transmission_glass_air.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an glass (<span class="math notranslate nohighlight">\(n_1=1.5\)</span>) /air (<span class="math notranslate nohighlight">\(n_2=1\)</span>) interface.</p>
 </figcaption></figure><p>Another thing that is occuring but not directly visible is the electric field amplitude in the region directly behind the glass interface in air. Even though all of the light is reflected, this does not mean that no electric field may exist on the transmission side. In fact, an electric field is present and will decay in amplitude exponentially. To see what is happing directly behind the interface we</p>
 <p>What is interesting for the total internal reflection is now the electric field that exists on the side, where usually the transmission would go. Here is our coordinate system again such that we can have a look at the wavevectors in the different regions.</p>
-<figure><p><img alt="e16cc5be94a341f39c16cb82eab31041" class="no-scaled-link" src="../../_images/coordinates1.png" style="width: 40%;" /></p>
+<figure><p><img alt="252240a4004c438087f42a1506333e22" class="no-scaled-link" src="../../_images/coordinates1.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Coordinate system for wave at interfaces.</p>
 </figcaption></figure><p>The wavevector in the transmission region is given by</p>
 <div class="math notranslate nohighlight">
@@ -394,22 +414,22 @@ resulting from the changed speed of light in the glass. We will have a closer lo
 they concern in this case the decay of the probability to find a particle inside a region.</p>
 <p>The image below shows the electric field (left) and the intensity (right) for the total internal reflection at a boundary between glass and air, which the exponential decay is nicely visible for the electric field. To calculate the intensity, we would have to calculate the Poynting vector. As it turns our, the Pyonting vector is zero in the transmission region and hence there is no energy flow in the transmission region. Nevertheless, there is a time oscillating electric field and we may
 calculate the magnitude square of the electric field decay, which is shown in the right figure.</p>
-<figure><p><img alt="6c935251a9f14e4fa6961923793ee86e" class="no-scaled-link" src="../../_images/tir1.png" style="width: 60%;" /></p>
+<figure><p><img alt="cc3f5e1416804d7188844ed9582be067" class="no-scaled-link" src="../../_images/tir1.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Total internal reflection at a glass/air interface (at <span class="math notranslate nohighlight">\(z=0\)</span>). The left image shows the electric field amplitude, the right image the square magnitude of the electric field amplitude.</p>
 </figcaption></figure><p>To gain a bit more insight into the lengthscale on which the electric field is decaying, we may have a look at the prefactor in the above exponential term. This prefactor denotes an inverse length scale, i.e.</p>
 <div class="math notranslate nohighlight">
 \[\delta=\frac{1}{n_2k_0 \alpha}\]</div>
 <p>and measures the distance on which the electric field decayed to <span class="math notranslate nohighlight">\(1/e\)</span>. The plot below shows that the decay length for the electric field amplitude quickly drops with increasing incident angle</p>
-<figure><p><img alt="1a0755b9713946619d709f9641bf971d" class="no-scaled-link" src="../../_images/decay_length.png" style="width: 50%;" /></p>
+<figure><p><img alt="52530e4c4134435b8758096718ba644d" class="no-scaled-link" src="../../_images/decay_length.png" style="width: 50%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Decay length of the electric field amplitude in the transmission region for total internal reflection at a glass/air interface with a wavelength of 532 nm.</p>
 </figcaption></figure><p>The evanescent field in the transmission region can be converted back into a propagating wave if a second interface is brought in the range of the evanescent wave. This can be demonstrated easily with microwaves, since their wavelength is long.</p>
-<figure><p><img alt="21c4126baf154841a77cf0c0dbbb516d" class="no-scaled-link" src="../../_images/tir_exp2.png" style="width: 60%;" /></p>
+<figure><p><img alt="aa43fd55a39e4003a37e933719406251" class="no-scaled-link" src="../../_images/tir_exp2.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Total internal reflection of microwaves by a prism (left).</p>
 </figcaption></figure><p>In the visible region, this decay length is on the order of a feww 100 nanometers. Evanescent field play an important role for optical microscopy for example, where they are either used in total internal reflection fluorescence microscopy (TIRF), exciting only a tiny sheet above an interface and thus reducing fluorescence background. Other techniques use the evanescent field on tiny tips as sources for excitation of fluorescence or scattering (NSOM). Evanescent waves are also used for coupling
 light into small mechanical resonators to cool them to extremely low temperatures (opto-mechanics).</p>
-</section>
-</section>
-<section id="Intensities-of-Reflected-and-Transmitted-Waves">
+</div>
+</div>
+<div class="section" id="Intensities-of-Reflected-and-Transmitted-Waves">
 <h2>Intensities of Reflected and Transmitted Waves<a class="headerlink" href="#Intensities-of-Reflected-and-Transmitted-Waves" title="Permalink to this headline">¶</a></h2>
 <p>So far we calculated the Fresnel coefficients, from which we may obtain the electric and magnetic field amplitudes of the reflected and transmitted waves. We now want to calculate the intensities. The Poynting vector of a wave is given by</p>
 <div class="math notranslate nohighlight">
@@ -425,7 +445,7 @@ light into small mechanical resonators to cool them to extremely low temperature
 \[R=|r|^2\]</div>
 <p>which is valid for either s- or p-polarization.</p>
 <p>For the transmission we have to be a bit more careful as first of all the light propagates with different phase velocities (refractivi index <span class="math notranslate nohighlight">\(n\)</span>) and the cross section of a beam changes due to the refraction at the interface as shown in the image below.</p>
-<figure><p><img alt="c6ba80daedeb40d28ffe8e0314c580c5" class="no-scaled-link" src="../../_images/tir_transmission.png" style="width: 40%;" /></p>
+<figure><p><img alt="d9947dda96d249e4aaaa419ed43b9e79" class="no-scaled-link" src="../../_images/tir_transmission.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Relevant areas for the calculation of the intensities from the transmission Fresnel coefficients.</p>
 </figcaption></figure><p>The two cross-section behave as</p>
 <div class="math notranslate nohighlight">
@@ -437,8 +457,8 @@ light into small mechanical resonators to cool them to extremely low temperature
 <div class="math notranslate nohighlight">
 \[R+T=1
 \tag{nonabsorbing media}\]</div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
@@ -449,7 +469,7 @@ light into small mechanical resonators to cool them to extremely low temperature
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020, Frank Cichos.
-      <span class="lastupdated">Last updated on Oct 17, 2022.
+      <span class="lastupdated">Last updated on Oct 19, 2022.
       </span></p>
   </div>
 
