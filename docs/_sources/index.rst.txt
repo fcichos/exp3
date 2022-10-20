@@ -75,6 +75,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L4/Lens Systems and Optical Instruments.ipynb
    notebooks/L4/Optical Instruments.ipynb
    notebooks/L4/Magnifying Glass.ipynb
+   notebooks/L4/Microscope.ipynb
    
 Indices and tables
 ==================
