@@ -162,6 +162,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../L4/Optical%20Instruments.html#The-Eye">The Eye</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Magnifying%20Glass.html">Magnifying Glass</a></li>
 </ul>
 
         </div>
@@ -234,7 +235,7 @@ figcaption {
 }
 </style><p>Before we have a look at the behavior of electromagnetic waves at boundaries, we would like to setup the stage for those consideraations. For this purpose we need to define the geometry we are referring to and also have a look at the electric fields (and magnetic fields) that will be present. The sketch below shows the wavevectors of the incident <span class="math notranslate nohighlight">\(\vec{k}_I\)</span>, reflected <span class="math notranslate nohighlight">\(\vec{k}_R\)</span> and transmitted <span class="math notranslate nohighlight">\(\vec{k}_T\)</span> waves in the two materials with the refractive indices <span class="math notranslate nohighlight">\(n_1\)</span> and
 <span class="math notranslate nohighlight">\(n_2\)</span>.</p>
-<figure><p><img alt="eab7666ce766432dbf4c227eb7654dd8" class="no-scaled-link" src="../../_images/setup_k.png" style="width: 40%;" /></p>
+<figure><p><img alt="cb3e8f614bb646c8a245a78a161431d5" class="no-scaled-link" src="../../_images/setup_k.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>These wavevectors are connected to the following plane waves, we will consider. We will first assume that these three waves have different frequencies as well, even though we may guess that they have the same as they all stem from the incident wave.</p>
 <div class="math notranslate nohighlight">
@@ -252,13 +253,13 @@ figcaption {
 <li><p><strong>s-polarized light:</strong> electric field is perpendicular to the plane of incidence, also called transverse electric (TE)</p></li>
 </ul>
 <p>This is sketched in the image below.</p>
-<figure><p><img alt="2f9e31c8bdbb4af3948610a95fa16aac" class="no-scaled-link" src="../../_images/pol_decomp.png" style="width: 70%;" /></p>
+<figure><p><img alt="09609ba3679545c38839818125a21bd1" class="no-scaled-link" src="../../_images/pol_decomp.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>To apply the boundary conditions, we will further need to split thesse polarisation vectors into components, which are <strong>parallel</strong> (<span class="math notranslate nohighlight">\(||\)</span>) or <strong>perpendicular</strong> (<span class="math notranslate nohighlight">\(\perp\)</span>) to the interface. This is required as we will have boundary conditions for the electric and magnetic fields either parallel or perpendicular to the interface. The s-polarisation, for example, has an electric field, which is always parallel to the interface, while the p-polarization comprises both components.</p>
 <div class="section" id="Boundary-Condition">
 <h2>Boundary Condition<a class="headerlink" href="#Boundary-Condition" title="Permalink to this headline">¶</a></h2>
 <p>The boundary conditions fo rthe electric or magnetic field passing an interface are derived from the Maxwell equations. As I assume you have don this already in the electro- and magnetostatics lectures, I will only resume shortly here.</p>
-<figure><p><img alt="5d61eb1bc3b44cbeacadfbd73bedf96b" class="no-scaled-link" src="../../_images/boundary.png" style="width: 70%;" /></p>
+<figure><p><img alt="045eee2b57e042ab9692d411c12ba75d" class="no-scaled-link" src="../../_images/boundary.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>Let us take the divergence of the displacement field <span class="math notranslate nohighlight">\(\nabla \cdot \vec{D}=\rho_f\)</span> which is equal to the density of free charges. When integrating both sides over the volume</p>
 <div class="math notranslate nohighlight">
@@ -297,7 +298,7 @@ figcaption {
 <div class="section" id="Frequency-and-Wavevector-Matching">
 <h3>Frequency and Wavevector Matching<a class="headerlink" href="#Frequency-and-Wavevector-Matching" title="Permalink to this headline">¶</a></h3>
 <p>Recalling the above formulas for the incident, reflected and transmitted plane waves, we can explicitely write down the components of the wavevectors of the three waves in our cordinate system</p>
-<figure><p><img alt="381908518d0849cc90330c9be713be4b" class="no-scaled-link" src="../../_images/coordinates.png" style="width: 40%;" /></p>
+<figure><p><img alt="bbb01335233143859de7b76737c85dab" class="no-scaled-link" src="../../_images/coordinates.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>According to that drawing, we have</p>
 <p><span class="math">\begin{eqnarray}
@@ -345,7 +346,7 @@ n_1 \sin(\theta_I) &=& n_2 \sin(\theta_T)
 
   <div role="contentinfo">
     <p>&#169; Copyright 2020, Frank Cichos.
-      <span class="lastupdated">Last updated on Oct 19, 2022.
+      <span class="lastupdated">Last updated on Oct 20, 2022.
       </span></p>
   </div>
 
