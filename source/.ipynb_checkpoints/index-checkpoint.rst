@@ -84,7 +84,8 @@ The fields of optics and quantum mechanics are nowadays very active research are
 
    lectures/L5/overview_5.rst
    notebooks/L5/Microscope.ipynb
-   notebooks/L6/Telescope.ipynb   
+   notebooks/L5/Telescope.ipynb   
+   notebooks/L5/Imaging Errors.ipynb
 
 
    

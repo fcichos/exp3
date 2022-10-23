@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 5 we will discuss all the experiments we have missed in Lecture 4. In addition we will start a new section of optical instruments, which discusses systems of lenses and the imaging with the eye. 
+In Lecture 5, we will discuss optical instruments like the microscope or a telescope. We also have a look errors which arise in the imaging process, which are related to the paraxial approximation we have used during the 
 
 
 

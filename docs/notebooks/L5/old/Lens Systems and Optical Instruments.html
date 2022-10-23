@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lens Systems and Optical Instruments &mdash; Experimental Physics 3 1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/./xtheme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Experimental Physics 3
+            <img src="../../../_static/mona_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../course-info/website.html">This Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course-info/schedule.html">Course Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course-info/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course-info/exam.html">Exams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course-info/resources.html">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../course-info/resources.html#books">Books</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../course-info/resources.html#molecular-nanophotonics-group">Molecular Nanophotonics Group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../course-info/instructor.html">Instructors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Course Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/Intro/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../lectures/Intro/overview.html#lecture-contents">Lecture Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro/Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/Introduction2Jupyter.html#Kernels">Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/Introduction2Jupyter.html#Notebook-documents">Notebook documents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro/NotebookEditor.html">Notebook editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/NotebookEditor.html#Edit-mode">Edit mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/NotebookEditor.html#Command-mode">Command mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/NotebookEditor.html#Keyboard-navigation">Keyboard navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/NotebookEditor.html#Running-code">Running code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/NotebookEditor.html#Managing-the-kernel">Managing the kernel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro/EditCells.html">Entering code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Intro/EditCells.html#Entering-Markdown">Entering Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/EditCells.html#Markdown-basics">Markdown basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/EditCells.html#Headings">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/EditCells.html#Embedded-code">Embedded code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/EditCells.html#LaTeX-equations">LaTeX equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/EditCells.html#Images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Intro/EditCells.html#Videos">Videos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 1:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/L1/overview_1.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../L1/Geometrical%20Optics.html">Geometrical Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L1/Geometrical%20Optics.html#Assumptions">Assumptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../L1/Reflection.html">Reflection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L1/Reflection.html#Law-of-Reflection">Law of Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../L1/Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../L1/Refraction.html">Refraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L1/Refraction.html#Refractive-Index">Refractive Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../L1/Refraction.html#Snells-Law">Snells Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../L1/Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../snippets/Refraction%20Explorer.html">EXP3 Snippets – Refraction Explorer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/L2/overview_2.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../L2/Optical%20Elements%20I.html">Optical Elements Part I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L2/Optical%20Elements%20I.html#Mirrors">Mirrors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../L2/Optical%20Elements%20I.html#Plane-Mirrors">Plane Mirrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../L2/Optical%20Elements%20I.html#Concave-Mirrors">Concave Mirrors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../L2/Optical%20Elements%20II.html">Optical Elements Part II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L2/Optical%20Elements%20II.html#Prism">Prism</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../L2/Optical%20Elements%20II.html#Deflection-angle">Deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../L2/Optical%20Elements%20II.html#Minimum-deflection-angle">Minimum deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../L2/Optical%20Elements%20II.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/L3/overview_3.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../L3/Optical%20Elements%20III.html">Optical Elements Part III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L3/Optical%20Elements%20III.html#Lenses">Lenses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../L3/Optical%20Elements%20III.html#Refraction-at-spherical-surfaces">Refraction at spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../L3/Optical%20Elements%20III.html#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../L3/Optical%20Elements%20III.html#Image-Construction">Image Construction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../L3/Optical%20Elements%20III.html#Thick-lens">Thick lens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../L3/Optical%20Elements%20III.html#Lens-types">Lens types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../L4/Rainbow.html">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L4/Rainbow.html#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../L4/Rainbow.html#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../L4/Rainbow.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../L4/Rainbow.html#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../L4/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L4/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../L4/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L4/Optical%20Instruments.html#The-Eye">The Eye</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../L4/Magnifying%20Glass.html">Magnifying Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../L4/Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../L4/Microscope.html#Modern-microscopy">Modern microscopy</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 5:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/L5/overview_5.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Microscope.html#Modern-microscopy">Modern microscopy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Telescope.html">Telescope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Imaging%20Errors.html">Imaging Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Imaging%20Errors.html#Chromatic-Aberrations">Chromatic Aberrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Imaging%20Errors.html#Spherical-Aberration">Spherical Aberration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Imaging%20Errors.html#Coma">Coma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Imaging%20Errors.html#Astigmatism">Astigmatism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Imaging%20Errors.html#Field-Curvature">Field Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Imaging%20Errors.html#Distortions">Distortions</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Experimental Physics 3</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Lens Systems and Optical Instruments</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L5/old/Lens Systems and Optical Instruments.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="admonition note">
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L5/old/Lens Systems and Optical Instruments.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L5/old/Lens Systems and Optical Instruments.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+</div>
+<div class="section" id="Lens-Systems-and-Optical-Instruments">
+<h1>Lens Systems and Optical Instruments<a class="headerlink" href="#Lens-Systems-and-Optical-Instruments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Lens-Systems">
+<h2>Lens Systems<a class="headerlink" href="#Lens-Systems" title="Permalink to this headline">¶</a></h2>
+<p>Most of the optical instruments consist of multiple lenses that are used to image objects or to magnify them. They are combined at distances, which are either larger or smaller than the sum of their focal distances. The image below shows, for example, an artifical image of a lens system contained in a single microscope objctive lens, where you see multiple elements, e.g., doublets and triplets of lenses. These elements as joined objects may considerably improve the performance of the optics,
+e.g., correct for imaging errors.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="d37aa1a961fc4ab7a693a681dc1c558b" class="no-scaled-link" src="notebooks/L5/old/img/objective_lens.jpg" style="width: 60%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> System of of lenses inside a microscope objective lens.</p></td>
+</tr>
+</tbody>
+</table>
+<p>We will consider first a pair of two biconvex lenses that are at a distance <span class="math notranslate nohighlight">\(D&gt;f_1+f_2\)</span>, where <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span> are their focal distances.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="fa3177aac27e4fb2a4c5076704a3c18f" class="no-scaled-link" src="notebooks/L5/old/img/lens_system.png" style="width: 60%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> System of two biconvex lenses at a distance larger than the sum of their focal distances.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here the first lens creates an image at a position</p>
+<div class="math notranslate nohighlight">
+\[b_1=\frac{a_1 f_1}{(a_1-f_1)}.\]</div>
+<p>Accordingly the object distance for lens 2 is then <span class="math notranslate nohighlight">\(a_2=D-b_1\)</span>.</p>
+<p>The second lens then images this intermediate object into</p>
+<div class="math notranslate nohighlight">
+\[b_2=\frac{a_2 f_2}{a_2-f_2}=\frac{(D-b_1) f_2}{D-b_1-f_2},\]</div>
+<p>from which we can finally calculate the image location and also the size with the help of <span class="math notranslate nohighlight">\(b_1\)</span>.</p>
+<p>Instead of doing a lengthy transformation I would like to draw your attention to a simple method which arises from the linearization of Snell’s law. This is called <strong>matrix optics</strong>. Matrix optics relates the outgoing angle <span class="math notranslate nohighlight">\(\theta_2\)</span> and height <span class="math notranslate nohighlight">\(y_2\)</span> of an optical element to its incident angle <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(y_1\)</span> via a matrix operation. Let us have a look at an example of a biconvex lens with a focal length <span class="math notranslate nohighlight">\(f\)</span>. An incident ray is then expressed by a vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+y_1\\
+\theta_1
+\end{bmatrix},\end{split}\]</div>
+<p>which is converted by the lens into an outgoing ray vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+y_2\\
+\theta_2
+\end{bmatrix}.\end{split}\]</div>
+<p>If you have two 2D vectors which you want to transform by a linear operation into each other, then the transformation can be described by a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix, which is given for a lens with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+A &amp; B\\
+C &amp; D
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 &amp; 0\\
+-\frac{1}{f} &amp; 1
+\end{bmatrix}.\end{split}\]</div>
+<p>Similarly we can also define a free space propagation matrix for a propagation by a distance <span class="math notranslate nohighlight">\(D\)</span>, which is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+A &amp; B\\
+C &amp; D
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 &amp; D\\
+0 &amp; 1
+\end{bmatrix}.\end{split}\]</div>
+<p>The propagation of light through two lenses, which are seprarated by a distance <span class="math notranslate nohighlight">\(D\)</span> is then the product of two matrices for the lenses and one for the free space. The transformation then in addition requires to multiply from the right side the incident vector and we obtain on the left side the outgoing ray vector.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+y_2\\
+\theta_2\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 &amp; 0\\
+-\frac{1}{f_2} &amp; 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; D\\
+0 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0\\
+-\frac{1}{f_1} &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+y_1\\
+\theta_1
+\end{bmatrix}.\end{split}\]</div>
+<p>If you multiply the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices with each other, you will obtain a new <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix with a matrix element <span class="math notranslate nohighlight">\(C\)</span>, which should correspond to the effective focal length of that system. This is the case since the element <span class="math notranslate nohighlight">\(C=-\frac{1}{f}\)</span>.</p>
+<p>The result of that calculation is</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{f}=\frac{1}{f_1}+\frac{1}{f_2}-\frac{D}{f_1 f_2},\]</div>
+<p>which gives the effective focal length of two biconvex lenses at a distance <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<p>Following this equation the inverse of the total focal length of the combined lenses is just the sum of its inverse focal distances minus a term, which depends on the distance of the two lenses. If this distance is small as compared to the focal length, i.e., the lenses are close to each other, the total inverse focal is just given by the first two terms. The inverse focal distances characterizes the refractive power of a lens. The larger the inverse value, the smaller is the focal distance.
+This refractive power is commonly measured in the unit <strong>diopter</strong>. One diopter corresponds to <strong>1 dpt=1 :math:`m^{-1}`</strong>.</p>
+<p>The image above shows also that in the case of the combined lenses and a real inverted intermediate image, the final image will be upright again. Thus, if the first lens has a magnification <span class="math notranslate nohighlight">\(M_1=-b_1/a_1\)</span> and the second lens a magnification <span class="math notranslate nohighlight">\(M_2=-b_2/a_2\)</span>, the total magnification is the product, which is</p>
+<div class="math notranslate nohighlight">
+\[M=\frac{b_1}{a_1}\frac{b_2}{a_2},\]</div>
+<p>from which we may finally obtain with <span class="math notranslate nohighlight">\(M=\frac{f}{f-a}\)</span></p>
+<div class="math notranslate nohighlight">
+\[M=\frac{1}{1-\frac{a_1}{f_1}-\frac{a_1+D}{f_2}+\frac{a_1D}{f_1 f_2}}.\]</div>
+<p>For more than two lenses, there is a versatile framework called <strong>Matrix Optics</strong>, which treats each optical element as a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix. This becomes possible as we derived earlier equations which were linear in <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(\theta\)</span>. A whole system of different lenses, plates and other optical elements can, thus, be treated as a matrix multiplication, which is quite useful.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Frank Cichos.
+      <span class="lastupdated">Last updated on Oct 23, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
