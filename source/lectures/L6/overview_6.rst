@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 6 we address the magnification of optical instruments such as the magnifying glass, the microscope or telescope. If we have time, we will also start to explore  imaging errors and possibilities to correct them.
+In Lecture 7 we discuss the different types of imaging errors, which all arise if the paraxial approximation is violated and we finally start to have a look at wave optics, which extends our understanding of light propagation.
 
 
 
