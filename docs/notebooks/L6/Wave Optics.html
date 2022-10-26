@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wave Optics &mdash; Experimental Physics 3 1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/./xtheme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="EXP3 Snippets: Wave Explorer" href="../../snippets/Wave%20Explorer.html" />
+    <link rel="prev" title="Imaging Errors" href="Imaging%20Errors.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Experimental Physics 3
+            <img src="../../_static/mona_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/website.html">This Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/schedule.html">Course Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/exam.html">Exams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#books">Books</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#molecular-nanophotonics-group">Molecular Nanophotonics Group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/instructor.html">Instructors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Course Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lectures/Intro/overview.html#lecture-contents">Lecture Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Kernels">Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-documents">Notebook documents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/NotebookEditor.html">Notebook editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Edit-mode">Edit mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Command-mode">Command mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Keyboard-navigation">Keyboard navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Running-code">Running code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Managing-the-kernel">Managing the kernel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/EditCells.html">Entering code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/EditCells.html#Entering-Markdown">Entering Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Markdown-basics">Markdown basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Headings">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Embedded-code">Embedded code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#LaTeX-equations">LaTeX equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Videos">Videos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 1:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L1/overview_1.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Geometrical%20Optics.html">Geometrical Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Geometrical%20Optics.html#Assumptions">Assumptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Reflection.html">Reflection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Law-of-Reflection">Law of Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Refraction.html">Refraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Refractive-Index">Refractive Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Snells-Law">Snells Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction%20Explorer.html">EXP3 Snippets – Refraction Explorer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L2/overview_2.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/Optical%20Elements%20I.html">Optical Elements Part I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20I.html#Mirrors">Mirrors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20I.html#Plane-Mirrors">Plane Mirrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20I.html#Concave-Mirrors">Concave Mirrors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/Optical%20Elements%20II.html">Optical Elements Part II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Prism">Prism</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Deflection-angle">Deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Minimum-deflection-angle">Minimum deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L3/overview_3.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/Optical%20Elements%20III.html">Optical Elements Part III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Lenses">Lenses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Refraction-at-spherical-surfaces">Refraction at spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Image-Construction">Image Construction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Thick-lens">Thick lens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Lens-types">Lens types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Rainbow.html">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Optical%20Instruments.html#The-Eye">The Eye</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Magnifying%20Glass.html">Magnifying Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Microscope.html#Modern-microscopy">Modern microscopy</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 5:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L5/overview_5.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L5/Microscope.html#Modern-microscopy">Modern microscopy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Telescope.html">Telescope</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 6:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L6/overview_6.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Imaging%20Errors.html">Imaging Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Imaging%20Errors.html#Chromatic-Aberrations">Chromatic Aberrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Imaging%20Errors.html#Spherical-Aberration">Spherical Aberration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Imaging%20Errors.html#Coma">Coma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Imaging%20Errors.html#Astigmatism">Astigmatism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Imaging%20Errors.html#Field-Curvature">Field Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Imaging%20Errors.html#Distortions">Distortions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Wave Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Postulates-of-Wave-Optics">Postulates of Wave Optics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Wave-equation">Wave equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Intensity-of-waves">Intensity of waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Monochromatic-wave">Monochromatic wave</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Complex-Amplitude">Complex Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Wavefronts">Wavefronts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Spherical-Waves">Spherical Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Interference">Interference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Wave%20Explorer.html">EXP3 Snippets: Wave Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-Waves">Plane Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-wave-propagation">Plane wave propagation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-Waves">Spherical Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-wave-propagation">Spherical wave propagation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Experimental Physics 3</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Wave Optics</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L6/Wave Optics.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="admonition note">
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L6/Wave Optics.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L6/Wave Optics.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+</div>
+<div class="section" id="Wave-Optics">
+<h1>Wave Optics<a class="headerlink" href="#Wave-Optics" title="Permalink to this headline">¶</a></h1>
+<p>Wave optics extends our insight into optics with the help of a wave description. Light is able to interfere or to be diffracted at edges and it reveals specific colors in the visible range, where are not able to take account of that with the help of geometrical optics. The spectrum of electromagnetic waves extends over a huge range of frequencies and only a tiny fraction of it is related to the visible region.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="8fbd27cd12564b2eb3b1c399cbc8a1a3" class="no-scaled-link" src="../../_images/spectrum1.png" style="width: 50%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Electromagnetic Spectrum with its different regions.</p></td>
+</tr>
+</tbody>
+</table>
+<p>In the following, we would like to introduce wave by discarding the fact, that light is related to electric and magnetic fields. This is useful as the vectorial nature of the electric and magnetic field further complicates the calculations, but we do not need those yet. Accordingly we also do not understand how light really interacts with matter and we therefore have to introduce some postulates as well.</p>
+<div class="section" id="Postulates-of-Wave-Optics">
+<h2>Postulates of Wave Optics<a class="headerlink" href="#Postulates-of-Wave-Optics" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p>A wave corresponds to a physical quantity which oscillates in space and time. Its energy current density is related to the square magnitude of the amplitude.</p>
+</div>
+<div class="section" id="Wave-equation">
+<h3>Wave equation<a class="headerlink" href="#Wave-equation" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\nabla^2 u - \frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 =\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\]</div>
+<p>is the Laplace operator. The wave equation is a linear differential equation, which means that the superposition principle is valid. This means, that if we have found two solution <span class="math notranslate nohighlight">\(u_1(\vec{r},t)\)</span> and <span class="math notranslate nohighlight">\(u_2(\vec{r},t)\)</span> being solutions of the wave equation, then <span class="math notranslate nohighlight">\(u(\vec{r},t)=a_1 u_1(\vec{r},t)+a_2*u_2(\vec{r},t)\)</span> is a solution as well (<span class="math notranslate nohighlight">\(a_1,a_2\)</span> being constants)</p>
+</div>
+<div class="section" id="Intensity-of-waves">
+<h3>Intensity of waves<a class="headerlink" href="#Intensity-of-waves" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[I(\vec{r},t)=2\langle u^2(\vec{r},t)\rangle\]</div>
+<p>which is given in units <span class="math notranslate nohighlight">\(\left[\frac{W}{m^2}\right]\)</span>. The <span class="math notranslate nohighlight">\(\langle \ldots \rangle\)</span> denotes a time average over one cycle of the oscillation of <span class="math notranslate nohighlight">\(u\)</span>. This is extremely short. For light of 600 nm wavelength, one cycle just lasts 2 femtoseconds.</p>
+<p>The optical power of a wave is obtained when integrating the intensity over an area <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[P=\int_A I(\vec{r},t) dA\]</div>
+</div>
+<div class="section" id="Monochromatic-wave">
+<h3>Monochromatic wave<a class="headerlink" href="#Monochromatic-wave" title="Permalink to this headline">¶</a></h3>
+<p>A monochromatic wave is obtained whem only one single frequency <span class="math notranslate nohighlight">\(\omega\)</span> is contained in a wave. For this to be true, the wave has to be inifnitely long in time and the oscillation should not have any phase disturbances (such as jumps). A monochromatic wave is given by.</p>
+<div class="math notranslate nohighlight">
+\[u(\vec{r},t)=a(\vec{r})\cos(\omega t + \phi(\vec{r}))\]</div>
+<p>where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a(\vec{r})\)</span> is the amplitude</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi(\vec{r})\)</span> is the spatial phase</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> is the frequency</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="e2ec351698d04a0a876ee94bd7057522" class="no-scaled-link" src="../../_images/wave.png" style="width: 50%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Representation of a wavefunction over time (constant position) denoting the phase <span class="math notranslate nohighlight">\(\phi\)</span> and the period <span class="math notranslate nohighlight">\(T=1/\nu\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="Complex-Amplitude">
+<h4>Complex Amplitude<a class="headerlink" href="#Complex-Amplitude" title="Permalink to this headline">¶</a></h4>
+<p>We may also introduce a complex representation of a wave by</p>
+<div class="math notranslate nohighlight">
+\[U(\vec{r},t)=a(\vec{r})e^{i\phi(r)}e^{i\omega t}\]</div>
+<p>which is called the complex wavefunction.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="0190eb42442c4961ac25ed0b989d45dd" class="no-scaled-link" src="../../_images/complex_rep.png" style="width: 50%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Phasor diagram of the complex amplitude <span class="math notranslate nohighlight">\(U(r)\)</span> (left) and <span class="math notranslate nohighlight">\(U(t)\)</span> (right).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p>A phasor displays the complex amplitude with magnitude and phase as a vector in the complex plane.</p>
+</div>
+<p>This complex wavefunction is related to the real wavefunction by</p>
+<div class="math notranslate nohighlight">
+\[u(\vec{r},t)=Re\lbrace U(\vec{r},t)\rbrace=\frac{1}{2}\left [ U(\vec{r},t)+U^*(\vec{r},t)\right ]\]</div>
+<p>but allows us much easier calculations. In the same way as for real wavefunction we may now also write a wave equation for the complex wavefunction</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 U - \frac{1}{c^2}\frac{\partial^2 U}{\partial t^2}=0\]</div>
+<p>We may now further split up the complex wavefunction into a spatial and temporal dependence</p>
+<div class="math notranslate nohighlight">
+\[U(\vec{r},t)=U(\vec{r})e^{i\omega t}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[U(\vec{r},t)=a(\vec{r})e^{i\phi(\vec{r})}\]</div>
+<p>The quantity <span class="math notranslate nohighlight">\(\phi\)</span> resembles to be the spatial part of the phase of a wavefunction. The intensity of the wave if further now just given by</p>
+<div class="math notranslate nohighlight">
+\[I(\vec{r})=|U(r)|^2\]</div>
+</div>
+<div class="section" id="Wavefronts">
+<h4>Wavefronts<a class="headerlink" href="#Wavefronts" title="Permalink to this headline">¶</a></h4>
+<p>Wavefronts are the surfaces in space where the phase <span class="math notranslate nohighlight">\(\phi(\vec{r})={\rm const}\)</span>. This constant can be chosen such that we always denote the maximum of the spatial amplitude, i.e. <span class="math notranslate nohighlight">\(\phi(\vec{r})=2\pi q\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is an integer. We will later have a look how those wavefronts propagate in time. We can also define a vector which is perpendicular to the wavefront. This is given by</p>
+<div class="math notranslate nohighlight">
+\[\vec{n}=\left \{ \frac{\partial \phi}{\partial x},\frac{\partial \phi}{\partial y},\frac{\partial \phi}{\partial z} \right \}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="Plane-Waves">
+<h2>Plane Waves<a class="headerlink" href="#Plane-Waves" title="Permalink to this headline">¶</a></h2>
+<p>A plane wave is a solution of the homogeneous wave equation and is given in its complex form by</p>
+<p><span class="math">\begin{equation}
+U=Ae^{-i\vec{k}\cdot \vec{r}}e^{i\omega t}
+\end{equation}</span></p>
+<p>where the two exponentials contain an spatial and a temporal phase. <span class="math notranslate nohighlight">\(A\)</span> denotes the amplitude of the plane wave and can be a complex number as well. The plane is defined by the shape of the wavefront which is given by <span class="math notranslate nohighlight">\(\vec{k}\cdot \vec{r}=2\pi q + {\rm arg}{A}\)</span>, which is just the definition of a plane perpendicular to <span class="math notranslate nohighlight">\(\vec{k}\)</span>. The planes are seperated by the wavelength <span class="math notranslate nohighlight">\(\lambda=2\pi /k\)</span>. The wavenumber <span class="math notranslate nohighlight">\(k\)</span> is therefore the spatial frequency of the oscillation in
+position of a wave.</p>
+<p>The spatial amplitude of the plane wave is given by</p>
+<p><span class="math">\begin{equation}
+U(\vec{r})=Ae^{-i\vec{k}\cdot \vec{r}}
+\end{equation}</span></p>
+<p>The propagation direction of the wave is defined by wavevector <span class="math notranslate nohighlight">\(\vec{k}\)</span>. In vacuum, the wavevector is just real valued</p>
+<p><span class="math">\begin{equation}
+\vec{k}_{0}=
+\begin{pmatrix}
+k_{0x} \\
+k_{0y}\\
+k_{0z}\\
+\end{pmatrix}
+\end{equation}</span></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="111db7a4a3884162b207b92006dc669b" class="no-scaled-link" src="../../_images/plane_wave2.png" style="width: 45%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Plane wave propagating along the horizontal direction.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The wavevector is also proportional to the momentum of the wave, which will be important if we consider the refraction process a bit later. The magnitude of the wavevector is related wo the frequency</p>
+<p><span class="math">\begin{equation}
+k_{0}=\frac{\omega}{c_{0}}
+\end{equation}</span></p>
+<p>This relation connects the momentum (<span class="math notranslate nohighlight">\(k\)</span>) to the energy <span class="math notranslate nohighlight">\(\omega\)</span> and is in general in physics called <strong>dispersion relation</strong>. Light in free space obeys a linear dispersion relation.</p>
+<p>If we consider a wave propagating in a medium, the frequency of the wave <span class="math notranslate nohighlight">\(\omega\)</span> stays the same as this is defined by the source. Nevertheless the propagation speed of the wave changes, i.e.</p>
+<div class="math notranslate nohighlight">
+\[c=\frac{c}{n_0}\]</div>
+<p>and by a factor lower (the refractive index <span class="math notranslate nohighlight">\(n\)</span> of the medium). As a result, the wavelength of the wave changes in a medium and gets typically shorter for <span class="math notranslate nohighlight">\(n&gt;1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\lambda=\frac{\lambda_0}{n}\]</div>
+<p>Correspondingly. The wavenumber gets larger,</p>
+<div class="math notranslate nohighlight">
+\[k=nk_{0}\]</div>
+<p>.</p>
+<p>The above graph shows a static snapshot of the plane wave at a time <span class="math notranslate nohighlight">\(t=0\)</span>. The animation below shows the plane wave propagation of a <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm wave.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="68b7bf2050b648c98f6aca9c639991e9" class="no-scaled-link" src="../../_images/plane_prop.mov" style="width: 40%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> . Propagating spherical waves for positive and negative wavenumber.</p></td>
+</tr>
+</tbody>
+</table>
+<p>A reversal of the wavevector to its negative value, changes the propagation direction to the opposite direction.</p>
+</div>
+<div class="section" id="Spherical-Waves">
+<h2>Spherical Waves<a class="headerlink" href="#Spherical-Waves" title="Permalink to this headline">¶</a></h2>
+<p>A spherical wave is as well described by two exponentials containing the spatial and temporal dependence of the wave. The only difference is, that the wavefronts shall describe spheres instead of planes. We therefore need <span class="math notranslate nohighlight">\(|\vec{k}||\vec{r}|=k r=const\)</span>. The product of the magntitudes of the wavevector and the distance from the source are constant. If we further generalize the position of the source to <span class="math notranslate nohighlight">\(\vec{r}_{0}\)</span> we can write a spherical wave by</p>
+<p><span class="math">\begin{equation}
+U=\frac{A}{|\vec{r}-\vec{r}_{0}|}e^{-i k|\vec{r}-\vec{r}_{0}|} e^{i\omega t}
+\end{equation}</span></p>
+<p>Note that we have to introduce an additional scaling of the amplitude with the inverse distance of the source. This is due to energy conservation, as we require that all the energy that flows through all spheres around the source is constant.</p>
+<p>The line plots below show that the field amplitude rapidly decays and the intensity follows a <span class="math notranslate nohighlight">\(1/r^2\)</span> law as expected. The slight deiviation at small distances is an artifact from our discretization. We used the image above to extract the line plot and therefore never exactly hit <span class="math notranslate nohighlight">\(r=0\)</span>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="fcb008f7330c46e5b81c7f9082c5eadb" class="no-scaled-link" src="../../_images/spherical_wave1.png" style="width: 80%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Spherical wave amplitude and intensity of the spherical wave as a function of distance from the source.</p></td>
+</tr>
+</tbody>
+</table>
+<p>We can also visualize the animation our spherical wave to check for the direction of the wave propagation.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="bacbd6d68fcc41c190afc57fb1757099" class="no-scaled-link" src="../../_images/out.mov" style="width: 30%;" /> <img alt="2a45e390b4594d4ab3ab297cd82f108d" class="no-scaled-link" src="../../_images/in.mov" style="width: 30%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> . Propagating spherical waves for positive and negative wavenumber.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="Interference">
+<h2>Interference<a class="headerlink" href="#Interference" title="Permalink to this headline">¶</a></h2>
+<p>Interference is one of the most important phenomena in physics. It is a realization of the superposition principle which is valid, if the differential equation which produce the solutions is linear as we already stated above.</p>
+<p>Let’s assume we have two solutions of the wave equation <span class="math notranslate nohighlight">\(U_1(\vec{r})\)</span> and <span class="math notranslate nohighlight">\(U_2(\vec{r})\)</span>. The superposition allows to add them to get a new solution <span class="math notranslate nohighlight">\(U(\vec{r})\)</span></p>
+<div class="math notranslate nohighlight">
+\[U(\vec{r})=U_{1}(\vec{r})+U_{2}(\vec{r})\]</div>
+<p>To calculate the intensity of the total wave, we have to calculate therfore the magnitude square of the sum of the two waves.</p>
+<p><span class="math">\begin{eqnarray}
+I &= &|U|^2\\
+&= &|U_1+U_2|\\
+&= &|U_1|^2+|U_2|^2+U^{*}_1 U_2 + U_1 U^{*}_1
+\end{eqnarray}</span></p>
+<p>which results in two terms, which resemble to be the sum of the two waves. Yet, there are two additional cross-term, which say that the resulting intensity is not just the sum of the two intensities in case the two terms do not cancel out.</p>
+<p>If we use</p>
+<div class="math notranslate nohighlight">
+\[I_{1}=|U_1|^2\]</div>
+<div class="math notranslate nohighlight">
+\[I_{2}=|U_2|^2\]</div>
+<p>we can express the individual waves as</p>
+<div class="math notranslate nohighlight">
+\[U_{1}=\sqrt{I_1}e^{i\phi_1}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[U_{2}=\sqrt{I_2}e^{i\phi_2}\]</div>
+<p>where the exponential term with <span class="math notranslate nohighlight">\(\phi_1,\phi_2\)</span> denotes the phase of the two spatial amplitudes. Taking the magnitude square of the sum of those two wave we then obtain</p>
+<div class="math notranslate nohighlight">
+\[I=I_{1}+I_{2}+2\sqrt{I_1 I_2}\cos(\Delta \phi)\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\Delta \phi=\phi_{2}-\phi_1\]</div>
+<p>which now clearly tells us, that the total intensity of two waves in not the sum of the two intensities, but contains an additional term, which depends on the phase difference between the two wave. This term <span class="math notranslate nohighlight">\(2\sqrt{I_1 I_2}\cos(\Delta \phi)\)</span> is called the interference term.</p>
+<p>Let us assume for an example two wave, which originally have the same intensity, i.e. <span class="math notranslate nohighlight">\(I_2=I_1=I_0\)</span>. If we insert this into the abocve formulas we obtain for the total intensity</p>
+<div class="math notranslate nohighlight">
+\[I=2I_{0}(1+\cos(\Delta \phi)=4I_{0})\cos^2\left (\frac{\Delta \phi}{2}\right)\]</div>
+<p>This is quite interesting as we obtain the follwing results for specific phase shifts</p>
+<p><strong>Contructive Interference</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta \phi=0,2\pi,2\pi m\)</span>: <span class="math notranslate nohighlight">\(I=4I_{0}\)</span>, where m is an integer</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="d240c1559dc9448486fde8f5460fe323" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="da8bc8afa1c64207b7a021b9fbc61cca" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="d4408afe0fe24b5f8e0bf30e2fe798e1" class="no-scaled-link" src="../../_images/sum_const.png" style="width: 33%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Constructive interference of two wave (left, middle) and the sumn of the two wave amplitudes.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Constructive Interference</strong></p>
+<p>Constructive interference between wave occurs when the phase difference between the waves is a multiple of <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\Delta \phi=2\pi m\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is an integer number.</p>
+</div>
+<p><strong>Destructive Interference</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta \phi=\pi,3\pi,(2m-1)\pi\)</span>: <span class="math notranslate nohighlight">\(I=0\)</span>, where m is an integer</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="f1e3838b342d4b76804e497606eeb903" class="no-scaled-link" src="../../_images/w_0.png" style="width: 33%;" /> <img alt="f04c2ff5f52543fbbf0ae6a4d9f23069" class="no-scaled-link" src="../../_images/w_pi.png" style="width: 33%;" /> <img alt="c90055ea02e84453a1e8c6bc3f18c943" class="no-scaled-link" src="../../_images/sum_destr.png" style="width: 33%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Destructive interference of two wave (left, middle) and the sumn of the two wave amplitudes.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Destructive Interference</strong></p>
+<p>Destructive interference between wave occurs when the phase difference between the waves is an odd multiple of <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\Delta \phi=(2m-1)\pi\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is an integer number.</p>
+</div>
+<p><strong>Sum of both Intensities</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta \phi=\pi/2,3\pi/2,(2m-1)\pi/2\)</span>: <span class="math notranslate nohighlight">\(I=2I_0\)</span>, where m is an integer</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Phase Difference and Path Difference</strong></p>
+<p>Note that a phase difference can be caused by a difference in the path length the two waves have to travel. This pathlength difference <span class="math notranslate nohighlight">\(\Delta s\)</span> then correponds to a phase amngle difference of <span class="math notranslate nohighlight">\(k\Delta s=2\pi\Delta s /\lambda\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is the wavenumber. A pathlength difference, which is a multiple of <span class="math notranslate nohighlight">\(\lambda\)</span>, will thus correspond to a phase angle difference, which is a multiple of <span class="math notranslate nohighlight">\(2\pi\)</span>.</p>
+</div>
+<p>Interference may give rise to distinct patterns in space, which can be used for lithography purposes, for example. If we superpose two plane waves with different directions of the wave propagation, we will in general obtain a stripe like intensity pattern as depicted below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="70c83dbe637447b3930028d24fe517b2" class="no-scaled-link" src="../../_images/plane_plane.png" style="width: 80%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Interference of two plane waves propagating under an angle of 45<span class="math notranslate nohighlight">\(^{\circ}\)</span>. The two left graphs show the original waves. The two right the total amplitude and the intensity pattern.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The interference of the two plane wave shown above leads also to stripe pattern on a screen (think of the intensity pattern at z=10 µm for example).</p>
+<p>If we use a spherical and a plane wave, we will find a circular shaped interference intensity due to the curvature of the wavefronts of the spherical wave.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><img alt="55861675e7a0456d9f55c5da00981b19" class="no-scaled-link" src="../../_images/sphere_plane.png" style="width: 90%;" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Fig.:</strong> Interference of a spherical wave and a plane wave (left amplitude, right intensity).</p></td>
+</tr>
+</tbody>
+</table>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Imaging%20Errors.html" class="btn btn-neutral float-left" title="Imaging Errors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../snippets/Wave%20Explorer.html" class="btn btn-neutral float-right" title="EXP3 Snippets: Wave Explorer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Frank Cichos.
+      <span class="lastupdated">Last updated on Oct 26, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
