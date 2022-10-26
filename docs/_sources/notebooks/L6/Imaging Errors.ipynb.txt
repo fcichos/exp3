@@ -55,7 +55,7 @@
     "\n",
     "\n",
     "\n",
-    "|<img src=\"img/chromatic.png\" width=\"30%\"> <img src=\"img/chromatic_exp.png\" width=\"30%\"><img src=\"img/chromatic_rend.jpeg\" width=\"30%\">|\n",
+    "|<img src=\"img/chromatic.png\" width=\"30%\"><img src=\"img/chromatic_exp.png\" width=\"30%\"><img src=\"img/chromatic_rend.jpeg\" width=\"30%\">|\n",
     "|-|\n",
     "| **Fig.:** Chromatic aberration. Left: Sketch of the chromatic aberration, focusing red light less strong than blue. Middle: Image from the lecture. Right: Rendered image using the refractive index for BK7 glass.|\n"
    ]
