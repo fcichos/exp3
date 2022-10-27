@@ -322,7 +322,7 @@
     "\n",
     "while\n",
     "\n",
-    "- $\\frac{\\mathrm dn}{\\mathrm d\\lambda}<0$, is called anomalous dispersion\n",
+    "- $\\frac{\\mathrm dn}{\\mathrm d\\lambda}>0$, is called anomalous dispersion\n",
     "\n",
     "This wavelength dependence of the refractive index will yield a dependence of the deflection angle on the color of light as well. The change of the deflection angle with the refractive index can be calculated to be\n",
     "\n",
