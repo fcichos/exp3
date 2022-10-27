@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Experimental Physics 3'
-copyright = '2020, Frank Cichos'
+copyright = '2022, Frank Cichos'
 author = 'Frank Cichos'
 master_doc = 'index'
 
