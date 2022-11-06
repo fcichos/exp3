@@ -102,8 +102,16 @@ The fields of optics and quantum mechanics are nowadays very active research are
    
    lectures/L7/overview_7.rst
    notebooks/L7/Wave Optics.ipynb 
-   notebooks/L7/Interference.ipynb 
-   notebooks/L7/Thin Film Interference.ipynb 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 8:
+   
+   lectures/L8/overview_8.rst
+   notebooks/L8/Interference.ipynb 
+   notebooks/L8/Thin Film Interference.ipynb
+   notebooks/L8/MultiWave Interference.ipynb
+   notebooks/L8/FabryPerot.ipynb
    
 Indices and tables
 ==================

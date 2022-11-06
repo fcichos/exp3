@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 8 we start having a look at the wave properties of light, yet with a simpler description of wave optics. We will look at the solution of the wave equation and understand interfrence and diffraction.
+In Lecture 8 we continue to explore different interference phenomena including different interferometers and thin film interference.
 
 
 
