@@ -244,19 +244,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html#Double-Slit-Interference">Double Slit Interference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html">Thin Film Interference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html#Multiple-Wave-Interference">Multiple Wave Interference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 9:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L9/Thin%20Film%20Interference.html">Thin Film Interference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L9/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L9/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L8/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L8/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/FabryPerot.html">Fabry Perot Interferometer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html">Fabry Perot Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
 </ul>
 
         </div>
@@ -330,7 +328,7 @@ figcaption {
 </style><div class="section" id="Light-propagation">
 <h2>Light propagation<a class="headerlink" href="#Light-propagation" title="Permalink to this headline">¶</a></h2>
 <p>So war we have only discussed isotropic materials, meaning that the speed of light was independent by the direction of light propagation in the material. Often, the light propagation is, however, not isotropic as the underlying materials have an anisotropic structure.</p>
-<figure><p><img alt="93beb154f61d47fc9cea76b7d36755fd" class="no-scaled-link" src="../../_images/anisotropy.png" style="width: 40%;" /></p>
+<figure><p><img alt="121e67fa8dc748d1838edba5a54c0628" class="no-scaled-link" src="../../_images/anisotropy.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Ethene molecules as an example for an anisotropically polarizable object. The red arrows denote the electric field directions.</p>
 </figcaption></figure><p>Just consider the above molecule <span class="math notranslate nohighlight">\(C_2H_4\)</span> (Ethen), where the two carbon atoms are bound by a double bond. In an external electric field aligned along that bond, we certinly expect the electrons to be more easily displaced over a larger distance, when the field is aligned parallel to the double bond. The dipole induced will therefore depend on the orientation of molecule and electric field. We therefore need to express the electronic polarizability <span class="math notranslate nohighlight">\(\alpha\)</span> for the calculation of the
 dipole moment <span class="math notranslate nohighlight">\(\vec{p}=\alpha \vec{E}\)</span> as a tensor <span class="math notranslate nohighlight">\(\overleftrightarrow{a}\)</span>.</p>
@@ -367,7 +365,7 @@ D_3 \\
 \end{pmatrix}\end{split}\]</div>
 <p>From this it becomes evident, that the displacement field <span class="math notranslate nohighlight">\(\vec{D}\)</span> is not anymore parallel to the electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span>. This also means now, that the wavevector <span class="math notranslate nohighlight">\(\vec{k}\)</span> is now perpendicular to the displacement field and not to the electric field. The magnetic field is still directed along the same direction and thus the Poynting vector is not parallel to the wavevector. Energy and phasefronts flow in different directions.The sketch below indicates the relations of the
 vectors.</p>
-<figure><p><img alt="aed62a7e66624f458c6df95370c52a19" class="no-scaled-link" src="../../_images/fields.png" style="width: 35%;" /></p>
+<figure><p><img alt="77574d9c51284c74860ae4d17487be8e" class="no-scaled-link" src="../../_images/fields.png" style="width: 35%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>The tensorial nature of the dielectric function has now consequences for the propagation of light. In general different symmetries are considered. If we have for example two of the diagonal elements be equal to each other</p>
 <div class="math notranslate nohighlight">
@@ -377,7 +375,7 @@ vectors.</p>
 \[\epsilon_{11}\neq\epsilon_{22}\neq\epsilon_{33}\neq\epsilon_{11}\]</div>
 <p>we call the material <strong>biaxial</strong> and the material has two optical axes. We will have a look at the meaning of an optical axis a bit later.</p>
 <p>A tensor as the dielectric tensor (similar to the tensor of inertia) can be geometrically represented by an ellipsoid with three different half axes as depicted below. This can be done for the refractive index or the dielectric tensor. When doing so with the refractive index, we obtain an index ellipsoid, where the half-axes correspond to the three refractive indices <span class="math notranslate nohighlight">\(n_1=\sqrt{\epsilon_{11}}\)</span>, <span class="math notranslate nohighlight">\(n_2=\sqrt{\epsilon_{22}}\)</span> and <span class="math notranslate nohighlight">\(n_3=\sqrt{\epsilon_{33}}\)</span>.</p>
-<figure><p><img alt="6d9b1e672d1640868a911dd7eab2aab8" class="no-scaled-link" src="../../_images/index_tensor.png" style="width: 30%;" /></p>
+<figure><p><img alt="ac3599f74c9b4710a62ae3501a50f33c" class="no-scaled-link" src="../../_images/index_tensor.png" style="width: 30%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>To find out the relevant refractive indices for a certain propagation direction on now undertakes the following steps:</p>
 <ul class="simple">
@@ -398,22 +396,22 @@ vectors.</p>
 \[\vec{k}\times(\vec{k}\times\vec{E})+\omega^2\mu_0 \epsilon_0 \overleftrightarrow{\epsilon_r} \vec{E}=0\]</div>
 <p>This equation leads to a system of equations for the components of the wavevector (<span class="math notranslate nohighlight">\(\vec{k}=\{k_1,k_2,k_3\}\)</span>) that define the k-surface for a given frequency.</p>
 <p>This k-surface has, for a uniaxial material, in the plane (here x-z plane) a circular and an elliptical shape, where the circular shape corresponds to the ordinary refractive index and the elliptical to the extra-ordinary refractive index. In the unixial case both surfaces intersect along the optical axis. The image below shows the situation for the situation of a uniaxial material.</p>
-<figure><p><img alt="1047614f8bcc4aaf8f3edba5e4ce61da" class="no-scaled-link" src="../../_images/k-surface.png" style="width: 40%;" /></p>
+<figure><p><img alt="a9ffa93c776d430e8d0a136d1b2605f7" class="no-scaled-link" src="../../_images/k-surface.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>If we select now a specific direction of propagation for the light with the direction of <span class="math notranslate nohighlight">\(\vec{k}\)</span>, the intersections of the k-surface with the k-vector deliver the solutions for the refractive indices. From the figure above, it becomes obvious, that the electric field vector must be perpendicular to the plane in the case of the ordinary refractive index. Only in this case, the wavevector can be rotated in the above sketch such that the direction of the electric field does not change. If
 the electric field is within the plane of the above sketch, the field direction with respect to the crystal structure changes and therefore the refractive index changes.</p>
 <p>Therefore the <strong>extra-ordinary</strong> refractive index is valid for the p-polarization and the ordinary refractive index is valid for the <strong>s-polarization</strong>.</p>
-<figure><p><img alt="8eb0cd690019411ebec83515ac1a3604" class="no-scaled-link" src="../../_images/birefringence.png" style="width: 55%;" /> <img alt="04cbd58a5b954fe09bba647f2d79648b" class="no-scaled-link" src="../../_images/birefringence_exp.png" style="width: 37%;" /></p>
+<figure><p><img alt="c4791afd4ef3449c877682775195da11" class="no-scaled-link" src="../../_images/birefringence.png" style="width: 55%;" /> <img alt="9d36a3f42f834b169e513f0e3dcd9637" class="no-scaled-link" src="../../_images/birefringence_exp.png" style="width: 37%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Birefringence.</p>
 </figcaption></figure><p>Let’s discuss the sketches above, which show the general case of <strong>birefringence</strong>. The image on the left side shows an interface between air on the bottom and the anisotropic material on the top. The wavevector is incident from below and is normal zo the surface. Its direction will intersect both k-surfaces and thereby select the ordinary refractive index and the extra-ordinary refractive index for the two different polarization directions. Both waves propgate in the same direction, so their
 wavefronts are perpendicular to the k-vectors as shown in the middle sketch. Yet, the Poynting vectors go in different direction. The Poynting vector, which points in the direction of energy propagation, is always perpendicular to the k-surface, since the k-surface is an isoenergy surface <em>(think about that for a moment)</em>. This means that the beam is split into two beams with parallel wavefronts as indicated. This phenomenon is called birefringence and separates two orthogonal polarizations into
 two beams as indicated.</p>
 <p>This effect is probably best visible, when you put a birefringent material like the common calcit crystal on a newpaper or book. You will immediately see the birefringence in the double images as in the figure above to the right.</p>
 <p>The different refractive index for both polarizations make those materials very suitable for the creating polarizing optical elements like beam splitters. A selection of different polarizing beam splitters is shown in the image below.</p>
-<figure><p><img alt="88e35441d85649ba99c9486daf8797c5" class="no-scaled-link" src="../../_images/polarizers.png" style="width: 40%;" /></p>
+<figure><p><img alt="2734df4165984fab9aa3b70fff472381" class="no-scaled-link" src="../../_images/polarizers.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarizing beam splitters.</p>
 </figcaption></figure><p>Birefringence is often observed in mechanically stressed materials like quickly cooled glasses or stretched polymer foils. The latter is demonstrated in the images below, where we used</p>
-<figure><p><img alt="2bd8374d17ed4dbfb2b84a3256f1fc48" class="no-scaled-link" src="../../_images/christmas_tree.png" style="width: 45%;" /> <img alt="b792e2bc38e64d7591c85043e27b8608" class="no-scaled-link" src="../../_images/tulip.png" style="width: 45%;" /></p>
+<figure><p><img alt="bc509138d14d48509e7f6336cc2cc7b1" class="no-scaled-link" src="../../_images/christmas_tree.png" style="width: 45%;" /> <img alt="796a9495a2d145fb801fedd159ef7d80" class="no-scaled-link" src="../../_images/tulip.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Scotch tape art. Scotch tape christmas tree and tulip between crossed polarizers showing their birefringent behavior.</p>
 </figcaption></figure></div>
 <div class="section" id="Wave-retarders">
@@ -433,7 +431,7 @@ E_y & = & E_{0y}e^{i(\omega t -n_o k_0 z)}
 \[\Delta \phi=(n_e-n_o)k_0 d\]</div>
 <div class="section" id="Quarter-Wave-Plate">
 <h3>Quarter Wave Plate<a class="headerlink" href="#Quarter-Wave-Plate" title="Permalink to this headline">¶</a></h3>
-<figure><p><img alt="b041119854c249c3b8f0f340322e3c94" class="no-scaled-link" src="../../_images/retarder.png" style="width: 50%;" /> <img alt="5a1d204c5027458aaee787eb850d6454" class="no-scaled-link" src="../../_images/circ_pol.png" style="width: 45%;" /></p>
+<figure><p><img alt="f495b390056c4b049a89d6469af9109f" class="no-scaled-link" src="../../_images/retarder.png" style="width: 50%;" /> <img alt="75906772a2ec4f9486a0ee695dfcf739" class="no-scaled-link" src="../../_images/circ_pol.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Sketch of the conditions for a wave retarder.</p>
 </figcaption></figure><p>If we design now a material of a certain thickness such that the phase shift is <span class="math notranslate nohighlight">\(\Delta \phi=\pi/2\)</span>, then the light exiting the material will be circularly polarized as in the sketch on the right side. The minimum thickness of the crystal is then</p>
 <div class="math notranslate nohighlight">
@@ -458,7 +456,7 @@ angle between the incident and the outgoing linear polarization will correspond 
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Nov 06, 2022.
+      <span class="lastupdated">Last updated on Nov 09, 2022.
       </span></p>
   </div>
 

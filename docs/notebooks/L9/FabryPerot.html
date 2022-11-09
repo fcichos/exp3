@@ -235,22 +235,20 @@
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Lecture 8:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L8/overview_8.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Interference.html">Coherence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Interference.html#Interferometers">Interferometers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Interference.html#Michelson-Interferometer">Michelson Interferometer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Interference.html#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Interference.html#Sagnac-Interferometer">Sagnac Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html">Coherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html#Interferometers">Interferometers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Interference.html#Michelson-Interferometer">Michelson Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Interference.html#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Interference.html#Sagnac-Interferometer">Sagnac Interferometer</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Interference.html#Double-Slit-Interference">Double Slit Interference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html#Double-Slit-Interference">Double Slit Interference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 9:</span></p>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Thin%20Film%20Interference.html">Thin Film Interference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Thin%20Film%20Interference.html#Multiple-Wave-Interference">Multiple Wave Interference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Thin%20Film%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Thin%20Film%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="MultiWave%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
@@ -276,7 +274,7 @@
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>Fabry Perot Interferometer</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L8/FabryPerot.ipynb" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L9/FabryPerot.ipynb" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -309,8 +307,8 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L8/FabryPerot.ipynb`_</span></a>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L8/FabryPerot.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L9/FabryPerot.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L9/FabryPerot.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
 <div class="section" id="Fabry-Perot-Interferometer">
 <h1>Fabry Perot Interferometer<a class="headerlink" href="#Fabry-Perot-Interferometer" title="Permalink to this headline">¶</a></h1>
@@ -328,7 +326,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>We will now have a look at some applications of the multiwave interference also with changing amplitude. One of the is the Fabry-Perot interferometer, which essentially consists of two mirrors, which are brought to a distance <span class="math notranslate nohighlight">\(d\)</span> as shown below.</p>
-<figure><p><img alt="600d960c8e134515bd0947540d5ee4d0" class="no-scaled-link" src="../../_images/fabry_perot1.png" style="width: 70%;" /></p>
+<figure><p><img alt="d740a4666ba641d7a92c33739fdb7bcb" class="no-scaled-link" src="../../_images/fabry_perot1.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Simplified Sketch of a Fabry-Perot Interferometer.</p>
 </figcaption></figure><p>If light enters the Fabry Perot interferometer with an amplitude <span class="math notranslate nohighlight">\(A_0\)</span>. It is transmitted with a reduced amplitude. The initial amplitude has to be multiplied with the transmission factor <span class="math notranslate nohighlight">\(t_1\)</span>. It travels further until it hits the sescond mirror, where it is reflected and transmitted as well. The reduced amplitude due to reflection is expressed by <span class="math notranslate nohighlight">\(r_2\)</span>, while the transmission is introducing another factor <span class="math notranslate nohighlight">\(t_2\)</span>. This means that the first transmitted wave has the
 amplitude</p>
@@ -351,7 +349,7 @@ amplitude</p>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="3ac55b0cddf3499aad2abab92d49aaee" class="no-scaled-link" src="../../_images/perot3.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="194410d8007547babe7fbfda846c77a1" class="no-scaled-link" src="../../_images/perot3.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -394,7 +392,7 @@ still seperate the two frequencies. We use as a measure the width of the individ
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p><img alt="f87cd4ec86b848ec84bf9662ccff8020" class="no-scaled-link" src="../../_images/perot_spectral1.png" style="width: 60%;" /></p></th>
+<tr class="row-odd"><th class="head"><p><img alt="398fed1c7a014017ac91ab0398135173" class="no-scaled-link" src="../../_images/perot_spectral1.png" style="width: 60%;" /></p></th>
 </tr>
 </thead>
 <tbody>
@@ -403,16 +401,16 @@ still seperate the two frequencies. We use as a measure the width of the individ
 </tbody>
 </table>
 <p>A specific intensity pattern is obtained when inserting a Fabry Perot interferometer in a lens system and using an extended monochromatic light source as sketched below.</p>
-<figure><p><img alt="175d55855e884853a6136ab4235f1af2" class="no-scaled-link" src="../../_images/fabry_w_lens1.png" style="width: 90%;" /></p>
+<figure><p><img alt="3a93cff254834bfbab7a814d1d9e9c15" class="no-scaled-link" src="../../_images/fabry_w_lens1.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Fabry Perot Interferometer and interferebnce pattern observed in the lecture.</p>
 </figcaption></figure><p>In this case the interference pattern is a ring structure whgich gets denser with increasing radius as shown in the lecture (see below).</p>
-<figure><p><img alt="7037e22aef064b3cb428c22988788749" class="no-scaled-link" src="../../_images/fabry_perot_lecture11.png" style="width: 45%;" /> <img alt="1edaa58b3d2445009296ec5ce9fd9260" class="no-scaled-link" src="../../_images/fabry_perot_lecture21.png" style="width: 45%;" /></p>
+<figure><p><img alt="bf6e811ea7c64784a371a73f809da44e" class="no-scaled-link" src="../../_images/fabry_perot_lecture11.png" style="width: 45%;" /> <img alt="ba225d52e2d94ec2a0ce3414b7ea52f3" class="no-scaled-link" src="../../_images/fabry_perot_lecture21.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Fabry Perot Interferometer and interferebnce pattern observed in the lecture.</p>
 </figcaption></figure></div>
 <div class="section" id="Newton-Rings">
 <h1>Newton Rings<a class="headerlink" href="#Newton-Rings" title="Permalink to this headline">¶</a></h1>
 <p>A similar interference pattern is also observed in the case of a hemi-spherical surface touching a planar surface as sketched in the image below.</p>
-<figure><p><img alt="5881cff611814dffb19c56d2caab6f14" class="no-scaled-link" src="../../_images/newton_ring_sketch1.png" style="width: 80%;" /></p>
+<figure><p><img alt="d38fbfac9d1e42e182ca45210dd5847a" class="no-scaled-link" src="../../_images/newton_ring_sketch1.png" style="width: 80%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Newton Rings. Interference of waves from a spherical and a planar surface in close contact.</p>
 </figcaption></figure><p>If light in incident normal to the top surface, light is reflected at several surfaces. The ones we are interested in are the spherical surface and the planar surface below. The vertical distance between those points is <span class="math notranslate nohighlight">\(d\)</span>, yet refraction will deflect the beam slightly so that the actual path is a bit longer. If we are close to the axis of the spherical surface (<span class="math notranslate nohighlight">\(r\ll R\)</span>), where <span class="math notranslate nohighlight">\(R\)</span> is the radius of the spherical surface. We can neglect refraction.</p>
 <p>Under these conditions the path length difference between a wave reflected at the curved and the planar surface is</p>
@@ -435,7 +433,7 @@ still seperate the two frequencies. We use as a measure the width of the individ
 <div class="math notranslate nohighlight">
 \[r=\sqrt{m\lambda R}\]</div>
 <p>The radius of the interference fringes is thus characteristic for a certain wavelength and radius and increases with the square root of the integer <span class="math notranslate nohighlight">\(m\)</span>.</p>
-<figure><p><img alt="e274eb1109da4fe8935737c1f79a5869" class="no-scaled-link" src="../../_images/newton_rings_lecture1.png" style="width: 80%;" /></p>
+<figure><p><img alt="eb7e83f3f4b449aebe2fac384834e11e" class="no-scaled-link" src="../../_images/newton_rings_lecture1.png" style="width: 80%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Observation of Newton Rings using white light in the lecture.</p>
 </figcaption></figure><p>Such patterns can be used to calculate the wavelength of light if the radius of the spherical surface is known.</p>
 <script type="application/vnd.jupyter.widget-state+json">
@@ -453,7 +451,7 @@ still seperate the two frequencies. We use as a measure the width of the individ
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Nov 06, 2022.
+      <span class="lastupdated">Last updated on Nov 09, 2022.
       </span></p>
   </div>
 

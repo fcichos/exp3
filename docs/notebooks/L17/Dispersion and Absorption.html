@@ -244,19 +244,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html#Double-Slit-Interference">Double Slit Interference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html">Thin Film Interference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html#Multiple-Wave-Interference">Multiple Wave Interference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L8/Thin%20Film%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 9:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L9/Thin%20Film%20Interference.html">Thin Film Interference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L9/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L9/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L8/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L8/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/FabryPerot.html">Fabry Perot Interferometer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L8/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html">Fabry Perot Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
 </ul>
 
         </div>
@@ -328,7 +326,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>We would like to have a closer look at what happens with our atom in the electric field of a light wave. First of all, our toy atom is very small (around 0.1 nm) which is much smaller than the wavelength of ligth (500 nm). Thus the electric field appears to homogeneous over the cross section of the atom and seems to change over time with <span class="math notranslate nohighlight">\(E(t)=E_0 e^{-i\omega t}\)</span>.</p>
-<figure><p><img alt="5d7614e73359436ab58221211d8b1e17" class="no-scaled-link" src="../../_images/polarization.png" style="width: 50%;" /></p>
+<figure><p><img alt="a629a4ce458a408e9f8efb77f8634da6" class="no-scaled-link" src="../../_images/polarization.png" style="width: 50%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>Lets assume the electric field being aligned with the x-direction, then we can write down the equation of motion for the displacement of the two charges in the atom</p>
 <div class="math notranslate nohighlight">
@@ -356,7 +354,7 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[n=1+\frac{Nq^2}{2\epsilon_0 m}\frac{(\omega_0^2-\omega^2)-i\sigma\omega}{(\omega_0^2-\omega^2)^2+\omega^2\sigma^2}=n-i\kappa\]</div>
 <p>The refractive index therefore has a real and imaginary part, which we can derive from the above formuala. We would like to a have a look at the consequences of those two coefficients <span class="math notranslate nohighlight">\(n_r,\kappa\)</span> for the propagation of the light wave.</p>
-<figure><p><img alt="5bf8f592e3d64a49a2ad343f5ad96361" class="no-scaled-link" src="../../_images/nr.png" style="width: 40%;" /> <img alt="39aab4d58ece4c189905c76a3391d599" class="no-scaled-link" src="../../_images/kappa.png" style="width: 40%;" /></p>
+<figure><p><img alt="7e528a30fff94c898fd30c8be101d97c" class="no-scaled-link" src="../../_images/nr.png" style="width: 40%;" /> <img alt="559819be915d45dfa820d11f1bc6b791" class="no-scaled-link" src="../../_images/kappa.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Real and imaginary part of the refractive index as a function of the frequency. The vertical dashed line is located at <span class="math notranslate nohighlight">\(\omega=\omega_0\)</span>.</p>
 </figcaption></figure><p>The two plots above show the frequency dependence of the real and imaginary part of the refractive index. The freuency dependence arises from the coupling to the resonance of the damped harmonic oscillator of our crude atomic model . Around the resonance, the are strong changes to be expected for the real part and the imaginary part. The real part has a dispersive shape being larger than 1 at lower frequencies and smaller than one (!) above the resonance. The imaginary part has the shape of a
 Lorentzian curve around the resonance frequency, where the full width at half maximum (<strong>FWHM</strong>) of the curve us given by the damping coefficient <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
@@ -379,7 +377,7 @@ I &=& \epsilon_0 c E^2=\epsilon_0 c \left | E_0 e^{-in_r k_0 z }e^{-\kappa k_0 z
 \[\frac{I}{I_0}= e^{-\alpha z}
 \tag{Lambert Beer Law}\]</div>
 <p>is called <strong>Lambert-Beers law</strong>.</p>
-<figure><p><img alt="37a60ae09645471989234956faa34a6a" class="no-scaled-link" src="../../_images/absorption_exp.png" style="width: 44%;" /> <img alt="9554aae39fb8427b9829db9ecb3ec8e0" class="no-scaled-link" src="../../_images/lambert_exp.png" style="width: 40%;" /></p>
+<figure><p><img alt="4d9b645834474d5b96baff0d5e241bba" class="no-scaled-link" src="../../_images/absorption_exp.png" style="width: 44%;" /> <img alt="a9e1bd8cebc246a4a53de0cc4ee7fb7c" class="no-scaled-link" src="../../_images/lambert_exp.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> .</p>
 </figcaption></figure><p>As the coefficient <span class="math notranslate nohighlight">\(\kappa\)</span> shows the indicated frequency dependence, the absorption coefficient is also reflecting this strong absorption close to the resonances but weaker absorption far away from it. Since common materials have not only a single but many of hose resonances, the absorption behavior could be quite complex. It is however characteristic for each substance, which makes absorption spectroscopy a invaluable tool to study the composition of materials.</p>
 </div>
@@ -446,7 +444,7 @@ v_g&=&v+k_0 n_r \frac{d}{dk}\left ( \frac{c}{n_r}\right)\\
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Nov 06, 2022.
+      <span class="lastupdated">Last updated on Nov 09, 2022.
       </span></p>
   </div>
 
