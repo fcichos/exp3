@@ -257,6 +257,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html">Fabry Perot Interferometer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 10:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L10/overview_10.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L10/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/FabryPerot.html">Fabry Perot Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L10/Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -328,7 +347,7 @@ figcaption {
 }
 </style><p>We would like to combine now the diffraction on individual slits with the multiple inteference from many slits. Such objects are called <strong>diffraction gratings</strong> and have large importance for spectroscopy but also for the compression of short laser pulses.</p>
 <p>Let’s have a look at the sketch below.</p>
-<figure><p><img alt="b74a7b9f1c814f2696a54e372a4c9881" class="no-scaled-link" src="../../_images/grating.png" style="width: 45%;" /></p>
+<figure><p><img alt="16ba1489a5bf451c82090e3eeb2cd6e1" class="no-scaled-link" src="../../_images/grating.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>We consider a number of <span class="math notranslate nohighlight">\(N\)</span> slits of width <span class="math notranslate nohighlight">\(b\)</span>. The slits have a distance <span class="math notranslate nohighlight">\(d\)</span> from each other. Each slit acts like the slit before giving rise to a diffraction pattern, that is oscillating with decreasing amplitude. The width of this diffraction pattern is determined by <span class="math notranslate nohighlight">\(\lambda/b\)</span> and the pattern is given by</p>
 <div class="math notranslate nohighlight">
@@ -363,25 +382,25 @@ figcaption {
 <h2>Position of the Main Peaks<a class="headerlink" href="#Position-of-the-Main-Peaks" title="Permalink to this headline">¶</a></h2>
 <p>The position of the main peaks requires that the numerator and the denominator are zero. This is given whenever the denominator argument is a integer multiple of <span class="math notranslate nohighlight">\(\pi\)</span>, i.e. <span class="math notranslate nohighlight">\(\pi d/\lambda\sin(\theta)=m\pi\)</span> or <span class="math notranslate nohighlight">\(\sin(\theta)=m\lambda/d\)</span>. So the first order diffraction maximum is found at <span class="math notranslate nohighlight">\(\sin(\theta)=\lambda/d\)</span> independent of the slit number <span class="math notranslate nohighlight">\(N\)</span>. This means that the position of the main peaks increases linearly with the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> and decreases with
 increasing distance of the slits <span class="math notranslate nohighlight">\(d\)</span>.</p>
-<figure><p><img alt="94d87b3015634f419bb8ecae61babb8f" class="no-scaled-link" src="../../_images/grating_general.png" style="width: 75%;" /></p>
+<figure><p><img alt="646be363760f4001aa114ff4868e8bd7" class="no-scaled-link" src="../../_images/grating_general.png" style="width: 75%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction pattern of a grating wher 8 slits with a width of 2 µm and a distance of 4 micrometers are illuminated by a wavelength of 532 nm.</p>
 </figcaption></figure></div>
 <div class="section" id="Influence-of-the-Slit-Width">
 <h2>Influence of the Slit Width<a class="headerlink" href="#Influence-of-the-Slit-Width" title="Permalink to this headline">¶</a></h2>
 <p>The two plots below show the influence of the slit width while the slit distance is the same. We have again <span class="math notranslate nohighlight">\(N=8\)</span> slits participating with <span class="math notranslate nohighlight">\(d=4\)</span> µm while the slit width is <span class="math notranslate nohighlight">\(b=2\)</span> µm on the left side and <span class="math notranslate nohighlight">\(b=1\)</span> µm on the right side. The result is clearly an increased width of the envelope. The first minimum of the slit diffraction pattern occurs at <span class="math notranslate nohighlight">\(\sin(\theta)=\lambda/b\)</span>.</p>
-<figure><p><img alt="0bd973a722c34306b7392429cf3ac94b" class="no-scaled-link" src="../../_images/grating_slit_width.png" style="width: 100%;" /></p>
+<figure><p><img alt="99d6290e1083425e86235a26a5c8d364" class="no-scaled-link" src="../../_images/grating_slit_width.png" style="width: 100%;" /></p>
 <figcaption><p><strong>Fig.:</strong> (Left) Diffraction pattern of a grating with <span class="math notranslate nohighlight">\(N=8\)</span> slits (<span class="math notranslate nohighlight">\(d=4\)</span> µm, <span class="math notranslate nohighlight">\(b=2\)</span> µm) with <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm. (Right) Diffraction pattern of a grating with <span class="math notranslate nohighlight">\(N=8\)</span> slits (<span class="math notranslate nohighlight">\(d=4\)</span> µm, <span class="math notranslate nohighlight">\(b=1\)</span> µm) with <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm.</p>
 </figcaption></figure></div>
 <div class="section" id="Influence-on-the-Slit-Number">
 <h2>Influence on the Slit Number<a class="headerlink" href="#Influence-on-the-Slit-Number" title="Permalink to this headline">¶</a></h2>
 <p>When using an increased slit number, we obtain the main diffraction peaks are becoming sharper. The location of the main peaks for the wavelength is unchanged, but as we have now <span class="math notranslate nohighlight">\(N-2\)</span> secondary maxima inbetween. This decreased width of the main peaks is important for the spectral resolution of the grating.</p>
-<figure><p><img alt="deb7ed657fc0411ab34deade98751e60" class="no-scaled-link" src="../../_images/grating_slit_number.png" style="width: 100%;" /></p>
+<figure><p><img alt="5a8f03eac1b04f0f900d0923e5acf0bf" class="no-scaled-link" src="../../_images/grating_slit_number.png" style="width: 100%;" /></p>
 <figcaption><p><strong>Fig.:</strong> (Left) Diffraction pattern of a grating with <span class="math notranslate nohighlight">\(N=16\)</span> slits (<span class="math notranslate nohighlight">\(d=4\)</span> µm, <span class="math notranslate nohighlight">\(b=1\)</span> µm) with <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm. (Right) Diffraction pattern of a grating with <span class="math notranslate nohighlight">\(N=100\)</span> slits (<span class="math notranslate nohighlight">\(d=4\)</span> µm, <span class="math notranslate nohighlight">\(b=1\)</span> µm) with <span class="math notranslate nohighlight">\(\lambda=532\)</span> nm.</p>
 </figcaption></figure></div>
 <div class="section" id="Spectral-resolution">
 <h2>Spectral resolution<a class="headerlink" href="#Spectral-resolution" title="Permalink to this headline">¶</a></h2>
 <p>For the spectral resolution we have to define a criterium again, that allows us to quantify the spectral resolution. We borrow the idea we used from the optical resolution of the microscope, i.e. that two peaks are separable, if the second peak is located at the minimum of the first diffraction pattern. Here the diffraction patterns refer not to different objects on space but to different wavelength <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span>.</p>
-<figure><p><img alt="e35a933dccdc49c18080555763f07204" class="no-scaled-link" src="../../_images/grating_resolution.png" style="width: 100%;" /></p>
+<figure><p><img alt="e5b0e3899e82465ba6b27e2cf7a87c49" class="no-scaled-link" src="../../_images/grating_resolution.png" style="width: 100%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Rayleigh resolution limit a grating with <span class="math notranslate nohighlight">\(N=100\)</span> slits (<span class="math notranslate nohighlight">\(d=4\)</span> µm, <span class="math notranslate nohighlight">\(b=1\)</span> µm) with <span class="math notranslate nohighlight">\(\lambda_1=532\)</span> nm and <span class="math notranslate nohighlight">\(\lambda_2=537\)</span> nm in the first order diffraction peak (left) and the second order peak (right).</p>
 </figcaption></figure><p>Let us have a look at the <span class="math notranslate nohighlight">\(m\)</span>th order diffraction peak for the wavelength <span class="math notranslate nohighlight">\(\lambda_1\)</span>. This occurs at</p>
 <div class="math notranslate nohighlight">
@@ -406,7 +425,7 @@ increasing distance of the slits <span class="math notranslate nohighlight">\(d\
 \[R=\frac{\lambda}{\Delta \lambda}=mN\]</div>
 <p>This is the resolving power <span class="math notranslate nohighlight">\(R\)</span> of a grating. The ability to resolve two wavelength therefore increases with the diffraction order <span class="math notranslate nohighlight">\(m\)</span> and the number of slits used for the diffraction. Yet, the intensity of higher diffraction orders rapidly decreases due to the grating envelope. Therefore, the main parameter to change is the number of illuminted slits.</p>
 <p>Our finding is illustrated in the Figure above. Where we achieve a resolution of about 5 nm, when using <span class="math notranslate nohighlight">\(N=100\)</span> slits at a distance of <span class="math notranslate nohighlight">\(d=4\)</span> µm.</p>
-<figure><p><img alt="fea59e46b6ab4ad48f8117223fe0a0ea" class="no-scaled-link" src="../../_images/red_light_grating.png" style="width: 45%;" /> <img alt="155ebfaebb7f41f9a0b400d4a8b688cf" class="no-scaled-link" src="../../_images/white_light_grating.png" style="width: 45%;" /></p>
+<figure><p><img alt="2c5c8024417341fa96b94771c2ae8599" class="no-scaled-link" src="../../_images/red_light_grating.png" style="width: 45%;" /> <img alt="c1b0679b85084c409e433e11bbef09b7" class="no-scaled-link" src="../../_images/white_light_grating.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction pattern observed for a grating in the lecture with red light (left) and white light (right).</p>
 </figcaption></figure></div>
 </div>
@@ -420,7 +439,7 @@ increasing distance of the slits <span class="math notranslate nohighlight">\(d\
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Nov 10, 2022.
+      <span class="lastupdated">Last updated on Nov 13, 2022.
       </span></p>
   </div>
 

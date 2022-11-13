@@ -257,6 +257,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html">Fabry Perot Interferometer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 10:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L10/overview_10.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L10/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/FabryPerot.html">Fabry Perot Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L10/Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -328,13 +347,13 @@ figcaption {
 }
 </style><p>So far we have looked at the propagation of light in form of ray’s and its description in Gemoetrical Optics. We made a number of assumtions that we formulated as postulates. We then extended this description by a scalar Wave Optics description to allow for a description of interference and diffraction, which can not be explained by Geometrical Optics. Yet concepts of refractive index and light matter interaction and the intensities are not covered by Wave Optics and also just postulates.</p>
 <p>Electromagnetic Optics allows us to define these missing things. We discover light as electromagnetic waves consisting of electric and magnetic fields, which allow us to describe the interaction with charges in atoms, which is the foundation for the refractive index for example. The new thing is therefore the fact that we now need vectors for the description of light.</p>
-<figure><p><img alt="21fc7924f359476d9cc4ba06593c1680" class="no-scaled-link" src="../../_images/vertical_pol.png" style="width: 45%;" /> <img alt="cd8c11590c584f638d43dd5087726c89" class="no-scaled-link" src="../../_images/horizontal_pol.png" style="width: 45%;" /></p>
+<figure><p><img alt="9baf10537de24718b1f53ef6ac33aab9" class="no-scaled-link" src="../../_images/vertical_pol.png" style="width: 45%;" /> <img alt="0f2673811f804116bd282d500eac2dca" class="no-scaled-link" src="../../_images/horizontal_pol.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Demonstration of the vectorial nature of the electric field of electromagnetic waves with the help of a set of polarizers. (Left) The firstr polarizer on the right side of the image is transmitting only the vertical direction of the electric field. This vertical direction of the electric field is probed with the second polarizer. If pointing in the same direction, the intensity as measured with the meter behind is maximum. When probed with a second polarizer along the horizontal
 direction (Right), the detector shows zero intensity.</p>
 </figcaption></figure><div class="section" id="Electromagnetic-Spectrum">
 <h2>Electromagnetic Spectrum<a class="headerlink" href="#Electromagnetic-Spectrum" title="Permalink to this headline">¶</a></h2>
 <p>While most of our considerations are focused on electromagnetic waves in the visible region, all of them can be generalized to other regions of the very broad electromagnetic spectrum. The electromagnetic theory is scale free, meaning that the same effect on specific structures occur also at smaller scales if you scale the wavelength of the wave.</p>
-<figure><p><img alt="606a4749975f47b19659562203777934" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
+<figure><p><img alt="340ca9d2ac294a3fb421fdeb33b0a247" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Electromagnetic wave spectrum with its specific regions.</p>
 </figcaption></figure><div class="section" id="Maxwell-Equations">
 <h3>Maxwell Equations<a class="headerlink" href="#Maxwell-Equations" title="Permalink to this headline">¶</a></h3>
@@ -418,7 +437,7 @@ equation, we can take the time derivative which yields for the electric field</p
 <div class="math notranslate nohighlight">
 \[B_0=\frac{1}{c}E_0\]</div>
 <p>This is quite helpful, as we may just do calculations for the electric field and transfer them with the help of this conversion to the magnetic field.</p>
-<figure><p><img alt="f9050412a8d34a81acb60e9964386f4a" class="no-scaled-link" src="../../_images/plane_wave.png" style="width: 90%;" /></p>
+<figure><p><img alt="1ae72b97dbdf457b81474361c88bf202" class="no-scaled-link" src="../../_images/plane_wave.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Plane wave propagating along the y-direction, with the electric field oscillating along the z-direction..</p>
 </figcaption></figure></div>
 <div class="section" id="Spherical-Waves">
@@ -438,7 +457,7 @@ equation, we can take the time derivative which yields for the electric field</p
 \vec{B}(\vec{r})&=& B_0 \sin(\theta) U(\vec{r}) \hat{\phi}
 \end{eqnarray}</span></p>
 <p>The electric and magnetic fields are therefire tangential to the wavefront surface, which is a sphere. The propgation direction is always radial, so the spherical wave is also a transverse electromagnetic wave.</p>
-<figure><p><img alt="c82ad962ebf047eeb0f909704a15d9b8" class="no-scaled-link" src="../../_images/spherical_wave.png" style="width: 95%;" /></p>
+<figure><p><img alt="2cf70bf9d52b4cecb27ff254b7187f44" class="no-scaled-link" src="../../_images/spherical_wave.png" style="width: 95%;" /></p>
 <figcaption><p><strong>Fig.:</strong> (Left) Definition of the unit vectors in a spherical coordinate system. (Right) Vectors of the electric and magnetic field for a spherical wave.</p>
 </figcaption></figure></div>
 </div>
@@ -453,7 +472,7 @@ equation, we can take the time derivative which yields for the electric field</p
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Nov 10, 2022.
+      <span class="lastupdated">Last updated on Nov 13, 2022.
       </span></p>
   </div>
 

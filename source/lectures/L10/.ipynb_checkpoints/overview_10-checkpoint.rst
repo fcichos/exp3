@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 10 we look at multiple wave interference, anit-reflection coatings and explore the diffraction of light including Huygens principle.
+In Lecture 10 we look at multiple wave interference, Fabry-Perot interferometers and explore the diffraction of light including Huygens principle.
 
 
 
