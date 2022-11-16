@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 11 we look at multi-wave interference again, anti-reflection coatings and explore the diffraction of light including Huygens principle.
+In Lecture 11 we look at the diffraction of light including Huygens principle. We will find out about the diffraction at circular apertures, the diffraction grating and other structures.
 
 
 

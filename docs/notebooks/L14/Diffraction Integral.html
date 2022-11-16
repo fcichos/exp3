@@ -276,6 +276,29 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 11:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L11/overview_11.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L11/Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Diffraction%20Grating.html">Diffraction Grating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Properties-of-the-diffraction-pattern">Properties of the diffraction pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Position-of-the-Main-Peaks">Position of the Main Peaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Influence-of-the-Slit-Width">Influence of the Slit Width</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Influence-on-the-Slit-Number">Influence on the Slit Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Spectral-resolution">Spectral resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Fresnel%20Zones.html">Fresnel Zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Fresnel%20Zones.html#Fresnel-Zone-Plate">Fresnel Zone Plate</a></li>
+</ul>
 
         </div>
       </div>
@@ -346,7 +369,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>In the last section about Fresnel zones and the zone plate we have considered how different path contribute to the intensity at a point on the optical axis. We would like to generalize this idea to an integral formulation allowing us to calculate any kind of diffraction pattern.</p>
-<figure><p><img alt="9ed9f59652ac46338a7a468c2c3ddc18" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
+<figure><p><img alt="6c1b049461964868a75e79d976c8164c" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction integral.</p>
 </figcaption></figure><p>Assume we have a light source <span class="math notranslate nohighlight">\(S\)</span> as in the image above, which sends out a spherical wave (does not need to be a spherical wave). The spatial amplitude of this wave at the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> at a tiny aperture element <span class="math notranslate nohighlight">\(d\sigma\)</span></p>
 <div class="math notranslate nohighlight">
@@ -396,10 +419,10 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 \[U(x^{\prime},y^{\prime},z_0)=i\frac{e^{-ikz_0}}{\lambda z_0} e^{-\frac{ik}{2z_0}(x^{\prime 2}+y^{\prime 2})}
 \iint U_{s}(x,y)
 e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
-<figure><p><img alt="208a0d52c75045468906182b7a52e0d1" class="no-scaled-link" src="../../_images/near_far_field.png" style="width: 90%;" /></p>
+<figure><p><img alt="c52a8555a7d64080a1e1b47a0e0faf31" class="no-scaled-link" src="../../_images/near_far_field.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction pattern of a slit in the near field (Fresnel diffraction, left) and the far field (Fraunhofer diffraction, right).</p>
 </figcaption></figure><p>While these formulas provide the mathematical tools, we may obtain a more intuitive idea about the different approximation in the following way. Consider the image below, where we would like to know about the diffraction intensity of a slit of width <span class="math notranslate nohighlight">\(b\)</span> at the optical axis at a distance <span class="math notranslate nohighlight">\(D\)</span>.</p>
-<figure><p><img alt="89ae35ba8e244f55afd3b123a5e81b4b" class="no-scaled-link" src="../../_images/diffraction.png" style="width: 55%;" /></p>
+<figure><p><img alt="7f44db4165834c69bd0cac2121370efc" class="no-scaled-link" src="../../_images/diffraction.png" style="width: 55%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Illustration of the importance of additional geometrical path length difference for the discrimination of Fresnel (near-field) and Fraunhofer (far-field) diffraction.</p>
 </figcaption></figure><p>The waves from the center of the slit and the edge have to travel towards that point a different pathlength, whcih we may calculate to</p>
 <p><span class="math">\begin{eqnarray}
@@ -430,7 +453,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <div class="section" id="Babinet’s-Principle">
 <h2>Babinet’s Principle<a class="headerlink" href="#Babinet’s-Principle" title="Permalink to this headline">¶</a></h2>
 <p>The above considerations of diffraction have some intruiging consequence. Consider the two apertures in the image below.</p>
-<figure><p><img alt="1d99195f96664dc6a21eaf3a21fb3197" class="no-scaled-link" src="../../_images/babinet.png" style="width: 60%;" /></p>
+<figure><p><img alt="6b22ec57573e4553805b74a40670fefe" class="no-scaled-link" src="../../_images/babinet.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Two complementary apertures, which have the same diffraction pattern in the far field.</p>
 </figcaption></figure><p>The left aperture will create in the far field an amplitude distribution <span class="math notranslate nohighlight">\(U_h\)</span>, while the inverse aperture on the right will cause an amplitude <span class="math notranslate nohighlight">\(U_d\)</span>. If we combine both amplitudes in the far field, we obtain a total amplitude distribution</p>
 <div class="math notranslate nohighlight">
@@ -447,7 +470,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <p>The far field diffraction intensity distribution of complementary apertures is the same.</p>
 </div>
 <p>The images below show an experimental demonstration of Babinet’s principle on a slit and a wire.</p>
-<figure><p><img alt="b7429602be374118bb3adf80ee41a1eb" class="no-scaled-link" src="../../_images/babinet_exp.png" style="width: 90%;" /></p>
+<figure><p><img alt="351e99cb2778499cb33fc48a46677b88" class="no-scaled-link" src="../../_images/babinet_exp.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Babinet’s principle demonstrated experimentally on a slit (left) and a wire (right).</p>
 </figcaption></figure><script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -463,7 +486,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Nov 13, 2022.
+      <span class="lastupdated">Last updated on Nov 16, 2022.
       </span></p>
   </div>
 
