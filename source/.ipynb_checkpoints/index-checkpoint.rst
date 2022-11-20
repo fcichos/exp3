@@ -139,6 +139,17 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L11/Diffraction Grating.ipynb
    notebooks/L11/Fresnel Zones.ipynb  
    
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 12:
+   
+   lectures/L12/overview_12.rst 
+   notebooks/L12/Diffraction Grating.ipynb
+   notebooks/L12/Fresnel Zones.ipynb     
+   notebooks/L12/Diffraction Integral.ipynb     
+   notebooks/L12/Electromagnetic Optics.ipynb
+   notebooks/L12/Polarization of EM Waves.ipynb     
+   
 Indices and tables
 ==================
 

@@ -1,9 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 12 we explore the diffraction of light including Huygens principle. We study the diffraction of a slit, a circular aperture as well as the resolution of a microscope.
-
-
+In Lecture 12 we explore consequences of the diffraction of light, e.g. how diffraction can lead to focussing using a Fresnel Zone plate. We will generalize diffraction and start to enter the field of electromagnetic waves.
 
 
 .. image:: img/slides.png
