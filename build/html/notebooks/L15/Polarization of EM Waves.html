@@ -365,13 +365,30 @@
 <li class="toctree-l2"><a class="reference internal" href="../L13/Speed%20of%20Light%20Measurements.html#Phase-Method">Phase Method</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../L13/EM%20Waves%20in%20Matter.html">Electromagnetic Waves in Matter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L13/EM%20Waves%20in%20Matter.html#Dielectrics-Polarization">Dielectrics Polarization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L13/EM%20Waves%20in%20Matter.html#Magnetization">Magnetization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L13/EM%20Waves%20in%20Matter.html#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 14:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L14/overview_14.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html">Electromagnetic Waves in Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Dielectrics-Polarization">Dielectrics Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Magnetization">Magnetization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../L13/EM%20Waves%20in%20Matter.html#Wave-Equation-and-Refractive-Index">Wave Equation and Refractive Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Wave-Equation-and-Refractive-Index">Wave Equation and Refractive Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Dispersion%20and%20Absorption.html">Dispersion and Absorption</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Dispersion%20and%20Absorption.html#Absorption">Absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Dispersion%20and%20Absorption.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -457,7 +474,7 @@ physics. The polarization of light is also important for interence as two wave o
 <div class="section" id="Linearly-Polarized-Waves">
 <h2>Linearly Polarized Waves<a class="headerlink" href="#Linearly-Polarized-Waves" title="Permalink to this headline">¶</a></h2>
 <p>Light is called linearly polarized if the electric field vector oscillates in a single plane during light propagation. The picture below, which we introduced earlier for a plane wave shows such a linearly polarized wave.</p>
-<figure><p><img alt="fa4c655f7a114e02b7bb6b3cede6ce18" class="no-scaled-link" src="../../_images/plane_wave3.png" style="width: 90%;" /></p>
+<figure><p><img alt="10b48334e0ad48b58a0a845150853b13" class="no-scaled-link" src="../../_images/plane_wave3.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Plane wave propagating along the y-direction, with the electric field oscillating along the z-direction.</p>
 </figcaption></figure><p>We can generalize this description a bit more. Our plane wave shall be given by</p>
 <div class="math notranslate nohighlight">
@@ -475,7 +492,7 @@ E_{y}&=&E_{0y}e^{i(\omega t-kz)}\\
 <div class="section" id="Circularly-Polarized-Waves">
 <h2>Circularly Polarized Waves<a class="headerlink" href="#Circularly-Polarized-Waves" title="Permalink to this headline">¶</a></h2>
 <p>In circular polarized light, the end of the electric field vector describe a circle around the propagation direction. This means the elecric field vector is rotating around the propagation direction.</p>
-<figure><p><img alt="0f8a44ce9885471da4a606f8f193e7ba" class="no-scaled-link" src="../../_images/circular2.png" style="width: 90%;" /></p>
+<figure><p><img alt="110feeb4a8c54a4b884e6cba8731379d" class="no-scaled-link" src="../../_images/circular2.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> (Left) Left and right (right) circularly polarized waves. The vectors display the direction of the electric field only for clarity. The left circularly polarized wave has a counter-clockwise rotating field vector with respect to the propagation direction. The right circularly polarized a clockwise rotating field vector.</p>
 </figcaption></figure><p>To obtain circularly polarized light we can consider our two polarization components again but with an additional phase shift of <span class="math notranslate nohighlight">\(\pm\pi/2\)</span> of one of the components (here the y-component) together with constraining the amplitude of the components to teh same value.</p>
 <p><span class="math">\begin{eqnarray}
@@ -496,7 +513,7 @@ E_{y}&=&E_{0y}e^{i(\omega t-kz+\delta_2)}\\
 E_{0y}&\neq&E_{0x}
 \end{eqnarray}</span></p>
 <p>which means that the end point of the electric field vector describes an ellipse around the propagation direction.</p>
-<figure><p><img alt="4eb083a9e8d34e2f93fb45dd825a98e2" class="no-scaled-link" src="../../_images/elliptical2.png" style="width: 60%;" /></p>
+<figure><p><img alt="09bb8efda3e34bea82d5156a995eafba" class="no-scaled-link" src="../../_images/elliptical2.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Elliptical polarization.</p>
 </figcaption></figure><p>The ellipse is then described by</p>
 <div class="math notranslate nohighlight">
@@ -514,7 +531,7 @@ E_{0y}&\neq&E_{0x}
 <h2>Analyzing Polarization<a class="headerlink" href="#Analyzing-Polarization" title="Permalink to this headline">¶</a></h2>
 <p>The polarization state of light is analyzed with the help of polarizers. These can be thin polymeric films, where the order of the polymer chain in the film provides a preferential axis or polarizers can also be made of other birefringent materials like Mica, for example. Those materials are called anisotropic as they have a refractive index, which depends on the direction of the electric field in the material. Depending on the design of the polarizer, you may generate linearly polarized light,
 you may change the polarization direction or even create circularly polarized light. We will cover aisotropic materials in a later lecture.</p>
-<figure><p><img alt="a6fe7e7dbc844bfd8ca65e37ece8eeb3" class="no-scaled-link" src="../../_images/lin_pol2.png" style="width: 40%;" /></p>
+<figure><p><img alt="9e52664edab441ed9587ae363b6e3029" class="no-scaled-link" src="../../_images/lin_pol2.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Sketch for the action of a linear polarizer. The red arrow is the electric field vector of the incident wave.<span class="math notranslate nohighlight">\(\hat{e}_p\)</span> denotes the orientation of the polarizer and the blue arrow the transmitted electric field.</p>
 </figcaption></figure><p>In mathematical terms, a <em>linear polarizer</em> projects the electric field vector to a specific direction. If <span class="math notranslate nohighlight">\(\vec{E}(z,t)\)</span> is our electric field vector of the electromagnetic wave and <span class="math notranslate nohighlight">\(\hat{e}_{p}\)</span> is the unit vector in the polarization direction the resulting electric field after the light has trasmitted through the polarizer is given by</p>
 <div class="math notranslate nohighlight">
@@ -526,7 +543,7 @@ you may change the polarization direction or even create circularly polarized li
 <div class="math notranslate nohighlight">
 \[I_t=I_0\cos^2(\theta)\]</div>
 <p>If follows that the intensity drops to <span class="math notranslate nohighlight">\(50\)</span> %, when we adjust an angle of <span class="math notranslate nohighlight">\(45^{\circ}\)</span>. As soon as we have a lecture in the lecture hall again, we will have a look at some nice demonstrations that illustrate Malu’s law similar to the picture below.</p>
-<figure><p><img alt="dbc0958b190d4000b58b129cbec2c550" class="no-scaled-link" src="../../_images/malus2.png" style="width: 90%;" /></p>
+<figure><p><img alt="7c0b9528f14544b69b3af008c9a823ca" class="no-scaled-link" src="../../_images/malus2.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Demonstration of Malu’s law using two or three polarizers.</p>
 </figcaption></figure><script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -543,7 +560,7 @@ you may change the polarization direction or even create circularly polarized li
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Nov 26, 2022.
+      <span class="lastupdated">Last updated on Nov 30, 2022.
       </span></p>
   </div>
 

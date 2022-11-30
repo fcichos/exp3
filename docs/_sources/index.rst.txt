@@ -158,7 +158,15 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L13/Polarization of EM Waves.ipynb
    notebooks/L13/Energy Transport.ipynb
    notebooks/L13/Speed of Light Measurements.ipynb
-   notebooks/L13/EM Waves in Matter.ipynb
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 14:
+   
+   lectures/L14/overview_14.rst 
+   notebooks/L14/EM Waves in Matter.ipynb
+   notebooks/L14/Dispersion and Absorption.ipynb
+   notebooks/L14/Reflection and Refraction.ipynb
 
 Indices and tables
 ==================
