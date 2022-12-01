@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 14 we explore the diffraction integral and the discrimination between Fresnel and Fraunhofer diffraction. We also start with Electromagnetic Optics.
+In Lecture 14 we explore electromagnetic waves in dielectric matter.
 
 
 
