@@ -392,6 +392,37 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 15:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L15/overview_15.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L15/Dispersion%20and%20Absorption.html">Dispersion and Absorption</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Dispersion%20and%20Absorption.html#Absorption">Absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Dispersion%20and%20Absorption.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L15/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Intensities-of-Reflected-and-Transmitted-Waves">Intensities of Reflected and Transmitted Waves</a></li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -462,7 +493,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>In the last section about Fresnel zones and the zone plate we have considered how different path contribute to the intensity at a point on the optical axis. We would like to generalize this idea to an integral formulation allowing us to calculate any kind of diffraction pattern.</p>
-<figure><p><img alt="9c2ea73d585447869e4f6b96af6b79d6" class="no-scaled-link" src="../../_images/sketch1.png" style="width: 80%;" /></p>
+<figure><p><img alt="bb7db3b6858943b48505b6cb18e6ca6b" class="no-scaled-link" src="../../_images/sketch1.png" style="width: 80%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction integral.</p>
 </figcaption></figure><p>Assume we have a light source <span class="math notranslate nohighlight">\(S\)</span> as in the image above, which sends out a spherical wave (does not need to be a spherical wave). The spatial amplitude of this wave at the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> at a tiny aperture element <span class="math notranslate nohighlight">\(d\sigma\)</span></p>
 <div class="math notranslate nohighlight">
@@ -512,10 +543,10 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 \[U(x^{\prime},y^{\prime},z_0)=i\frac{e^{-ikz_0}}{\lambda z_0} e^{-\frac{ik}{2z_0}(x^{\prime 2}+y^{\prime 2})}
 \iint U_{s}(x,y)
 e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
-<figure><p><img alt="c3d0675ef65c48b0a87e0b5646dc3604" class="no-scaled-link" src="../../_images/near_far_field1.png" style="width: 90%;" /></p>
+<figure><p><img alt="c135463413f7456f88b455c4056bfee0" class="no-scaled-link" src="../../_images/near_far_field1.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction pattern of a slit in the near field (Fresnel diffraction, left) and the far field (Fraunhofer diffraction, right).</p>
 </figcaption></figure><p>While these formulas provide the mathematical tools, we may obtain a more intuitive idea about the different approximation in the following way. Consider the image below, where we would like to know about the diffraction intensity of a slit of width <span class="math notranslate nohighlight">\(b\)</span> at the optical axis at a distance <span class="math notranslate nohighlight">\(D\)</span>.</p>
-<figure><p><img alt="3bea3dd5baa04b07819a5292d0e4f16e" class="no-scaled-link" src="../../_images/diffraction1.png" style="width: 55%;" /></p>
+<figure><p><img alt="8ed8737ab9fe4f3ab1acfd891a9259e1" class="no-scaled-link" src="../../_images/diffraction1.png" style="width: 55%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Illustration of the importance of additional geometrical path length difference for the discrimination of Fresnel (near-field) and Fraunhofer (far-field) diffraction.</p>
 </figcaption></figure><p>The waves from the center of the slit and the edge have to travel towards that point a different pathlength, whcih we may calculate to</p>
 <p><span class="math">\begin{eqnarray}
@@ -546,7 +577,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <div class="section" id="Babinet’s-Principle">
 <h2>Babinet’s Principle<a class="headerlink" href="#Babinet’s-Principle" title="Permalink to this headline">¶</a></h2>
 <p>The above considerations of diffraction have some intruiging consequence. Consider the two apertures in the image below.</p>
-<figure><p><img alt="7197e495f0724efa8a70fd4c2909d23c" class="no-scaled-link" src="../../_images/babinet1.png" style="width: 60%;" /></p>
+<figure><p><img alt="1bbc9209b31043edb7d64ecca2ce3ba7" class="no-scaled-link" src="../../_images/babinet1.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Two complementary apertures, which have the same diffraction pattern in the far field.</p>
 </figcaption></figure><p>The left aperture will create in the far field an amplitude distribution <span class="math notranslate nohighlight">\(U_h\)</span>, while the inverse aperture on the right will cause an amplitude <span class="math notranslate nohighlight">\(U_d\)</span>. If we combine both amplitudes in the far field, we obtain a total amplitude distribution</p>
 <div class="math notranslate nohighlight">
@@ -563,7 +594,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <p>The far field diffraction intensity distribution of complementary apertures is the same.</p>
 </div>
 <p>The images below show an experimental demonstration of Babinet’s principle on a slit and a wire.</p>
-<figure><p><img alt="619d4cdaae20443bb5c3898dd9aa551d" class="no-scaled-link" src="../../_images/babinet_exp1.png" style="width: 90%;" /></p>
+<figure><p><img alt="d1e86774638f42be82e0001b51378928" class="no-scaled-link" src="../../_images/babinet_exp1.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Babinet’s principle demonstrated experimentally on a slit (left) and a wire (right).</p>
 </figcaption></figure><script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -579,7 +610,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Dec 01, 2022.
+      <span class="lastupdated">Last updated on Dec 02, 2022.
       </span></p>
   </div>
 

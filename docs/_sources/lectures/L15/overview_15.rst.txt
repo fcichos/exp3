@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 15 we explore the polarization of electromagnetic waves and their energy and momentum transport.
+In Lecture 15 we will discuss the dispersion, absorption. We will introduce reflection and refraction and derive the Fresnel equations and discuss their meaning. We will have a look at more complex materials that are birefringent and at metals.
 
 
 

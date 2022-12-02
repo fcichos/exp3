@@ -167,6 +167,15 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L14/EM Waves in Matter.ipynb
    notebooks/L14/Dispersion and Absorption.ipynb
    notebooks/L14/Reflection and Refraction.ipynb
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 15:
+   
+   lectures/L15/overview_15.rst 
+   notebooks/L15/Dispersion and Absorption.ipynb
+   notebooks/L15/Reflection and Refraction.ipynb   
+   notebooks/L15/Fresnel Equations.ipynb
 
 Indices and tables
 ==================
