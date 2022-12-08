@@ -177,6 +177,16 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L15/Reflection and Refraction.ipynb   
    notebooks/L15/Fresnel Equations.ipynb
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 16:
+   
+   lectures/L16/overview_16.rst 
+   lectures/L16/Fresnel Equations.ipynb
+   lectures/L16/Anisotropic Materials.ipynb
+   lectures/L17/Metals.ipynb
+
 Indices and tables
 ==================
 

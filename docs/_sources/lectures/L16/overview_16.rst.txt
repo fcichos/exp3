@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 16 we have a look at the polarization of matter by electric field, the origin of the refractive index and the wave equation in linear dielectric matter.
+In Lecture 16 we have a look at the consequences of the Fresnel equation and anisotropic materials.
 
 
 
