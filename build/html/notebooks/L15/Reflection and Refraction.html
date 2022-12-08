@@ -428,6 +428,37 @@
 <p class="caption" role="heading"><span class="caption-text">Lecture 16:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L16/overview_16.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Intensities-of-Reflected-and-Transmitted-Waves">Intensities of Reflected and Transmitted Waves</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Metals.html">Metals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Metals.html#Drude-Model">Drude Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Metals.html#Dielectric-function">Dielectric function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Metals.html#Conductivity">Conductivity</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -500,7 +531,7 @@ figcaption {
 }
 </style><p>Before we have a look at the behavior of electromagnetic waves at boundaries, we would like to setup the stage for those consideraations. For this purpose we need to define the geometry we are referring to and also have a look at the electric fields (and magnetic fields) that will be present. The sketch below shows the wavevectors of the incident <span class="math notranslate nohighlight">\(\vec{k}_I\)</span>, reflected <span class="math notranslate nohighlight">\(\vec{k}_R\)</span> and transmitted <span class="math notranslate nohighlight">\(\vec{k}_T\)</span> waves in the two materials with the refractive indices <span class="math notranslate nohighlight">\(n_1\)</span> and
 <span class="math notranslate nohighlight">\(n_2\)</span>.</p>
-<figure><p><img alt="843720002151406fb4062997e0258d1d" class="no-scaled-link" src="../../_images/setup_k1.png" style="width: 40%;" /></p>
+<figure><p><img alt="662a87eddb994a269c0f5e714ff89bbb" class="no-scaled-link" src="../../_images/setup_k1.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>These wavevectors are connected to the following plane waves, we will consider. We will first assume that these three waves have different frequencies as well, even though we may guess that they have the same as they all stem from the incident wave.</p>
 <div class="math notranslate nohighlight">
@@ -518,13 +549,13 @@ figcaption {
 <li><p><strong>s-polarized light:</strong> electric field is perpendicular to the plane of incidence, also called transverse electric (TE)</p></li>
 </ul>
 <p>This is sketched in the image below.</p>
-<figure><p><img alt="2c651ed6856e4132a1926fba935ab3d1" class="no-scaled-link" src="../../_images/pol_decomp1.png" style="width: 70%;" /></p>
+<figure><p><img alt="4b04b947242f4aa184eb19ddb2807dda" class="no-scaled-link" src="../../_images/pol_decomp1.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>To apply the boundary conditions, we will further need to split thesse polarisation vectors into components, which are <strong>parallel</strong> (<span class="math notranslate nohighlight">\(||\)</span>) or <strong>perpendicular</strong> (<span class="math notranslate nohighlight">\(\perp\)</span>) to the interface. This is required as we will have boundary conditions for the electric and magnetic fields either parallel or perpendicular to the interface. The s-polarisation, for example, has an electric field, which is always parallel to the interface, while the p-polarization comprises both components.</p>
 <div class="section" id="Boundary-Condition">
 <h2>Boundary Condition<a class="headerlink" href="#Boundary-Condition" title="Permalink to this headline">¶</a></h2>
 <p>The boundary conditions fo rthe electric or magnetic field passing an interface are derived from the Maxwell equations. As I assume you have don this already in the electro- and magnetostatics lectures, I will only resume shortly here.</p>
-<figure><p><img alt="10827c153e02405f9a9864a0d4fc85a8" class="no-scaled-link" src="../../_images/boundary1.png" style="width: 70%;" /></p>
+<figure><p><img alt="53fdb18a43f04c62a3cb4ec56db1007a" class="no-scaled-link" src="../../_images/boundary1.png" style="width: 70%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>Let us take the divergence of the displacement field <span class="math notranslate nohighlight">\(\nabla \cdot \vec{D}=\rho_f\)</span> which is equal to the density of free charges. When integrating both sides over the volume</p>
 <div class="math notranslate nohighlight">
@@ -563,7 +594,7 @@ figcaption {
 <div class="section" id="Frequency-and-Wavevector-Matching">
 <h3>Frequency and Wavevector Matching<a class="headerlink" href="#Frequency-and-Wavevector-Matching" title="Permalink to this headline">¶</a></h3>
 <p>Recalling the above formulas for the incident, reflected and transmitted plane waves, we can explicitely write down the components of the wavevectors of the three waves in our cordinate system</p>
-<figure><p><img alt="d311a9194857496db83dc68a091942c1" class="no-scaled-link" src="../../_images/coordinates1.png" style="width: 40%;" /></p>
+<figure><p><img alt="10e6ed054f6245608f78a91c5f36fc1b" class="no-scaled-link" src="../../_images/coordinates1.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong></p>
 </figcaption></figure><p>According to that drawing, we have</p>
 <p><span class="math">\begin{eqnarray}
