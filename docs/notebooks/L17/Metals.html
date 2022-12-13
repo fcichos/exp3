@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fresnel Equations &mdash; Experimental Physics 3 1 documentation</title>
+  <title>Metals &mdash; Experimental Physics 3 1 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/./xtheme_overrides.css" type="text/css" />
@@ -444,13 +444,13 @@
 <p class="caption" role="heading"><span class="caption-text">Lecture 17:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L17/overview_17.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L17/Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Optical-Activity">Optical Activity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Faraday-Effect">Faraday Effect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Anisotropic%20Materials.html#Optical-Activity">Optical Activity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Anisotropic%20Materials.html#Faraday-Effect">Faraday Effect</a></li>
 </ul>
 </li>
 </ul>
@@ -471,9 +471,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Fresnel Equations</li>
+      <li>Metals</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L18/Fresnel Equations.ipynb" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L17/Metals.ipynb" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -506,11 +506,11 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id3"><span class="problematic" id="id4">`/home/lectures/exp3/source/notebooks/L18/Fresnel Equations.ipynb`_</span></a>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L18/Fresnel Equations.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L17/Metals.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L17/Metals.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<div class="section" id="Fresnel-Equations">
-<h1>Fresnel Equations<a class="headerlink" href="#Fresnel-Equations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Metals">
+<h1>Metals<a class="headerlink" href="#Metals" title="Permalink to this headline">¶</a></h1>
 <style>
 figure {
   border: 1px #cccccc solid;
@@ -525,218 +525,64 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style><p>In the last lecture, we have discussed the mathcing of the frequency and the wavevector at an interface between the two materials. We no also need to have a look at the matching of the electric field amplitudes at the boundaries.</p>
-<div class="section" id="Reflection">
-<h2>Reflection<a class="headerlink" href="#Reflection" title="Permalink to this headline">¶</a></h2>
-<p><strong>s-polarized light</strong></p>
-<p>We would first like to have a look at light that is polarized perpendicular to the incident plane - so-called spolarized light. According to our previous definition, s-polarized light is directed along the y-axis of our coordinate system. The incident light amplitude is therefore written as</p>
+</style><p>Metals have free charges, which modify the propagation of light. Their influence is large and gives metals their characteristic reflection and color. In this case, we have to include the free charge density <span class="math notranslate nohighlight">\(\rho_f\)</span> and the current density <span class="math notranslate nohighlight">\(\vec{j}\)</span> in the Maxwell equations and derive the wave equation accordingly. Instead of modifying the wave equation, we would like to go a different way here. We would like to derive the dielectric function for metals based on a microscopic
+description, which is only approximate but captures some basic features.</p>
+<div class="section" id="Drude-Model">
+<h2>Drude Model<a class="headerlink" href="#Drude-Model" title="Permalink to this headline">¶</a></h2>
+<p>The model we would like to put forward is the Drude model. It considers the motion of a charge in the electromagnetic field of a wave. As compared to our previous attempts on bound electrons in atoms, there is no direct restoring force for the free charges in the metal. The equation of motion therefore looks as</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_I=E_I\hat{e}_y\]</div>
-<p>This electric field vector is perpendicular to the plane of incidence. With this polarization the reflected and the refracted electric field also have to have this polarizations and thus</p>
+\[m_e\frac{d^2\vec{r}}{dt^2}+m_e\Gamma \frac{d\vec{r}}{dt}=e\vec{E}_0 e^{i\omega t}\]</div>
+<p>Here, the coefficient <span class="math notranslate nohighlight">\(\Gamma\)</span> is given by</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_R=E_{R}\hat{e}_y\]</div>
-<p>and</p>
+\[\Gamma=\frac{v_f}{l}=\frac{1}{\tau}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_f\)</span> is the so-called Fermi energy and <span class="math notranslate nohighlight">\(l\)</span> is the mean free path electrons travel before colliding with a lattice site inside the metal. To obtain an expression for the refractive index, we use again the ansatz</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_T=E_{T}\hat{e}_y\]</div>
-<p>From this it also follows that at the boundary, the incident and the reflected field must be the same as the transmitted field in our matching condition. This is due to the fact that s-polarized light it always parallel to the interface.</p>
+\[\vec{r}=\vec{r}_0 e^{i\omega t}\]</div>
+<p>from which we obtain an expression for <span class="math notranslate nohighlight">\(\vec{r}_0\)</span>. With his solution we can again calculate the polarization density and finally also the dielectric function</p>
 <div class="math notranslate nohighlight">
-\[E_I+E_R=E_T
-\tag{matching}\]</div>
-<p>The magnetic field lies then in the plane of incidence as it is perpendicular to <span class="math notranslate nohighlight">\(\vec{k}_I\)</span> and <span class="math notranslate nohighlight">\(\vec{E}_I\)</span>. It has components parallel <span class="math notranslate nohighlight">\(||\)</span> and perpendicular <span class="math notranslate nohighlight">\(\perp\)</span> to the interface. The tangential components as well as the perpendicular ones are conserved so we can write for the tangential ones</p>
+\[\epsilon_r(\omega)=n^2=1-\frac{\omega_p^2}{\omega^2-i\Gamma \omega}\]</div>
+<p>with</p>
 <div class="math notranslate nohighlight">
-\[B_I\cos(\theta_I)-B_R\cos(\theta_R)=B_T\cos(\theta_T)\]</div>
-<p>Given the fact that</p>
+\[\omega_p=\sqrt{\frac{Ne^2}{\epsilon_0 m}}\]</div>
+<p>which is called the <strong>plasma frequency</strong>. It is a characteristic for each metal, since the density of free charges in the metal enters the equation. It is located in the UV region of the electromagnetic spectrum.</p>
+<div class="section" id="Dielectric-function">
+<h3>Dielectric function<a class="headerlink" href="#Dielectric-function" title="Permalink to this headline">¶</a></h3>
+<p>With our previous definition of the complex refractive index we may now analyze the result of the dielectric function in terms of the Drude model. Using</p>
 <div class="math notranslate nohighlight">
-\[\vec{B}=\frac{1}{v}(\hat{v}\times \vec{E})\]</div>
-<p>and that all three vectors are orthogonal we can use the relation <span class="math notranslate nohighlight">\(B=E/v\)</span> for the magnetic and electric field amplitudes and <span class="math notranslate nohighlight">\(\theta_I=\theta_R\)</span> to obtain</p>
+\[n=n_r-i\kappa\]</div>
+<p>the dielectric function, which is the square of the refractive index, is given by</p>
 <div class="math notranslate nohighlight">
-\[\frac{E_I-E_r}{v_1}\cos(\theta_I)=\frac{E_T}{v_2}\cos(\theta_T)\]</div>
-<p>With the help of the condition <em>matching</em> above we can replace the transmitted electric field <span class="math notranslate nohighlight">\(E_T\)</span> and using <span class="math notranslate nohighlight">\(v_1=c/n_1\)</span> and <span class="math notranslate nohighlight">\(v_2=c/n_2\)</span> we finally find</p>
+\[n^2=n_r^2-\kappa^2-2i n_r \kappa=\epsilon^{\prime}+i\epsilon^{\prime\prime}\]</div>
+<p>We can therefore relatex the real part</p>
 <div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_1\cos(\theta_I)-n_2\cos(\theta_T)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=r_s\]</div>
-<p>This is the <strong>Fresnel coefficient for the reflection of s-polarized light</strong> <span class="math notranslate nohighlight">\(r_s\)</span>. If we replace not the transmitted but the refletec electric field in the formula above, we may obtain the <strong>Fresnel coefficient for the transmission of s-polarized light</strong> <span class="math notranslate nohighlight">\(t_s\)</span></p>
+\[\epsilon^{\prime}=n_r^2-\kappa^2=1-\frac{\tau^2 (\omega^2-\omega_p^2)}{1+\omega^2\tau^2}\]</div>
+<p>and the imaginary part</p>
 <div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=t_s\]</div>
-<p><strong>p-polarized light</strong></p>
-<p>If the electric field is parallel to the plane of incidence, the we need to split it into parallel <span class="math notranslate nohighlight">\(||\)</span> and perpendicular <span class="math notranslate nohighlight">\(\perp\)</span> components. The incident field may be written as</p>
-<div class="math notranslate nohighlight">
-\[\vec{E}_I=-E_I\sin(\theta_I)\hat{e}_x+E_I\cos(\theta_I)\hat{e}_z\]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{e}_z\)</span> and <span class="math notranslate nohighlight">\(\hat{e}_x\)</span> are the unit vectors in the z- and x-direction, respectively. The first term is the normal component to the boundary and the second the parallel component. We may pick our the parallel part, for which we know that the electric field is just continuous across the interface.</p>
-<div class="math notranslate nohighlight">
-\[E_I\cos(\theta_I)+E_R\cos(\theta_R)=E_T\cos(\theta_T)\]</div>
-<p>Now the magnetic field is perpendicular to the plane of incidence and we may write</p>
-<div class="math notranslate nohighlight">
-\[B_I-B_R=B_T\]</div>
-<p>for the matching condition of the magnetic field. From this follows that</p>
-<div class="math notranslate nohighlight">
-\[\frac{E_I-E_R}{v_1}=\frac{E_T}{v_2}\]</div>
-<p>We may now replace again the transmitted field, which results finally in the <strong>Fresnel coefficient for the reflection of p-polarized light</strong> <span class="math notranslate nohighlight">\(r_p\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_2\cos(\theta_I)-n_1\cos(\theta_T)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=r_p\]</div>
-<p>Finally, we may also do the same for the <strong>Fresnel coefficient of the transmission of p-polarized light</strong> <span class="math notranslate nohighlight">\(t_p\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=t_p\]</div>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Fresnel Equations</strong></p>
-<p>The Fresnel equations give the relations for the amplitude of the transmitted and reflected electric fields to the incident electric field amplitude as a function of the angle of incident and the light polarization.</p>
-<p><strong>s-polarization</strong></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_1\cos(\theta_I)-n_2\cos(\theta_T)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=r_s
-\tag{Fresnel Coefficient $r_s$}\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=t_s
-\tag{Fresnel Coefficient $t_s$}\]</div>
-<p><strong>p-polarization</strong></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_2\cos(\theta_I)-n_1\cos(\theta_T)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=r_p
-\tag{Fresnel Coefficient $r_p$}\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=t_p
-\tag{Fresnel Coefficient $t_p$}\]</div>
+\[\epsilon^{\prime\prime}=2n_r\kappa=\frac{\omega_p^2\tau}{\omega(1+\omega^2\tau^2)}\]</div>
+<p>of the dielectric function <span class="math notranslate nohighlight">\(\epsilon=\epsilon^{\prime}+i\epsilon^{\prime\prime}\)</span> to the refractive index components.</p>
+<figure><p><img alt="37e8d7fb7b8147dc8bdc129bcd1910f8" class="no-scaled-link" src="../../_images/drude_dielectric2.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Real (left) and imaginary part (right) of the dielectric function according to the Drude model. The dashed line in the left plot corresponds to the plasma frequency. The calculations are for Gold.</p>
+</figcaption></figure><p>The figure above shows the dielectric function for Gold as determined from the parameters <span class="math notranslate nohighlight">\(\omega_{p}=13.8\times 10^{15}\, \rm{s}^{-1}\)</span> and <span class="math notranslate nohighlight">\(\Gamma=1.075\times 10^{14}\, \rm{s}^{-1}\)</span>. The real value of the dielectric function is negative over the whole visible range stating that there is no propagating wave inside the matal. It just becomes positive below the plasma frequency. The imaginary part increases continuously with the wavelength.</p>
 </div>
-<div class="section" id="Air-to-Glass">
-<h3>Air to Glass<a class="headerlink" href="#Air-to-Glass" title="Permalink to this headline">¶</a></h3>
-<p>Lets discuss the results we obtained with the help of specifc examples. We will consider the interface between air (<span class="math notranslate nohighlight">\(n_1=1\)</span>) and glass (<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) and vary the angle of incidence. The transmission angle can the be obtained from Snell’s law <span class="math notranslate nohighlight">\(n_1\sin(\theta_I)=n_2\sin(\theta_T)\)</span>. Besides the Frensel coefficients, we plot also the phase. This phase gives us an idea about possible phase changes upon reflection and refraction. We have previously assume for example, that under normal
-incidence we obtain a phase jump of <span class="math notranslate nohighlight">\(\pi\)</span> upon reflection when coming from air to glass. This is something we may check now.</p>
-<p>To do so, we just represent the complex Fresnel coefficients as <span class="math notranslate nohighlight">\(r_s=|r_s|e^{i\phi}\)</span></p>
-<figure><p><img alt="6834f1acf3bc4339827e31095ff6c29d" class="no-scaled-link" src="../../_images/reflection_air_glass2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an air(<span class="math notranslate nohighlight">\(n_1=1\)</span>)/glass(<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) interface.</p>
-</figcaption></figure><p>The above graph displays the reflection coefficients <span class="math notranslate nohighlight">\(r_s,r_p\)</span> as a function of the angle of incidence. The value of <span class="math notranslate nohighlight">\(r_s\)</span> is negative for the whole range indicating the there is a phase jump by an angle of <span class="math notranslate nohighlight">\(\pi\)</span> as we assumed already in the thin film interference section. This phase jump is also confirmed in the second plot on the right. Note that that reflection coefficient for the parallel polarization <span class="math notranslate nohighlight">\(r_p\)</span> is positive up to an angle of about <span class="math notranslate nohighlight">\(56^{\circ}\)</span>. This
-also means that there is no phase jump for this component up to this angle. Beyond this angle we find also a phase jump of <span class="math notranslate nohighlight">\(\phi\)</span>. Note that normal incidence <span class="math notranslate nohighlight">\(\theta_I=0\)</span> is a special point, where all incident electric field are tangential to the interface. So also <span class="math notranslate nohighlight">\(r_p\)</span> will be negative at that point and for this incident angle there is no plane of incidence definition.</p>
-<p>The special angle where the <span class="math notranslate nohighlight">\(r_p=0\)</span> is called the <strong>Brewster Angle</strong>. It is special since at this angle of incidence unpolarized light will be turned into completely s-polarized light in reflection. This also means that you can get rid of a reflection from an air/glass interface, when observing this interface with a linear polarizer.</p>
-<figure><p><img alt="4104898cefd3419a9fbb2bbf1a441fbe" class="no-scaled-link" src="../../_images/Brewster2.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Reflections observed with linear polarizer.</p>
-</figcaption></figure><p>Following the Fresnel formula for <span class="math notranslate nohighlight">\(r_p\)</span>, the reflection coefficient becomes zero when <span class="math notranslate nohighlight">\(n_2\cos(\theta_I)=n_1\cos(\theta_T)\)</span>. Using Snells law as well, we find that</p>
+<div class="section" id="Conductivity">
+<h3>Conductivity<a class="headerlink" href="#Conductivity" title="Permalink to this headline">¶</a></h3>
+<p>Als we calculate the position <span class="math notranslate nohighlight">\(\vec{r}\)</span> of the electrons in the oscillating electric field, we may also obtain its velocity, which helps us to calculate a new quantity, which is the conductivity <span class="math notranslate nohighlight">\(\sigma\)</span> of the metal. This conductivity will be frequency dependent as well as the charges will not follow the electric field oscillations in the same way at different frequencies. The conductivity is following from Ohm’s law, which is given by</p>
 <div class="math notranslate nohighlight">
-\[\theta_I+\theta_T=\frac{\pi}{2}\]</div>
-<p>and thus the following definition for the Brewster angle (<span class="math notranslate nohighlight">\(\theta_B\)</span>)</p>
+\[\vec{j}=\sigma \vec{E}=N e \vec{v}\]</div>
+<p>where we explicity wrote the current density on the right side. Following this relation, the conductivity is obtained as</p>
 <div class="math notranslate nohighlight">
-\[\tan(\theta_B)=\frac{n_2}{n_1}\]</div>
-<p>The Brewster angle arises from the fact that the dipoles which are induced by the incident light in the material oscillate along the direction of the reflected light. We will see later that dipoles do not emit light along its oscillation direction and hence, there is no reflection for the in plane polarization.</p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Brewster Angle</strong></p>
-<p>The Brewster angle is the angle under which the reflection of light with a polarization in the plane of incidence vanishes.</p>
+\[\sigma=\epsilon_0 \omega_p^2\frac{\tau(1+i\omega\tau)}{1+\omega^2\tau^2}\]</div>
+<p>from the Drude model and we may express the real and imaginary parts of the dielectric function also in relation to the conductivity by</p>
 <div class="math notranslate nohighlight">
-\[\tan(\theta_B)=\frac{n_2}{n_1}\]</div>
-</div>
-<p><strong>Brewsster Pyramid</strong></p>
-<figure><p><img alt="ef7efc4dd9cb462b8f72f94e25729230" class="no-scaled-link" src="notebooks/L18/img/brewster_exp1.png" style="width: 40%;" /> <img alt="166b603744b2435f8f6f0ad5fe8f8d87" class="no-scaled-link" src="notebooks/L18/img/brewster_exp2.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Reflections from a pyramid observed with linear polarizer. The pyramid sides are arranged at an angle, which corresponds to the Brewster angle. If polarized light in a certain direction is falling on the pyramid faces, the reflection disappears.</p>
-</figcaption></figure><p><strong>Reflection Removal</strong></p>
-<figure><p><img alt="70732489bafb4e658e74f6e459bf3758" class="no-scaled-link" src="../../_images/brewster2.gif" style="width: 50%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Reflections from surfaces which are observed under an angle are often partially polarized such that the observation with the help of a polarizer (e.g. in photography), can greatly reduce the highlights from reflections and make objects behind windows visible.</p>
-</figcaption></figure></div>
-<div class="section" id="Glass-to-Air">
-<h3>Glass to Air<a class="headerlink" href="#Glass-to-Air" title="Permalink to this headline">¶</a></h3>
-<p>If we invert the order of the materials and have light incindent to a glass/air interface we observe a new effect in the <strong>total internal reflection of light</strong>. First of all the p-polarization obtains now a phase shift by <span class="math notranslate nohighlight">\(pi\)</span> up to the Brewster angle, which is now at <span class="math notranslate nohighlight">\(33^{\circ}\)</span>, when it gets back in phase with the incident light. The s-polarized light has no phase jump at the interface, yet both components reach a magnitude of <span class="math notranslate nohighlight">\(1\)</span> at the critical angle of total internal
-reflection <span class="math notranslate nohighlight">\(\theta_C\)</span>. Starting from this incident angle, all light is reflected by the glass/air interface. As we know from the geometrical optics, the angle of total internal reflection is obtained when the transmission angle becomes <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p>
+\[\epsilon^{\prime}=1-\frac{\mathcal{R}(\sigma)\tau}{\epsilon_0}\]</div>
 <div class="math notranslate nohighlight">
-\[\sin(\theta_C)=\frac{n_2}{n_1}
-\tag{$n_2&lt;n_1$}\]</div>
-<p>For the glass/air interface as shown below, this total internal reflection occurs for an angle <span class="math notranslate nohighlight">\(\theta_C=41.8^{\circ}\)</span>. While the magnitude of the reflections coefficient is then <span class="math notranslate nohighlight">\(1\)</span>, the phase of the reflected light changes continuously from <span class="math notranslate nohighlight">\(0^{\circ}\)</span> to <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p>
-<figure><p><img alt="f96b7dade9974f1c94ee7380378c55f8" class="no-scaled-link" src="../../_images/reflection_glass_air2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an glass (<span class="math notranslate nohighlight">\(n_1=1.5\)</span>) /air (<span class="math notranslate nohighlight">\(n_2=1\)</span>) interface.</p>
-</figcaption></figure><p>We will investigate the transmitted light in the case of total internal reflection below in the transmission section. You will see in the images below also, that the on the reflection side a standing interference pattern is observed, due to the superposition of incident and reflected wave.</p>
-<figure><p><img alt="82482f8392d442358ef8b6604d5bb43e" class="no-scaled-link" src="../../_images/tir_exp12.png" style="width: 60%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Total internal reflection of microwaves by a prism.</p>
-</figcaption></figure></div>
-</div>
-<div class="section" id="Transmission">
-<h2>Transmission<a class="headerlink" href="#Transmission" title="Permalink to this headline">¶</a></h2>
-<p>As compared to the reflection, the transmission of light is more or less boring.</p>
-<div class="section" id="id1">
-<h3>Air to Glass<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>The transmission of light from air to glass only changes weakly the intensity, except for large angles of incidence. Also the phase angle is not changed at all upon transmission.</p>
-<figure><p><img alt="02e7a900c9cf434c8a5bb49c772b73cf" class="no-scaled-link" src="../../_images/transmission_air_glass2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an air(<span class="math notranslate nohighlight">\(n_1=1\)</span>)/glass(<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) interface.</p>
-</figcaption></figure></div>
-<div class="section" id="id2">
-<h3>Glass to Air<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>The situation, however, becomes a bit more interesting the the case of the transmission of light from glass to air. The first thing we notice here is that the Fresnel coefficients for transmission <span class="math notranslate nohighlight">\(t_s,t_p\)</span> are both bigger than one and even grow to larger values at the edge of total internal reflection. This seems to say that the amplitude of the electric field that is transmitted is bigger than the one incident. This is in fact true, but does not violate energy conservation, but is rather
-resulting from the changed speed of light in the glass. We will have a closer look at the intensities down below.</p>
-<figure><p><img alt="3c28d9e7c7da432a9344a1ed185b3e4e" class="no-scaled-link" src="../../_images/transmission_glass_air2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an glass (<span class="math notranslate nohighlight">\(n_1=1.5\)</span>) /air (<span class="math notranslate nohighlight">\(n_2=1\)</span>) interface.</p>
-</figcaption></figure><p>Another thing that is occuring but not directly visible is the electric field amplitude in the region directly behind the glass interface in air. Even though all of the light is reflected, this does not mean that no electric field may exist on the transmission side. In fact, an electric field is present and will decay in amplitude exponentially. To see what is happing directly behind the interface we</p>
-<p>What is interesting for the total internal reflection is now the electric field that exists on the side, where usually the transmission would go. Here is our coordinate system again such that we can have a look at the wavevectors in the different regions.</p>
-<figure><p><img alt="da193a6f371b41d6ab7960c0c8caa708" class="no-scaled-link" src="../../_images/coordinates4.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Coordinate system for wave at interfaces.</p>
-</figcaption></figure><p>The wavevector in the transmission region is given by</p>
-<div class="math notranslate nohighlight">
-\[\vec{k}_T=k_{Tx} \hat{e}_x+k_{Tz} \hat{e}_z\]</div>
-<p>Accordining to the condition that the tangential component of the wavevector is conserved we can write down</p>
-<div class="math notranslate nohighlight">
-\[k_{Iz}=\vec{k}_I\cdot \hat{e}_z=\vec{k}_T\cdot \hat{e}_z=k_{Tz}=\frac{\omega}{v_1}\sin(\theta_I)\hat{e}_z\]</div>
-<p>where <span class="math notranslate nohighlight">\(\omega\)</span> is the frequency of light and <span class="math notranslate nohighlight">\(v_1\)</span> the phase velocity in medium 1, which is in this case glass. Besides the tangential component of the wavevector we can also calculate the magnitude square of the wavevector that is transmitted, which is</p>
-<div class="math notranslate nohighlight">
-\[|\vec{k}_T|^2=\frac{\omega^2}{v_2^2}\]</div>
-<p>Since the wavevector is in the x-z plane we may calculate the x-component from</p>
-<p><span class="math">\begin{eqnarray}
-\vec{k}_T\cdot \hat{e}_x&=&\pm \sqrt{|\vec{k}_T|^2-(\vec{k}_T\cdot \hat{e}_z)^2}\\
-&=&\pm \frac{\omega}{v_2}\sqrt{1-\frac{v_2^2\sin^2(\theta_I)}{v_1^2}}\\
-&=&\pm \frac{\omega}{v_2}\sqrt{1-\frac{n_1^2\sin^2(\theta_I)}{n_2^2}}
-\end{eqnarray}</span></p>
-<p>The last equation will yield a negative value under the square root</p>
-<div class="math notranslate nohighlight">
-\[\frac{n_1}{n_2}\sin(\theta_I)&gt;1\]</div>
-<p>which is in fact the region, where total internal reflection occurs. If this is the case, the transmitted wavevector along the x-direction will be imaginary and we may write</p>
-<div class="math notranslate nohighlight">
-\[k_{Tx}=\vec{k}_T\cdot \hat{e}_x=\pm i \frac{\omega}{v_2}\alpha\]</div>
-<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the given by</p>
-<div class="math notranslate nohighlight">
-\[\alpha=\sqrt{\frac{n_1^2\sin^2(\theta_I)}{n_2^2}-1}\]</div>
-<p>and is a positive number due to a little trick taking the negative value of the previous square root term. We may now use this wavevector with the x- and the z-component and insert that in our plane wave, which would be propagating in the transmission region (here air).</p>
-<div class="math notranslate nohighlight">
-\[\vec{E}_{\rm trans}=\vec{E}_T e^{i(\omega t -k_{Tx}x-k_{Tz}z)}\]</div>
-<p>Inserting the results for the components of the wavevector obtained above yields</p>
-<div class="math notranslate nohighlight">
-\[\vec{E}_{\rm trans}=\vec{E}_T e^{i(\omega t -n_1 k_0\sin(\theta_I) z)}e^{-n_2k_0 \alpha x}\]</div>
-<p>The imaginary -xcomponent of the wavevector is creating a real valued factor for the amplitude of the electric field in the transmission region. The electric field in this region is decaying exponentially with the distance <span class="math notranslate nohighlight">\(x\)</span> from the interface. Yet, the field is only osciallting along the interface but not in the x-direction. Such an exponentially decaying field without oscialltion is called <strong>evanescent wave</strong>. Equivalent exponential decays do also exist in quantum mechanics, however,
-they concern in this case the decay of the probability to find a particle inside a region.</p>
-<p>The image below shows the electric field (left) and the intensity (right) for the total internal reflection at a boundary between glass and air, which the exponential decay is nicely visible for the electric field. To calculate the intensity, we would have to calculate the Poynting vector. As it turns our, the Pyonting vector is zero in the transmission region and hence there is no energy flow in the transmission region. Nevertheless, there is a time oscillating electric field and we may
-calculate the magnitude square of the electric field decay, which is shown in the right figure.</p>
-<figure><p><img alt="b686c1f2ba9547a7ad5b6255b8f8c836" class="no-scaled-link" src="../../_images/tir12.png" style="width: 60%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Total internal reflection at a glass/air interface (at <span class="math notranslate nohighlight">\(z=0\)</span>). The left image shows the electric field amplitude, the right image the square magnitude of the electric field amplitude.</p>
-</figcaption></figure><p>To gain a bit more insight into the lengthscale on which the electric field is decaying, we may have a look at the prefactor in the above exponential term. This prefactor denotes an inverse length scale, i.e.</p>
-<div class="math notranslate nohighlight">
-\[\delta=\frac{1}{n_2k_0 \alpha}\]</div>
-<p>and measures the distance on which the electric field decayed to <span class="math notranslate nohighlight">\(1/e\)</span>. The plot below shows that the decay length for the electric field amplitude quickly drops with increasing incident angle</p>
-<figure><p><img alt="24a419ff2eaf4788899db94bd476905b" class="no-scaled-link" src="../../_images/decay_length2.png" style="width: 50%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Decay length of the electric field amplitude in the transmission region for total internal reflection at a glass/air interface with a wavelength of 532 nm.</p>
-</figcaption></figure><p>The evanescent field in the transmission region can be converted back into a propagating wave if a second interface is brought in the range of the evanescent wave. This can be demonstrated easily with microwaves, since their wavelength is long.</p>
-<figure><p><img alt="74afe60e339b476388072df3a6941af6" class="no-scaled-link" src="../../_images/tir_exp22.png" style="width: 60%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Total internal reflection of microwaves by a prism (left).</p>
-</figcaption></figure><p>In the visible region, this decay length is on the order of a feww 100 nanometers. Evanescent field play an important role for optical microscopy for example, where they are either used in total internal reflection fluorescence microscopy (TIRF), exciting only a tiny sheet above an interface and thus reducing fluorescence background. Other techniques use the evanescent field on tiny tips as sources for excitation of fluorescence or scattering (NSOM). Evanescent waves are also used for coupling
-light into small mechanical resonators to cool them to extremely low temperatures (opto-mechanics).</p>
-</div>
-</div>
-<div class="section" id="Intensities-of-Reflected-and-Transmitted-Waves">
-<h2>Intensities of Reflected and Transmitted Waves<a class="headerlink" href="#Intensities-of-Reflected-and-Transmitted-Waves" title="Permalink to this headline">¶</a></h2>
-<p>So far we calculated the Fresnel coefficients, from which we may obtain the electric and magnetic field amplitudes of the reflected and transmitted waves. We now want to calculate the intensities. The Poynting vector of a wave is given by</p>
-<div class="math notranslate nohighlight">
-\[\vec{S}=\vec{E}\times \vec{H}=\frac{1}{\mu_r \mu_0}(\vec{E}\times \vec{B})=\epsilon_r \epsilon_0 v^2(\vec{E}\times \vec{B})\]</div>
-<p>The magnitude of the Pyonting vector is therefore given by</p>
-<div class="math notranslate nohighlight">
-\[S=\epsilon_r\epsilon_0 v|\vec{E}|^2=n^2\epsilon_0 c|\vec{E}|^2\]</div>
-<p>The intensity is then obtained from the integration over one cycly of oscialltion, which finally results in</p>
-<div class="math notranslate nohighlight">
-\[I=\frac{1}{2}n\epsilon_0 c|\vec{E}|^2\]</div>
-<p>With the help of this equation it can be seend that the reflected intensity and the incident intensity contain the same refractive index. thus only the magnitude square of the Fresnel coefficients for the reflection is importnat giving</p>
-<div class="math notranslate nohighlight">
-\[R=|r|^2\]</div>
-<p>which is valid for either s- or p-polarization.</p>
-<p>For the transmission we have to be a bit more careful as first of all the light propagates with different phase velocities (refractivi index <span class="math notranslate nohighlight">\(n\)</span>) and the cross section of a beam changes due to the refraction at the interface as shown in the image below.</p>
-<figure><p><img alt="429188db692444c9ab43f7b9c717cc53" class="no-scaled-link" src="../../_images/tir_transmission2.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Relevant areas for the calculation of the intensities from the transmission Fresnel coefficients.</p>
-</figcaption></figure><p>The two cross-section behave as</p>
-<div class="math notranslate nohighlight">
-\[\frac{A''}{A}=\frac{\cos(\theta_T)}{\cos(\theta_I)}\]</div>
-<p>The intensities directly contain the refractive index and this</p>
-<div class="math notranslate nohighlight">
-\[T=\frac{n_2\cos(\theta_T)}{n_1\cos(\theta_I)}|t|^2\]</div>
-<p>As energy conservation is valid, the reflected energy and the transmitted energy have to sum up to the incident energy in nonabsorbing media, which states that</p>
-<div class="math notranslate nohighlight">
-\[R+T=1
-\tag{nonabsorbing media}\]</div>
+\[\epsilon^{\prime\prime}=\frac{\mathcal{Im}(\sigma)}{\epsilon_0 \omega^2 \tau}\]</div>
+<p>which readily tells us, that we obtain information on the conductivity at high frequencies from optical measurements.</p>
+<figure><p><img alt="5678c7c776294b7cb0d392f06ed0ff1a" class="no-scaled-link" src="../../_images/gold_np2.png" style="width: 70%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Backscattering and transmission through a 65 nm gold nanoparticle solution. The backscattering is green due to the surface plasmon resonance of the conduction band electrons, while the transission is red, since the green light is removed by scattering.</p>
+</figcaption></figure><script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 

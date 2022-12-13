@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fresnel Equations &mdash; Experimental Physics 3 1 documentation</title>
+  <title>Anisotropic Materials &mdash; Experimental Physics 3 1 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/./xtheme_overrides.css" type="text/css" />
@@ -22,7 +22,8 @@
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Lecture Contents" href="../../lectures/L17/overview_17.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -442,15 +443,15 @@
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Lecture 17:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L17/overview_17.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L17/Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Optical-Activity">Optical Activity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Faraday-Effect">Faraday Effect</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Half-Wave-Plate">Half Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Optical-Activity">Optical Activity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Faraday-Effect">Faraday Effect</a></li>
 </ul>
 </li>
 </ul>
@@ -471,9 +472,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Fresnel Equations</li>
+      <li>Anisotropic Materials</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L18/Fresnel Equations.ipynb" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L17/Anisotropic Materials.ipynb" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -483,6 +484,252 @@
              
   
 <style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -506,11 +753,11 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id3"><span class="problematic" id="id4">`/home/lectures/exp3/source/notebooks/L18/Fresnel Equations.ipynb`_</span></a>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L18/Fresnel Equations.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L17/Anisotropic Materials.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L17/Anisotropic Materials.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<div class="section" id="Fresnel-Equations">
-<h1>Fresnel Equations<a class="headerlink" href="#Fresnel-Equations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Anisotropic-Materials">
+<h1>Anisotropic Materials<a class="headerlink" href="#Anisotropic-Materials" title="Permalink to this headline">¶</a></h1>
 <style>
 figure {
   border: 1px #cccccc solid;
@@ -525,225 +772,187 @@ figcaption {
   color: black;
   padding: 2px;
 }
-</style><p>In the last lecture, we have discussed the mathcing of the frequency and the wavevector at an interface between the two materials. We no also need to have a look at the matching of the electric field amplitudes at the boundaries.</p>
-<div class="section" id="Reflection">
-<h2>Reflection<a class="headerlink" href="#Reflection" title="Permalink to this headline">¶</a></h2>
-<p><strong>s-polarized light</strong></p>
-<p>We would first like to have a look at light that is polarized perpendicular to the incident plane - so-called spolarized light. According to our previous definition, s-polarized light is directed along the y-axis of our coordinate system. The incident light amplitude is therefore written as</p>
+</style><div class="section" id="Light-propagation">
+<h2>Light propagation<a class="headerlink" href="#Light-propagation" title="Permalink to this headline">¶</a></h2>
+<p>So war we have only discussed isotropic materials, meaning that the speed of light was independent by the direction of light propagation in the material. Often, the light propagation is, however, not isotropic as the underlying materials have an anisotropic structure.</p>
+<figure><p><img alt="f0ba3d35dcbd4715909183bcdda3cf58" class="no-scaled-link" src="../../_images/anisotropy2.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Ethene molecules as an example for an anisotropically polarizable object. The red arrows denote the electric field directions.</p>
+</figcaption></figure><p>Just consider the above molecule <span class="math notranslate nohighlight">\(C_2H_4\)</span> (Ethen), where the two carbon atoms are bound by a double bond. In an external electric field aligned along that bond, we certinly expect the electrons to be more easily displaced over a larger distance, when the field is aligned parallel to the double bond. The dipole induced will therefore depend on the orientation of molecule and electric field. We therefore need to express the electronic polarizability <span class="math notranslate nohighlight">\(\alpha\)</span> for the calculation of the
+dipole moment <span class="math notranslate nohighlight">\(\vec{p}=\alpha \vec{E}\)</span> as a tensor <span class="math notranslate nohighlight">\(\overleftrightarrow{a}\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_I=E_I\hat{e}_y\]</div>
-<p>This electric field vector is perpendicular to the plane of incidence. With this polarization the reflected and the refracted electric field also have to have this polarizations and thus</p>
+\[\begin{split}\overleftrightarrow{a}=
+\begin{pmatrix}
+\alpha_{11} &amp; \alpha_{12} &amp; \alpha_{13} \\
+\alpha_{21} &amp; \alpha_{22} &amp; \alpha_{23} \\
+\alpha_{31} &amp; \alpha_{32} &amp; \alpha_{33}
+\end{pmatrix}\end{split}\]</div>
+<p>Consequently also the susceptibility <span class="math notranslate nohighlight">\(\chi\)</span>, the dielectric function <span class="math notranslate nohighlight">\(\epsilon_r\)</span> and refractive index <span class="math notranslate nohighlight">\(n\)</span> will be tensors in anisotropic materials. The entries of these tensors now depend on the choice of the coordinate system, since the polarisabilities are connected to the structures. Accordingly, there is also coordinate system in which the tensor becomes completely diagonal.</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_R=E_{R}\hat{e}_y\]</div>
-<p>and</p>
+\[\begin{split}\overleftrightarrow{\epsilon_r}=
+\begin{pmatrix}
+\epsilon_{11} &amp; 0 &amp; 0 \\
+0 &amp; \epsilon_{22} &amp; 0 \\
+0 &amp; 0 &amp; \epsilon_{33}
+\end{pmatrix}\end{split}\]</div>
+<p>This coordinate systems is the principle coordinate system of the tensor. The electric displacement field <span class="math notranslate nohighlight">\(\vec{D}\)</span> is related to the electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span> by</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_T=E_{T}\hat{e}_y\]</div>
-<p>From this it also follows that at the boundary, the incident and the reflected field must be the same as the transmitted field in our matching condition. This is due to the fact that s-polarized light it always parallel to the interface.</p>
+\[\vec{D}=\epsilon_0 \overleftrightarrow{\epsilon_r} \vec{E}\]</div>
+<p>and in the principle coordinate system of the tensor we obtain</p>
 <div class="math notranslate nohighlight">
-\[E_I+E_R=E_T
-\tag{matching}\]</div>
-<p>The magnetic field lies then in the plane of incidence as it is perpendicular to <span class="math notranslate nohighlight">\(\vec{k}_I\)</span> and <span class="math notranslate nohighlight">\(\vec{E}_I\)</span>. It has components parallel <span class="math notranslate nohighlight">\(||\)</span> and perpendicular <span class="math notranslate nohighlight">\(\perp\)</span> to the interface. The tangential components as well as the perpendicular ones are conserved so we can write for the tangential ones</p>
+\[\begin{split}\begin{pmatrix}
+D_1 \\
+D_2 \\
+D_3 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\epsilon_0\epsilon_{11} E_1\\
+\epsilon_0\epsilon_{22} E_2\\
+\epsilon_0\epsilon_{33} E_3\\
+\end{pmatrix}\end{split}\]</div>
+<p>From this it becomes evident, that the displacement field <span class="math notranslate nohighlight">\(\vec{D}\)</span> is not anymore parallel to the electric field <span class="math notranslate nohighlight">\(\vec{E}\)</span>. This also means now, that the wavevector <span class="math notranslate nohighlight">\(\vec{k}\)</span> is now perpendicular to the displacement field and not to the electric field. The magnetic field is still directed along the same direction and thus the Poynting vector is not parallel to the wavevector. Energy and phasefronts flow in different directions.The sketch below indicates the relations of the
+vectors.</p>
+<figure><p><img alt="0f2ec500acba41eea4d4d9dd1d23899d" class="no-scaled-link" src="../../_images/fields2.png" style="width: 35%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>The tensorial nature of the dielectric function has now consequences for the propagation of light. In general different symmetries are considered. If we have for example two of the diagonal elements be equal to each other</p>
 <div class="math notranslate nohighlight">
-\[B_I\cos(\theta_I)-B_R\cos(\theta_R)=B_T\cos(\theta_T)\]</div>
-<p>Given the fact that</p>
+\[\epsilon_{11}=\epsilon_{22}\neq\epsilon_{33}\]</div>
+<p>then we call the material <strong>uniaxial</strong>. The system has one optical axis. In case</p>
 <div class="math notranslate nohighlight">
-\[\vec{B}=\frac{1}{v}(\hat{v}\times \vec{E})\]</div>
-<p>and that all three vectors are orthogonal we can use the relation <span class="math notranslate nohighlight">\(B=E/v\)</span> for the magnetic and electric field amplitudes and <span class="math notranslate nohighlight">\(\theta_I=\theta_R\)</span> to obtain</p>
-<div class="math notranslate nohighlight">
-\[\frac{E_I-E_r}{v_1}\cos(\theta_I)=\frac{E_T}{v_2}\cos(\theta_T)\]</div>
-<p>With the help of the condition <em>matching</em> above we can replace the transmitted electric field <span class="math notranslate nohighlight">\(E_T\)</span> and using <span class="math notranslate nohighlight">\(v_1=c/n_1\)</span> and <span class="math notranslate nohighlight">\(v_2=c/n_2\)</span> we finally find</p>
-<div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_1\cos(\theta_I)-n_2\cos(\theta_T)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=r_s\]</div>
-<p>This is the <strong>Fresnel coefficient for the reflection of s-polarized light</strong> <span class="math notranslate nohighlight">\(r_s\)</span>. If we replace not the transmitted but the refletec electric field in the formula above, we may obtain the <strong>Fresnel coefficient for the transmission of s-polarized light</strong> <span class="math notranslate nohighlight">\(t_s\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=t_s\]</div>
-<p><strong>p-polarized light</strong></p>
-<p>If the electric field is parallel to the plane of incidence, the we need to split it into parallel <span class="math notranslate nohighlight">\(||\)</span> and perpendicular <span class="math notranslate nohighlight">\(\perp\)</span> components. The incident field may be written as</p>
-<div class="math notranslate nohighlight">
-\[\vec{E}_I=-E_I\sin(\theta_I)\hat{e}_x+E_I\cos(\theta_I)\hat{e}_z\]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{e}_z\)</span> and <span class="math notranslate nohighlight">\(\hat{e}_x\)</span> are the unit vectors in the z- and x-direction, respectively. The first term is the normal component to the boundary and the second the parallel component. We may pick our the parallel part, for which we know that the electric field is just continuous across the interface.</p>
-<div class="math notranslate nohighlight">
-\[E_I\cos(\theta_I)+E_R\cos(\theta_R)=E_T\cos(\theta_T)\]</div>
-<p>Now the magnetic field is perpendicular to the plane of incidence and we may write</p>
-<div class="math notranslate nohighlight">
-\[B_I-B_R=B_T\]</div>
-<p>for the matching condition of the magnetic field. From this follows that</p>
-<div class="math notranslate nohighlight">
-\[\frac{E_I-E_R}{v_1}=\frac{E_T}{v_2}\]</div>
-<p>We may now replace again the transmitted field, which results finally in the <strong>Fresnel coefficient for the reflection of p-polarized light</strong> <span class="math notranslate nohighlight">\(r_p\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_2\cos(\theta_I)-n_1\cos(\theta_T)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=r_p\]</div>
-<p>Finally, we may also do the same for the <strong>Fresnel coefficient of the transmission of p-polarized light</strong> <span class="math notranslate nohighlight">\(t_p\)</span></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=t_p\]</div>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Fresnel Equations</strong></p>
-<p>The Fresnel equations give the relations for the amplitude of the transmitted and reflected electric fields to the incident electric field amplitude as a function of the angle of incident and the light polarization.</p>
-<p><strong>s-polarization</strong></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_1\cos(\theta_I)-n_2\cos(\theta_T)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=r_s
-\tag{Fresnel Coefficient $r_s$}\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_I)+n_2\cos(\theta_T)}=t_s
-\tag{Fresnel Coefficient $t_s$}\]</div>
-<p><strong>p-polarization</strong></p>
-<div class="math notranslate nohighlight">
-\[\frac{E_R}{E_I}=\frac{n_2\cos(\theta_I)-n_1\cos(\theta_T)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=r_p
-\tag{Fresnel Coefficient $r_p$}\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{E_T}{E_I}=\frac{2n_1\cos(\theta_I)}{n_1\cos(\theta_T)+n_2\cos(\theta_I)}=t_p
-\tag{Fresnel Coefficient $t_p$}\]</div>
-</div>
-<div class="section" id="Air-to-Glass">
-<h3>Air to Glass<a class="headerlink" href="#Air-to-Glass" title="Permalink to this headline">¶</a></h3>
-<p>Lets discuss the results we obtained with the help of specifc examples. We will consider the interface between air (<span class="math notranslate nohighlight">\(n_1=1\)</span>) and glass (<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) and vary the angle of incidence. The transmission angle can the be obtained from Snell’s law <span class="math notranslate nohighlight">\(n_1\sin(\theta_I)=n_2\sin(\theta_T)\)</span>. Besides the Frensel coefficients, we plot also the phase. This phase gives us an idea about possible phase changes upon reflection and refraction. We have previously assume for example, that under normal
-incidence we obtain a phase jump of <span class="math notranslate nohighlight">\(\pi\)</span> upon reflection when coming from air to glass. This is something we may check now.</p>
-<p>To do so, we just represent the complex Fresnel coefficients as <span class="math notranslate nohighlight">\(r_s=|r_s|e^{i\phi}\)</span></p>
-<figure><p><img alt="6834f1acf3bc4339827e31095ff6c29d" class="no-scaled-link" src="../../_images/reflection_air_glass2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an air(<span class="math notranslate nohighlight">\(n_1=1\)</span>)/glass(<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) interface.</p>
-</figcaption></figure><p>The above graph displays the reflection coefficients <span class="math notranslate nohighlight">\(r_s,r_p\)</span> as a function of the angle of incidence. The value of <span class="math notranslate nohighlight">\(r_s\)</span> is negative for the whole range indicating the there is a phase jump by an angle of <span class="math notranslate nohighlight">\(\pi\)</span> as we assumed already in the thin film interference section. This phase jump is also confirmed in the second plot on the right. Note that that reflection coefficient for the parallel polarization <span class="math notranslate nohighlight">\(r_p\)</span> is positive up to an angle of about <span class="math notranslate nohighlight">\(56^{\circ}\)</span>. This
-also means that there is no phase jump for this component up to this angle. Beyond this angle we find also a phase jump of <span class="math notranslate nohighlight">\(\phi\)</span>. Note that normal incidence <span class="math notranslate nohighlight">\(\theta_I=0\)</span> is a special point, where all incident electric field are tangential to the interface. So also <span class="math notranslate nohighlight">\(r_p\)</span> will be negative at that point and for this incident angle there is no plane of incidence definition.</p>
-<p>The special angle where the <span class="math notranslate nohighlight">\(r_p=0\)</span> is called the <strong>Brewster Angle</strong>. It is special since at this angle of incidence unpolarized light will be turned into completely s-polarized light in reflection. This also means that you can get rid of a reflection from an air/glass interface, when observing this interface with a linear polarizer.</p>
-<figure><p><img alt="4104898cefd3419a9fbb2bbf1a441fbe" class="no-scaled-link" src="../../_images/Brewster2.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Reflections observed with linear polarizer.</p>
-</figcaption></figure><p>Following the Fresnel formula for <span class="math notranslate nohighlight">\(r_p\)</span>, the reflection coefficient becomes zero when <span class="math notranslate nohighlight">\(n_2\cos(\theta_I)=n_1\cos(\theta_T)\)</span>. Using Snells law as well, we find that</p>
-<div class="math notranslate nohighlight">
-\[\theta_I+\theta_T=\frac{\pi}{2}\]</div>
-<p>and thus the following definition for the Brewster angle (<span class="math notranslate nohighlight">\(\theta_B\)</span>)</p>
-<div class="math notranslate nohighlight">
-\[\tan(\theta_B)=\frac{n_2}{n_1}\]</div>
-<p>The Brewster angle arises from the fact that the dipoles which are induced by the incident light in the material oscillate along the direction of the reflected light. We will see later that dipoles do not emit light along its oscillation direction and hence, there is no reflection for the in plane polarization.</p>
-<div class="admonition note">
-<p class="admonition-title fa fa-exclamation-circle"><strong>Brewster Angle</strong></p>
-<p>The Brewster angle is the angle under which the reflection of light with a polarization in the plane of incidence vanishes.</p>
-<div class="math notranslate nohighlight">
-\[\tan(\theta_B)=\frac{n_2}{n_1}\]</div>
-</div>
-<p><strong>Brewsster Pyramid</strong></p>
-<figure><p><img alt="ef7efc4dd9cb462b8f72f94e25729230" class="no-scaled-link" src="notebooks/L18/img/brewster_exp1.png" style="width: 40%;" /> <img alt="166b603744b2435f8f6f0ad5fe8f8d87" class="no-scaled-link" src="notebooks/L18/img/brewster_exp2.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Reflections from a pyramid observed with linear polarizer. The pyramid sides are arranged at an angle, which corresponds to the Brewster angle. If polarized light in a certain direction is falling on the pyramid faces, the reflection disappears.</p>
-</figcaption></figure><p><strong>Reflection Removal</strong></p>
-<figure><p><img alt="70732489bafb4e658e74f6e459bf3758" class="no-scaled-link" src="../../_images/brewster2.gif" style="width: 50%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Reflections from surfaces which are observed under an angle are often partially polarized such that the observation with the help of a polarizer (e.g. in photography), can greatly reduce the highlights from reflections and make objects behind windows visible.</p>
-</figcaption></figure></div>
-<div class="section" id="Glass-to-Air">
-<h3>Glass to Air<a class="headerlink" href="#Glass-to-Air" title="Permalink to this headline">¶</a></h3>
-<p>If we invert the order of the materials and have light incindent to a glass/air interface we observe a new effect in the <strong>total internal reflection of light</strong>. First of all the p-polarization obtains now a phase shift by <span class="math notranslate nohighlight">\(pi\)</span> up to the Brewster angle, which is now at <span class="math notranslate nohighlight">\(33^{\circ}\)</span>, when it gets back in phase with the incident light. The s-polarized light has no phase jump at the interface, yet both components reach a magnitude of <span class="math notranslate nohighlight">\(1\)</span> at the critical angle of total internal
-reflection <span class="math notranslate nohighlight">\(\theta_C\)</span>. Starting from this incident angle, all light is reflected by the glass/air interface. As we know from the geometrical optics, the angle of total internal reflection is obtained when the transmission angle becomes <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\sin(\theta_C)=\frac{n_2}{n_1}
-\tag{$n_2&lt;n_1$}\]</div>
-<p>For the glass/air interface as shown below, this total internal reflection occurs for an angle <span class="math notranslate nohighlight">\(\theta_C=41.8^{\circ}\)</span>. While the magnitude of the reflections coefficient is then <span class="math notranslate nohighlight">\(1\)</span>, the phase of the reflected light changes continuously from <span class="math notranslate nohighlight">\(0^{\circ}\)</span> to <span class="math notranslate nohighlight">\(90^{\circ}\)</span>.</p>
-<figure><p><img alt="f96b7dade9974f1c94ee7380378c55f8" class="no-scaled-link" src="../../_images/reflection_glass_air2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the reflected light observed for the reflection at an glass (<span class="math notranslate nohighlight">\(n_1=1.5\)</span>) /air (<span class="math notranslate nohighlight">\(n_2=1\)</span>) interface.</p>
-</figcaption></figure><p>We will investigate the transmitted light in the case of total internal reflection below in the transmission section. You will see in the images below also, that the on the reflection side a standing interference pattern is observed, due to the superposition of incident and reflected wave.</p>
-<figure><p><img alt="82482f8392d442358ef8b6604d5bb43e" class="no-scaled-link" src="../../_images/tir_exp12.png" style="width: 60%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Total internal reflection of microwaves by a prism.</p>
-</figcaption></figure></div>
-</div>
-<div class="section" id="Transmission">
-<h2>Transmission<a class="headerlink" href="#Transmission" title="Permalink to this headline">¶</a></h2>
-<p>As compared to the reflection, the transmission of light is more or less boring.</p>
-<div class="section" id="id1">
-<h3>Air to Glass<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>The transmission of light from air to glass only changes weakly the intensity, except for large angles of incidence. Also the phase angle is not changed at all upon transmission.</p>
-<figure><p><img alt="02e7a900c9cf434c8a5bb49c772b73cf" class="no-scaled-link" src="../../_images/transmission_air_glass2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an air(<span class="math notranslate nohighlight">\(n_1=1\)</span>)/glass(<span class="math notranslate nohighlight">\(n_2=1.5\)</span>) interface.</p>
-</figcaption></figure></div>
-<div class="section" id="id2">
-<h3>Glass to Air<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>The situation, however, becomes a bit more interesting the the case of the transmission of light from glass to air. The first thing we notice here is that the Fresnel coefficients for transmission <span class="math notranslate nohighlight">\(t_s,t_p\)</span> are both bigger than one and even grow to larger values at the edge of total internal reflection. This seems to say that the amplitude of the electric field that is transmitted is bigger than the one incident. This is in fact true, but does not violate energy conservation, but is rather
-resulting from the changed speed of light in the glass. We will have a closer look at the intensities down below.</p>
-<figure><p><img alt="3c28d9e7c7da432a9344a1ed185b3e4e" class="no-scaled-link" src="../../_images/transmission_glass_air2.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Fresnel coefficients (left) and phase (right) of the transmitted light observed for the reflection at an glass (<span class="math notranslate nohighlight">\(n_1=1.5\)</span>) /air (<span class="math notranslate nohighlight">\(n_2=1\)</span>) interface.</p>
-</figcaption></figure><p>Another thing that is occuring but not directly visible is the electric field amplitude in the region directly behind the glass interface in air. Even though all of the light is reflected, this does not mean that no electric field may exist on the transmission side. In fact, an electric field is present and will decay in amplitude exponentially. To see what is happing directly behind the interface we</p>
-<p>What is interesting for the total internal reflection is now the electric field that exists on the side, where usually the transmission would go. Here is our coordinate system again such that we can have a look at the wavevectors in the different regions.</p>
-<figure><p><img alt="da193a6f371b41d6ab7960c0c8caa708" class="no-scaled-link" src="../../_images/coordinates4.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Coordinate system for wave at interfaces.</p>
-</figcaption></figure><p>The wavevector in the transmission region is given by</p>
-<div class="math notranslate nohighlight">
-\[\vec{k}_T=k_{Tx} \hat{e}_x+k_{Tz} \hat{e}_z\]</div>
-<p>Accordining to the condition that the tangential component of the wavevector is conserved we can write down</p>
-<div class="math notranslate nohighlight">
-\[k_{Iz}=\vec{k}_I\cdot \hat{e}_z=\vec{k}_T\cdot \hat{e}_z=k_{Tz}=\frac{\omega}{v_1}\sin(\theta_I)\hat{e}_z\]</div>
-<p>where <span class="math notranslate nohighlight">\(\omega\)</span> is the frequency of light and <span class="math notranslate nohighlight">\(v_1\)</span> the phase velocity in medium 1, which is in this case glass. Besides the tangential component of the wavevector we can also calculate the magnitude square of the wavevector that is transmitted, which is</p>
-<div class="math notranslate nohighlight">
-\[|\vec{k}_T|^2=\frac{\omega^2}{v_2^2}\]</div>
-<p>Since the wavevector is in the x-z plane we may calculate the x-component from</p>
+\[\epsilon_{11}\neq\epsilon_{22}\neq\epsilon_{33}\neq\epsilon_{11}\]</div>
+<p>we call the material <strong>biaxial</strong> and the material has two optical axes. We will have a look at the meaning of an optical axis a bit later.</p>
+<p>A tensor as the dielectric tensor (similar to the tensor of inertia) can be geometrically represented by an ellipsoid with three different half axes as depicted below. This can be done for the refractive index or the dielectric tensor. When doing so with the refractive index, we obtain an index ellipsoid, where the half-axes correspond to the three refractive indices <span class="math notranslate nohighlight">\(n_1=\sqrt{\epsilon_{11}}\)</span>, <span class="math notranslate nohighlight">\(n_2=\sqrt{\epsilon_{22}}\)</span> and <span class="math notranslate nohighlight">\(n_3=\sqrt{\epsilon_{33}}\)</span>.</p>
+<figure><p><img alt="9bf594ac4f54489a93fd477b5368b12a" class="no-scaled-link" src="../../_images/index_tensor2.png" style="width: 30%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>To find out the relevant refractive indices for a certain propagation direction on now undertakes the following steps:</p>
+<ul class="simple">
+<li><p>chose a direction of light propagation with the direction of the wavevector <span class="math notranslate nohighlight">\(\vec{k}\)</span></p></li>
+<li><p>construct a plane perpendicular to the wavevector</p></li>
+<li><p>take the intersection of this plane with the ellisoid, which is in general an ellipse</p></li>
+<li><p>the ellipse has a long and a short axis, which correspond to the direction of the so-called normal modes</p></li>
+<li><p>a <span class="math notranslate nohighlight">\(\vec{D}\)</span> field along those half-axes propages with the corresponding refractive index <span class="math notranslate nohighlight">\(n_o\)</span> (ordinary), <span class="math notranslate nohighlight">\(n_e\)</span> (extra_ordinary)</p></li>
+</ul>
+<p>An <strong>optical axis</strong> is now a propagation direction, for which the refractive index does not depend on the direction of the electric field. For a biaxial material, there are two distinct directions for a propagation, while there is only one for uniaxial.</p>
+<p>Considering now in more detail the propagation of light as a function of the direction of light propagation one obtains a dispersion relation (how the wavenumber depends on teh direction for a given frequency of light). This surface is the so-called <strong>k-surface</strong>, which in general consists of 2 sheets. This k-surface is obtained from Maxwells equations</p>
 <p><span class="math">\begin{eqnarray}
-\vec{k}_T\cdot \hat{e}_x&=&\pm \sqrt{|\vec{k}_T|^2-(\vec{k}_T\cdot \hat{e}_z)^2}\\
-&=&\pm \frac{\omega}{v_2}\sqrt{1-\frac{v_2^2\sin^2(\theta_I)}{v_1^2}}\\
-&=&\pm \frac{\omega}{v_2}\sqrt{1-\frac{n_1^2\sin^2(\theta_I)}{n_2^2}}
+\vec{k}\times \vec{H}& = &-\omega \vec{D}\\
+\vec{k}\times\vec{E}=\omega \mu_0 \vec{H}
 \end{eqnarray}</span></p>
-<p>The last equation will yield a negative value under the square root</p>
+<p>which leads to</p>
 <div class="math notranslate nohighlight">
-\[\frac{n_1}{n_2}\sin(\theta_I)&gt;1\]</div>
-<p>which is in fact the region, where total internal reflection occurs. If this is the case, the transmitted wavevector along the x-direction will be imaginary and we may write</p>
+\[\vec{k}\times(\vec{k}\times\vec{E})+\omega^2\mu_0 \epsilon_0 \overleftrightarrow{\epsilon_r} \vec{E}=0\]</div>
+<p>This equation leads to a system of equations for the components of the wavevector (<span class="math notranslate nohighlight">\(\vec{k}=\{k_1,k_2,k_3\}\)</span>) that define the k-surface for a given frequency.</p>
+<p>This k-surface has, for a uniaxial material, in the plane (here x-z plane) a circular and an elliptical shape, where the circular shape corresponds to the ordinary refractive index and the elliptical to the extra-ordinary refractive index. In the unixial case both surfaces intersect along the optical axis. The image below shows the situation for the situation of a uniaxial material.</p>
+<figure><p><img alt="55332654980543558ca5b05de005674c" class="no-scaled-link" src="../../_images/k-surface2.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong></p>
+</figcaption></figure><p>If we select now a specific direction of propagation for the light with the direction of <span class="math notranslate nohighlight">\(\vec{k}\)</span>, the intersections of the k-surface with the k-vector deliver the solutions for the refractive indices. From the figure above, it becomes obvious, that the electric field vector must be perpendicular to the plane in the case of the ordinary refractive index. Only in this case, the wavevector can be rotated in the above sketch such that the direction of the electric field does not change. If
+the electric field is within the plane of the above sketch, the field direction with respect to the crystal structure changes and therefore the refractive index changes.</p>
+<p>Therefore the <strong>extra-ordinary</strong> refractive index is valid for the p-polarization and the ordinary refractive index is valid for the <strong>s-polarization</strong>.</p>
+<figure><p><img alt="a754e4b4658148aea2b72cbadbe6c44a" class="no-scaled-link" src="../../_images/birefringence2.png" style="width: 55%;" /> <img alt="adb5a587c7254c3a854cc381d8897842" class="no-scaled-link" src="../../_images/birefringence_exp2.png" style="width: 37%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Birefringence.</p>
+</figcaption></figure><p>Let’s discuss the sketches above, which show the general case of <strong>birefringence</strong>. The image on the left side shows an interface between air on the bottom and the anisotropic material on the top. The wavevector is incident from below and is normal zo the surface. Its direction will intersect both k-surfaces and thereby select the ordinary refractive index and the extra-ordinary refractive index for the two different polarization directions. Both waves propgate in the same direction, so their
+wavefronts are perpendicular to the k-vectors as shown in the middle sketch. Yet, the Poynting vectors go in different direction. The Poynting vector, which points in the direction of energy propagation, is always perpendicular to the k-surface, since the k-surface is an isoenergy surface <em>(think about that for a moment)</em>. This means that the beam is split into two beams with parallel wavefronts as indicated. This phenomenon is called birefringence and separates two orthogonal polarizations into
+two beams as indicated.</p>
+<p>This effect is probably best visible, when you put a birefringent material like the common calcit crystal on a newpaper or book. You will immediately see the birefringence in the double images as in the figure above to the right.</p>
+<p>The different refractive index for both polarizations make those materials very suitable for the creating polarizing optical elements like beam splitters. A selection of different polarizing beam splitters is shown in the image below.</p>
+<figure><p><img alt="6abbbe6c55384eed9e082aaec6b08588" class="no-scaled-link" src="../../_images/polarizers2.png" style="width: 40%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Polarizing beam splitters.</p>
+</figcaption></figure><p>Birefringence is often observed in mechanically stressed materials like quickly cooled glasses or stretched polymer foils. The latter is demonstrated in the images below, where we used</p>
+<figure><p><img alt="2855f0f640734c61a5ac67afc23a364d" class="no-scaled-link" src="../../_images/christmas_tree2.png" style="width: 45%;" /> <img alt="28c73ddbeed14b6580023f53d6f39eb5" class="no-scaled-link" src="../../_images/tulip2.png" style="width: 45%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Scotch tape art. Scotch tape christmas tree and tulip between crossed polarizers showing their birefringent behavior.</p>
+</figcaption></figure></div>
+<div class="section" id="Wave-retarders">
+<h2>Wave retarders<a class="headerlink" href="#Wave-retarders" title="Permalink to this headline">¶</a></h2>
+<p>Anisotropic materials can now but cut in specific way, for example such that the optical axis is parallel to the interface as in the picture below. Under these circumstances at normal incidence both wavevectors and both Poynting vectors of the polarizations propagate along the same direction. Yet, the p-polarization has a lower phase velocity (long k-vector) than the s-polarization. If now the incident light has now elecric field components parallel and perpedicular to the optical axis which are
+of same amplitude, then one component of the incident polarization is delayed in its phase with respect to the other comonent.</p>
+<p>Let</p>
 <div class="math notranslate nohighlight">
-\[k_{Tx}=\vec{k}_T\cdot \hat{e}_x=\pm i \frac{\omega}{v_2}\alpha\]</div>
-<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the given by</p>
+\[\vec{E}=(E_{0x}\hat{e}_x +E_{0y}\hat{e}_y)e^{i(\omega t -k z)}\]</div>
+<p>be the incident electric field of the plane wave travelling along the z-direction with <span class="math notranslate nohighlight">\(E_{0x}=E_{0y}\)</span> and the optical axis aligned along the y-axis. Then each vector component of the wave travels with a different wavevector</p>
+<p><span class="math">\begin{eqnarray}
+E_x & = & E_{0x}e^{i(\omega t -n_e k_0 z)}\\
+E_y & = & E_{0y}e^{i(\omega t -n_o k_0 z)}
+\end{eqnarray}</span></p>
+<p>After a material of thickness <span class="math notranslate nohighlight">\(d\)</span> both components have accumulated a phase shift of</p>
 <div class="math notranslate nohighlight">
-\[\alpha=\sqrt{\frac{n_1^2\sin^2(\theta_I)}{n_2^2}-1}\]</div>
-<p>and is a positive number due to a little trick taking the negative value of the previous square root term. We may now use this wavevector with the x- and the z-component and insert that in our plane wave, which would be propagating in the transmission region (here air).</p>
+\[\Delta \phi=(n_e-n_o)k_0 d\]</div>
+<div class="section" id="Quarter-Wave-Plate">
+<h3>Quarter Wave Plate<a class="headerlink" href="#Quarter-Wave-Plate" title="Permalink to this headline">¶</a></h3>
+<figure><p><img alt="f0eff9f4b48c4c7099a1b436518a798f" class="no-scaled-link" src="../../_images/retarder2.png" style="width: 50%;" /> <img alt="3b85e7b560504a8481b7269d0a9d7d9b" class="no-scaled-link" src="../../_images/circ_pol2.png" style="width: 45%;" /></p>
+<figcaption><p><strong>Fig.:</strong> Sketch of the conditions for a wave retarder.</p>
+</figcaption></figure><p>If we design now a material of a certain thickness such that the phase shift is <span class="math notranslate nohighlight">\(\Delta \phi=\pi/2\)</span>, then the light exiting the material will be circularly polarized as in the sketch on the right side. The minimum thickness of the crystal is then</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_{\rm trans}=\vec{E}_T e^{i(\omega t -k_{Tx}x-k_{Tz}z)}\]</div>
-<p>Inserting the results for the components of the wavevector obtained above yields</p>
+\[d=\frac{\pi}{2}\frac{1}{k_0(n_e-n_o)}=\frac{\lambda}{4(n_e-n_o)}\]</div>
+<p>The crystal thickness is, however, not restricted to this minimal thickness, but to any thickness which creates a phase difference of <span class="math notranslate nohighlight">\(\pi/2\)</span>. Such an optical element which is generating a phase difference of <span class="math notranslate nohighlight">\(\pi/2\)</span> between the different electric field components with respect to the optical axis is called a <strong>Quarter Wave Plate</strong>, since the phase difference corresponds to a quarter wavelength.</p>
+<p>If the two elecric field components are not of equal amplitude, then a quarter wave plate will generate elliptically polarized light. Note that if you send circular polarization to a QWP, linearly polarized light will be created.</p>
+</div>
+<div class="section" id="Half-Wave-Plate">
+<h3>Half Wave Plate<a class="headerlink" href="#Half-Wave-Plate" title="Permalink to this headline">¶</a></h3>
+<p>The phase difference between the two elecric field components could also be adjusted to be half a wavelength of <span class="math notranslate nohighlight">\(\pi\)</span>. In this case, one of the components is flipped in its orientation with respect to the other. This is happening for the component perpendicular to the optical axis. If the incident electric field vectors makes an angle of <span class="math notranslate nohighlight">\(45^{°}\)</span> to the optical axis, the field vector after the half wave plate will be rotated by <span class="math notranslate nohighlight">\(90^{°}\)</span>. For any other angle of incidence, the
+angle between the incident and the outgoing linear polarization will correspond to twice the angle between the optical axis and the incident polarization.</p>
+</div>
+<div class="section" id="Optical-Activity">
+<h3>Optical Activity<a class="headerlink" href="#Optical-Activity" title="Permalink to this headline">¶</a></h3>
+<p>In addition to retarding the propagation of a particular polarization, there are materials that rotate the plane polarization for any arbitraty orientation. Such kind of materials are called <strong>opticallly active</strong>. If linear polarized light enters a layer of an optically active material, the plane of polarization is rotated about an angle</p>
 <div class="math notranslate nohighlight">
-\[\vec{E}_{\rm trans}=\vec{E}_T e^{i(\omega t -n_1 k_0\sin(\theta_I) z)}e^{-n_2k_0 \alpha x}\]</div>
-<p>The imaginary -xcomponent of the wavevector is creating a real valued factor for the amplitude of the electric field in the transmission region. The electric field in this region is decaying exponentially with the distance <span class="math notranslate nohighlight">\(x\)</span> from the interface. Yet, the field is only osciallting along the interface but not in the x-direction. Such an exponentially decaying field without oscialltion is called <strong>evanescent wave</strong>. Equivalent exponential decays do also exist in quantum mechanics, however,
-they concern in this case the decay of the probability to find a particle inside a region.</p>
-<p>The image below shows the electric field (left) and the intensity (right) for the total internal reflection at a boundary between glass and air, which the exponential decay is nicely visible for the electric field. To calculate the intensity, we would have to calculate the Poynting vector. As it turns our, the Pyonting vector is zero in the transmission region and hence there is no energy flow in the transmission region. Nevertheless, there is a time oscillating electric field and we may
-calculate the magnitude square of the electric field decay, which is shown in the right figure.</p>
-<figure><p><img alt="b686c1f2ba9547a7ad5b6255b8f8c836" class="no-scaled-link" src="../../_images/tir12.png" style="width: 60%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Total internal reflection at a glass/air interface (at <span class="math notranslate nohighlight">\(z=0\)</span>). The left image shows the electric field amplitude, the right image the square magnitude of the electric field amplitude.</p>
-</figcaption></figure><p>To gain a bit more insight into the lengthscale on which the electric field is decaying, we may have a look at the prefactor in the above exponential term. This prefactor denotes an inverse length scale, i.e.</p>
+\[\alpha = \alpha_s \cdot d\]</div>
+<p>with <span class="math notranslate nohighlight">\(d\)</span> being the layer thickness. The factor of proportionality <span class="math notranslate nohighlight">\(\alpha_s\)</span> is called specific rotation.</p>
+<p><strong>Figure</strong></p>
+<p>Among optically active substances one distinguishes between materials providing a positive or negative specific rotation. By definition the observer is watching against the direction of propation. If the polarization is rotated clockwise, the specific rotation is defined positive (<span class="math notranslate nohighlight">\(\alpha_s &gt; 0\)</span>) and the substance gets the index <span class="math notranslate nohighlight">\(+\)</span> or “d” (Latin: dexter, <em>dextrorotary</em>). If the polarization is rotated counterclockwise, the specific rotation is defined negative (<span class="math notranslate nohighlight">\(\alpha_s &lt; 0\)</span>)
+and the substance gets the index <span class="math notranslate nohighlight">\(-\)</span> or “l” (Latin: laevus, <em>levorotary</em>).</p>
+<p>The physical explaination for the rotation is based on treh specific symmetry of teh optically active material. Some materials like <em>Quartz</em> are only active in its solid form. Thus, being optically active depends on the symmetry of teh crytsal structure. There are naturally occuring right-handed (+, d) and left-handed (-, l) Quartz crystals. In liquid or gasous phase, however, optical activity of vanishs. Other substances like <em>sucrose</em> or <em>fructose</em> are optically active in solution. Therfore,
+the symmetry of those molecules gives rise to the rotation of he polarization.</p>
+<p>Without in-depth quantum mechaniscs, this phenomenon can be explained only qualitatively. Analogously to vibrations of electrons in homogenous media induced through the electric field of linear polarized waves, here one assumes an spiral motion of electrons along the direction of propagation. Indeed, the crystal structure of Quartz suggest such kind of concept, due to a spiral-like arrangment of oxygen and silicon atoms. A right-handed spiral for right-handed d-Quartz and a left-handed spiral
+for l-Quartz. Structures which exists in two mirrored forms are called <em>chiral</em> (Greek: <span class="math notranslate nohighlight">\(\chi \varepsilon \iota \rho\)</span>, hand).</p>
+<p>If one models a linear polarized wave as a superpostion of two circular polarized waves with opposite directions of rotation <span class="math">\begin{eqnarray}
+E^+ & = & \frac{1}{2} \left( E_{0,x} \hat{e}_x + i E_{0,y} \hat{e}_y \right) \mathrm{e}^{i \left(kz - \omega t \right)}\\
+E^- & = & \frac{1}{2} \left( E_{0,x} \hat{e}_x - i E_{0,y} \hat{e}_y \right) \mathrm{e}^{i \left(kz - \omega t \right)}
+\end{eqnarray}</span> and do both partial waves experiences different phase velocities <span class="math">\begin{eqnarray}
+v^+ & = & \frac{c}{n^+}\\
+v^- & = & \frac{c}{n^-2} \mathrm{,}
+\end{eqnarray}</span> then the resulting wave is still linear polarized but with a rotation about</p>
 <div class="math notranslate nohighlight">
-\[\delta=\frac{1}{n_2k_0 \alpha}\]</div>
-<p>and measures the distance on which the electric field decayed to <span class="math notranslate nohighlight">\(1/e\)</span>. The plot below shows that the decay length for the electric field amplitude quickly drops with increasing incident angle</p>
-<figure><p><img alt="24a419ff2eaf4788899db94bd476905b" class="no-scaled-link" src="../../_images/decay_length2.png" style="width: 50%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Decay length of the electric field amplitude in the transmission region for total internal reflection at a glass/air interface with a wavelength of 532 nm.</p>
-</figcaption></figure><p>The evanescent field in the transmission region can be converted back into a propagating wave if a second interface is brought in the range of the evanescent wave. This can be demonstrated easily with microwaves, since their wavelength is long.</p>
-<figure><p><img alt="74afe60e339b476388072df3a6941af6" class="no-scaled-link" src="../../_images/tir_exp22.png" style="width: 60%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Total internal reflection of microwaves by a prism (left).</p>
-</figcaption></figure><p>In the visible region, this decay length is on the order of a feww 100 nanometers. Evanescent field play an important role for optical microscopy for example, where they are either used in total internal reflection fluorescence microscopy (TIRF), exciting only a tiny sheet above an interface and thus reducing fluorescence background. Other techniques use the evanescent field on tiny tips as sources for excitation of fluorescence or scattering (NSOM). Evanescent waves are also used for coupling
-light into small mechanical resonators to cool them to extremely low temperatures (opto-mechanics).</p>
+\[\alpha = \frac{\pi}{\lambda_0} \left( n^- - n^+ \right) d \mathrm{.}\]</div>
+<p>The rotary power is then defined per uni length</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{\pi}{\lambda_0} \left( n^- - n^+ \right) \mathrm{.}\]</div>
+<p>In liquids, however, molecules are randomly oriented. In the case of an emerging electromagnetic wave, molecules are slightly oriented causing optical activity. If <span class="math notranslate nohighlight">\(+\)</span>- and <span class="math notranslate nohighlight">\(-\)</span>-active molecules are present to equal amount, the rotations counteract and teh liquid is not active.</p>
+<p>The correlation between left- and right-handed propgation and molecular struture is exploited for the spectroscopic technique of <em>Circular Dichroism</em>. The degree of rotation <span class="math notranslate nohighlight">\(\alpha\)</span> or the difference in absorption <span class="math notranslate nohighlight">\(\Delta A = A_L - A_R\)</span> is used as measure in order to determien the concentration of a solution of the secondary structure of proteins.</p>
+</div>
+<div class="section" id="Faraday-Effect">
+<h3>Faraday Effect<a class="headerlink" href="#Faraday-Effect" title="Permalink to this headline">¶</a></h3>
+<p>If a linear polarized wave propagates winth an magneto-optical material parallel or antiparallel to the magnetic field, polarization of the wave experiences a rotation. The reason for this effect lies in imaginary off-diaginal elements of the permativity tensor <span class="math notranslate nohighlight">\(\overleftrightarrow{\varepsilon}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\overleftrightarrow{\epsilon_r}=
+\begin{pmatrix}
+\epsilon^{\prime}_{11} &amp; \epsilon^{\prime}_{12} + i G_3 &amp; \epsilon^{\prime}_{13} + i G_y \\
+\epsilon^{\prime}_{21} - iG_3 &amp; \epsilon^{\prime}_{22} &amp; \epsilon^{\prime}_{23} + i G_x \\
+\epsilon^{\prime}_{31} + iG_2 &amp; \epsilon^{\prime}_{32} - i G_1 &amp; \epsilon^{\prime}_{33} \mathrm{,}\\
+\end{pmatrix}\end{split}\]</div>
+<p>which allows for reformulating tdielectric displacement can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[\vec{D} = \overleftrightarrow{\varepsilon} \vec{E} = \overleftrightarrow{\varepsilon^{\prime}} \vec{E} + \vec{E} \times \vec{G}\]</div>
+<p>with the</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="Intensities-of-Reflected-and-Transmitted-Waves">
-<h2>Intensities of Reflected and Transmitted Waves<a class="headerlink" href="#Intensities-of-Reflected-and-Transmitted-Waves" title="Permalink to this headline">¶</a></h2>
-<p>So far we calculated the Fresnel coefficients, from which we may obtain the electric and magnetic field amplitudes of the reflected and transmitted waves. We now want to calculate the intensities. The Poynting vector of a wave is given by</p>
-<div class="math notranslate nohighlight">
-\[\vec{S}=\vec{E}\times \vec{H}=\frac{1}{\mu_r \mu_0}(\vec{E}\times \vec{B})=\epsilon_r \epsilon_0 v^2(\vec{E}\times \vec{B})\]</div>
-<p>The magnitude of the Pyonting vector is therefore given by</p>
-<div class="math notranslate nohighlight">
-\[S=\epsilon_r\epsilon_0 v|\vec{E}|^2=n^2\epsilon_0 c|\vec{E}|^2\]</div>
-<p>The intensity is then obtained from the integration over one cycly of oscialltion, which finally results in</p>
-<div class="math notranslate nohighlight">
-\[I=\frac{1}{2}n\epsilon_0 c|\vec{E}|^2\]</div>
-<p>With the help of this equation it can be seend that the reflected intensity and the incident intensity contain the same refractive index. thus only the magnitude square of the Fresnel coefficients for the reflection is importnat giving</p>
-<div class="math notranslate nohighlight">
-\[R=|r|^2\]</div>
-<p>which is valid for either s- or p-polarization.</p>
-<p>For the transmission we have to be a bit more careful as first of all the light propagates with different phase velocities (refractivi index <span class="math notranslate nohighlight">\(n\)</span>) and the cross section of a beam changes due to the refraction at the interface as shown in the image below.</p>
-<figure><p><img alt="429188db692444c9ab43f7b9c717cc53" class="no-scaled-link" src="../../_images/tir_transmission2.png" style="width: 40%;" /></p>
-<figcaption><p><strong>Fig.:</strong> Relevant areas for the calculation of the intensities from the transmission Fresnel coefficients.</p>
-</figcaption></figure><p>The two cross-section behave as</p>
-<div class="math notranslate nohighlight">
-\[\frac{A''}{A}=\frac{\cos(\theta_T)}{\cos(\theta_I)}\]</div>
-<p>The intensities directly contain the refractive index and this</p>
-<div class="math notranslate nohighlight">
-\[T=\frac{n_2\cos(\theta_T)}{n_1\cos(\theta_I)}|t|^2\]</div>
-<p>As energy conservation is valid, the reflected energy and the transmitted energy have to sum up to the incident energy in nonabsorbing media, which states that</p>
-<div class="math notranslate nohighlight">
-\[R+T=1
-\tag{nonabsorbing media}\]</div>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../lectures/L17/overview_17.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
