@@ -189,8 +189,9 @@ The fields of optics and quantum mechanics are nowadays very active research are
    :maxdepth: 2
    :caption: Lecture 17:
    
-   lectures/L17/overview_17.rst 
+   lectures/L17/overview_17.rst q
    notebooks/L17/Anisotropic Materials.ipynb
+   
 
 
 Indices and tables
