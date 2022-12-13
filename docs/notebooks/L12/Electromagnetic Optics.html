@@ -428,6 +428,37 @@
 <p class="caption" role="heading"><span class="caption-text">Lecture 16:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L16/overview_16.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Intensities-of-Reflected-and-Transmitted-Waves">Intensities of Reflected and Transmitted Waves</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Metals.html">Metals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Metals.html#Drude-Model">Drude Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Metals.html#Dielectric-function">Dielectric function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Metals.html#Conductivity">Conductivity</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -500,13 +531,13 @@ figcaption {
 }
 </style><p>So far we have looked at the propagation of light in form of ray’s and its description in Gemoetrical Optics. We made a number of assumtions that we formulated as postulates. We then extended this description by a scalar Wave Optics description to allow for a description of interference and diffraction, which can not be explained by Geometrical Optics. Yet concepts of refractive index and light matter interaction and the intensities are not covered by Wave Optics and also just postulates.</p>
 <p>Electromagnetic Optics allows us to define these missing things. We discover light as electromagnetic waves consisting of electric and magnetic fields, which allow us to describe the interaction with charges in atoms, which is the foundation for the refractive index for example. The new thing is therefore the fact that we now need vectors for the description of light.</p>
-<figure><p><img alt="0eb7a558fad54a71ba43590cba0c149f" class="no-scaled-link" src="../../_images/vertical_pol.png" style="width: 45%;" /> <img alt="8b03411aeb294866bf1d537ddc45d7b7" class="no-scaled-link" src="../../_images/horizontal_pol.png" style="width: 45%;" /></p>
+<figure><p><img alt="18c034360b7f4057925b2d721fb64772" class="no-scaled-link" src="../../_images/vertical_pol.png" style="width: 45%;" /> <img alt="07b3b8c5e2054a4ca9c7eb200db6e808" class="no-scaled-link" src="../../_images/horizontal_pol.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Demonstration of the vectorial nature of the electric field of electromagnetic waves with the help of a set of polarizers. (Left) The firstr polarizer on the right side of the image is transmitting only the vertical direction of the electric field. This vertical direction of the electric field is probed with the second polarizer. If pointing in the same direction, the intensity as measured with the meter behind is maximum. When probed with a second polarizer along the horizontal
 direction (Right), the detector shows zero intensity.</p>
 </figcaption></figure><div class="section" id="Electromagnetic-Spectrum">
 <h2>Electromagnetic Spectrum<a class="headerlink" href="#Electromagnetic-Spectrum" title="Permalink to this headline">¶</a></h2>
 <p>While most of our considerations are focused on electromagnetic waves in the visible region, all of them can be generalized to other regions of the very broad electromagnetic spectrum. The electromagnetic theory is scale free, meaning that the same effect on specific structures occur also at smaller scales if you scale the wavelength of the wave.</p>
-<figure><p><img alt="d77f12befb584893b67e8109914ea8c8" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
+<figure><p><img alt="2bc28d63def84ad69b4c66a3ca6b99c5" class="no-scaled-link" src="../../_images/em_spectrum.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Electromagnetic wave spectrum with its specific regions.</p>
 </figcaption></figure><div class="section" id="Maxwell-Equations">
 <h3>Maxwell Equations<a class="headerlink" href="#Maxwell-Equations" title="Permalink to this headline">¶</a></h3>
@@ -590,7 +621,7 @@ equation, we can take the time derivative which yields for the electric field</p
 <div class="math notranslate nohighlight">
 \[B_0=\frac{1}{c}E_0\]</div>
 <p>This is quite helpful, as we may just do calculations for the electric field and transfer them with the help of this conversion to the magnetic field.</p>
-<figure><p><img alt="353299a75fcc4a7480bacb420adba2fa" class="no-scaled-link" src="../../_images/plane_wave.png" style="width: 90%;" /></p>
+<figure><p><img alt="5122097763204c9fb2550805d9d803de" class="no-scaled-link" src="../../_images/plane_wave.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Plane wave propagating along the y-direction, with the electric field oscillating along the z-direction..</p>
 </figcaption></figure></div>
 <div class="section" id="Spherical-Waves">
@@ -610,7 +641,7 @@ equation, we can take the time derivative which yields for the electric field</p
 \vec{B}(\vec{r})&=& B_0 \sin(\theta) U(\vec{r}) \hat{\phi}
 \end{eqnarray}</span></p>
 <p>The electric and magnetic fields are therefire tangential to the wavefront surface, which is a sphere. The propgation direction is always radial, so the spherical wave is also a transverse electromagnetic wave.</p>
-<figure><p><img alt="dc051b36cb78408ba6dec3235bf990e6" class="no-scaled-link" src="../../_images/spherical_wave.png" style="width: 95%;" /></p>
+<figure><p><img alt="3f86b916433d42cd87f47db78af7eb06" class="no-scaled-link" src="../../_images/spherical_wave.png" style="width: 95%;" /></p>
 <figcaption><p><strong>Fig.:</strong> (Left) Definition of the unit vectors in a spherical coordinate system. (Right) Vectors of the electric and magnetic field for a spherical wave.</p>
 </figcaption></figure><script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}

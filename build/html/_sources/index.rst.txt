@@ -183,9 +183,9 @@ The fields of optics and quantum mechanics are nowadays very active research are
    :caption: Lecture 16:
    
    lectures/L16/overview_16.rst 
-   lectures/L16/Fresnel Equations.ipynb
-   lectures/L16/Anisotropic Materials.ipynb
-   lectures/L17/Metals.ipynb
+   notebooks/L16/Fresnel Equations.ipynb
+   notebooks/L16/Anisotropic Materials.ipynb
+
 
 Indices and tables
 ==================
