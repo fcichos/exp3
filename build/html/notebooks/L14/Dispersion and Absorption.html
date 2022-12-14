@@ -471,6 +471,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html#Faraday-Effect">Faraday Effect</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../L18_AMA/Metals.html">Metals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Metals.html#Drude-Model">Drude Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18_AMA/Metals.html#Dielectric-function">Dielectric function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18_AMA/Metals.html#Conductivity">Conductivity</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../L18_AMA/Dipole%20Radiation.html">Dipole Radiation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Dipole%20Radiation.html#Electric-field-of-an-accelerated-charge">Electric field of an accelerated charge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Dipole%20Radiation.html#Energy-flow">Energy flow</a></li>
@@ -548,7 +556,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>We would like to have a closer look at what happens with our atom in the electric field of a light wave. First of all, our toy atom is very small (around 0.1 nm) which is much smaller than the wavelength of ligth (500 nm). Thus the electric field appears to homogeneous over the cross section of the atom and seems to change over time with <span class="math notranslate nohighlight">\(E(t)=E_0 e^{-i\omega t}\)</span>.</p>
-<figure><p><img alt="01acc4415f6c47edb31d6dce13f11cf2" class="no-scaled-link" src="../../_images/polarization.png" style="width: 50%;" /></p>
+<figure><p><img alt="dd5c4838de834396bb31d4c8bdd62e65" class="no-scaled-link" src="../../_images/polarization.png" style="width: 50%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Polarization of an electric cloud of an atom.</p>
 </figcaption></figure><p>Lets assume the electric field being aligned with the x-direction, then we can write down the equation of motion for the displacement of the two charges in the atom</p>
 <div class="math notranslate nohighlight">
@@ -576,7 +584,7 @@ figcaption {
 <div class="math notranslate nohighlight">
 \[n=1+\frac{Nq^2}{2\epsilon_0 m}\frac{(\omega_0^2-\omega^2)-i\sigma\omega}{(\omega_0^2-\omega^2)^2+\omega^2\sigma^2}=n-i\kappa\]</div>
 <p>The refractive index therefore has a real and imaginary part, which we can derive from the above formuala. We would like to a have a look at the consequences of those two coefficients <span class="math notranslate nohighlight">\(n_r,\kappa\)</span> for the propagation of the light wave.</p>
-<figure><p><img alt="3b1eab74c30148dea094c9bbb05699e0" class="no-scaled-link" src="../../_images/nr.png" style="width: 40%;" /> <img alt="ba90f6213c3e4e669b07ff297f825e81" class="no-scaled-link" src="../../_images/kappa.png" style="width: 40%;" /></p>
+<figure><p><img alt="114fae02e57842c69564c91a24e26467" class="no-scaled-link" src="../../_images/nr.png" style="width: 40%;" /> <img alt="19bc372644d446bcbdd2366b55d792ec" class="no-scaled-link" src="../../_images/kappa.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Real and imaginary part of the refractive index as a function of the frequency. The vertical dashed line is located at <span class="math notranslate nohighlight">\(\omega=\omega_0\)</span>.</p>
 </figcaption></figure><p>The two plots above show the frequency dependence of the real and imaginary part of the refractive index. The freuency dependence arises from the coupling to the resonance of the damped harmonic oscillator of our crude atomic model . Around the resonance, the are strong changes to be expected for the real part and the imaginary part. The real part has a dispersive shape being larger than 1 at lower frequencies and smaller than one (!) above the resonance. The imaginary part has the shape of a
 Lorentzian curve around the resonance frequency, where the full width at half maximum (<strong>FWHM</strong>) of the curve us given by the damping coefficient <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
@@ -599,7 +607,7 @@ I &=& \epsilon_0 c E^2=\epsilon_0 c \left | E_0 e^{-in_r k_0 z }e^{-\kappa k_0 z
 \[\frac{I}{I_0}= e^{-\alpha z}
 \tag{Lambert Beer Law}\]</div>
 <p>is called <strong>Lambert-Beers law</strong>.</p>
-<figure><p><img alt="a2bb357332474bbfbad61ab3e04c6c9c" class="no-scaled-link" src="../../_images/absorption_exp.png" style="width: 44%;" /> <img alt="cb55dc152a674ec1962c676932cd041c" class="no-scaled-link" src="../../_images/lambert_exp.png" style="width: 40%;" /></p>
+<figure><p><img alt="f0c1242de5df4023a1d65c47a5128429" class="no-scaled-link" src="../../_images/absorption_exp.png" style="width: 44%;" /> <img alt="86fa1db6e6744f6e80d70144b2d4f5b2" class="no-scaled-link" src="../../_images/lambert_exp.png" style="width: 40%;" /></p>
 <figcaption><p><strong>Fig.:</strong> .</p>
 </figcaption></figure><p>As the coefficient <span class="math notranslate nohighlight">\(\kappa\)</span> shows the indicated frequency dependence, the absorption coefficient is also reflecting this strong absorption close to the resonances but weaker absorption far away from it. Since common materials have not only a single but many of hose resonances, the absorption behavior could be quite complex. It is however characteristic for each substance, which makes absorption spectroscopy a invaluable tool to study the composition of materials.</p>
 </div>
