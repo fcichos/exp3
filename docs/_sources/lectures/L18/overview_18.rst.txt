@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 18 we will derive the Fresnel equations and discuss their meaning. We will have a look at more complex materials that are birefringent and at metals.
+In Lecture 18 we will introduce optically active materials and discuss the rotation of the electric field through optically active materials and the Faraday effect. In addition we will develop a model for the dielectric function in conducting media and for dipole radiation in a classial picture.
 
 
 
