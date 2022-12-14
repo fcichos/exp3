@@ -198,7 +198,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    
    lectures/L18/overview_18.rst
    notebooks/L18_AMA/Anisotropic Materials.ipynb
-   notebooks/L18_AMA/Anisotropic Metals.ipnb
+   notebooks/L18_AMA/Metals.ipnb
    notebooks/L18_AMA/Dipole Radiation.ipynb
    
 
