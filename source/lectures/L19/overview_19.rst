@@ -1,8 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 19 we will talk about the optical properties of anisotropic materials and metals.
-
+In Lecture 19 we will discuss the emission of electromagnetic radiation through an accelerated charge which leads to Rayleigh scattering. Moreover, we will talk about the development of the concept of atoms and first experiments motivating modern quantum mechanics.
 
 
 .. image:: img/slides.png
