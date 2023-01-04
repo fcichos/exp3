@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 20 we will discuss the theoretical concept of blackbody radition and its real world counterart of cavity radiation. We will have a look at historical laws from Stefan and Boltzmann, Wien and Rayleigh and Jeans concerning electromagnetic radiation before we introduce teh concept of quantum mechanics on teh basis of Plancl's law of radiation.
+In Lecture 20 we will look into the generation of transverse electromagnetic waves due accelerated charges and dipoles. We will also start with an introduction to quantum mechanics.
 
 
 .. image:: img/slides.png
