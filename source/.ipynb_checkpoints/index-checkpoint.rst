@@ -139,6 +139,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L11/Diffraction Grating.ipynb
    notebooks/L11/Fresnel Zones.ipynb  
    
+   
 .. toctree::
    :maxdepth: 2
    :caption: Lecture 12:
@@ -150,6 +151,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L12/Electromagnetic Optics.ipynb
    notebooks/L12/Polarization of EM Waves.ipynb     
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Lecture 13:
@@ -159,6 +161,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L13/Energy Transport.ipynb
    notebooks/L13/Speed of Light Measurements.ipynb
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Lecture 14:
@@ -167,6 +170,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L14/EM Waves in Matter.ipynb
    notebooks/L14/Dispersion and Absorption.ipynb
    notebooks/L14/Reflection and Refraction.ipynb
+   
    
 .. toctree::
    :maxdepth: 2
@@ -185,12 +189,14 @@ The fields of optics and quantum mechanics are nowadays very active research are
    lectures/L16/overview_16.rst 
    notebooks/L16/Fresnel Equations.ipynb
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Lecture 17:
    
    lectures/L17/overview_17.rst q
    notebooks/L17/Anisotropic Materials.ipynb
+
 
 .. toctree::
    :maxdepth: 2
@@ -201,6 +207,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L18_AMA/Metals.ipynb
    notebooks/L18_AMA/Dipole Radiation.ipynb
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Lecture 19:
@@ -210,12 +217,23 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L19_AMA/Structure_of_matter.ipynb
    notebooks/L19_AMA/Quantum_mechanics_introduction.ipynb
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Lecture 20:
    
    lectures/L20/overview_20.rst
    notebooks/L20_AMA/Quantum_mechanics_introduction.ipynb
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 21:
+   
+   lectures/L21/overview_21.rst
+   notebooks/L21_AMA/Plancks_law.ipynb
+   notebooks/L21_AMA/Particle_character_of_light.ipynb
+ 
 
    
 

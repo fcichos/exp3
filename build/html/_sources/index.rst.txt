@@ -231,9 +231,9 @@ The fields of optics and quantum mechanics are nowadays very active research are
    :caption: Lecture 21:
    
    lectures/L21/overview_21.rst
-   notebooks/L21_AMA/Plancks_law.ipyn
-   notebooks/L21_AMA/Particle_character_of_light.ipyn
-   
+   notebooks/L21_AMA/Plancks_law.ipynb
+   notebooks/L21_AMA/Particle_character_of_light.ipynb
+ 
 
    
 
