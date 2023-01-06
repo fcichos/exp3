@@ -1,7 +1,7 @@
 Lecture Contents
 ================
 
-In Lecture 21 we will look at the beginning of quantum mechanics. In particular we will analyse the radiation of a black body.
+In Lecture 21 we will have a look at historical laws describing in part black body radiation and coincide empirical results or results derived on the basis of thermadynamic considerations with Planck's law.
 
 
 
