@@ -22,7 +22,9 @@
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The Wave Character of Particles" href="Wave_character_of_particles.html" />
+    <link rel="prev" title="Lecture Contents" href="../../lectures/L22/overview_22.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -546,8 +548,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Stefan-Boltzmann-law-as-derived-from-Planck’s-law">Stefan-Boltzmann law as derived from Planck’s law</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../L21_AMA/Particle_character_of_light.html">The Particle Character of Light</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Particle_character_of_light.html#The-photoelectric-effect">The photoelectric effect</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 22:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L22/overview_22.html">Lecture Contents</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Particle Character of Light</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#The-photoelectric-effect">The photoelectric effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#The-Compton-effect">The Compton effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Properties-of-photons">Properties of photons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Energy-and-momentum">Energy and momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Angular-momentum">Angular momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Mass-and-gravitational-force">Mass and gravitational force</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Wave_character_of_particles.html">The Wave Character of Particles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Wave_character_of_particles.html#Electron-diffraction-and-de-Broglie-wavelength">Electron diffraction and de Broglie wavelength</a></li>
 </ul>
 </li>
 </ul>
@@ -578,252 +595,6 @@
              
   
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt *,
-div.nbinput.container div.input_area pre,
-div.nboutput.container div.output_area pre,
-div.nbinput.container div.input_area .highlight,
-div.nboutput.container div.output_area .highlight {
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-div.nbinput.container > div[class*=highlight],
-div.nboutput.container > div[class*=highlight] {
-    margin: 0;
-}
-
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt * {
-    background: none;
-}
-
-div.nboutput.container div.output_area .highlight,
-div.nboutput.container div.output_area pre {
-    background: unset;
-}
-
-div.nboutput.container div.output_area div.highlight {
-    color: unset;  /* override Pygments text color */
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    /*background: #f5f5f5;*/
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-    margin: 0;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt .copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -856,7 +627,7 @@ div.rendered_html tbody tr:hover {
 <h2>The photoelectric effect<a class="headerlink" href="#The-photoelectric-effect" title="Permalink to this headline">¶</a></h2>
 <p>In 1888 Wilhelm Hallwachs published an experiment with charged foils connected to a metal plate which was irradiated with ultraviolet light (we did this experiment in the last lecture before Christmas). If the foils and the plate are negatively charged and electrically isolated against the surrounding, the charge do decrease upon irradiation with ultraviolet light. In constrast, if the system is positively charged, the charge does not decrease. Hallwachs concluded that the light is responsible
 for negative charges leaving the metal plate.</p>
-<figure><p><img alt="14147202cd904e92be12edcd28cecf01" class="no-scaled-link" src="notebooks/L22_AMA/img/Lecture21_Hallwachs.png" style="width: 90%;" /></p>
+<figure><p><img alt="bf3d64e5c0304be895fe90ad5220c213" class="no-scaled-link" src="../../_images/Lecture21_Hallwachs.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.: (left) Scheme of the apparatus used by Hallwachs. (center) Scheme of the apparatus used by Lennard and the corresponding photocurrent :math:`I_{mathrm{ph}}`. (right) From the onset voltage :math:`U_0` one can calculate the work function :math:`W_{mathrm{a}}` as intercept and Planck’s constant :math:`h` as part of the slope.</strong></p>
 </figcaption></figure><p>Later in 1902 Lennard measured the photocurrent between two plates in vacuum. The current set in already at a negative voltage <span class="math notranslate nohighlight">\(U_0\)</span> between the plates, incresed with rising voltage, and reached a plateau which depended only on the light’s intensity. He concluded:</p>
 <ul class="simple">
@@ -893,37 +664,134 @@ for negative charges leaving the metal plate.</p>
 <span class="math notranslate nohighlight">\(\dot{N} = 10^3\)</span> photons per second with an energy of <span class="math notranslate nohighlight">\(h \cdot \nu = 10^4 \; \mathrm{eV}\)</span> on average every 30 minutes a change of the bead charge was detected. The number of photons arriving at one bead within a time intervall <span class="math notranslate nohighlight">\(\Delta t\)</span> is <span class="math notranslate nohighlight">\(Z = \dot{N} \cdot \Delta t \cdot \mathrm{d} \Omega/ \left( 4\pi \right)\)</span>, whith <span class="math notranslate nohighlight">\(\mathrm{d} \Omega\)</span> as the solid angle covered by the bead. The calculated time constant of <span class="math notranslate nohighlight">\(Z\)</span> was in well agreement with the observed rate
 of the charge alterarion. If we again assume a wave-like explanation of teh photoeffect, the emitted power within the according solid anngle will be absorbed by the bead and distributed between all its elctrons. As a consequnce the bead as a whole will have collected enough energy in order release an electron within the same period of time. However it cannot be explained how all <span class="math notranslate nohighlight">\(10^{12}\)</span> atoms are supposed to combine their energy in one, sinblge electron at the very same time.</p>
 </div>
-<div class="section" id="The-Comporon-effect">
-<h2>The Comporon effect<a class="headerlink" href="#The-Comporon-effect" title="Permalink to this headline">¶</a></h2>
-<p>Anoterh example for demonstrating the particle chracter of light is the Comporon effect. If an arbitrary material is irradiated with X-rays of wavelength <span class="math notranslate nohighlight">\(\lambda_0\)</span>, ona can detetct scattered light with the same wavelength <span class="math notranslate nohighlight">\(\lambda_0\)</span> but also scattered light with a greater wavelength <span class="math notranslate nohighlight">\(\lambda_{\mathrm{S}} &gt; \lambda_0\)</span>. Moreover, the scattering angle seemed to have a much bigger influence on the wavelength of the scattered light than the scattering material itself.</p>
-<p>This phenomenon can be explained by means of the photon model and inelastic impact. Every photon bears an energy of <span class="math notranslate nohighlight">\(E = h \cdot \nu = \hbar \cdot \omega\)</span> and a momentum of <span class="math notranslate nohighlight">\(p = h/\lambda = \hbar \cdot k\)</span>. particle image. If a photon impacts into a weakly bound electron with a binding energy much smaller than the photon energy (<span class="math notranslate nohighlight">\(E_\mathrm{B} \le E\)</span>), we can neglect the binding energy and assume the electron as free electron. In addition we simplify further and assume the
-electron as beeing at rest. During the collision event</p>
+<div class="section" id="The-Compton-effect">
+<h2>The Compton effect<a class="headerlink" href="#The-Compton-effect" title="Permalink to this headline">¶</a></h2>
+<p>Another example for demonstrating the corpuscle (particle-like) character of light is the Compton effect. If an arbitrary material is irradiated with X-rays of wavelength <span class="math notranslate nohighlight">\(\lambda_0\)</span>, one can detetct scattered light with the same wavelength <span class="math notranslate nohighlight">\(\lambda_0\)</span> but also scattered light with a greater wavelength <span class="math notranslate nohighlight">\(\lambda_{\mathrm{S}} &gt; \lambda_0\)</span>. Moreover, the wavelength of the scattered light seemes to depend much stronger on the scattering angle than on the scattering material.</p>
+<p>This phenomenon can be explained by means of the photon model and inelastic impact. Every photon bears an energy of <span class="math notranslate nohighlight">\(E = h \cdot \nu = \hbar \cdot \omega\)</span> and a momentum of <span class="math notranslate nohighlight">\(p = h/\lambda = \hbar \cdot k\)</span>. If a photon impacts into a weakly bound electron with a binding energy much smaller than the photon energy (<span class="math notranslate nohighlight">\(E_\mathrm{B} \le E\)</span>), we can neglect the binding energy and assume the electron as free electron. In addition we simplify further and assume the electron as beeing at
+rest. During the collision event</p>
 <div class="math notranslate nohighlight">
 \[h \nu_0 + \mathrm{e}^{-} \longrightarrow h \nu_{\mathrm{S}} + \mathrm{e}^{-} + E_{\mathrm{kin}}\]</div>
-<p>energy and momentum are conserved.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
+<p>energy and momentum are conserved. The law of conservation of energy then reads as</p>
+<div class="math notranslate nohighlight">
+\[h \, \nu_0 = h \, \nu_\mathrm{s} + E_{\mathrm{kin}}^{\mathrm{e}}\]</div>
+<p>with <span class="math notranslate nohighlight">\(E_{\mathrm{kin}}^{\mathrm{e}}\)</span> as teh relativistic kinitic energy of the electron</p>
+<div class="math notranslate nohighlight">
+\[E_{\mathrm{kin}}^{\mathrm{e}} = \frac{m_0 c^2}{\sqrt{1-\beta^2}} - m_0 c^2\]</div>
+<p>and <span class="math notranslate nohighlight">\(\beta = v/c\)</span>. If we ascribe a momentum like</p>
+<div class="math notranslate nohighlight">
+\[\vec{p} = \hbar \, \vec{k}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\left| \vec{p} \right| = \hbar \, \left| \vec{k} \right| = h \frac{1}{\lambda}\]</div>
+<p>to the photon, we can formulate teh law of momentum conservation as follow,</p>
+<div class="math notranslate nohighlight">
+\[\hbar \, \vec{k_0} = \hbar \, \vec{k_{\mathrm{s}}} + \vec{p^{\mathrm{e}}}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\vec{p^{\mathrm{e}}} = \frac{m_0 \vec{v}}{\sqrt{1-\beta^2}} \mathrm{.}\]</div>
+<p>If we isolate the square of the momentum of the electron, we obtain an equation depending of teh squared difference between the wavevectors of the incident and scattered photon. Calculating this difference leads to a scalar product between these two vectors and necessitates the introduction of the angle between the propagation direction of the incident and scattered photon. We denote thsi angle as <span class="math notranslate nohighlight">\(\phi\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+\frac{m_0^2 v^2}{1-\beta^2} &amp; = &amp; \hbar^2 \left( \vec{k_0} - \vec{k_{\mathrm{s}}} \right)^2\\
+{} &amp; = &amp; \hbar^2 \left( k_0^2 + k_{\mathrm{s}}^2 + 2 k_0 k_{\mathrm{s}} \cos \left( \varphi \right) \right)^2\\
+{} &amp; = &amp; \frac{h^2}{c^2} \left( \nu_0^2 + \nu_{\mathrm{s}}^2 + 2 \nu_0 \nu_{\mathrm{s}} \cos \left( \varphi \right) \right)^2
+\end{eqnarray}\end{split}\]</div>
+<p>From the law of energy conservation we get</p>
+<div class="math notranslate nohighlight">
+\[\frac{m_0^2 v^2}{1-\beta^2} = \frac{h^2}{c^2} \left( \nu_0 - \nu_{\mathrm{s}} \right)^2 + 2 h m_0 \left( \nu_0 - \nu_{\mathrm{s}}\right) \mathrm{,}\]</div>
+<p>which we can compare with the law of momentum conservation and get</p>
+<div class="math notranslate nohighlight">
+\[\nu_0 - \nu_{\mathrm{s}} = \frac{h}{m_0 c^2} \,  \nu_0 \, \nu_{\mathrm{s}} \, \left(1- \cos \left( \varphi \right) \right) \mathrm{.}\]</div>
+<p>Now making use of <span class="math notranslate nohighlight">\(1- \cos \left( \varphi \right) = 2 \sin^2 \left( \varphi/2 \right)\)</span> and <span class="math notranslate nohighlight">\(\nu = c/\lambda\)</span> we achieve the Compton formula</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+\lambda_{\mathrm{S}} &amp; = &amp; \lambda_0 + 2 \frac{h}{m_0 c} \sin^2 \left( \varphi/2 \right)\\
+{} &amp; = &amp; \lambda_0 + 2 \lambda_{\mathrm{C}} \sin^2 \left( \varphi/2 \right)\\
+\end{eqnarray}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\lambda_{\mathrm{C}}\)</span> denoting the Compton wavelength of the electron,</p>
+<div class="math notranslate nohighlight">
+\[\lambda_{\mathrm{C}} = \frac{h}{m_0 c} = 2.4262 \cdot 10^{-12} \; \mathrm{m.}\]</div>
+<p>The Compton wavelength is a constant and represents the change of the wavelength $:nbsphinx-math:<cite>Delta `:nbsphinx-math:</cite>lambda <cite>= :nbsphinx-math:</cite>lambda`_{<span class="math">\mathrm{S}</span>} - <span class="math">\lambda</span>_0 $ at a scattering angle of <span class="math notranslate nohighlight">\(\varphi = 90^{\circ}\)</span>. Results from experiements almost perfectly coincide with the Compton formula. Furthermore the ratio between the wavelengths</p>
+<div class="math notranslate nohighlight">
+\[\frac{\lambda_{\mathrm{S}}}{\lambda_0} = \frac{h \nu_0}{m_0 c^2}\]</div>
+<p>represents the ration between the energy of the incident photon and the energy at rest of the electron. Thus, if we know the mass of the electron, we can detremine <span class="math notranslate nohighlight">\(\varphi\)</span> and <span class="math notranslate nohighlight">\(\lambda_{\mathrm{S}}\)</span> (and therefor <span class="math notranslate nohighlight">\(\lambda_{\mathrm{C}}\)</span>) and calculate <span class="math notranslate nohighlight">\(h\)</span>.</p>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
+<div class="section" id="Properties-of-photons">
+<h2>Properties of photons<a class="headerlink" href="#Properties-of-photons" title="Permalink to this headline">¶</a></h2>
+<p>During the 18th century there was a dispute about the nature of light. <em>Newton</em> proposed a particle-like character on the basis of the straight propagation and the law of refraction. In contrast, <em>Huygens</em> proposed a wave-like character of light on the basis of interference and diffraction. This interpretation seemed to be proven when Heinrich Hertz discovered electromagnetic waves and light was interpreted as a special spectral region being as well governed by Maxwell’s equations. As we have
+seen on the basis of the experiemnts, light –and more general electromagnetic waves– might show corpuscular characteristics as well. That is why we have to introduce a particle-like description in additon to the allready known wave-like description.</p>
+<div class="section" id="Energy-and-momentum">
+<h3>Energy and momentum<a class="headerlink" href="#Energy-and-momentum" title="Permalink to this headline">¶</a></h3>
+<p>During the 18th century there was a dispute about the nature of light. <em>Newton</em> proposed a particle-like character on the basis of the straight propagation and the law of refraction. In contrast, <em>Huygens</em> proposed a wave-like character of light on the basis of interference and diffraction. This interpretation seemed to be proven when Heinrich Hertz discovered electromagnetic waves and light was interpreted as a special spectral region being as well governed by Maxwell’s equations. As we have
+seen on the basis of the experiemnts, light –and more general electromagnetic waves– might show corpuscular characteristics as well. That is why we have to introduce a particle-like description in additon to the allready known wave-like description.</p>
+<p>Every electromagnetic field consists of <em>quanta of energy</em> <span class="math notranslate nohighlight">\(h \cdot \nu\)</span>, which we call <strong>photons</strong>. If we remember back for the cavity resonator, we can now state the enerngy density of the electromagnetic field <span class="math notranslate nohighlight">\(\omega_{\mathrm{em}}\)</span> as the density of modes <span class="math notranslate nohighlight">\(n\)</span> multiplied with the <em>quantum of energy</em> <span class="math notranslate nohighlight">\(h \cdot \nu\)</span></p>
+<div class="math notranslate nohighlight">
+\[\omega_{\mathrm{em}} = n \cdot h \cdot \nu \mathrm{.}\]</div>
+<p>We can further comprehend the intensity <span class="math notranslate nohighlight">\(I = \varepsilon_0 c E^2\)</span> of an electromagnetic wave as a <em>particle flux</em> <span class="math notranslate nohighlight">\(\dot{N}\)</span> of photons</p>
+<div class="math notranslate nohighlight">
+\[I = \dot{N} h \nu\]</div>
+<p>with <span class="math notranslate nohighlight">\(\dot{N} = n \cdot c\)</span>. Therefore, if a light wave with in intensity of <span class="math notranslate nohighlight">\(I\)</span> is shining on an area is <em>tantamount</em> with a particle flux of photon reaching this area.</p>
+<p>As demonstrated on the basis of the Comptopn effect, every photon bears a momentum <span class="math notranslate nohighlight">\(\vec{p} = \hbar \cdot \vec{k}\)</span> with the magnitude <span class="math notranslate nohighlight">\(\left| \vec{p} \right| = p = h \nu / c\)</span>. As a consequence, if we are able to assign an energy density to teh denisty of modes, we are also able to assign a <em>momentum density</em>,</p>
+<div class="math notranslate nohighlight">
+\[\pi_{\mathrm{em}} = n \cdot \hbar \cdot k \mathrm{.}\]</div>
+<p>Then, the relation between the energy density <span class="math notranslate nohighlight">\(\omega_{\mathrm{em}}\)</span> of an electromegnatic wave and the momentum density <span class="math notranslate nohighlight">\(\pi_{\mathrm{em}}\)</span> of teh very same wave reads as</p>
+<div class="math notranslate nohighlight">
+\[\omega_{\mathrm{em}} = c \cdot \pi_{\mathrm{em}} {.}\]</div>
 </div>
+<div class="section" id="Angular-momentum">
+<h3>Angular momentum<a class="headerlink" href="#Angular-momentum" title="Permalink to this headline">¶</a></h3>
+<p>Concerning the <em>angular momentum</em> of photons, if a free atom absorbs a photon, the angular momentum of the atom is altered by <span class="math notranslate nohighlight">\(\hbar\)</span>. Thus, the law of the conservation of eth angular momentum predicts that a photon does have an angular momentum of <span class="math notranslate nohighlight">\(\hbar\)</span>, independent of its energy <span class="math notranslate nohighlight">\(h \cdot \nu\)</span>. If left-handed circular polarized light (<span class="math notranslate nohighlight">\(\sigma^{+}\)</span> propagating along <span class="math notranslate nohighlight">\(z\)</span> is absorbed by a free atom, its angular momentum <span class="math notranslate nohighlight">\(J_z\)</span> is changed by
+<span class="math notranslate nohighlight">\(\Delta J_z = + \hbar\)</span>. In the case of right-handed circular polarized light (<span class="math notranslate nohighlight">\(\sigma^{-}\)</span>), the change of the angular momentum of the electron is negative <span class="math notranslate nohighlight">\(\Delta J_z = + \hbar\)</span>. We can conclude, that for <span class="math notranslate nohighlight">\(\sigma^{+}\)</span>-polarized light the vector of the angular momentum is oriented along the direction of propagation, whereas for <span class="math notranslate nohighlight">\(\sigma^{-}\)</span>-polarized light the vector of the angular momentum is oriented against the direction of propagation. Since the direction of
+propagation is determined through the wavevector, we can conclude for the photon’s angular momentum</p>
+<div class="math notranslate nohighlight">
+\[\vec{L}_{Ph} = \pm \hbar \, \frac{\vec{k}}{\left| \vec{k} \right|}\]</div>
+<p>Linearly polarized light can be comprehended as superposition of <span class="math notranslate nohighlight">\(\sigma^{+}\)</span>- and <span class="math notranslate nohighlight">\(\sigma^{-}\)</span>-polarized light to equal parts. Thus the angular momentum of linearly polarized light adds up to <span class="math notranslate nohighlight">\(0\)</span>.</p>
 </div>
+<div class="section" id="Mass-and-gravitational-force">
+<h3>Mass and gravitational force<a class="headerlink" href="#Mass-and-gravitational-force" title="Permalink to this headline">¶</a></h3>
+<p>From theory of relativity we know that the mass is actually affected through the traveling speed of the reference systems, namely</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{1}{\sqrt{1-\left( \frac{v}{c}\right)^2}} \, m_0 \mathrm{.}\]</div>
+<p>Furthermore, it is evedent that only particles with a mass at rest of <span class="math notranslate nohighlight">\(m_0 = 0\)</span> are capable to travel with the speed of light, and thus a photon does have a mass at rest of <span class="math notranslate nohighlight">\(0\)</span>. For the energy it follows</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+E &amp; = &amp; \sqrt{p^2c^2 + m_0^2 c^4}\\
+{} &amp; = &amp; p c\\
+{} &amp; = &amp; \frac{h}{\lambda} c\\
+{} &amp; = &amp; h \nu
+\end{eqnarray}\end{split}\]</div>
+<p>in accordance with energy and momentum considerations stated above. If we now ascribe a mass <span class="math notranslate nohighlight">\(m\)</span> to the photon with</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{E}{c^2} = \frac{h \nu}{c^2}\]</div>
+<p>and let this photon travel within a gravitational field, then the photon has to perform work in order to change its position from <span class="math notranslate nohighlight">\(\vec{r_1}\)</span> with the gravitational potential <span class="math notranslate nohighlight">\(\Phi \left( \vec{r_1} \right)\)</span> to position <span class="math notranslate nohighlight">\(\vec{r_2}\)</span> with the gravitational potential <span class="math notranslate nohighlight">\(\Phi \left( \vec{r_2} \right)\)</span>. The work within teh gravitational field reads as</p>
+<div class="math notranslate nohighlight">
+\[W = m \cdot \Delta \Phi = \frac{h \nu}{c^2} \left( \Phi \left( \vec{r_2} \right) - \Phi \left( \vec{r_1} \right) \right) \mathrm{.}\]</div>
+<p>For reasons of conservation of energy, the energy of the photon <span class="math notranslate nohighlight">\(h\cdot\nu\)</span> has to change about the same amout the photon does perform work, and hance its frequency has to change</p>
+<div class="math notranslate nohighlight">
+\[\nu_2 = \nu_1 \left(1-\frac{\Delta \phi}{c^2} \right)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta \nu}{\nu} = \frac{\Delta \Phi}{c^2} \mathrm{.}\]</div>
+<p>Even though a photon does not have any mass at rest, a photon experiences a red shift (longer wavelength, smaller frequency, smaller energy), if it rises within a gravitational field. The energy decrease of the photon is equal to an increase in potential energy of <span class="math notranslate nohighlight">\(m \Delta \Phi\)</span> with <span class="math notranslate nohighlight">\(m = h \nu /c^2\)</span>.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></div>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../lectures/L22/overview_22.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Wave_character_of_particles.html" class="btn btn-neutral float-right" title="The Wave Character of Particles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 09, 2023.
+      <span class="lastupdated">Last updated on Jan 11, 2023.
       </span></p>
   </div>
 

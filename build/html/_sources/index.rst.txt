@@ -232,10 +232,16 @@ The fields of optics and quantum mechanics are nowadays very active research are
    
    lectures/L21/overview_21.rst
    notebooks/L21_AMA/Plancks_law.ipynb
-   notebooks/L21_AMA/Particle_character_of_light.ipynb
- 
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 22:
    
+   lectures/L22/overview_22.rst
+   notebooks/L22_AMA/Particle_character_of_light.ipynb
+   notebooks/L22_AMA/Wave_character_of_particles.ipynb
+ 
 
 
 Indices and tables
