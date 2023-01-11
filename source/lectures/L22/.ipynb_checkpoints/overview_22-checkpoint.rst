@@ -1,10 +1,10 @@
 Lecture Contents
 ================
 
-In Lecture 22 we will have a look at the photoelectri effect and the Compoton effect, both beeing examples for the particle nature of light.
+In Lecture 22 we will have a look at the photoelectric effect and the Compoton effect, both beeing examples for the particle nature of light.
 
 
-.. image:: img/slides.png
+.. image:: img/slides.pdf
    :width: 600
 
 
