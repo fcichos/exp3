@@ -23,6 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lecture Contents" href="../../lectures/L23/overview_23.html" />
     <link rel="prev" title="The Particle Character of Light" href="Particle_character_of_light.html" /> 
 </head>
 
@@ -567,6 +568,36 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 23:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L23/overview_23.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html">The Particle Character of Light</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#The-photoelectric-effect">The photoelectric effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#The-Compton-effect">The Compton effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Properties-of-photons">Properties of photons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Energy-and-momentum">Energy and momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Angular-momentum">Angular momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Mass-and-gravitational-force">Mass and gravitational force</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L23_AMA/L23_wave_character_of_particles.html">The Wave Character of Particles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_wave_character_of_particles.html#Electron-diffraction-and-de-Broglie-wavelength">Electron diffraction and de Broglie wavelength</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html">Waves of Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html#Plane-waves">Plane waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html#Wave-packets">Wave packets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html#The-statistical-interpretation-of-matter-waves">The statistical interpretation of matter waves</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L23_AMA/L23_Heisenbergs_uncertanty_relation.html">Heisenbergs Uncertanty Relation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_Heisenbergs_uncertanty_relation.html#Position-momentum-uncertanty">Position-momentum uncertanty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_Heisenbergs_uncertanty_relation.html#Energy-time-uncertanty">Energy-time uncertanty</a></li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -594,6 +625,252 @@
              
   
 <style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -624,9 +901,9 @@
 <h1>The Wave Character of Particles<a class="headerlink" href="#The-Wave-Character-of-Particles" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Electron-diffraction-and-de-Broglie-wavelength">
 <h2>Electron diffraction and de Broglie wavelength<a class="headerlink" href="#Electron-diffraction-and-de-Broglie-wavelength" title="Permalink to this headline">¶</a></h2>
-<p>On the basis of the particle-like character of electromagnatic wave de Broglie wondered about a wave-like character of corpuscle. In order to discuss this issue and derive an expression for the wavelength of a particle de Broglie combined classical mechanic and the new quantum model of light. Let’s take a particle of mass <span class="math notranslate nohighlight">\(m\)</span> travelling with a speed of <span class="math notranslate nohighlight">\(v\)</span> the momentum <span class="math notranslate nohighlight">\(p\)</span> of thus particle is given through</p>
-<p>$$ p = m <span class="math">\cdot `v :nbsphinx-math:</span>mathrm{.}`</p>
-<p>$$</p>
+<p>On the basis of the particle-like character of electromagnatic wave de Broglie wondered about a wave-like character of corpuscles. In order to discuss this issue and derive an expression for the wavelength of a particle de Broglie combined classical mechanics and the new quantum model of light. Let’s take a particle of mass <span class="math notranslate nohighlight">\(m\)</span> travelling with a speed of <span class="math notranslate nohighlight">\(v\)</span> the momentum <span class="math notranslate nohighlight">\(p\)</span> of thus particle is given through</p>
+<div class="math notranslate nohighlight">
+\[p = m \cdot v \mathrm{.}\]</div>
 <p>From the quantum model of light we know that the momentum of a photon can be expressed as</p>
 <div class="math notranslate nohighlight">
 \[p = \hbar \cdot k = \frac{h}{\lambda}\]</div>
@@ -644,6 +921,14 @@
 properties in accord to de Broglie’s hypothetis.</p>
 <p>In addition, de Broglie’s consideration of small particles behaving like waves is not limitted to electrons only. If we direct a beam of neutral He atoms onto a single slit of width <span class="math notranslate nohighlight">\(12 \;\mu\mathrm{m}\)</span> being <span class="math notranslate nohighlight">\(64 \;\mathrm{cm}\)</span> apart from a double slit (<span class="math notranslate nohighlight">\(1 \;\mu\mathrm{m}\)</span> each, <span class="math notranslate nohighlight">\(8 \;\mu\mathrm{m}\)</span> seperated), then the diffracted <em>wave of He atoms</em> gives rise to a diffraction pattern identical to diffraction patterns from Young’s double-slit experiment with the according
 wavelength. Furthermore, it has been demonstrated that <em>waves of neutral atoms</em> can be diffracted on standing waves of light. This underpins the <strong>equivalence of describing atomistics particles by means of the de Broglie wavelength or electromagnetic waves by means of the quantum model</strong>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></div>
@@ -654,13 +939,14 @@ wavelength. Furthermore, it has been demonstrated that <em>waves of neutral atom
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Particle_character_of_light.html" class="btn btn-neutral float-left" title="The Particle Character of Light" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../lectures/L23/overview_23.html" class="btn btn-neutral float-right" title="Lecture Contents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 11, 2023.
+      <span class="lastupdated">Last updated on Jan 13, 2023.
       </span></p>
   </div>
 
