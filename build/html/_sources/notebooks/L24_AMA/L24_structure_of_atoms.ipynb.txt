@@ -5,7 +5,7 @@
    "id": "53b2405d-41e3-4372-b7cd-b8ca83b3b1f1",
    "metadata": {},
    "source": [
-    "# The Structure of Atoms"
+    "# The Structure of Atoms and the Bohr Model"
    ]
   },
   {
