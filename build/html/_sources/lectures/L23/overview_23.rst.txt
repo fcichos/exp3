@@ -8,4 +8,4 @@ In Lecture 23 we will conclude the discussion about the particle character of el
    :width: 600
 
 
-Lecture 22 slides for download :download:`pdf <Lecture 23.pdf>`.
+Lecture 23 slides for download :download:`pdf <Lecture 23.pdf>`.
