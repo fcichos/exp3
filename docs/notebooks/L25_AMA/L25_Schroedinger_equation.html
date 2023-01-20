@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Structure of Atoms and the Bohr Model &mdash; Experimental Physics 3 1 documentation</title>
+  <title>The Schrödinger Equation &mdash; Experimental Physics 3 1 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/./xtheme_overrides.css" type="text/css" />
@@ -22,7 +22,8 @@
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="The Structure of Atoms and the Bohr Model" href="L25_structure_of_atoms.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -594,10 +595,29 @@
 <p class="caption" role="heading"><span class="caption-text">Lecture 24:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L24/overview_24.html">Lecture Contents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertanty_relation.html">Heisenbergs Uncertanty Relation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertanty_relation.html#Position-momentum-uncertanty">Position-momentum uncertanty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertanty_relation.html#Energy-time-uncertanty">Energy-time uncertanty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertanty_relation.html#Spreading-of-wave-packets">Spreading of wave packets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html">Heisenbergs Uncertainty Relation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html#Position-momentum-uncertainty">Position-momentum uncertainty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html#Energy-time-uncertainty">Energy-time uncertainty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html#Spreading-of-wave-packets">Spreading of wave packets</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 25:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L25/overview_25.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L25_structure_of_atoms.html">The Structure of Atoms and the Bohr Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="L25_structure_of_atoms.html#Atomic-sprectra">Atomic sprectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="L25_structure_of_atoms.html#The-Bohr-model">The Bohr model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="L25_structure_of_atoms.html#About-the-stability-of-atoms">About the stability of atoms</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Schrödinger Equation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Introducing-the-equation">Introducing the equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#A-potential-barrier">A potential barrier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#The-case-E-&lt;-E_0">The case <span class="math notranslate nohighlight">\(E &lt; E_0\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#The-case-E-&gt;-E_0">The case <span class="math notranslate nohighlight">\(E &gt; E_0\)</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -616,9 +636,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>The Structure of Atoms and the Bohr Model</li>
+      <li>The Schrödinger Equation</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L25_AMA/L24_structure_of_atoms.ipynb" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L25_AMA/L25_Schroedinger_equation.ipynb" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -651,172 +671,184 @@
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L25_AMA/L24_structure_of_atoms.ipynb`_</span></a>.
-<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L25_AMA/L24_structure_of_atoms.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+<p>This page was generated from <a href="#id2"><span class="problematic" id="id3">`/home/lectures/exp3/source/notebooks/L25_AMA/L25_Schroedinger_equation.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L25_AMA/L25_Schroedinger_equation.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
-<div class="section" id="The-Structure-of-Atoms-and-the-Bohr-Model">
-<h1>The Structure of Atoms and the Bohr Model<a class="headerlink" href="#The-Structure-of-Atoms-and-the-Bohr-Model" title="Permalink to this headline">¶</a></h1>
-<p>So far we have discussed the models of the structural organization of atoms as proposed by <em>Thomson</em> also called <em>Plum Pudding Model</em> and proposed by <em>Rutherford</em>. We know that charges are not equally distributed across the volume of the atom (as assumed in the plum pudding model). Positive charges are rather comprised within a tiny volume, whereas negative charges form a shell around teh positive core. In detail, positive charges form the core with a diameter of
-<span class="math notranslate nohighlight">\(R_{\mathrm{C}} &lt; 10^{-14} \; \mathrm{m}\)</span> and a total charge of <span class="math notranslate nohighlight">\(Q = Z\cdot \mathrm{e}\)</span>, where Q, Z, and e denote the charge of teh core, the atomic number, and the elementary charge, respectively. In addition, the atom core or <em>nucleus</em> bears allmost the whole mass of the atome. In contrast to the positive charges forming heavy but small nucleus, the number of <span class="math notranslate nohighlight">\(Z\)</span> electrons with a charge of <span class="math notranslate nohighlight">\(- \mathrm{e}\)</span> each form the <em>atomic shell</em>. The volume of the shell measures
-<span class="math notranslate nohighlight">\(10^{12}\)</span> to <span class="math notranslate nohighlight">\(10^{15}\)</span> times the volume of the nucleus and thus allmost the volume of the whole atome. In contrast, the mass of the shell is allmost vanishing.</p>
-<p>Now, we will discuss how the atomic shell might be structured. One question is, whether the distribution of electrons is a static distribution of charges or the electrons move. The first case is not stable, because of the electrostatic attraction between the positive nucleus and the negative electrons. The secong case, however, is puzzling as well, because accerlerated and decelerated charges are supposed to emit electromagnetic waves which is not observed.</p>
-<div class="section" id="Atomic-sprectra">
-<h2>Atomic sprectra<a class="headerlink" href="#Atomic-sprectra" title="Permalink to this headline">¶</a></h2>
-<p>In 1859 Kirchhoff and Bunsen observed that atoms absorb light only for particular values of the wavelength. Moreover these wavelength values are specific for the particular kind of atoms and form the absoprtion and emission spectra of these atoms. Early instruments for recording spectra made use of a prism as diffracting element and a photo plate for recording. The prism gave rise to a rainbow at the plate narrow lines were the intensity is lacking exactly at those positions corresponding the
-particular wavelengths where the atoms absorb. Thus, the negative of the photo plates showed bright lines at these positions and those composition of lines were called <em>line spectra</em>. On the basis of further experiments one was able to state</p>
-<ul class="simple">
-<li><p>For every wavelength at which an atom absorbs emission of light is possible, if the atom was previously supplied with enough energy</p></li>
-<li><p>The absorption and emission spectra are specific for every kind of atoms. Thus, one is able to determine the chemical element absorbing or emitting the radiation on the basis of the line spectrum.</p></li>
-<li><p>The values of wavelength (spectral lines) are not arbitrarily narrow. They rather exhibit a distribution of intensity. This indicates that atoms do not emit monochromatic radiation.</p></li>
-</ul>
-<p>In 1885 Balmer discovered that the emission spectrum of hydrogen is compossed of a series of lines that obey a specific law, namely</p>
+<div class="section" id="The-Schrödinger-Equation">
+<h1>The Schrödinger Equation<a class="headerlink" href="#The-Schrödinger-Equation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Introducing-the-equation">
+<h2>Introducing the equation<a class="headerlink" href="#Introducing-the-equation" title="Permalink to this headline">¶</a></h2>
+<p>First we discuss the simple case of a <em>free</em> particle with mass <span class="math notranslate nohighlight">\(m\)</span> at uniform motion with velocity <span class="math notranslate nohighlight">\(u\)</span> along the <span class="math notranslate nohighlight">\(x\)</span> direction. We set the motion at a constant potential (<span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span>) and get a matter wave like</p>
 <div class="math notranslate nohighlight">
-\[\frac{1}{\lambda_{\mathrm{k}}} = R_{\mathrm{y}} \left( \frac{1}{n_1^2} -\frac{1}{n_2^2} \right) \mathrm{.}\]</div>
-<p>In this equation <span class="math notranslate nohighlight">\(R_{\mathrm{y}}\)</span> denote the Rydberg constant (<span class="math notranslate nohighlight">\(R_{\mathrm{y}} = 109 \, 678 \; \mathrm{cm}^{-1}\)</span>) and <span class="math notranslate nohighlight">\(n_1\)</span> and <span class="math notranslate nohighlight">\(n_2\)</span> adopt only the integers <span class="math notranslate nohighlight">\(n_1 = 2\)</span> and <span class="math notranslate nohighlight">\(n_2 = 3,4,5 \ldots\)</span>. This series of lines with <span class="math notranslate nohighlight">\(n_1 = 2\)</span> is calles <em>Balmer series</em>. Later Lyman and Pascher dicovered additional series of the hydrogen emission called <em>Lyman series</em> (<span class="math notranslate nohighlight">\(n_1 = 1\)</span> and <span class="math notranslate nohighlight">\(n_2 = 2,3,4 \ldots\)</span>) and <em>Paschen series</em> (<span class="math notranslate nohighlight">\(n_1 = 3\)</span> and
-<span class="math notranslate nohighlight">\(n_2 = 4,5,6 \ldots\)</span>).</p>
-<figure><p><img alt="7425a8ef811042c5bcc76b8a4d8e821e" class="no-scaled-link" src="notebooks/L25_AMA/img/L24_hydrogen_lines.png" style="width: 75%;" /></p>
-<figcaption><p><strong>Fig.: (top) A continuous spectra in the visible range of light. (center) A hydrogen emission line spectrum. Only where hydrogen emitts light narrow lines of light appear. (bottom) A hydrogen absorption spectra. At wavelengths where hydrogen absorbs light the remaining intensity drops and black lines appear. Source: https://www.thoughtco.com/definition-of-balmer-series-604381</strong></p>
-</figcaption></figure></div>
-<div class="section" id="The-Bohr-model">
-<h2>The Bohr model<a class="headerlink" href="#The-Bohr-model" title="Permalink to this headline">¶</a></h2>
-<p>On the basis of the spectral lines, a number of models for the architecture of atoms were porposed but they were not able to explaine all experimental result at a whole. Amomng them wer Bohr’s famous model from 1913. In the framework of this model electrons with mass <span class="math notranslate nohighlight">\(m_{\mathrm{e}}\)</span> propagates with a velicity <span class="math notranslate nohighlight">\(v\)</span> at a circular orbit with radius <span class="math notranslate nohighlight">\(r\)</span> around the center of mass of the nucleus-electron system. This system can be described through the motion of a particle with the
-reduced mass <span class="math notranslate nohighlight">\(\mu = m_{\mathrm{e}} \cdot m_{\mathrm{n}} / \left( m_{\mathrm{e}} + m_{\mathrm{n}} \right)\)</span> around the center of the Coulomb potential from the nucleus at <span class="math notranslate nohighlight">\(r = 0\)</span>. The nucleus bears the charge <span class="math notranslate nohighlight">\(Q = Z \cdot \mathrm{e}\)</span> and the mass <span class="math notranslate nohighlight">\(m_{\mathrm{n}}\)</span>, which is much greater than <span class="math notranslate nohighlight">\(m_{\mathrm{e}}\)</span> and give rise to <span class="math notranslate nohighlight">\(\mu \approx m_{\mathrm{e}}\)</span>. From the equilibrium of the centrifugal for and the centripetal force (Coulomb force),</p>
+\[\psi \left(x,t\right) = A \cdot \mathrm{e}^{i\left( k x - \omega t\right)} = A \cdot \mathrm{e}^{\frac{i}{\hbar}\left(k x - E t\right)} \mathrm{,}\]</div>
+<p>whith <span class="math notranslate nohighlight">\(E = E_{\mathrm{kin}} = \hbar \cdot \omega\)</span> and <span class="math notranslate nohighlight">\(p = \hbar \cdot k\)</span>. Because the formula is analogue with an electromagnetic wave, we use the same formula as for an electromagnetic wave propagating with a phase velocity of <span class="math notranslate nohighlight">\(u\)</span> alnog <span class="math notranslate nohighlight">\(x\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\frac{\mu  v^2}{r} = \frac{1}{4 \pi \varepsilon_0} \frac{Z e^2}{r^2} \mathrm{,}\]</div>
-<p>we can determinethe radius of the orbital</p>
-<div class="math notranslate nohighlight">
-\[r = \frac{1}{4 \pi \varepsilon_0} \frac{Z e^2}{\mu  v^2} \mathrm{.}\]</div>
-<p>As long as there are no constraints for the energy of the electron <span class="math notranslate nohighlight">\(\mu v^2 / 2\)</span>, the orbit can adopt every possible radius. However, if we describe the electron through a <em>matter wave</em>, then for every stationary state of the atom a corresponding standing wave has to exist. Furthermore, is the wave-like description supposed to comply with the classical orbit description, then the circumference of the orbital has to be a magnitude of the de Broglie wavelength,</p>
-<div class="math notranslate nohighlight">
-\[2 \pi r = n \cdot \lambda_{\mathrm{D}} \mathrm{,}\]</div>
-<p>with <span class="math notranslate nohighlight">\(n = 1,2,3, \ldots\)</span> and <span class="math notranslate nohighlight">\(\lambda_{\mathrm{D}} = h/ \left( \mu \cdot v\right)\)</span>. As a consequence, the velocity of the electron then reads as</p>
-<div class="math notranslate nohighlight">
-\[v = n \cdot \frac{h}{2 \pi \mu r} \mathrm{.}\]</div>
-<p>Now, we can use the expression for the velocity <span class="math notranslate nohighlight">\(v\)</span> in the equilibrium of forces and calculate the orbit radius under the constraint of stationary states being described through matter waves,</p>
+\[\frac{\partial^2 \psi}{\partial x^2} - \frac{1}{u^2} \frac{\partial^2 \psi}{\partial t^2} = 0 \mathrm{.}\]</div>
+<p>In order to describe stationary quantum states, namly the momentum <span class="math notranslate nohighlight">\(p\)</span> and enegery <span class="math notranslate nohighlight">\(E\)</span> do not depent on time, we are seeking for a stationary solution of the above equation. Since they are indepent of time, we can write the genernal solution for the wave equation <span class="math notranslate nohighlight">\(\psi \left(x,t\right)\)</span> as a product of a <em>position-dependent</em> factor $A <span class="math">\cdot `:nbsphinx-math:</span>mathrm{e}`^{i k x} $ and a <em>time-dependent</em> phase <span class="math notranslate nohighlight">\(\mathrm{e}^{-i \omega t}\)</span>, such like</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray}
-r \left(n\right) &amp; = &amp; \frac{\varepsilon_0 h}{\pi \mu e^2} \frac{n^2}{Z}\\
-{} &amp; = &amp; a_0 \frac{n^2}{Z} \mathrm{.}
+\psi \left(x,t\right) &amp; = &amp; A \cdot \mathrm{e}^{i k x} \cdot \mathrm{e}^{-i \omega t}\\
+{} &amp; = &amp; \psi \left(x\right) \cdot \mathrm{e}^{-i \omega t}\mathrm{.}
 \end{eqnarray}\end{split}\]</div>
-<p>The constant <span class="math notranslate nohighlight">\(a_0\)</span>,</p>
+<p>If we now use this ansatz in the wave equation, we obtain for the derivative in space</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-a_0 &amp; = &amp; \frac{\varepsilon_0 h}{\pi \mu e^2}\\
-{} &amp; = &amp; \frac{4 \pi \varepsilon_0 \hbar}{\mu e^2}\\
-{} &amp; = &amp; 5.2919 \cdot 10^{-11} \; \mathrm{m}
-\end{eqnarray}\end{split}\]</div>
-<p>represents the <strong>Bohr radius</strong>, which is the smalles radius of the electron orbit (<span class="math notranslate nohighlight">\(n = 1\)</span>) within a hydrogen atom with <span class="math notranslate nohighlight">\(Z = 1\)</span>. Due to the constraint <span class="math notranslate nohighlight">\(2 \pi r = n \cdot \lambda_{\mathrm{D}}\)</span>, the radii of the electron orbitals are limited to discrete values. Thus, they are <em>quantized</em>.</p>
-<p>Concerning the kinetic energy of an electron <span class="math notranslate nohighlight">\(\mu v^2 / 2\)</span> within a discrete orbit, we can make use of the equilibrium of forces and calculate</p>
+\[\frac{\partial^2 \psi}{\partial x^2} = -k^2 \psi = - \frac{p^2}{\hbar^2} \psi = - \frac{2 m}{\hbar^2} E_{\mathrm{kin}} \psi \mathrm{.}\]</div>
+<p>In the general case our particle might move within a force field. If it is a conservative field, we can assign a potential energy <span class="math notranslate nohighlight">\(E_{\mathrm{pot}}\)</span> to every point in space keeping the total energy constant <span class="math notranslate nohighlight">\(E = E_{\mathrm{kin}} + E_{\mathrm{pot}}\)</span>. Then, we directly obtain the <em>one-dimension stationary Schrödinger equation</em></p>
 <div class="math notranslate nohighlight">
-\[E_{\mathrm{kin}} = \frac{1}{2} \, \mu v^2 = \frac{1}{2} \, \frac{1}{4 \pi \varepsilon_0} \frac{Z e^2}{r} = - \frac{1}{2} \, E_{\mathrm{pot}} \mathrm{.}\]</div>
-<p>We can see that the kinetic energy of an electron is equal to <span class="math notranslate nohighlight">\(-1/2\)</span> times the potential energy of the electron in the Coulomb potential of the nucleus. The total energy then reads as</p>
+\[- \frac{\hbar^2}{2 m} \, \frac{\partial^2 \psi}{\partial x^2} + E_{\mathrm{pot}} \psi = E \psi\]</div>
+<p>In the case of a three-dimensional motion of our particle we can analogously use the three-diemensional wave equation,</p>
 <div class="math notranslate nohighlight">
-\[E = E_{\mathrm{kin}} + E_{\mathrm{pot}} = - \frac{1}{8 \pi \varepsilon_0} \frac{Z e^2}{r}  \mathrm{.}\]</div>
-<p>We can further use the expression for the discrete radius <span class="math notranslate nohighlight">\(r = r\left(n\right)\)</span> and get</p>
+\[\Delta \psi- \frac{1}{u^2} \frac{\partial^2 \psi}{\partial t^2} = 0 \mathrm{,}\]</div>
+<p>and an ansatz in three dimensions,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-E \left( n \right) &amp; = &amp; E_{\mathrm{n}}\\
-{} &amp; = &amp;- \frac{\mu e^4}{8 \varepsilon_0^2 h^2} \cdot \frac{Z^2}{n^2}\\
-{} &amp; = &amp; - Ry^{\ast} \cdot \frac{Z^2}{n^2} \mathrm{,}\\
-\end{eqnarray}\end{split}\]</div>
-<p>with the Rydberg energy (Rydberg constant with respect to energy)</p>
+\[\psi \left(x,y,z,t\right) = \psi \left(x,y,z\right) \cdot \mathrm{e}^{-i \omega t} \mathrm{,}\]</div>
+<p>in order to obtain the <em>three-dimensional stationary Schrödinger equation</em></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-Ry^{\ast} &amp; = &amp; \frac{\mu e^4}{8 \varepsilon_0^2 h^2}\\
-{} &amp; = &amp; h \cdot c \cdot Ry \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<p>It is evident that the electron can adopt only particular values of energy <span class="math notranslate nohighlight">\(E_{\mathrm{n}}\)</span>, which might be expressed in terms of a <em>quantum number</em> <span class="math notranslate nohighlight">\(n = 1, 2, 3 \ldots\)</span>. This stationary energetic state is also called a <em>quantum state</em> of the atom and the quantum number <span class="math notranslate nohighlight">\(n\)</span> is called the <em>principal quantum number</em>.</p>
-<p>Moreover, it is evident that <strong>the energy is negative</strong> and approaches <span class="math notranslate nohighlight">\(0\)</span> if the obital radius approaches <span class="math notranslate nohighlight">\(+\infty\)</span>, which corresponds to the principal quantum number appraoching <span class="math notranslate nohighlight">\(+\infty\)</span>.</p>
-<figure><p><img alt="07ddddfcd2624ea682479bb784eb0295" class="no-scaled-link" src="notebooks/L25_AMA/img/L24_Bohr_model.png" style="width: 90%;" /></p>
-<figcaption><p><strong>Fig.: (left) Kinetic energy, potentual energy, and the resulting total energy as sum of the fomer of an electron within the Coulomb potential in the framework of the classical mechanics and electrodynamics in dependence of the distance of the lectron from the nucleus. (right) The same is left, but the quantum mechnical correction resulting in a minimum of the total energy.</strong></p>
-</figcaption></figure><p>Please note:</p>
-<ul class="simple">
-<li><p>The particular value of teh Ryberg constant depends on teh reduced mass of teh system electron plus nucleus <span class="math notranslate nohighlight">\(1/\mu = 1/m_{\mathrm{e}} + 1/m_{\mathrm{c}}\)</span>. In order to use a general cosntant one define the Rydberg constant <span class="math notranslate nohighlight">\(Ry_{\infty}\)</span> for <span class="math notranslate nohighlight">\(m_{\mathrm{c}} \longrightarrow \infty\)</span> with the result <span class="math notranslate nohighlight">\(\mu \longrightarrow m_{\mathrm{e}}\)</span>. Therydberg cosntant for finite nuleus mass ithen is given through <span class="math notranslate nohighlight">\(Ry = Ry_{\infty} \cdot \mu /m_{\mathrm{e}}\)</span>, with
-<span class="math notranslate nohighlight">\(Ry_{\infty} = 109737 \; \mathrm{cm}^{-1}\)</span></p></li>
-<li><p>The Bohr model is a <em>semi-classical</em> model. The motion of the electron is treated in the framework of classical mechanics as the motion of a point-like particle within a Coulomb potential plus the additional constraint from the matter wave leading to quantized quantum states.</p></li>
-<li><p>From the quantized velocity of the elctron <span class="math notranslate nohighlight">\(v = n \cdot h / (2 \pi \mu r)\)</span> it follows <span class="math notranslate nohighlight">\(\mu r v = n \cdot \hbar = \left| \vec{L} \right|\)</span>. The <em>angular momentum</em> of the electron is also quantized. It can adopt only magnitude of <span class="math notranslate nohighlight">\(\hbar\)</span>. Both conditions, the qunatization of the electron orbit circumference <span class="math notranslate nohighlight">\(2 \pi r = n \cdot \lambda_{\mathrm{D}}\)</span> and the quantization of the electron angular momentum $ <span class="math">\left</span>| <span class="math">\vec{L}</span>
-<span class="math">\right</span>| = <span class="math">\mu `r v = n :nbsphinx-math:</span>cdot <cite>:nbsphinx-math:</cite>hbar`$ are identical.</p></li>
-</ul>
-<p>In order to explain the shape of the line spectra we have to state a hypothesis. If a photon is absorbed by an atom, then the atom might go from a lower energtic state <span class="math notranslate nohighlight">\(E \left( n_i \right) = E_{\mathrm{i}}\)</span> to a higher energetic state <span class="math notranslate nohighlight">\(E \left( n_k \right) = E_{\mathrm{k}}\)</span> under the prerequisite of energy conservation,</p>
+\[- \frac{\hbar^2}{2 m} \, \Delta \psi + E_{\mathrm{pot}} \psi = E \psi \mathrm{.}\]</div>
+<p>If we, in addition, calculate the first order derivative of our matter wave with respect to time, we obtain (for <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span>)</p>
 <div class="math notranslate nohighlight">
-\[E_{\mathrm{k}} - E_{\mathrm{i}} \mathrm{.}\]</div>
-<p>The energy of teh photon is used to compensate the energy differnce between state <span class="math notranslate nohighlight">\(E_{\mathrm{k}}\)</span> and state <span class="math notranslate nohighlight">\(E_{\mathrm{i}}\)</span>, <span class="math notranslate nohighlight">\(\Delta E = E_{\mathrm{k}} - E_{\mathrm{i}}\)</span>. From the relation <span class="math notranslate nohighlight">\(E_{\mathrm{n}} = h \cdot \nu = - Ry^{\ast} \cdot \frac{Z^2}{n^2}\)</span> a we obtain</p>
+\[\frac{\partial \psi}{\partial t} = - \frac{i}{\hbar} E_{\mathrm{kin}} \, \psi \mathrm{.}\]</div>
+<p>In the case of a free particle, the condition <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span> implies <span class="math notranslate nohighlight">\(E_{\mathrm{kin}} = \; \mathrm{const.}\)</span> and we can combine the derivative in space and in time in order to derive this <em>three-dimensionsial time-dependent equation</em></p>
 <div class="math notranslate nohighlight">
-\[\nu = \frac{Ry^{\ast}}{h} Z^2 \left( \frac{1}{n_{\mathrm{i}}^2} - \frac{1}{n_{\mathrm{k}}^2} \right) \mathrm{.}\]</div>
-<p>With the aid of <span class="math notranslate nohighlight">\(\nu = c / \lambda\)</span> as well as <span class="math notranslate nohighlight">\(Ry^{\ast} = Ry \cdot c \cdot h\)</span> we get further</p>
+\[- \frac{\hbar^2}{2 m} \, \Delta \psi = i \hbar \frac{\partial \psi}{\partial t} \mathrm{.}\]</div>
+<p>Please note, in the case of <strong>non-stationary</strong> problems, namely where <span class="math notranslate nohighlight">\(E = E \left( t \right)\)</span> and <span class="math notranslate nohighlight">\(p = p \left( t \right)\)</span>, the simple derivative <span class="math notranslate nohighlight">\(\partial^2 \psi / \partial t^2 = - \omega^2 \psi\)</span> <strong>does not hold true</strong> anymore and more time-dependent parameters have to be considered. However, Schrödinger proposed for a <em>time-dependent</em> potential energy <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = E_{\mathrm{pot}} \left(r, t \right)\)</span> the equation</p>
 <div class="math notranslate nohighlight">
-\[\frac{1}{\lambda} = Ry \cdot Z^2 \left( \frac{1}{n_{\mathrm{i}}^2} - \frac{1}{n_{\mathrm{k}}^2} \right) \mathrm{,}\]</div>
-<p>which is the general equation for the lines of a line spectrum and comprises the equation stated by Balmer for special the case of hydorgen (<span class="math notranslate nohighlight">\(Z = 1\)</span>).</p>
-<p>In order to explain the shape of the line spectra we have to state a hypothesis. If a photon is absorbed by an atom, then the atom might go from a lower energtic state <span class="math notranslate nohighlight">\(E \left( n_i \right) = E_{\mathrm{i}}\)</span> to a higher energetic state <span class="math notranslate nohighlight">\(E \left( n_k \right) = E_{\mathrm{k}}\)</span> under the prerequisite of energy conservation,</p>
-<div class="math notranslate nohighlight">
-\[E_{\mathrm{k}} - E_{\mathrm{i}} \mathrm{.}\]</div>
-<p>The energy of teh photon is used to compensate the energy differnce between state <span class="math notranslate nohighlight">\(E_{\mathrm{k}}\)</span> and state <span class="math notranslate nohighlight">\(E_{\mathrm{i}}\)</span>, <span class="math notranslate nohighlight">\(\Delta E = E_{\mathrm{k}} - E_{\mathrm{i}}\)</span>. From the relation <span class="math notranslate nohighlight">\(E_{\mathrm{n}} = h \cdot \nu = - Ry^{\ast} \cdot \frac{Z^2}{n^2}\)</span> a we obtain</p>
-<div class="math notranslate nohighlight">
-\[\nu = \frac{Ry^{\ast}}{h} Z^2 \left( \frac{1}{n_{\mathrm{i}}^2} - \frac{1}{n_{\mathrm{k}}^2} \right) \mathrm{.}\]</div>
-<p>With the aid of <span class="math notranslate nohighlight">\(\nu = c / \lambda\)</span> as well as <span class="math notranslate nohighlight">\(Ry^{\ast} = Ry \cdot c \cdot h\)</span> we get further</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{\lambda} = Ry \cdot Z^2 \left( \frac{1}{n_{\mathrm{i}}^2} - \frac{1}{n_{\mathrm{k}}^2} \right) \mathrm{,}\]</div>
-<p>which is the general equation for the lines of a line spectrum and comprises the equation stated by Balmer for special the case of hydorgen (<span class="math notranslate nohighlight">\(Z = 1\)</span>).</p>
-<p>In summary we can state:</p>
-<ul class="simple">
-<li><p>Electrons propagate in circular orbitals around the nucleus. The raddi of the orbital are quantized and the particular radius increase <em>quadratically</em> with th eprincipal quantum number <span class="math notranslate nohighlight">\(n\)</span>,</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[r_n = \frac{a_0}{Z}\cdot n^2 \mathrm{.}\]</div>
-<ul class="simple">
-<li><p>The radii are inverse propertinal to the atomic number.</p></li>
-<li><p>Every quantum state characterized through the quantum number <span class="math notranslate nohighlight">\(n\)</span> is associated witha particular <em>negative</em> energy <span class="math notranslate nohighlight">\(E_{\mathrm{n}}\)</span>,</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[E_{\mathrm{n}} = - Ry^{\ast} \frac{Z^2}{n^2} \mathrm{.}\]</div>
-<ul class="simple">
-<li><p>The energy for <span class="math notranslate nohighlight">\(n \longrightarrow \infty\)</span> and thus <span class="math notranslate nohighlight">\(r \longrightarrow \infty\)</span> is set as <span class="math notranslate nohighlight">\(0\)</span>. The difference between <span class="math notranslate nohighlight">\(E_{\mathrm{n}}\)</span> and <span class="math notranslate nohighlight">\(E_{\infty}\)</span> is teh ionization energy.</p></li>
-<li><p>Through absorbing a photon of energy <span class="math notranslate nohighlight">\(h\cdot \nu\)</span> the atom gos from a lower energetic state <span class="math notranslate nohighlight">\(E_{\mathrm{i}}\)</span> into a higher enrgetic state <span class="math notranslate nohighlight">\(E_{\mathrm{k}}\)</span>, if conservation of energy is fulfilled.</p></li>
-</ul>
-<p>So far the Bohr model can successfully describe the line spectra. However, since electrons are assumed to propagate at circular orbits and hence are supposed to permanently irradiate electromagnetic waves. This gives rise to the questions why does the electron not emit radiation and therefore lose energy and collapse into teh nucleus? Or why are atoms stable?</p>
+\[- \frac{\hbar^2}{2 m} \, \Delta \psi\left(r, t \right) + E_{\mathrm{pot}} \left(r, t \right) \psi\left(r, t \right) = i \hbar \frac{\partial}{\partial t} \psi\left(r, t \right) \mathrm{,}\]</div>
+<p>which was confirmed by numerous experiments. For stationary problems, one can again separate the wave function into a position- and a time-dependent factor and get the stationary Schrödinger equation as stated above.</p>
 </div>
-<div class="section" id="About-the-stability-of-atoms">
-<h2>About the stability of atoms<a class="headerlink" href="#About-the-stability-of-atoms" title="Permalink to this headline">¶</a></h2>
-<p>The stability of atoms in its lowest energetic state can be explained on the basis of the uncertanty principle. If we assume <span class="math notranslate nohighlight">\(a\)</span> being the average radius of a hydrogen atom, we can state the orbit radius with the uncertainty</p>
+<div class="section" id="A-potential-barrier">
+<h2>A potential barrier<a class="headerlink" href="#A-potential-barrier" title="Permalink to this headline">¶</a></h2>
+<p>The free particle with <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span> as we discussed it previously might propagate in <span class="math notranslate nohighlight">\(+x\)</span> direction and enter a region with a different potential <span class="math notranslate nohighlight">\(\phi \left( x \ge 0 \right) =\phi_0 &gt; 0\)</span> at <span class="math notranslate nohighlight">\(x = 0\)</span>. Thus, the particle experience a shift in its potential energy from <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span> for <span class="math notranslate nohighlight">\(x &lt; 0\)</span> to <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = E_0\)</span> for <span class="math notranslate nohighlight">\(x \ge 0\)</span>. This scenario is similar to a light wave at the air-glass interface.</p>
+<p>In order to solve the Schrödinger equation for this problem, we split the space <span class="math notranslate nohighlight">\(-\infty &lt; x &lt; \infty\)</span> into two regions. In region 1, where <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span>, we can state the general solution for the one-dimensional stationary Schrödinger equation as</p>
 <div class="math notranslate nohighlight">
-\[\Delta r \le a \mathrm{,}\]</div>
-<p>since we know the electron has to be somewhere within the atom. As a consequence the radial component <span class="math notranslate nohighlight">\(p_r\)</span> of the electron’s momentum becomes</p>
+\[- \frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi\left( x \right) + E_{\mathrm{pot}} \psi\left( x \right) = E \psi \left( x \right) \mathrm{.}\]</div>
+<p>Because <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span> and <span class="math notranslate nohighlight">\(E = E_{\mathrm{kin}} + E_{\mathrm{pot}}\)</span>, we can simplify <span class="math notranslate nohighlight">\(E = p^2/\left( 2 m \right) = \hbar^2 k^2 / 2 m\)</span> and get</p>
 <div class="math notranslate nohighlight">
-\[\Delta p_r \ge \frac{\hbar}{a} \mathrm{.}\]</div>
-<p>Because of that, the overall electron momentum has to bigger than the uncertanty</p>
+\[\begin{split}\begin{eqnarray}
+- \frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi\left( x \right) &amp; = &amp; \frac{\hbar^2 k^2}{2 m} \psi \left( x \right)\\
+\rightarrow \frac{\partial^2}{\partial x^2} \psi\left( x \right) &amp; = &amp; - k^2 \psi \left( x \right) \mathrm{.}
+\end{eqnarray}\end{split}\]</div>
+<p>The general solution of <span class="math notranslate nohighlight">\(\psi\left( x \right)\)</span> has the shape</p>
 <div class="math notranslate nohighlight">
-\[p \ge \frac{\hbar}{a} \mathrm{,}\]</div>
-<p>otherwise we would know the momentum with a smaller uncertanty than <span class="math notranslate nohighlight">\(\Delta p_r\)</span>. For the electron’s average kinetic and potential energy it follows</p>
+\[\psi\left( x \right) = A \cdot \mathrm{e}^{+i k x} + B \cdot \mathrm{e}^{-i k x}\]</div>
+<p>and the time-dependent solution for the wave function</p>
 <div class="math notranslate nohighlight">
-\[E_{\mathrm{kin}} = \frac{p^2}{2m} \ge \frac{\Delta p^2}{2m} \ge \frac{\hbar^2}{2ma^2}\]</div>
+\[\begin{split}\begin{eqnarray}
+\psi \left( x,t \right) &amp; = &amp; \psi \left( x \right) \cdot \mathrm{e}^{-i \omega t}\\
+{} &amp; = &amp; A \cdot \mathrm{e}^{i \left( k x - \omega t \right)} + B \cdot \mathrm{e}^{-i \left( k x + \omega t \right)}
+\end{eqnarray}\end{split}\]</div>
+<p>is a superposition of a plane wave propagating in <span class="math notranslate nohighlight">\(+x\)</span> direction and a plane wave propagating in <span class="math notranslate nohighlight">\(-x\)</span> direction. The coefficients <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are the amplitudes of both waves and are determined on the basis of boundary conditions. If we now concentrate again on our potantial barrier, we can state for the position-dependent solution in region 1</p>
+<div class="math notranslate nohighlight">
+\[\psi_{\mathrm{1}} \left( x \right) = A \cdot \mathrm{e}^{+i k x} + B \cdot \mathrm{e}^{-i k x} \mathrm{.}\]</div>
+<p>For region 2 where <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = E_0\)</span> we can state the Schrödinger equation as follows</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+- \frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi\left( x \right) + E_0 \psi\left( x \right) &amp; = &amp; E \psi \left( x \right) \\
+\rightarrow \frac{\partial^2}{\partial x^2} \psi\left( x \right) + \frac{2m}{\hbar^2} \left(E - E_0 \right) \psi\left( x \right) &amp; = &amp; 0\\
+\frac{\partial^2}{\partial x^2} \psi\left( x \right) - \alpha^2 \psi\left( x \right) &amp; = &amp; 0\mathrm{,}
+\end{eqnarray}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\alpha = \sqrt{2m\left(E_0 - E \right)}/\hbar\)</span>. The solution for region 2 then reads as</p>
+<div class="math notranslate nohighlight">
+\[\psi_{\mathrm{2}} \left( x \right) = C \cdot \mathrm{e}^{+\alpha x} + B \cdot \mathrm{e}^{-\alpha x}\]</div>
+<p>and the general solution for the position-dependent factor of the one-dimensional stationary Schrödinger equation reads as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\psi \left( x \right) =
+    \begin{cases}
+      \psi_{\mathrm{1}} \left( x \right) &amp; \text{, if $x &lt; 0$}\\
+      \psi_{\mathrm{2}} \left( x \right) &amp; \text{, if $x \ge 0$}
+    \end{cases} \mathrm{.}\end{split}\]</div>
+<p>The general solution does represent a solution of the Schrödinger equation for the whole space <span class="math notranslate nohighlight">\(- \infty &lt; x &lt; \infty\)</span> if and only if <span class="math notranslate nohighlight">\(\psi \left( x \right)\)</span> is continuously differentiable over the whole space. Otherwise the second derivative $ <span class="math">\partial`^2 :nbsphinx-math:</span>psi`:nbsphinx-math:<cite>left`( x :nbsphinx-math:</cite>right`) / <span class="math">\partial `x^2$ in the Schrödinger equation will be undefined. From this prerequisite the boundary conditions at :math:`x = 0</span>
+directly follow,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+\psi_{\mathrm{1}} \left( x = 0 \right) &amp; = &amp; \psi_{\mathrm{2}} \left( x = 0 \right)\\
+\rightarrow A + B &amp; = &amp; C +D
+\end{eqnarray}\end{split}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight">
-\[E_{\mathrm{pot}} = - \frac{e^2}{4 \pi \varepsilon_0 a} \mathrm{,}\]</div>
-<p>respectively. The total energy <span class="math notranslate nohighlight">\(E = E_{\mathrm{kin}} + E_{\mathrm{pot}}\)</span> then is given though</p>
+\[\begin{split}\begin{eqnarray}
+\frac{\partial}{\partial x} \psi_{\mathrm{1}} \left( x = 0 \right) &amp; = &amp;  \frac{\partial}{\partial x} \psi_{\mathrm{2}} \left( x = 0 \right)\\
+\rightarrow i k \left(A - B \right) &amp; = &amp; \alpha \left( C - D \right) \mathrm{.}
+\end{eqnarray}\end{split}\]</div>
+<div class="section" id="The-case-E-&lt;-E_0">
+<h3>The case <span class="math notranslate nohighlight">\(E &lt; E_0\)</span><a class="headerlink" href="#The-case-E-<-E_0" title="Permalink to this headline">¶</a></h3>
+<p>In the case <span class="math notranslate nohighlight">\(E&lt;E_0\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span> is a real number. Moreover the coefficient <span class="math notranslate nohighlight">\(C\)</span> has to be <span class="math notranslate nohighlight">\(0\)</span>, otherwise <span class="math notranslate nohighlight">\(\psi_{\mathrm{2}}\)</span> will approach <span class="math notranslate nohighlight">\(+\infty\)</span> for <span class="math notranslate nohighlight">\(x \longrightarrow +\infty\)</span>. From the boundary conditions we get</p>
 <div class="math notranslate nohighlight">
-\[E \ge \frac{\hbar^2}{2ma^2} - \frac{e^2}{4 \pi \varepsilon_0 a}\]</div>
-<p>The propability to find an electron at the radius <span class="math notranslate nohighlight">\(a_{\mathrm{min}}\)</span> is biggest, for the minimum of teh energy <span class="math notranslate nohighlight">\(\mathrm{d}E/\mathrm{d}a = 0\)</span>, which leads us to</p>
+\[\begin{split}\begin{eqnarray}
+B &amp; = &amp; \frac{i k + \alpha}{i k - \alpha} A\\
+C &amp; = &amp; \frac{2 i k}{i k - \alpha} A
+\end{eqnarray}\end{split}\]</div>
+<p>and thus the wave function in region 1 (<span class="math notranslate nohighlight">\(x &lt; 0\)</span>) reads as</p>
 <div class="math notranslate nohighlight">
-\[a_{\mathrm{min}} = \frac{4 \pi \varepsilon_0 \hbar^2}{m e^2} = \frac{\varepsilon_0 h^2}{\pi m e^2} = a_0 \mathrm{.}\]</div>
-<p>As a consequence, there is a state of minimum energy with the lower limit</p>
+\[\psi_{\mathrm{1}} \left( x \right) = A \left( \mathrm{e}^{+i k x} + \frac{i k + \alpha}{i k - \alpha} \mathrm{e}^{-i k x} \right)\mathrm{.}\]</div>
+<p>Because we do know the wave function and its amplitudes, we can calculate the <strong>reflection coefficient</strong> as the ratio of the squared reflected and initial waves,</p>
 <div class="math notranslate nohighlight">
-\[E_{\mathrm{min}} = - \frac{m e^4}{8 \varepsilon^2 h^2} = - Ry^{\ast} \mathrm{.}\]</div>
-<p>This result is in accord with observation from the Bohr model stating the energy of the lowest state in a hydrogen atom is <span class="math notranslate nohighlight">\(E = - Ry^{\ast}\)</span>. Because of this discussion, we can state there is a finite distance <span class="math notranslate nohighlight">\(a_{\mathrm{min}}\)</span> from the nucleus accociated with teh lowest energetic state. Due to the uncertanty relation the kinetic energy increases stronger than the potential energy decreases, if the elctron at moves closer to the nucleus as <span class="math notranslate nohighlight">\(a_{\mathrm{min}}\)</span>.</p>
-<script type="application/vnd.jupyter.widget-state+json">
+\[R = \frac{\left| B \cdot \mathrm{e}^{-i k x} \right|^2}{\left| A \cdot \mathrm{e}^{+i k x} \right|^2} = \frac{\left| B \right|^2}{\left| A \right|^2} = \frac{\left| i k + \alpha \right|^2}{\left| i k - \alpha \right|^2} = 1 \mathrm{.}\]</div>
+<p>From this result it is evedent that in the case <span class="math notranslate nohighlight">\(E &lt; E_0\)</span> every particle are reflected at the barrier as to be expected in the framework of classical mechanics. However, the particles do not change their direction of propagation diretly at the edge of the barrier (<span class="math notranslate nohighlight">\(x = 0\)</span>. Instead, they are able to intrude region 2 (<span class="math notranslate nohighlight">\(x \ge 0\)</span>) to some extend, even though their energy is not sufficient in the classical framework.</p>
+<p>The probibility <span class="math notranslate nohighlight">\(P \left( x \right)\)</span> to find a particle at the position <span class="math notranslate nohighlight">\(x &gt; 0\)</span> then is given through</p>
+<div class="math notranslate nohighlight">
+\[P \left( x \right) = \left| \psi_2 \left( x \right) \right|^2 = \left| D \cdot \mathrm{e}^{- \alpha x} \right|^2 = \frac{4 k^2}{\alpha^2 + k^2} \mathrm{e}^{-2 \alpha x} = \frac{4 k^2}{k_0^2} \mathrm{e}^{-2 \alpha x} \mathrm{,}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_0^2 = 2 m E_0 / \hbar\)</span>. We see, at a depth of penetration of <span class="math notranslate nohighlight">\(x = 1/\left(2\alpha\right)\)</span> the propability to find the particle at this position is decreased about the fractor <span class="math notranslate nohighlight">\(1/\mathrm{e}\)</span> compared to the propability at <span class="math notranslate nohighlight">\(x=0\)</span>. This phenomenon we allready know as evanescent wave during total internal reflection.</p>
+<figure><p><img alt="2d6d1de61845463a806d9c8a6117603e" class="no-scaled-link" src="../../_images/L25_potential_barrier_1.png" style="width: 75%;" /></p>
+<figcaption><p><strong>Fig.: A wave with a kinetic energy :math:`E_{mathrm{kin}}` approaches potential barrier :math:`E_0` with :math:`E_0 &gt; E_{mathrm{kin}}`. The wave is completely reflacted (amplitudes :math:`left|Aright|` = :math:`left|Bright|`), but intrudes the barrier where the amplitude decays exponentially.</strong></p>
+</figcaption></figure></div>
+<div class="section" id="The-case-E-&gt;-E_0">
+<h3>The case <span class="math notranslate nohighlight">\(E &gt; E_0\)</span><a class="headerlink" href="#The-case-E->-E_0" title="Permalink to this headline">¶</a></h3>
+<p>In this case the kinetic energy is greater then the shift in the potential energy. In the framework of classical mechanics, every particle is allowed to enter region 2 (<span class="math notranslate nohighlight">\(x&gt;0\)</span>) and to propagate there, but with reduced velocity due to their decreased kinetic energy (<span class="math notranslate nohighlight">\(E_{\mathrm{kin}} = E - E_0\)</span>).</p>
+<p>In the framwork of matter waves the parameter <span class="math notranslate nohighlight">\(\alpha\)</span> now is an imaginary number. Therefore, we introduce a real number,</p>
+<div class="math notranslate nohighlight">
+\[\kappa = i \alpha = \frac{\sqrt{2 m \left( E - E_0 \right)}}{\hbar} \mathrm{.}\]</div>
+<p>The solution of position-dependent factor in region 2 then reads as</p>
+<div class="math notranslate nohighlight">
+\[\psi_2 \left( x \right) = C \cdot \mathrm{e}^{-i \kappa x} + B \cdot \mathrm{e}^{+i \kappa x} \mathrm{.}\]</div>
+<p>Furthermore, in region 2 there are no particles propagation along the <span class="math notranslate nohighlight">\(-x\)</span> direction (since there is no boundary to reflect teh wave until <span class="math notranslate nohighlight">\(+\infty\)</span>). Thus, we can set <span class="math notranslate nohighlight">\(C = 0\)</span>. From the boundary conditions it follows</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+B &amp; = &amp; \frac{k - \kappa}{k + \kappa} A\\
+D &amp; = &amp; \frac{2}{k + \kappa} A\\
+\end{eqnarray}\end{split}\]</div>
+<p>and the wave function reads as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+\psi_{\mathrm{1}} \left( x \right) &amp; = &amp; A \left( \mathrm{e}^{+i k x} + \frac{k - \kappa}{ k + \kappa} \mathrm{e}^{-i k x} \right)\\
+\psi_{\mathrm{2}} \left( x \right) &amp; = &amp; A \frac{2 k}{ k + \kappa} \mathrm{e}^{+i \kappa x} \mathrm{.}
+\end{eqnarray}\end{split}\]</div>
+<p>The reflection coefficient then</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\left| B \right|^2}{\left| A \right|^2} = \frac{\left| k - \kappa \right|^2}{\left| k + \kappa \right|^2}\mathrm{.}\]</div>
+<p>Now we see, even though the kinetic energy of our pairticle is sufficient enough to overcome the potential barrier, a part of teh wave is reflected. Furthermore, since the wavenumber is directly connected to the refrective index <span class="math notranslate nohighlight">\(k = n \cdot k_0\)</span>, we can immediately calculate the refectance,</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\left| n_1 - n_2 \right|^2}{\left| n_1 + n_2 \right|^2}\mathrm{.}\]</div>
+<p>In order to calculate the transmission coefficient, or how many particles pass a unit area at <span class="math notranslate nohighlight">\(x=x_0&gt;0\)</span> per time devided through how many incident particles pass a unit area at <span class="math notranslate nohighlight">\(x=-x_0&lt;0\)</span> per time, we have to bear in mind the different propagation velocities in region 1 and 2. The ratio of the velocities is governed by the ration of the wavenumbers</p>
+<div class="math notranslate nohighlight">
+\[\frac{v_2}{v_1} = \frac{\kappa}{k} = \frac{\lambda_1}{\lambda_2} \mathrm{.}\]</div>
+<p>The transmission coefficient then reads as</p>
+<div class="math notranslate nohighlight">
+\[T = \frac{v_2 \cdot \left| D \right|^2}{v_1 \cdot \left| A \right|^2} = \frac{4 \kappa k}{\left( k + \kappa \right)^2}\mathrm{.}\]</div>
+<p>Moreover, it is evident that</p>
+<div class="math notranslate nohighlight">
+\[R + T = 1 \mathrm{,}\]</div>
+<p>which represents the conservation of the number of particles.</p>
+<figure><p><img alt="6612285bde1044e5be3797a3a4eb0a9f" class="no-scaled-link" src="../../_images/L25_potential_barrier_2.png" style="width: 75%;" /></p>
+<figcaption><p><strong>Fig.: A wave with a kinetic energy :math:`E_{mathrm{kin}}` approaches potential barrier :math:`E_0` with $E_{:nbsphinx-math:`mathrm{kin}`} &gt; E_0 $. The wave is partially reflected and partially transmitted.</strong></p>
+</figcaption></figure><script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></div>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="L25_structure_of_atoms.html" class="btn btn-neutral float-left" title="The Structure of Atoms and the Bohr Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 19, 2023.
+      <span class="lastupdated">Last updated on Jan 20, 2023.
       </span></p>
   </div>
 

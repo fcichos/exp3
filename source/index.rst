@@ -251,7 +251,6 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L23_AMA/L23_particle_character_of_light.ipynb
    notebooks/L23_AMA/L23_wave_character_of_particles.ipynb
    notebooks/L23_AMA/L23_matter_waves.ipynb
-   notebooks/L23_AMA/L23_Heisenbergs_uncertanty_relation.ipynb
 
 
 .. toctree::
@@ -259,8 +258,17 @@ The fields of optics and quantum mechanics are nowadays very active research are
    :caption: Lecture 24:
    
    lectures/L24/overview_24.rst
-   notebooks/L24_AMA/L24_Heisenbergs_uncertanty_relation.ipynb
-   notebooks/L24_AMA/L24_structure_of_atoms.ipynb
+   notebooks/L24_AMA/L24_matter_waves.ipynb
+   notebooks/L24_AMA/L24_Heisenbergs_uncertainty_relation.ipynb
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 25:
+   
+   lectures/L25/overview_25.rst
+   notebooks/L25_AMA/L25_structure_of_atoms.ipynb
+   notebooks/L25_AMA/L25_Schroedinger_equation.ipynb
 
  
 
