@@ -22,7 +22,8 @@
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Lecture Contents" href="../../lectures/L26/overview_26.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -620,6 +621,21 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 26:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L26/overview_26.html">Lecture Contents</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Schrödinger Equation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Introducing-the-equation">Introducing the equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#A-potential-barrier">A potential barrier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#The-case-0-&lt;-E-&lt;-E_0">The case <span class="math notranslate nohighlight">\(0 &lt; E &lt; E_0\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#The-case-0-&lt;-E_0-&lt;-E">The case <span class="math notranslate nohighlight">\(0 &lt; E_0 &lt; E\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#The-case-E_0-&lt;-0-&lt;-E">The case <span class="math notranslate nohighlight">\(E_0 &lt; 0 &lt; E\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#The-tunnel-effect-or-quantum-tunnelling">The tunnel effect or quantum tunnelling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -647,252 +663,6 @@
              
   
 <style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt *,
-div.nbinput.container div.input_area pre,
-div.nboutput.container div.output_area pre,
-div.nbinput.container div.input_area .highlight,
-div.nboutput.container div.output_area .highlight {
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-div.nbinput.container > div[class*=highlight],
-div.nboutput.container > div[class*=highlight] {
-    margin: 0;
-}
-
-div.nbinput.container div.prompt *,
-div.nboutput.container div.prompt * {
-    background: none;
-}
-
-div.nboutput.container div.output_area .highlight,
-div.nboutput.container div.output_area pre {
-    background: unset;
-}
-
-div.nboutput.container div.output_area div.highlight {
-    color: unset;  /* override Pygments text color */
-}
-
-/* avoid gaps between output lines */
-div.nboutput.container div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput.container,
-div.nboutput.container {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput.container,
-    div.nboutput.container {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput.container {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast.container {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput.container div.prompt pre {
-    color: #307FC1;
-}
-
-/* output prompt */
-div.nboutput.container div.prompt pre {
-    color: #BF5B3D;
-}
-
-/* all prompts */
-div.nbinput.container div.prompt,
-div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
-}
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
-@media (max-width: 540px) {
-    div.nbinput.container div.prompt,
-    div.nboutput.container div.prompt {
-        width: unset;
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput.container div.prompt.empty {
-        padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput.container div.prompt pre,
-div.nboutput.container div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput.container div.input_area,
-div.nboutput.container div.output_area {
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput.container div.input_area,
-    div.nboutput.container div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput.container div.input_area {
-    border: 1px solid #e0e0e0;
-    border-radius: 2px;
-    /*background: #f5f5f5;*/
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput.container div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput.container div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput.container div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-
-
-div.nbinput.container div.input_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight] > pre,
-div.nboutput.container div.output_area div[class*=highlight].math,
-div.nboutput.container div.output_area.rendered_html,
-div.nboutput.container div.output_area > div.output_javascript,
-div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
-    margin: 0;
-}
-
-/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
-div.nbinput.container div.input_area > div[class^='highlight'],
-div.nboutput.container div.output_area > div[class^='highlight']{
-    overflow-y: hidden;
-}
-
-/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt .copybtn {
-    display: none;
-}
-
-/* Some additional styling taken form the Jupyter notebook CSS */
-div.rendered_html table {
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-div.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
-}
-div.rendered_html tr,
-div.rendered_html th,
-div.rendered_html td {
-  text-align: right;
-  vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
-}
-div.rendered_html th {
-  font-weight: bold;
-}
-div.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-div.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
-}
-
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -916,7 +686,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <div class="admonition note">
-<p>This page was generated from <a href="#id2"><span class="problematic" id="id3">`/home/lectures/exp3/source/notebooks/L26_AMA/L26_Schroedinger_equation.ipynb`_</span></a>.
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L26_AMA/L26_Schroedinger_equation.ipynb`_</span></a>.
 <span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L26_AMA/L26_Schroedinger_equation.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
 </div>
 <div class="section" id="The-Schrödinger-Equation">
@@ -1016,8 +786,8 @@ directly follow,</p>
 \frac{\partial}{\partial x} \psi_{\mathrm{1}} \left( x = 0 \right) &amp; = &amp;  \frac{\partial}{\partial x} \psi_{\mathrm{2}} \left( x = 0 \right)\\
 \rightarrow i k \left(A - B \right) &amp; = &amp; \alpha \left( C - D \right) \mathrm{.}
 \end{eqnarray}\end{split}\]</div>
-<div class="section" id="The-case-E-&lt;-E_0">
-<h3>The case <span class="math notranslate nohighlight">\(E &lt; E_0\)</span><a class="headerlink" href="#The-case-E-<-E_0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="The-case-0-&lt;-E-&lt;-E_0">
+<h3>The case <span class="math notranslate nohighlight">\(0 &lt; E &lt; E_0\)</span><a class="headerlink" href="#The-case-0-<-E-<-E_0" title="Permalink to this headline">¶</a></h3>
 <p>In the case <span class="math notranslate nohighlight">\(E&lt;E_0\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span> is a real number. Moreover the coefficient <span class="math notranslate nohighlight">\(C\)</span> has to be <span class="math notranslate nohighlight">\(0\)</span>, otherwise <span class="math notranslate nohighlight">\(\psi_{\mathrm{2}}\)</span> will approach <span class="math notranslate nohighlight">\(+\infty\)</span> for <span class="math notranslate nohighlight">\(x \longrightarrow +\infty\)</span>. From the boundary conditions we get</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray}
@@ -1035,11 +805,11 @@ D &amp; = &amp; \frac{2 i k}{i k - \alpha} A
 <div class="math notranslate nohighlight">
 \[P \left( x \right) = \left| \psi_2 \left( x \right) \right|^2 = \left| D \cdot \mathrm{e}^{- \alpha x} \right|^2 = \frac{4 k^2}{\alpha^2 + k^2} \mathrm{e}^{-2 \alpha x} = \frac{4 k^2}{k_0^2} \mathrm{e}^{-2 \alpha x} \mathrm{,}\]</div>
 <p>where <span class="math notranslate nohighlight">\(k^2 = 2 m E / \hbar^2\)</span> and <span class="math notranslate nohighlight">\(k_0^2 = 2 m E_0 / \hbar^2\)</span>. We see, at a depth of penetration of <span class="math notranslate nohighlight">\(x = 1/\left(2\alpha\right)\)</span> the propability density to find the particle at this position is decreased about the fractor <span class="math notranslate nohighlight">\(1/\mathrm{e}\)</span> compared to the propability density at <span class="math notranslate nohighlight">\(x=0\)</span>. This phenomenon we allready know as evanescent waves during total internal reflection.</p>
-<figure><p><img alt="1bd20d66b3de4d3fa1e053e285134327" class="no-scaled-link" src="../../_images/L25_potential_barrier_11.png" style="width: 75%;" /></p>
+<figure><p><img alt="62e34311f5ae467aa3c4c1dab0c10534" class="no-scaled-link" src="../../_images/L25_potential_barrier_11.png" style="width: 75%;" /></p>
 <figcaption><p><strong>Fig.: A wave with a kinetic energy :math:`E_{mathrm{kin}}` approaches a potential barrier :math:`E_0` with :math:`E_0 &gt; E_{mathrm{kin}}`. The wave is completely reflacted (amplitudes :math:`left|Aright|` = :math:`left|Bright|`), but intrudes the barrier where the amplitude decays exponentially.</strong></p>
 </figcaption></figure></div>
-<div class="section" id="The-case-E-&gt;-E_0">
-<h3>The case <span class="math notranslate nohighlight">\(E &gt; E_0\)</span><a class="headerlink" href="#The-case-E->-E_0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="The-case-0-&lt;-E_0-&lt;-E">
+<h3>The case <span class="math notranslate nohighlight">\(0 &lt; E_0 &lt; E\)</span><a class="headerlink" href="#The-case-0-<-E_0-<-E" title="Permalink to this headline">¶</a></h3>
 <p>In this case the kinetic energy is greater than the shift in the potential energy. In the framework of classical mechanics, every particle is allowed to enter region 2 (<span class="math notranslate nohighlight">\(x&gt;0\)</span>) and to propagate there, but with a reduced velocity due to their decreased kinetic energy (<span class="math notranslate nohighlight">\(E_{\mathrm{kin}} = E - E_0\)</span>).</p>
 <p>In the framwork of matter waves the parameter <span class="math notranslate nohighlight">\(\alpha\)</span> now is an imaginary number. Therefore, we introduce a real number,</p>
 <div class="math notranslate nohighlight">
@@ -1088,19 +858,18 @@ D &amp; = &amp; \frac{2}{k + \kappa} A\\
 <div class="math notranslate nohighlight">
 \[R + T = 1 \mathrm{,}\]</div>
 <p>which represents the conservation of the number of particles. Please note, for the limiting case <span class="math notranslate nohighlight">\(E = E_0\)</span> every exponent becomes <span class="math notranslate nohighlight">\(0\)</span> (<span class="math notranslate nohighlight">\(\alpha = 0\)</span> as well as <span class="math notranslate nohighlight">\(\kappa = 0\)</span>) and the reflection coefficient becomes <span class="math notranslate nohighlight">\(R=1\)</span>.</p>
-<figure><p><img alt="af1feac961504ec498fdcabbb3652ec5" class="no-scaled-link" src="../../_images/L25_potential_barrier_21.png" style="width: 75%;" /></p>
+<figure><p><img alt="834478ed542a41e2a6d65f692b445140" class="no-scaled-link" src="../../_images/L25_potential_barrier_21.png" style="width: 75%;" /></p>
 <figcaption><p><strong>Fig.: A wave with a kinetic energy :math:`E_{mathrm{kin}}` approaches potential barrier :math:`E_0` with $E_{:nbsphinx-math:`mathrm{kin}`} &gt; E_0 $. The wave is partially reflected and partially transmitted.</strong></p>
 </figcaption></figure></div>
 <div class="section" id="The-case-E_0-&lt;-0-&lt;-E">
 <h3>The case <span class="math notranslate nohighlight">\(E_0 &lt; 0 &lt; E\)</span><a class="headerlink" href="#The-case-E_0-<-0-<-E" title="Permalink to this headline">¶</a></h3>
 <p>In this case the potential barrier is negative (<span class="math notranslate nohighlight">\(E_0 &lt; 0\)</span>). In the framework of classical mechanics, every particle is allowed to enter region 2 (<span class="math notranslate nohighlight">\(x&gt;0\)</span>) and to propagate there with an increased velocity due to their increased kinetic energy (<span class="math notranslate nohighlight">\(E_{\mathrm{kin}} = E - E_0\)</span>). This situation is analoque to the transition of a light wave from a medium with a higher index of refraction into a medium with a lower index.</p>
-<figure><p><img alt="b3e198a7680b45658a668c0ceecd03d5" class="no-scaled-link" src="../../_images/L25_potential_barrier_3.png" style="width: 75%;" /></p>
-<figcaption><p><strong>Fig.: A wave with a kinetic energy :math:`E_{mathrm{kin}}` approaches potential step with :math:`E_0 &lt; 0`.</strong></p>
+<figure><p><img alt="959c147cf39c4fb28e255bb76667660e" class="no-scaled-link" src="../../_images/L25_potential_barrier_3.png" style="width: 75%;" /></p>
+<figcaption><p><strong>Fig.: A wave with a kinetic energy of :math:`E_{mathrm{kin}}` approaches a potential step with :math:`E_0 &lt; 0`.</strong></p>
 </figcaption></figure><p>The quantum mechanical discussion of this special case is part of the exercise and supposed to be submitted at January 26, 2023 before teh lectuire starts. The details will be discussed in the seminar and posted here afterward.</p>
 </div>
-</div>
-<div class="section" id="The-tunnel-effect">
-<h2>The tunnel effect<a class="headerlink" href="#The-tunnel-effect" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="The-tunnel-effect-or-quantum-tunnelling">
+<h3>The tunnel effect or quantum tunnelling<a class="headerlink" href="#The-tunnel-effect-or-quantum-tunnelling" title="Permalink to this headline">¶</a></h3>
 <p>In order to discuss the tunnel effect we construct a potential barrier with a finite width <span class="math notranslate nohighlight">\(\Delta x = a\)</span>. Thus, for the regions <span class="math notranslate nohighlight">\(x &lt; 0\)</span> and <span class="math notranslate nohighlight">\(x &gt; a\)</span> the potential energy vanishes <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span>, whereas for <span class="math notranslate nohighlight">\(0 \le x \le a\)</span> the potential energy exhibit <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = E_0\)</span>. Moreover, now with split the definition range <span class="math notranslate nohighlight">\(-\infty &lt; x &lt; +\infty\)</span> into three region, namely</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray}
@@ -1133,8 +902,12 @@ D &amp; = &amp; \frac{2}{k + \kappa} A\\
 <p>From the previous cases we know that at the first boundary (<span class="math notranslate nohighlight">\(x=0\)</span>) the incident wave propagating along <span class="math notranslate nohighlight">\(+x\)</span> direction in region 1 is (partially) reflected. On the basis of the propagation directions we can explicitly write down the incident wave as <span class="math notranslate nohighlight">\(\psi_{inc} = A \cdot \mathrm{e}^{+i k x}\)</span>, the reflected wave as <span class="math notranslate nohighlight">\(\psi_{ref} = B \cdot \mathrm{e}^{-i k x}\)</span>, and the wave transmitted through the barrier propagating along <span class="math notranslate nohighlight">\(+x\)</span> direction in region 3 as
 <span class="math notranslate nohighlight">\(\psi_{trans} = A^{\prime} \cdot \mathrm{e}^{+i k x}\)</span>. In order to calculate the <strong>transmission probability</strong> or <strong>tunneling probability</strong> we have to know how much intensity from the incident wave reaches the backside of the barrier,</p>
 <div class="math notranslate nohighlight">
-\[T \left(E, a\right) = \frac{\left| \psi_{trans} \right|^2}{\left| \psi_{inc} \right|^2} = \frac{\left| A^{\prime} \right|^2}{\left| A \right|^2} \mathrm{.}\]</div>
-<p>From theboundary conditions we get</p>
+\[T \left(E, a\right) = \frac{\left| \psi_{trans} \right|^2}{\left| \psi_{inc} \right|^2} = \frac{\left| A^{\prime} \right|^2}{\left| A \right|^2} = \left| \frac{A^{\prime}}{A} \right|^2  \mathrm{.}\]</div>
+<p>Please not, the particular values for the speed of propagation at either side of the barrier are identical and will result in a ratio of <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<figure><p><img alt="54d588dbefe3470aa867b23299c15f27" class="no-scaled-link" src="../../_images/L25_potential_barrier_4_tunneleffect.png" style="width: 75%;" /></p>
+<figcaption><p><strong>Fig.: A wave with a kinetic energy of :math:`E_{mathrm{kin}}` approaches a potential step with :math:`E_{mathrm{kin}} &lt; E_0`. Since the width of the potential is finite, the wave might</strong>tunnel** through the barrier. At the other side amplitude is reduced which reflects a reduced propability density. The energy, however, is conserved.**</p>
+</figcaption></figure><p>The quantum mechanical discussion of this special case is part of the exercise and supposed to be submitted at January 26, 2023 before teh lectuire starts. The details will be discussed in the seminar and posted here afterward.</p>
+<p>From the boundary conditions we get</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray}
 A + B &amp; = &amp; C +D\\
@@ -1142,36 +915,45 @@ C \mathrm{e}^{+ \alpha a} + D \mathrm{e}^{- \alpha a} &amp; = &amp; A^{\prime} \
 i k \left( A - B \right) &amp; = &amp; \alpha \left( C  - D \right)\\
 \alpha \left( C \mathrm{e}^{+ \alpha a} - D \mathrm{e}^{- \alpha a} \right) &amp; = &amp; i k A^{\prime} \mathrm{e}^{+ i k a}
 \end{eqnarray}\end{split}\]</div>
-<p>which means we four equation in order to determine five constants. However, we are not exactly seeking for the parameters, but rahter for a ratio of those like <span class="math notranslate nohighlight">\(A^{\prime}/A\)</span>. Thus, we multiply each equation from the boundary conditions with the factor <span class="math notranslate nohighlight">\(1/A\)</span> and have now four eqtaions in order to determine four constants.</p>
-<p>by each</p>
-<p>In order to calculate the tunneling probability we</p>
-<p>is</p>
-<p>In order to</p>
-<p>The relations between the coefficients <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, and <span class="math notranslate nohighlight">\(D\)</span> are identical to the above discussion for the case <span class="math notranslate nohighlight">\(E &lt; E_0\)</span>.</p>
-<p>Text</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
+<p>which means we four equation in order to determine five constants. However, we are not exactly seeking for the parameters, but rahter for a ratio of those like <span class="math notranslate nohighlight">\(A^{\prime}/A\)</span>. Thus, we multiply each equation from the boundary conditions with the factor <span class="math notranslate nohighlight">\(1/A\)</span> and have now four equtaions in order to determine the four new constants. The ectual algabra in porder to isolate <span class="math notranslate nohighlight">\(A^{\prime}/A\)</span> is quite lengthy. Therefore, we only state the result here,</p>
+<div class="math notranslate nohighlight">
+\[\frac{A^{\prime}}{A} = \frac{\mathrm{e}^{-i k \cdot a}}{\cosh \left( \alpha \cdot a\right) + \frac{i}{2} \left(\frac{\alpha}{k} - \frac{k}{\alpha}\right) \sinh \left( \alpha \cdot a \right)} \mathrm{.}\]</div>
+<p>We now calculate the transmission coeficient <span class="math notranslate nohighlight">\(T = \left| A^{\prime}/A \right|^2\)</span> and get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+T &amp; = &amp; \left| \frac{A^{\prime}}{A} \right|^2\\
+{} &amp; = &amp; \frac{1}{\cosh^2 \left( \alpha \cdot a\right) + \frac{1}{4} \left(\frac{\alpha}{k} - \frac{k}{\alpha}\right)^2 \sinh^2 \left( \alpha \cdot a \right)}\\
+{} &amp; = &amp; \frac{1 - \frac{E}{E_0}}{1- \frac{E}{E_0} + \frac{1}{4}\frac{E_0}{E} \sinh^2 \left( \alpha \cdot a \right)} \mathrm{.}
+\end{eqnarray}\end{split}\]</div>
+<p>For a sufficient wide barrier (<span class="math notranslate nohighlight">\(\alpha \cdot a \gg 1\)</span>), we can simplify approximate the transmission probability through</p>
+<div class="math notranslate nohighlight">
+\[T \approx 16 \frac{E}{E_0^2} \left(E_0 - E \right) \cdot \mathrm{e}^{-2 \alpha a} \mathrm{.}\]</div>
+<p>It is evident that the tunneling probability strongly depends on the width of the barrier (<span class="math notranslate nohighlight">\(a\)</span>) but also its height (<span class="math notranslate nohighlight">\(E_0\)</span>) and the difference between the barrier height and the particle’s energy. If we, for example, assume a particle with an energy of <span class="math notranslate nohighlight">\(E = E_0 / 2\)</span> and a barrier width of half the de Broglie wavelength <span class="math notranslate nohighlight">\(a = \lambda/2\)</span>, we get <span class="math notranslate nohighlight">\(\alpha \cdot a = \pi\)</span> and
+<span class="math notranslate nohighlight">\(T = 0.5 / \left( 0.5 \left( 1 + \sinh^2 \left( \pi \right) \right) \right) = 7 \cdot 10^{-3}\)</span>. Thus, the probability for a particle to tunnel through the barier is <span class="math notranslate nohighlight">\(0.7\%\)</span>. In the framework of classical mechanics, instead, no particle with <span class="math notranslate nohighlight">\(E &lt; E_0\)</span> is allowed to reach the space behind the barrier and thus <span class="math notranslate nohighlight">\(T_{\mathrm{classic}} = 0\)</span>. In addition, if the energy of a partcile is sufficient large like <span class="math notranslate nohighlight">\(E &gt; E_0\)</span>, the particle is allowed to overcome the barrier ans thus
+<span class="math notranslate nohighlight">\(T_{\mathrm{classic}} = 1\)</span>.</p>
+<figure><p><img alt="11598e786c9b4c2eacab9587196e6ac0" class="no-scaled-link" src="../../_images/L26_tunneleffect.png" style="width: 45%;" /></p>
+<figcaption><p><strong>Fig.: The transmission coefficient :math:`T` and reflection coefficient :math:`R = 1-T` in dependence of the particle’s relative energy :math:`E / E_0` in the case of a rectangular potential barrier with a width of :math:`a = 3 hbar / sqrt{2 m E_0}`. Note the oscillations even for :math:`E / E_0 &gt; 1`.</strong></p>
+</figcaption></figure><p>While having a closer look at the transmission and reflection coefficient we find oscillations of them even though the energy is sufficent large <span class="math notranslate nohighlight">\(E / E_0 &gt; 1\)</span> in order to overcome the barrier. This behavior is completely analogous to a light wave beeing reflected at two parallel glass surfaces. We get the maximum transmission for <span class="math notranslate nohighlight">\(\kappa \cdot a = m \cdot \pi\)</span>, which gives a de Broglie wavelength of <span class="math notranslate nohighlight">\(\lambda = 2a/m\)</span> and a path difference of <span class="math notranslate nohighlight">\(\Delta s = 2 a\)</span>. Thus, at the
+position <span class="math notranslate nohighlight">\(x = 0\)</span> the wave being reflected at <span class="math notranslate nohighlight">\(x = a\)</span> exhibits a phase difference relative to the wave being reflected right at <span class="math notranslate nohighlight">\(x = 0\)</span> of <span class="math notranslate nohighlight">\(2 \pi\)</span>. Since the wave being reflected at the potential wall (synonymously the medium with the higher refractive index) experiences a phase shift about <span class="math notranslate nohighlight">\(\pi\)</span>, the reflected waves superimpose destructively within the whole region 1 resultin in <span class="math notranslate nohighlight">\(R = 0\)</span>. Thus, we get <span class="math notranslate nohighlight">\(T = 1\)</span> in region 3. In constrast a path difference of
+<span class="math notranslate nohighlight">\(\Delta s = \left( 2m + 1 \right) a\)</span> results in constructive interference and a maximum of the <span class="math notranslate nohighlight">\(R\)</span> and minimum of <span class="math notranslate nohighlight">\(T\)</span>.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></div>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../lectures/L26/overview_26.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 24, 2023.
+      <span class="lastupdated">Last updated on Jan 25, 2023.
       </span></p>
   </div>
 

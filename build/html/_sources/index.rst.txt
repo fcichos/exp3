@@ -270,6 +270,14 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L25_AMA/L25_structure_of_atoms.ipynb
    notebooks/L25_AMA/L25_Schroedinger_equation.ipynb
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 26:
+   
+   lectures/L26/overview_26.rst
+   notebooks/L26_AMA/L26_Schroedinger_equation.ipynb
+
  
 
 
