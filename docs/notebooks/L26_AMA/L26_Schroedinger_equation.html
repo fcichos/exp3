@@ -23,6 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="A potential barrier" href="L26_potential_barrier.html" />
     <link rel="prev" title="Lecture Contents" href="../../lectures/L26/overview_26.html" /> 
 </head>
 
@@ -626,13 +627,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/L26/overview_26.html">Lecture Contents</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The Schrödinger Equation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Introducing-the-equation">Introducing the equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#A-potential-barrier">A potential barrier</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#The-case-0-&lt;-E-&lt;-E_0">The case <span class="math notranslate nohighlight">\(0 &lt; E &lt; E_0\)</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#The-case-0-&lt;-E_0-&lt;-E">The case <span class="math notranslate nohighlight">\(0 &lt; E_0 &lt; E\)</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#The-case-E_0-&lt;-0-&lt;-E">The case <span class="math notranslate nohighlight">\(E_0 &lt; 0 &lt; E\)</span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#The-tunnel-effect-or-quantum-tunnelling">The tunnel effect or quantum tunnelling</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="L26_potential_barrier.html">A potential barrier</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="L26_potential_barrier.html#The-case-0-&lt;-E-&lt;-E_0">The case <span class="math notranslate nohighlight">\(0 &lt; E &lt; E_0\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="L26_potential_barrier.html#The-case-0-&lt;-E_0-&lt;-E">The case <span class="math notranslate nohighlight">\(0 &lt; E_0 &lt; E\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="L26_potential_barrier.html#The-case-E_0-&lt;-0-&lt;-E">The case <span class="math notranslate nohighlight">\(E_0 &lt; 0 &lt; E\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="L26_potential_barrier.html#The-tunnel-effect-or-quantum-tunnelling">The tunnel effect or quantum tunnelling</a></li>
 </ul>
 </li>
 </ul>
@@ -730,216 +731,9 @@
 <div class="math notranslate nohighlight">
 \[- \frac{\hbar^2}{2 m} \, \Delta \psi\left(r, t \right) + E_{\mathrm{pot}} \left(r, t \right) \psi\left(r, t \right) = i \hbar \frac{\partial}{\partial t} \psi\left(r, t \right) \mathrm{,}\]</div>
 <p>which was confirmed by numerous experiments. For stationary problems, one can again separate the wave function into a position- and a time-dependent factor and get the stationary Schrödinger equation as stated above.</p>
-</div>
-<div class="section" id="A-potential-barrier">
-<h2>A potential barrier<a class="headerlink" href="#A-potential-barrier" title="Permalink to this headline">¶</a></h2>
-<p>The free particle with <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span> as we discussed it previously might propagate in <span class="math notranslate nohighlight">\(+x\)</span> direction and enter a region with a different potential <span class="math notranslate nohighlight">\(\phi \left( x \ge 0 \right) =\phi_0 &gt; 0\)</span>. Thus, the particle experiences a shift in its potential energy from <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span> for <span class="math notranslate nohighlight">\(x &lt; 0\)</span> to <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = E_0\)</span> for <span class="math notranslate nohighlight">\(x \ge 0\)</span>. This scenario is similar to a light wave at the air-glass interface.</p>
-<p>In order to solve the Schrödinger equation for this problem, we split the space <span class="math notranslate nohighlight">\(-\infty &lt; x &lt; \infty\)</span> into two regions. In region 1, where <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span>, we can state the general solution for the one-dimensional stationary Schrödinger equation as</p>
-<div class="math notranslate nohighlight">
-\[- \frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi\left( x \right) + E_{\mathrm{pot}} \psi\left( x \right) = E \psi \left( x \right) \mathrm{.}\]</div>
-<p>Because <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span> and <span class="math notranslate nohighlight">\(E = E_{\mathrm{kin}} + E_{\mathrm{pot}}\)</span>, we can simplify <span class="math notranslate nohighlight">\(E = E_{\mathrm{kin}} = p^2/\left( 2 m \right) = \hbar^2 k^2 / 2 m\)</span> and get</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-- \frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi\left( x \right) &amp; = &amp; \frac{\hbar^2 k^2}{2 m} \psi \left( x \right)\\
-\rightarrow \frac{\partial^2}{\partial x^2} \psi\left( x \right) &amp; = &amp; - k^2 \psi \left( x \right) \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<p>The general solution of <span class="math notranslate nohighlight">\(\psi\left( x \right)\)</span> has the shape</p>
-<div class="math notranslate nohighlight">
-\[\psi\left( x \right) = A \cdot \mathrm{e}^{+i k x} + B \cdot \mathrm{e}^{-i k x}\]</div>
-<p>and the time-dependent solution for the wave function</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\psi \left( x,t \right) &amp; = &amp; \psi \left( x \right) \cdot \mathrm{e}^{-i \omega t}\\
-{} &amp; = &amp; A \cdot \mathrm{e}^{i \left( k x - \omega t \right)} + B \cdot \mathrm{e}^{-i \left( k x + \omega t \right)}
-\end{eqnarray}\end{split}\]</div>
-<p>is a superposition of a plane wave propagating in <span class="math notranslate nohighlight">\(+x\)</span> direction and a plane wave propagating in <span class="math notranslate nohighlight">\(-x\)</span> direction. Here, the wave with coefficient <span class="math notranslate nohighlight">\(A\)</span> in propagation along <span class="math notranslate nohighlight">\(+x\)</span> direction and the wave with the coefficient <span class="math notranslate nohighlight">\(B\)</span> is propagation along the <span class="math notranslate nohighlight">\(-x\)</span> direction. The coefficients <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are the amplitudes of both waves and are determined on the basis of boundary conditions. If we now concentrate again on our potantial barrier, we can state for
-the position-dependent solution in region 1</p>
-<div class="math notranslate nohighlight">
-\[\psi_{\mathrm{1}} \left( x \right) = A \cdot \mathrm{e}^{+i k x} + B \cdot \mathrm{e}^{-i k x} \mathrm{.}\]</div>
-<p>For region 2 where <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = E_0\)</span> we can state the Schrödinger equation as follows</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-- \frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi\left( x \right) + E_0 \psi\left( x \right) &amp; = &amp; E \psi \left( x \right) \\
-\rightarrow \frac{\partial^2}{\partial x^2} \psi\left( x \right) - \frac{2m}{\hbar^2} \left(E_0 - E \right) \psi\left( x \right) &amp; = &amp; 0\\
-\frac{\partial^2}{\partial x^2} \psi\left( x \right) - \alpha^2 \psi\left( x \right) &amp; = &amp; 0\mathrm{,}
-\end{eqnarray}\end{split}\]</div>
-<p>with <span class="math notranslate nohighlight">\(\alpha = \sqrt{2m\left(E_0 - E \right)}/\hbar\)</span>. The solution for region 2 then reads as</p>
-<div class="math notranslate nohighlight">
-\[\psi_{\mathrm{2}} \left( x \right) = C \cdot \mathrm{e}^{+\alpha x} + D \cdot \mathrm{e}^{-\alpha x}\]</div>
-<p>and the general solution for the position-dependent factor of the one-dimensional stationary Schrödinger equation reads as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\psi \left( x \right) =
-    \begin{cases}
-      \psi_{\mathrm{1}} \left( x \right) &amp; \text{, if $x &lt; 0$}\\
-      \psi_{\mathrm{2}} \left( x \right) &amp; \text{, if $x \ge 0$}
-    \end{cases} \mathrm{.}\end{split}\]</div>
-<p>The general solution does represent a solution of the Schrödinger equation for the whole space <span class="math notranslate nohighlight">\(- \infty &lt; x &lt; \infty\)</span> if and only if <span class="math notranslate nohighlight">\(\psi \left( x \right)\)</span> is continuously differentiable over the whole space. Otherwise the second derivative $ <span class="math">\partial`^2 :nbsphinx-math:</span>psi`:nbsphinx-math:<cite>left`( x :nbsphinx-math:</cite>right`) / <span class="math">\partial `x^2$ in the Schrödinger equation will be undefined. From this prerequisite the boundary conditions at :math:`x = 0</span>
-directly follow,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\psi_{\mathrm{1}} \left( x = 0 \right) &amp; = &amp; \psi_{\mathrm{2}} \left( x = 0 \right)\\
-\rightarrow A + B &amp; = &amp; C +D
-\end{eqnarray}\end{split}\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\frac{\partial}{\partial x} \psi_{\mathrm{1}} \left( x = 0 \right) &amp; = &amp;  \frac{\partial}{\partial x} \psi_{\mathrm{2}} \left( x = 0 \right)\\
-\rightarrow i k \left(A - B \right) &amp; = &amp; \alpha \left( C - D \right) \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<div class="section" id="The-case-0-&lt;-E-&lt;-E_0">
-<h3>The case <span class="math notranslate nohighlight">\(0 &lt; E &lt; E_0\)</span><a class="headerlink" href="#The-case-0-<-E-<-E_0" title="Permalink to this headline">¶</a></h3>
-<p>In the case <span class="math notranslate nohighlight">\(E&lt;E_0\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span> is a real number. Moreover the coefficient <span class="math notranslate nohighlight">\(C\)</span> has to be <span class="math notranslate nohighlight">\(0\)</span>, otherwise <span class="math notranslate nohighlight">\(\psi_{\mathrm{2}}\)</span> will approach <span class="math notranslate nohighlight">\(+\infty\)</span> for <span class="math notranslate nohighlight">\(x \longrightarrow +\infty\)</span>. From the boundary conditions we get</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-B &amp; = &amp; \frac{i k + \alpha}{i k - \alpha} A\\
-D &amp; = &amp; \frac{2 i k}{i k - \alpha} A
-\end{eqnarray}\end{split}\]</div>
-<p>and thus the wave function in region 1 (<span class="math notranslate nohighlight">\(x &lt; 0\)</span>) reads as</p>
-<div class="math notranslate nohighlight">
-\[\psi_{\mathrm{1}} \left( x \right) = A \left( \mathrm{e}^{+i k x} + \frac{i k + \alpha}{i k - \alpha} \mathrm{e}^{-i k x} \right)\mathrm{.}\]</div>
-<p>Because we do know the wave function and its amplitudes, we can calculate the <strong>reflection coefficient</strong> as the ratio of the squared reflected and initial waves,</p>
-<div class="math notranslate nohighlight">
-\[R = \frac{\left| B \cdot \mathrm{e}^{-i k x} \right|^2}{\left| A \cdot \mathrm{e}^{+i k x} \right|^2} = \frac{\left| B \right|^2}{\left| A \right|^2} = \frac{\left| i k + \alpha \right|^2}{\left| i k - \alpha \right|^2} = 1 \mathrm{.}\]</div>
-<p>From this result it is evedent that in the case <span class="math notranslate nohighlight">\(E &lt; E_0\)</span> every particle is reflected at the barrier as to be expected in the framework of classical mechanics. However, the particles do not change their direction of propagation diretly at the edge of the barrier (<span class="math notranslate nohighlight">\(x = 0\)</span>). Instead, they are able to intrude into region 2 (<span class="math notranslate nohighlight">\(x \ge 0\)</span>) to some extend, even though their energy is not sufficient ( if discussed in the classical framework).</p>
-<p>The probibility density <span class="math notranslate nohighlight">\(P \left( x \right)\)</span> to find a particle at the position <span class="math notranslate nohighlight">\(x\)</span> (with <span class="math notranslate nohighlight">\(x &gt; 0\)</span>) then is given through</p>
-<div class="math notranslate nohighlight">
-\[P \left( x \right) = \left| \psi_2 \left( x \right) \right|^2 = \left| D \cdot \mathrm{e}^{- \alpha x} \right|^2 = \frac{4 k^2}{\alpha^2 + k^2} \mathrm{e}^{-2 \alpha x} = \frac{4 k^2}{k_0^2} \mathrm{e}^{-2 \alpha x} \mathrm{,}\]</div>
-<p>where <span class="math notranslate nohighlight">\(k^2 = 2 m E / \hbar^2\)</span> and <span class="math notranslate nohighlight">\(k_0^2 = 2 m E_0 / \hbar^2\)</span>. We see, at a depth of penetration of <span class="math notranslate nohighlight">\(x = 1/\left(2\alpha\right)\)</span> the propability density to find the particle at this position is decreased about the fractor <span class="math notranslate nohighlight">\(1/\mathrm{e}\)</span> compared to the propability density at <span class="math notranslate nohighlight">\(x=0\)</span>. This phenomenon we allready know as evanescent waves during total internal reflection.</p>
-<figure><p><img alt="62e34311f5ae467aa3c4c1dab0c10534" class="no-scaled-link" src="../../_images/L25_potential_barrier_11.png" style="width: 75%;" /></p>
-<figcaption><p><strong>Fig.: A wave with a kinetic energy :math:`E_{mathrm{kin}}` approaches a potential barrier :math:`E_0` with :math:`E_0 &gt; E_{mathrm{kin}}`. The wave is completely reflacted (amplitudes :math:`left|Aright|` = :math:`left|Bright|`), but intrudes the barrier where the amplitude decays exponentially.</strong></p>
-</figcaption></figure></div>
-<div class="section" id="The-case-0-&lt;-E_0-&lt;-E">
-<h3>The case <span class="math notranslate nohighlight">\(0 &lt; E_0 &lt; E\)</span><a class="headerlink" href="#The-case-0-<-E_0-<-E" title="Permalink to this headline">¶</a></h3>
-<p>In this case the kinetic energy is greater than the shift in the potential energy. In the framework of classical mechanics, every particle is allowed to enter region 2 (<span class="math notranslate nohighlight">\(x&gt;0\)</span>) and to propagate there, but with a reduced velocity due to their decreased kinetic energy (<span class="math notranslate nohighlight">\(E_{\mathrm{kin}} = E - E_0\)</span>).</p>
-<p>In the framwork of matter waves the parameter <span class="math notranslate nohighlight">\(\alpha\)</span> now is an imaginary number. Therefore, we introduce a real number,</p>
-<div class="math notranslate nohighlight">
-\[\kappa = i \alpha = \frac{\sqrt{2 m \left( E - E_0 \right)}}{\hbar} \mathrm{.}\]</div>
-<p>The solution for the position-dependent amplitude <span class="math notranslate nohighlight">\(\psi_2 \left( x \right)\)</span> in region 2 then reads as</p>
-<div class="math notranslate nohighlight">
-\[\psi_2 \left( x \right) = C \cdot \mathrm{e}^{-i \kappa x} + D \cdot \mathrm{e}^{+i \kappa x} \mathrm{,}\]</div>
-<p>whereas the solution <span class="math notranslate nohighlight">\(\psi_1 \left( x \right)\)</span> for the stationary equation in region 1 remains the same as stated above.</p>
-<p>As in the case of the first example, we state the boundary conditions at <span class="math notranslate nohighlight">\(x = 0\)</span> as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\psi_{\mathrm{1}} \left( x = 0 \right) &amp; = &amp; \psi_{\mathrm{2}} \left( x = 0 \right)\\
-\rightarrow A + B &amp; = &amp; C +D
-\end{eqnarray}\end{split}\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\frac{\partial}{\partial x} \psi_{\mathrm{1}} \left( x = 0 \right) &amp; = &amp;  \frac{\partial}{\partial x} \psi_{\mathrm{2}} \left( x = 0 \right)\\
-\rightarrow i k \left(A - B \right) &amp; = &amp; i \kappa \left( -C + D \right) \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<p>Furthermore, in region 2 there is no wave propagating along the <span class="math notranslate nohighlight">\(-x\)</span> direction since there is no boundary located in region 2 in order to reflect the wave. Thus, we can set <span class="math notranslate nohighlight">\(C = 0\)</span>. From the boundary conditions it follows</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-B &amp; = &amp; \frac{k - \kappa}{k + \kappa} A\\
-D &amp; = &amp; \frac{2}{k + \kappa} A\\
-\end{eqnarray}\end{split}\]</div>
-<p>and the wave functions read as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\psi_{\mathrm{1}} \left( x \right) &amp; = &amp; A \left( \mathrm{e}^{+i k x} + \frac{k - \kappa}{ k + \kappa} \mathrm{e}^{-i k x} \right)\\
-\psi_{\mathrm{2}} \left( x \right) &amp; = &amp; A \frac{2 k}{ k + \kappa} \mathrm{e}^{+i \kappa x} \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<p>For the reflection coefficient it follows</p>
-<div class="math notranslate nohighlight">
-\[R = \frac{\left| B \right|^2}{\left| A \right|^2} = \frac{\left| k - \kappa \right|^2}{\left| k + \kappa \right|^2}\]</div>
-<p>and we see, even though the kinetic energy of our pairticle is sufficient enough to overcome the potential barrier, a part of the wave is reflected. Furthermore, since the wavenumber is directly connected to the refrective index <span class="math notranslate nohighlight">\(k = n_1 \cdot k_0\)</span> and <span class="math notranslate nohighlight">\(\kappa = n_2 \cdot k_0\)</span>, we can immediately calculate the reflectance,</p>
-<div class="math notranslate nohighlight">
-\[R = \frac{\left| n_1 - n_2 \right|^2}{\left| n_1 + n_2 \right|^2}\mathrm{.}\]</div>
-<p>In order to calculate the transmission coefficient, or how many particles pass a unit area at <span class="math notranslate nohighlight">\(x=x_0&gt;0\)</span> per time devided through how many incident particles pass a unit area at <span class="math notranslate nohighlight">\(x=-x_0&lt;0\)</span> per time, we have to bear in mind the different propagation velocities in region 1 and 2. The ratio of the velocities is governed by the ratio of the wavenumbers</p>
-<div class="math notranslate nohighlight">
-\[\frac{v_2}{v_1} = \frac{\lambda_2}{\lambda_1} = \frac{k}{\kappa}  \mathrm{.}\]</div>
-<p>The transmission coefficient then reads as</p>
-<div class="math notranslate nohighlight">
-\[T = \frac{v_1 \cdot \left| D \right|^2}{v_2 \cdot \left| A \right|^2} = \frac{4 \kappa k}{\left( k + \kappa \right)^2}\mathrm{.}\]</div>
-<p>Moreover, it is evident that</p>
-<div class="math notranslate nohighlight">
-\[R + T = 1 \mathrm{,}\]</div>
-<p>which represents the conservation of the number of particles. Please note, for the limiting case <span class="math notranslate nohighlight">\(E = E_0\)</span> every exponent becomes <span class="math notranslate nohighlight">\(0\)</span> (<span class="math notranslate nohighlight">\(\alpha = 0\)</span> as well as <span class="math notranslate nohighlight">\(\kappa = 0\)</span>) and the reflection coefficient becomes <span class="math notranslate nohighlight">\(R=1\)</span>.</p>
-<figure><p><img alt="834478ed542a41e2a6d65f692b445140" class="no-scaled-link" src="../../_images/L25_potential_barrier_21.png" style="width: 75%;" /></p>
-<figcaption><p><strong>Fig.: A wave with a kinetic energy :math:`E_{mathrm{kin}}` approaches potential barrier :math:`E_0` with $E_{:nbsphinx-math:`mathrm{kin}`} &gt; E_0 $. The wave is partially reflected and partially transmitted.</strong></p>
-</figcaption></figure></div>
-<div class="section" id="The-case-E_0-&lt;-0-&lt;-E">
-<h3>The case <span class="math notranslate nohighlight">\(E_0 &lt; 0 &lt; E\)</span><a class="headerlink" href="#The-case-E_0-<-0-<-E" title="Permalink to this headline">¶</a></h3>
-<p>In this case the potential barrier is negative (<span class="math notranslate nohighlight">\(E_0 &lt; 0\)</span>). In the framework of classical mechanics, every particle is allowed to enter region 2 (<span class="math notranslate nohighlight">\(x&gt;0\)</span>) and to propagate there with an increased velocity due to their increased kinetic energy (<span class="math notranslate nohighlight">\(E_{\mathrm{kin}} = E - E_0\)</span>). This situation is analoque to the transition of a light wave from a medium with a higher index of refraction into a medium with a lower index.</p>
-<figure><p><img alt="959c147cf39c4fb28e255bb76667660e" class="no-scaled-link" src="../../_images/L25_potential_barrier_3.png" style="width: 75%;" /></p>
-<figcaption><p><strong>Fig.: A wave with a kinetic energy of :math:`E_{mathrm{kin}}` approaches a potential step with :math:`E_0 &lt; 0`.</strong></p>
-</figcaption></figure><p>The quantum mechanical discussion of this special case is part of the exercise and supposed to be submitted at January 26, 2023 before teh lectuire starts. The details will be discussed in the seminar and posted here afterward.</p>
-</div>
-<div class="section" id="The-tunnel-effect-or-quantum-tunnelling">
-<h3>The tunnel effect or quantum tunnelling<a class="headerlink" href="#The-tunnel-effect-or-quantum-tunnelling" title="Permalink to this headline">¶</a></h3>
-<p>In order to discuss the tunnel effect we construct a potential barrier with a finite width <span class="math notranslate nohighlight">\(\Delta x = a\)</span>. Thus, for the regions <span class="math notranslate nohighlight">\(x &lt; 0\)</span> and <span class="math notranslate nohighlight">\(x &gt; a\)</span> the potential energy vanishes <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = 0\)</span>, whereas for <span class="math notranslate nohighlight">\(0 \le x \le a\)</span> the potential energy exhibit <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = E_0\)</span>. Moreover, now with split the definition range <span class="math notranslate nohighlight">\(-\infty &lt; x &lt; +\infty\)</span> into three region, namely</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\mathrm{Region \, 1} &amp; \; &amp; x &lt; 0\\
-\mathrm{Region \, 2} &amp; \; &amp; 0 \le x \le a\\
-\mathrm{Region \, 3} &amp; \; &amp; a &lt; x \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<p>For every region we state the genernal solution of the position-dependent amplitude <span class="math notranslate nohighlight">\(\psi \left( x \right)\)</span> of the wave function as we have derived them previously</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\psi_1 &amp; = &amp; A \mathrm{e}^{+i k x} + B \mathrm{e}^{-i k x}\\
-\psi_2 &amp; = &amp; C \mathrm{e}^{\alpha x} + D \mathrm{e}^{-\alpha x}\\
-\psi_3 &amp; = &amp; A^{\prime} \mathrm{e}^{+i k x} + B^{\prime} \mathrm{e}^{-i k x}
-\end{eqnarray}\end{split}\]</div>
-<p>and calculate teh boundary conditions at at <span class="math notranslate nohighlight">\(x = 0\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\psi_1 \left( x = 0 \right) &amp; = &amp; \psi_2 \left( x = 0 \right)\\
-\frac{\mathrm{d}}{\mathrm{d}x} \psi_1 \left( x = 0 \right) &amp; = &amp; \frac{\mathrm{d}}{\mathrm{d}x} \psi_2 \left( x = 0 \right) \mathrm{,}
-\end{eqnarray}\end{split}\]</div>
-<p>and in additon at <span class="math notranslate nohighlight">\(x = a\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-\psi_2 \left( x = a \right) &amp; = &amp; \psi_3 \left( x = a \right)\\
-\frac{\mathrm{d}}{\mathrm{d}x} \psi_2 \left( x = a \right) &amp; = &amp; \frac{\mathrm{d}}{\mathrm{d}x} \psi_3 \left( x = a \right) \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<p>In addition there is no potentially reflecting interface in region 3 at a position <span class="math notranslate nohighlight">\(x &gt; a\)</span>. Thus, we can exclude a wave propagating along <span class="math notranslate nohighlight">\(-x\)</span> direction and set</p>
-<div class="math notranslate nohighlight">
-\[B^{\prime} = 0 \mathrm{.}\]</div>
-<p>From the previous cases we know that at the first boundary (<span class="math notranslate nohighlight">\(x=0\)</span>) the incident wave propagating along <span class="math notranslate nohighlight">\(+x\)</span> direction in region 1 is (partially) reflected. On the basis of the propagation directions we can explicitly write down the incident wave as <span class="math notranslate nohighlight">\(\psi_{inc} = A \cdot \mathrm{e}^{+i k x}\)</span>, the reflected wave as <span class="math notranslate nohighlight">\(\psi_{ref} = B \cdot \mathrm{e}^{-i k x}\)</span>, and the wave transmitted through the barrier propagating along <span class="math notranslate nohighlight">\(+x\)</span> direction in region 3 as
-<span class="math notranslate nohighlight">\(\psi_{trans} = A^{\prime} \cdot \mathrm{e}^{+i k x}\)</span>. In order to calculate the <strong>transmission probability</strong> or <strong>tunneling probability</strong> we have to know how much intensity from the incident wave reaches the backside of the barrier,</p>
-<div class="math notranslate nohighlight">
-\[T \left(E, a\right) = \frac{\left| \psi_{trans} \right|^2}{\left| \psi_{inc} \right|^2} = \frac{\left| A^{\prime} \right|^2}{\left| A \right|^2} = \left| \frac{A^{\prime}}{A} \right|^2  \mathrm{.}\]</div>
-<p>Please not, the particular values for the speed of propagation at either side of the barrier are identical and will result in a ratio of <span class="math notranslate nohighlight">\(1\)</span>.</p>
-<figure><p><img alt="54d588dbefe3470aa867b23299c15f27" class="no-scaled-link" src="../../_images/L25_potential_barrier_4_tunneleffect.png" style="width: 75%;" /></p>
-<figcaption><p><strong>Fig.: A wave with a kinetic energy of :math:`E_{mathrm{kin}}` approaches a potential step with :math:`E_{mathrm{kin}} &lt; E_0`. Since the width of the potential is finite, the wave might</strong>tunnel** through the barrier. At the other side amplitude is reduced which reflects a reduced propability density. The energy, however, is conserved.**</p>
-</figcaption></figure><p>The quantum mechanical discussion of this special case is part of the exercise and supposed to be submitted at January 26, 2023 before teh lectuire starts. The details will be discussed in the seminar and posted here afterward.</p>
-<p>From the boundary conditions we get</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-A + B &amp; = &amp; C +D\\
-C \mathrm{e}^{+ \alpha a} + D \mathrm{e}^{- \alpha a} &amp; = &amp; A^{\prime} \mathrm{e}^{+ i k}\\
-i k \left( A - B \right) &amp; = &amp; \alpha \left( C  - D \right)\\
-\alpha \left( C \mathrm{e}^{+ \alpha a} - D \mathrm{e}^{- \alpha a} \right) &amp; = &amp; i k A^{\prime} \mathrm{e}^{+ i k a}
-\end{eqnarray}\end{split}\]</div>
-<p>which means we four equation in order to determine five constants. However, we are not exactly seeking for the parameters, but rahter for a ratio of those like <span class="math notranslate nohighlight">\(A^{\prime}/A\)</span>. Thus, we multiply each equation from the boundary conditions with the factor <span class="math notranslate nohighlight">\(1/A\)</span> and have now four equtaions in order to determine the four new constants. The ectual algabra in porder to isolate <span class="math notranslate nohighlight">\(A^{\prime}/A\)</span> is quite lengthy. Therefore, we only state the result here,</p>
-<div class="math notranslate nohighlight">
-\[\frac{A^{\prime}}{A} = \frac{\mathrm{e}^{-i k \cdot a}}{\cosh \left( \alpha \cdot a\right) + \frac{i}{2} \left(\frac{\alpha}{k} - \frac{k}{\alpha}\right) \sinh \left( \alpha \cdot a \right)} \mathrm{.}\]</div>
-<p>We now calculate the transmission coeficient <span class="math notranslate nohighlight">\(T = \left| A^{\prime}/A \right|^2\)</span> and get</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{eqnarray}
-T &amp; = &amp; \left| \frac{A^{\prime}}{A} \right|^2\\
-{} &amp; = &amp; \frac{1}{\cosh^2 \left( \alpha \cdot a\right) + \frac{1}{4} \left(\frac{\alpha}{k} - \frac{k}{\alpha}\right)^2 \sinh^2 \left( \alpha \cdot a \right)}\\
-{} &amp; = &amp; \frac{1 - \frac{E}{E_0}}{1- \frac{E}{E_0} + \frac{1}{4}\frac{E_0}{E} \sinh^2 \left( \alpha \cdot a \right)} \mathrm{.}
-\end{eqnarray}\end{split}\]</div>
-<p>For a sufficient wide barrier (<span class="math notranslate nohighlight">\(\alpha \cdot a \gg 1\)</span>), we can simplify approximate the transmission probability through</p>
-<div class="math notranslate nohighlight">
-\[T \approx 16 \frac{E}{E_0^2} \left(E_0 - E \right) \cdot \mathrm{e}^{-2 \alpha a} \mathrm{.}\]</div>
-<p>It is evident that the tunneling probability strongly depends on the width of the barrier (<span class="math notranslate nohighlight">\(a\)</span>) but also its height (<span class="math notranslate nohighlight">\(E_0\)</span>) and the difference between the barrier height and the particle’s energy. If we, for example, assume a particle with an energy of <span class="math notranslate nohighlight">\(E = E_0 / 2\)</span> and a barrier width of half the de Broglie wavelength <span class="math notranslate nohighlight">\(a = \lambda/2\)</span>, we get <span class="math notranslate nohighlight">\(\alpha \cdot a = \pi\)</span> and
-<span class="math notranslate nohighlight">\(T = 0.5 / \left( 0.5 \left( 1 + \sinh^2 \left( \pi \right) \right) \right) = 7 \cdot 10^{-3}\)</span>. Thus, the probability for a particle to tunnel through the barier is <span class="math notranslate nohighlight">\(0.7\%\)</span>. In the framework of classical mechanics, instead, no particle with <span class="math notranslate nohighlight">\(E &lt; E_0\)</span> is allowed to reach the space behind the barrier and thus <span class="math notranslate nohighlight">\(T_{\mathrm{classic}} = 0\)</span>. In addition, if the energy of a partcile is sufficient large like <span class="math notranslate nohighlight">\(E &gt; E_0\)</span>, the particle is allowed to overcome the barrier ans thus
-<span class="math notranslate nohighlight">\(T_{\mathrm{classic}} = 1\)</span>.</p>
-<figure><p><img alt="11598e786c9b4c2eacab9587196e6ac0" class="no-scaled-link" src="../../_images/L26_tunneleffect.png" style="width: 45%;" /></p>
-<figcaption><p><strong>Fig.: The transmission coefficient :math:`T` and reflection coefficient :math:`R = 1-T` in dependence of the particle’s relative energy :math:`E / E_0` in the case of a rectangular potential barrier with a width of :math:`a = 3 hbar / sqrt{2 m E_0}`. Note the oscillations even for :math:`E / E_0 &gt; 1`.</strong></p>
-</figcaption></figure><p>While having a closer look at the transmission and reflection coefficient we find oscillations of them even though the energy is sufficent large <span class="math notranslate nohighlight">\(E / E_0 &gt; 1\)</span> in order to overcome the barrier. This behavior is completely analogous to a light wave beeing reflected at two parallel glass surfaces. We get the maximum transmission for <span class="math notranslate nohighlight">\(\kappa \cdot a = m \cdot \pi\)</span>, which gives a de Broglie wavelength of <span class="math notranslate nohighlight">\(\lambda = 2a/m\)</span> and a path difference of <span class="math notranslate nohighlight">\(\Delta s = 2 a\)</span>. Thus, at the
-position <span class="math notranslate nohighlight">\(x = 0\)</span> the wave being reflected at <span class="math notranslate nohighlight">\(x = a\)</span> exhibits a phase difference relative to the wave being reflected right at <span class="math notranslate nohighlight">\(x = 0\)</span> of <span class="math notranslate nohighlight">\(2 \pi\)</span>. Since the wave being reflected at the potential wall (synonymously the medium with the higher refractive index) experiences a phase shift about <span class="math notranslate nohighlight">\(\pi\)</span>, the reflected waves superimpose destructively within the whole region 1 resultin in <span class="math notranslate nohighlight">\(R = 0\)</span>. Thus, we get <span class="math notranslate nohighlight">\(T = 1\)</span> in region 3. In constrast a path difference of
-<span class="math notranslate nohighlight">\(\Delta s = \left( 2m + 1 \right) a\)</span> results in constructive interference and a maximum of the <span class="math notranslate nohighlight">\(R\)</span> and minimum of <span class="math notranslate nohighlight">\(T\)</span>.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></div>
-</div>
 </div>
 
 
@@ -947,13 +741,14 @@ position <span class="math notranslate nohighlight">\(x = 0\)</span> the wave be
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../../lectures/L26/overview_26.html" class="btn btn-neutral float-left" title="Lecture Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="L26_potential_barrier.html" class="btn btn-neutral float-right" title="A potential barrier" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 25, 2023.
+      <span class="lastupdated">Last updated on Jan 26, 2023.
       </span></p>
   </div>
 

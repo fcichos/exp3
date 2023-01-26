@@ -277,6 +277,7 @@ The fields of optics and quantum mechanics are nowadays very active research are
    
    lectures/L26/overview_26.rst
    notebooks/L26_AMA/L26_Schroedinger_equation.ipynb
+   notebooks/L26_AMA/L26_potential_barrier.ipynb
 
  
 
