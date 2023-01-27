@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The harmonic oscillator &mdash; Experimental Physics 3 1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/./xtheme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="A potential well" href="L27_potential_well.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Experimental Physics 3
+            <img src="../../_static/mona_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/website.html">This Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/schedule.html">Course Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/assignments.html">Assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/exam.html">Exams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#books">Books</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../course-info/resources.html#molecular-nanophotonics-group">Molecular Nanophotonics Group</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/instructor.html">Instructors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Course Introduction:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/Intro/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lectures/Intro/overview.html#lecture-contents">Lecture Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Introduction2Jupyter.html">Introduction to Jupyter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#What-is-Jupyter-Notebook?">What is Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-editor">Notebook editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Kernels">Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/Introduction2Jupyter.html#Notebook-documents">Notebook documents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/NotebookEditor.html">Notebook editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Edit-mode">Edit mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Command-mode">Command mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Keyboard-navigation">Keyboard navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Running-code">Running code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/NotebookEditor.html#Managing-the-kernel">Managing the kernel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/EditCells.html">Entering code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Intro/EditCells.html#Entering-Markdown">Entering Markdown</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Markdown-basics">Markdown basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Headings">Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Embedded-code">Embedded code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#LaTeX-equations">LaTeX equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Intro/EditCells.html#Videos">Videos</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 1:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L1/overview_1.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Geometrical%20Optics.html">Geometrical Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Geometrical%20Optics.html#Assumptions">Assumptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Reflection.html">Reflection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Law-of-Reflection">Law of Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Reflection.html#Fermat’s-Principle">Fermat’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/Refraction.html">Refraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Refractive-Index">Refractive Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Snells-Law">Snells Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L1/Refraction.html#Total-Internal-Reflection">Total Internal Reflection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Refraction%20Explorer.html">EXP3 Snippets – Refraction Explorer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L2/overview_2.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/Optical%20Elements%20I.html">Optical Elements Part I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20I.html#Mirrors">Mirrors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20I.html#Plane-Mirrors">Plane Mirrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20I.html#Concave-Mirrors">Concave Mirrors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/Optical%20Elements%20II.html">Optical Elements Part II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Prism">Prism</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Deflection-angle">Deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Minimum-deflection-angle">Minimum deflection angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L2/Optical%20Elements%20II.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L3/overview_3.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/Optical%20Elements%20III.html">Optical Elements Part III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Lenses">Lenses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Refraction-at-spherical-surfaces">Refraction at spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Refraction-with-two-spherical-surfaces">Refraction with two spherical surfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Image-Construction">Image Construction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Thick-lens">Thick lens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L3/Optical%20Elements%20III.html#Lens-types">Lens types</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L4/overview_4.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Rainbow.html">Rainbow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Deflection-with-one-reflection">Deflection with one reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Rainbow.html#Color-of-the-rainbow">Color of the rainbow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#id1">Rainbow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L4/Rainbow.html#Glassbow">Glassbow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html">Lens Systems and Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Lens%20Systems%20and%20Optical%20Instruments.html#Lens-Systems">Lens Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Optical%20Instruments.html">Optical Instruments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L4/Optical%20Instruments.html#The-Eye">The Eye</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/Magnifying%20Glass.html">Magnifying Glass</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 5:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L5/overview_5.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Microscope.html">Microscope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L5/Microscope.html#Modern-microscopy">Modern microscopy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/Telescope.html">Telescope</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 6:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L6/overview_6.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L6/Imaging%20Errors.html">Imaging Errors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Imaging%20Errors.html#Chromatic-Aberrations">Chromatic Aberrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Imaging%20Errors.html#Spherical-Aberration">Spherical Aberration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Imaging%20Errors.html#Coma">Coma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Imaging%20Errors.html#Astigmatism">Astigmatism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Imaging%20Errors.html#Field-Curvature">Field Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Imaging%20Errors.html#Distortions">Distortions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L6/Wave%20Optics.html">Wave Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Wave%20Optics.html#Postulates-of-Wave-Optics">Postulates of Wave Optics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L6/Wave%20Optics.html#Wave-equation">Wave equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L6/Wave%20Optics.html#Intensity-of-waves">Intensity of waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L6/Wave%20Optics.html#Monochromatic-wave">Monochromatic wave</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../L6/Wave%20Optics.html#Complex-Amplitude">Complex Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../L6/Wave%20Optics.html#Wavefronts">Wavefronts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Wave%20Optics.html#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Wave%20Optics.html#Spherical-Waves">Spherical Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L6/Wave%20Optics.html#Interference">Interference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../snippets/Wave%20Explorer.html">EXP3 Snippets: Wave Explorer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-Waves">Plane Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Plane-wave-propagation">Plane wave propagation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-Waves">Spherical Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../snippets/Wave%20Explorer.html#Spherical-wave-propagation">Spherical wave propagation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 7:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L7/overview_7.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L7/Wave%20Optics.html">Wave Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Wave%20Optics.html#Postulates-of-Wave-Optics">Postulates of Wave Optics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L7/Wave%20Optics.html#Wave-equation">Wave equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L7/Wave%20Optics.html#Intensity-of-waves">Intensity of waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L7/Wave%20Optics.html#Monochromatic-wave">Monochromatic wave</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../L7/Wave%20Optics.html#Complex-Amplitude">Complex Amplitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../L7/Wave%20Optics.html#Wavefronts">Wavefronts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Wave%20Optics.html#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Wave%20Optics.html#Spherical-Waves">Spherical Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L7/Wave%20Optics.html#Interference">Interference</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 8:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L8/overview_8.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html">Coherence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html#Interferometers">Interferometers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Interference.html#Michelson-Interferometer">Michelson Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Interference.html#Mach-Zehnder-Interferometer">Mach-Zehnder Interferometer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L8/Interference.html#Sagnac-Interferometer">Sagnac Interferometer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L8/Interference.html#Double-Slit-Interference">Double Slit Interference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 9:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L9/overview_9.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/Thin%20Film%20Interference.html">Thin Film Interference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L9/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Constant-Amplitude">Multiple Wave Interference with Constant Amplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L9/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html">Fabry Perot Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L9/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 10:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L10/overview_10.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/MultiWave%20Interference.html">Multiple Wave Interference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L10/MultiWave%20Interference.html#Multiple-Wave-Interference-with-Decreasing-Amplitude">Multiple Wave Interference with Decreasing Amplitude</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/FabryPerot.html">Fabry Perot Interferometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/FabryPerot.html#Newton-Rings">Newton Rings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L10/Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L10/Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L10/Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 11:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L11/overview_11.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Diffraction.html">Diffraction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction.html#Huygens-Principle">Huygens Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction.html#Single-Slit-diffraction">Single Slit diffraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction.html#Circular-Aperture">Circular Aperture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L11/Diffraction.html#Resolution-of-an-Optical-Microscope">Resolution of an Optical Microscope</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L11/Diffraction%20Grating.html">Diffraction Grating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Properties-of-the-diffraction-pattern">Properties of the diffraction pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Position-of-the-Main-Peaks">Position of the Main Peaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Influence-of-the-Slit-Width">Influence of the Slit Width</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Influence-on-the-Slit-Number">Influence on the Slit Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L11/Diffraction%20Grating.html#Spectral-resolution">Spectral resolution</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 12:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L12/overview_12.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L12/Diffraction%20Grating.html">Diffraction Grating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction%20Grating.html#Spectral-resolution">Spectral resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L12/Fresnel%20Zones.html">Fresnel Zones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L12/Fresnel%20Zones.html#Fresnel-Zone-Plate">Fresnel Zone Plate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L12/Diffraction%20Integral.html">Diffraction Integral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction%20Integral.html#Fresnel-Approximation">Fresnel Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction%20Integral.html#Fraunhofer-Approximation">Fraunhofer Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Diffraction%20Integral.html#Babinet’s-Principle">Babinet’s Principle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L12/Electromagnetic%20Optics.html">Electromagnetic Optics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Electromagnetic%20Optics.html#Electromagnetic-Spectrum">Electromagnetic Spectrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L12/Electromagnetic%20Optics.html#Maxwell-Equations">Maxwell Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Electromagnetic%20Optics.html#Plane-Waves,-Spherical-Waves">Plane Waves, Spherical Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L12/Electromagnetic%20Optics.html#Plane-Waves">Plane Waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L12/Electromagnetic%20Optics.html#Spherical-Waves">Spherical Waves</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L12/Polarization%20of%20EM%20Waves.html">Polarization of EM Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Polarization%20of%20EM%20Waves.html#Linearly-Polarized-Waves">Linearly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Polarization%20of%20EM%20Waves.html#Circularly-Polarized-Waves">Circularly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Polarization%20of%20EM%20Waves.html#Elliptically-Polarized">Elliptically Polarized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Polarization%20of%20EM%20Waves.html#Unpolarized-Light">Unpolarized Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L12/Polarization%20of%20EM%20Waves.html#Analyzing-Polarization">Analyzing Polarization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L12/Polarization%20of%20EM%20Waves.html#Law-of-Malus">Law of Malus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 13:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L13/overview_13.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Polarization%20of%20EM%20Waves.html">Polarization of EM Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Polarization%20of%20EM%20Waves.html#Linearly-Polarized-Waves">Linearly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Polarization%20of%20EM%20Waves.html#Circularly-Polarized-Waves">Circularly Polarized Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Polarization%20of%20EM%20Waves.html#Elliptically-Polarized">Elliptically Polarized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Polarization%20of%20EM%20Waves.html#Unpolarized-Light">Unpolarized Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Polarization%20of%20EM%20Waves.html#Analyzing-Polarization">Analyzing Polarization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L13/Polarization%20of%20EM%20Waves.html#Law-of-Malus">Law of Malus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Energy%20Transport.html">Energy Transport and Momentum Transport of EM Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Energy%20Transport.html#Energy-Transport">Energy Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Energy%20Transport.html#Momentum-Transport-and-Radiation-Pressure">Momentum Transport and Radiation Pressure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L13/Energy%20Transport.html#Radiation-Pressure-measurements">Radiation Pressure measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L13/Energy%20Transport.html#Comet-Tails">Comet Tails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L13/Energy%20Transport.html#Optical-Tweezers-and-Magneto-optical-Traps">Optical Tweezers and Magneto-optical Traps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L13/Speed%20of%20Light%20Measurements.html">Measurements of the Speed of Light</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Speed%20of%20Light%20Measurements.html#Rotating-Mirror-Method-by-Foucault">Rotating Mirror Method by Foucault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L13/Speed%20of%20Light%20Measurements.html#Phase-Method">Phase Method</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 14:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L14/overview_14.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html">Electromagnetic Waves in Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Dielectrics-Polarization">Dielectrics Polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Magnetization">Magnetization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Maxwell-Equations-in-Matter">Maxwell Equations in Matter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/EM%20Waves%20in%20Matter.html#Wave-Equation-and-Refractive-Index">Wave Equation and Refractive Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Dispersion%20and%20Absorption.html">Dispersion and Absorption</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Dispersion%20and%20Absorption.html#Absorption">Absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Dispersion%20and%20Absorption.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L14/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 15:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L15/overview_15.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L15/Dispersion%20and%20Absorption.html">Dispersion and Absorption</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Dispersion%20and%20Absorption.html#Absorption">Absorption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Dispersion%20and%20Absorption.html#Dispersion">Dispersion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html">Reflection and Refraction of Electromagnetic Waves</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html#Boundary-Condition">Boundary Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html#Reflection/Refraction">Reflection/Refraction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Reflection%20and%20Refraction.html#Frequency-and-Wavevector-Matching">Frequency and Wavevector Matching</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L15/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L15/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L15/Fresnel%20Equations.html#Intensities-of-Reflected-and-Transmitted-Waves">Intensities of Reflected and Transmitted Waves</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 16:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L16/overview_16.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L16/Fresnel%20Equations.html">Fresnel Equations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Air-to-Glass">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Glass-to-Air">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Transmission">Transmission</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#id1">Air to Glass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L16/Fresnel%20Equations.html#id2">Glass to Air</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L16/Fresnel%20Equations.html#Intensities-of-Reflected-and-Transmitted-Waves">Intensities of Reflected and Transmitted Waves</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 17:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L17/Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Optical-Activity">Optical Activity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L17/Anisotropic%20Materials.html#Faraday-Effect">Faraday Effect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 18:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L18/overview_18.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html">Anisotropic Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html#Light-propagation">Light propagation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html#Wave-retarders">Wave retarders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html#Quarter-Wave-Plate">Quarter Wave Plate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html#Half-Wave-Plate">Half Wave Plate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html#Optical-Activity">Optical Activity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Anisotropic%20Materials.html#Faraday-Effect">Faraday Effect</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L18_AMA/Metals.html">Metals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Metals.html#Drude-Model">Drude Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L18_AMA/Metals.html#Dielectric-function">Dielectric function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L18_AMA/Metals.html#Conductivity">Conductivity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L18_AMA/Dipole%20Radiation.html">Dipole Radiation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Dipole%20Radiation.html#Electric-field-of-an-accelerated-charge">Electric field of an accelerated charge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Dipole%20Radiation.html#Energy-flow">Energy flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L18_AMA/Dipole%20Radiation.html#Oscillating-Dipole">Oscillating Dipole</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 19:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L19/overview_19.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L19_AMA/Dipole%20Radiation.html">Dipole Radiation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Dipole%20Radiation.html#Electric-field-of-an-accelerated-charge">Electric field of an accelerated charge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Dipole%20Radiation.html#Energy-flow">Energy flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Dipole%20Radiation.html#Oscillating-Dipole">Oscillating Dipole</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html">The Structure of Matter - a Historical Approach</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#Do-atoms-exist?">Do atoms exist?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#Atoms-and-molecules">Atoms and molecules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#Dalton’s-law">Dalton’s law</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#The-law-of-Gay-Lussac">The law of Gay-Lussac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#The-Avogadro-number">The Avogadro number</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#The-Structure-of-atoms">The Structure of atoms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#Indication-of-charged-particles-within-atoms">Indication of charged particles within atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#The-Thomson-model">The Thomson model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L19_AMA/Structure_of_matter.html#The-Rutherford-model">The Rutherford model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L19_AMA/Quantum_mechanics_introduction.html">Introduction into Quantum Mechanics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Quantum_mechanics_introduction.html#The-argue-about-the-nature-of-light">The argue about the nature of light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Quantum_mechanics_introduction.html#Hallwachs-effect-and-photoelectric-effect">Hallwachs effect and photoelectric effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L19_AMA/Quantum_mechanics_introduction.html#Franck-Hertz-Experiment">Franck-Hertz Experiment</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 20:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L20/overview_20.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html">The Birth of Quantum Mechanics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#What-we-have-seen-during-the-last-lecture">What we have seen during the last lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#Blackbody-radiation-and-cavity-radiation">Blackbody radiation and cavity radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#Spectral-density-of-modes">Spectral density of modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#Stefan-Boltzmann-Law">Stefan-Boltzmann Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#Wien’s-Displacement-Law">Wien’s Displacement Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#Wien’s-distribution-law-or-Wien-approximation">Wien’s distribution law or Wien approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#Rayleigh–Jeans-law">Rayleigh–Jeans law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L20_AMA/Quantum_mechanics_introduction.html#Planck’s-law">Planck’s law</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 21:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L21/overview_21.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L21_AMA/Plancks_law.html">The Birth of Quantum Mechanics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Stefan-Boltzmann-Law">Stefan-Boltzmann Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Wien’s-Displacement-Law">Wien’s Displacement Law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Wien’s-distribution-law-or-Wien-approximation">Wien’s distribution law or Wien approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Rayleigh–Jeans-law">Rayleigh–Jeans law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Planck’s-law">Planck’s law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Rayleight-Jeans-law-as-special-case-of-Planck’s-law">Rayleight-Jeans law as special case of Planck’s law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Wien-approximation-as-special-case-of-Planck’s-law">Wien approximation as special case of Planck’s law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Wiens-displacement-law-as-derived-from-Planck’s-law">Wiens displacement law as derived from Planck’s law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L21_AMA/Plancks_law.html#Stefan-Boltzmann-law-as-derived-from-Planck’s-law">Stefan-Boltzmann law as derived from Planck’s law</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 22:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L22/overview_22.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L22_AMA/Particle_character_of_light.html">The Particle Character of Light</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L22_AMA/Particle_character_of_light.html#The-photoelectric-effect">The photoelectric effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L22_AMA/Particle_character_of_light.html#The-Compton-effect">The Compton effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L22_AMA/Particle_character_of_light.html#Properties-of-photons">Properties of photons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L22_AMA/Particle_character_of_light.html#Energy-and-momentum">Energy and momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L22_AMA/Particle_character_of_light.html#Angular-momentum">Angular momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L22_AMA/Particle_character_of_light.html#Mass-and-gravitational-force">Mass and gravitational force</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L22_AMA/Wave_character_of_particles.html">The Wave Character of Particles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L22_AMA/Wave_character_of_particles.html#Electron-diffraction-and-de-Broglie-wavelength">Electron diffraction and de Broglie wavelength</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 23:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L23/overview_23.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html">The Particle Character of Light</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#The-photoelectric-effect">The photoelectric effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#The-Compton-effect">The Compton effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Properties-of-photons">Properties of photons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Energy-and-momentum">Energy and momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Angular-momentum">Angular momentum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L23_AMA/L23_particle_character_of_light.html#Mass-and-gravitational-force">Mass and gravitational force</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L23_AMA/L23_wave_character_of_particles.html">The Wave Character of Particles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_wave_character_of_particles.html#Electron-diffraction-and-de-Broglie-wavelength">Electron diffraction and de Broglie wavelength</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html">Waves of Matter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html#Plane-waves">Plane waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html#Wave-packets">Wave packets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L23_AMA/L23_matter_waves.html#The-statistical-interpretation-of-matter-waves">The statistical interpretation of matter waves</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 24:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L24/overview_24.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html">Heisenbergs Uncertainty Relation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html#Position-momentum-uncertainty">Position-momentum uncertainty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html#Energy-time-uncertainty">Energy-time uncertainty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L24_AMA/L24_Heisenbergs_uncertainty_relation.html#Spreading-of-wave-packets">Spreading of wave packets</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 25:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L25/overview_25.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L25_AMA/L25_structure_of_atoms.html">The Structure of Atoms and the Bohr Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L25_AMA/L25_structure_of_atoms.html#Atomic-sprectra">Atomic sprectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L25_AMA/L25_structure_of_atoms.html#The-Bohr-model">The Bohr model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L25_AMA/L25_structure_of_atoms.html#About-the-stability-of-atoms">About the stability of atoms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L25_AMA/L25_Schroedinger_equation.html">The Schrödinger Equation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L25_AMA/L25_Schroedinger_equation.html#Introducing-the-equation">Introducing the equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L25_AMA/L25_Schroedinger_equation.html#A-potential-barrier">A potential barrier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../L25_AMA/L25_Schroedinger_equation.html#The-case-E-&lt;-E_0">The case <span class="math notranslate nohighlight">\(E &lt; E_0\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../L25_AMA/L25_Schroedinger_equation.html#The-case-E-&gt;-E_0">The case <span class="math notranslate nohighlight">\(E &gt; E_0\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 26:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L26/overview_26.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L26_AMA/L26_Schroedinger_equation.html">The Schrödinger Equation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L26_AMA/L26_Schroedinger_equation.html#Introducing-the-equation">Introducing the equation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L26_AMA/L26_potential_barrier.html">A potential barrier</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L26_AMA/L26_potential_barrier.html#The-case-0-&lt;-E-&lt;-E_0">The case <span class="math notranslate nohighlight">\(0 &lt; E &lt; E_0\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L26_AMA/L26_potential_barrier.html#The-case-0-&lt;-E_0-&lt;-E">The case <span class="math notranslate nohighlight">\(0 &lt; E_0 &lt; E\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L26_AMA/L26_potential_barrier.html#The-case-E_0-&lt;-0-&lt;-E">The case <span class="math notranslate nohighlight">\(E_0 &lt; 0 &lt; E\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L26_AMA/L26_potential_barrier.html#The-tunnel-effect-or-quantum-tunnelling">The tunnel effect or quantum tunnelling</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 27:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L27/overview_27.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L27_potential_well.html">A potential well</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="L27_potential_well.html#…-with-infinite-high-walls">… with infinite high walls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="L27_potential_well.html#…-with-finite-high-walls">… with finite high walls</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The harmonic oscillator</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Experimental Physics 3</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>The harmonic oscillator</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/fcichos/exp3/blob/master//source/notebooks/L27_AMA/L27_harmonic_oscillator.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="admonition note">
+<p>This page was generated from <a href="#id1"><span class="problematic" id="id2">`/home/lectures/exp3/source/notebooks/L27_AMA/L27_harmonic_oscillator.ipynb`_</span></a>.
+<span class="raw-html"><br/><a href="https://mybinder.org/v2/gh/fcichos/exp3/master?urlpath=tree//home/lectures/exp3/source/notebooks/L27_AMA/L27_harmonic_oscillator.ipynb"><img alt="Binder badge" src="https://img.shields.io/badge/launch-full%20binder-red.svg" style="vertical-align:text-bottom"></a></span></p>
+</div>
+<div class="section" id="The-harmonic-oscillator">
+<h1>The harmonic oscillator<a class="headerlink" href="#The-harmonic-oscillator" title="Permalink to this headline">¶</a></h1>
+<p>One of the most important examples in all branches of physics is the harmonic oscillator. The potential has the shape of a parabola with the potential energy of</p>
+<div class="math notranslate nohighlight">
+\[E_{\mathrm{pot}} = \frac{1}{2} D x^2\]</div>
+<p>and the repelling force depends linearly on the deviation from the equilibrium position</p>
+<div class="math notranslate nohighlight">
+\[F = - \mathrm{grad} \left( E_{\mathrm{pot}} \right) = - D x  \mathrm{.}\]</div>
+<p>In the case of classical mechanics we allready know examples like a weight at a pendulum or a weight at a spring. We can treat the weight as a point-like mass <span class="math notranslate nohighlight">\(m\)</span> oscillating around the rest position (<span class="math notranslate nohighlight">\(x = 0\)</span>) beeing reelled through the force <span class="math notranslate nohighlight">\(F = - D x\)</span>. The mass will then conduct a harmonic oscillation with the frequency</p>
+<div class="math notranslate nohighlight">
+\[\omega = \sqrt{\frac{D}{m}} \mathrm{.}\]</div>
+<p>In order to discuss a quantum mechanic harmonic oscillator we start with the Schrödinger equation and the harmonic potential <span class="math notranslate nohighlight">\(E_{\mathrm{pot}} = D x^2/2\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi \left( x \right) + \frac{1}{2} D x^2 \psi \left( x \right) = E \psi \left( x \right) \mathrm{,}\]</div>
+<p>which becomes</p>
+<div class="math notranslate nohighlight">
+\[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} \psi \left( x \right) + \frac{1}{2} \omega^2 m x^2 \psi \left( x \right)  =  E \psi \left( x \right)\]</div>
+<p>with the aid of the relation between the freuency <span class="math notranslate nohighlight">\(\omega\)</span> and the curvature of the potential <span class="math notranslate nohighlight">\(D\)</span> and finally</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2}{\partial x^2} \psi \left( x \right) + \left( \frac{2 m}{\hbar^2} E - \frac{m^2 \omega^2}{\hbar^2} x^2 \right) \psi \left( x \right)  = 0 \mathrm{.}\]</div>
+<p>Now we introduce the substitutions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+x &amp; = &amp; \sqrt{\frac{\hbar}{m \omega}} \cdot \xi\\
+E &amp; = &amp; \frac{\hbar \omega}{2} C
+\end{eqnarray}\end{split}\]</div>
+<p>and reformulate the Schrödinger equation like</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2}{\partial \xi^2} \psi \left( \xi \right) + \left( C - \xi^2 \right) \psi \left( \xi \right)  = 0 \mathrm{.}\]</div>
+<p>In the case of very high values of <span class="math notranslate nohighlight">\(\xi\)</span>, the term <span class="math notranslate nohighlight">\(C\)</span> can be neglected in comparison with the term <span class="math notranslate nohighlight">\(\xi^2\)</span>. Thus, we can guess the solution <span class="math notranslate nohighlight">\(\psi \left( \xi \right)\)</span> might behave like <span class="math notranslate nohighlight">\(\propto \mathrm{e}^{- \frac{\xi^2}{2}}\)</span> in its asymptotic limit. The genernal solution reads as</p>
+<div class="math notranslate nohighlight">
+\[\psi \left( \xi \right) = H \left( \xi \right) \mathrm{e}^{- \frac{\xi^2}{2}} \mathrm{.}\]</div>
+<p>If we now use the general solution within the re-formed Schrödinger equation, we get</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2}{\partial \xi^2} H \left( \xi \right) - 2 \xi \frac{\partial}{\partial \xi} H \left( \xi \right) + \left( C - 1 \right) H \left( \xi \right)  = 0 \mathrm{.}\]</div>
+<p>The very last equation is a second order ordinary differenctial equation, which has the shape of a <strong>Hermite differential equation</strong>. Its solutions are the <strong>Hermite polynomials</strong> of degree <span class="math notranslate nohighlight">\(n\)</span> defined through</p>
+<div class="math notranslate nohighlight">
+\[H_n \left( \xi \right) = \left( -1 \right)^{n} \cdot \mathrm{e}^{\xi^2} \cdot \frac{\partial^{n}}{\partial \xi^{n}} \left( \mathrm{e}^{- \xi^2} \right)\]</div>
+<p>with <span class="math notranslate nohighlight">\(n\)</span> being natural number <span class="math notranslate nohighlight">\(n = 0,1,2,3, \ldots\)</span>. If we test the Hermite polynomials in our function <span class="math notranslate nohighlight">\(H_{n} \left( \xi \right)\)</span>, we will get</p>
+<div class="math notranslate nohighlight">
+\[C -1 = 2 n \mathrm{.}\]</div>
+<p>The first four Hermite polynomials <span class="math notranslate nohighlight">\(H_n \left( \xi \right)\)</span> and the according wave functions <span class="math notranslate nohighlight">\(\psi_n \left( \xi \right)\)</span> are listed in the following table.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(E_n\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(H_{n} \left( \xi \right)\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\psi_{n} \left( \xi \right)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{2} \hbar \omega\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_0 \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{3}{2} \hbar \omega\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2 \xi\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_1 \cdot 2\xi \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{5}{2} \hbar \omega\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4 \xi^2 -2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_2 \cdot \left(4\xi^2-2\right) \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{7}{2} \hbar \omega\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(8 \xi^3 -12\xi\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_3 \cdot \left(8\xi-12\xi\right) \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>In addition, the normalization factors <span class="math notranslate nohighlight">\(N_n \left( \xi \right)\)</span> are indictaed which we have to chose in accord to the normalization condiction.</p>
+<div class="math notranslate nohighlight">
+\[\int_{x = -\infty}^{+\infty} \left| \psi_n \left( x \right) \right|^2 \mathrm{d}x = 1\]</div>
+<p>We can reformulate the Hermite polynomials through a power series expansion</p>
+<div class="math notranslate nohighlight">
+\[H_n \left( \xi \right) = \sum_{k = 0}^{n} a_k \cdot \mathrm{e}^{k} \mathrm{.}\]</div>
+<p>This series has to be <em>finite</em>, since otherwise <span class="math notranslate nohighlight">\(H_n \left( \xi \right)\)</span> will approach <span class="math notranslate nohighlight">\(+\infty\)</span> for <span class="math notranslate nohighlight">\(\xi &gt; 1\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\psi_n \left( x \right) = \tilde{H}_n \left( x \right) \mathrm{e}^{-\frac{m E}{\hbar^2} \frac{x^2}{2}}\]</div>
+<p>cannot be normalized for all <span class="math notranslate nohighlight">\(x\)</span>. If we now use the formular for the series expansion of <span class="math notranslate nohighlight">\(H_n \left( \xi \right)\)</span> in the differential equation and sort by coefficients with equal power of <span class="math notranslate nohighlight">\(\xi^k\)</span>, we obtain the <em>recursive</em> equation</p>
+<div class="math notranslate nohighlight">
+\[\left( k+2 \right) \cdot \left( k+1 \right) \cdot a_{k+2} = \left[ 2k - \left( C-1 \right)\right] \cdot a_k \mathrm{.}\]</div>
+<p>Because the series of <span class="math notranslate nohighlight">\(H_n \left( \xi \right)\)</span> has to be <em>finite</em>, we set <span class="math notranslate nohighlight">\(\xi^n\)</span> as the highest power of <span class="math notranslate nohighlight">\(\xi^k\)</span>, which results in <span class="math notranslate nohighlight">\(a_{n+2} = 0\)</span>. As a consequence and since <span class="math notranslate nohighlight">\(a_n \neq 0\)</span>, we can state</p>
+<div class="math notranslate nohighlight">
+\[2n - \left( C-1 \right) = 0\]</div>
+<p>wich results in</p>
+<div class="math notranslate nohighlight">
+\[n = \frac{1}{2} \left( C-1 \right) \mathrm{.}\]</div>
+<p>If we re-substitute <span class="math notranslate nohighlight">\(C=2E / \left( \hbar \omega \right)\)</span> and isolate <span class="math notranslate nohighlight">\(E\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[E = \hbar \omega \left( n +\frac{1}{2} \right) = E_n\mathrm{,}\]</div>
+<p>with <span class="math notranslate nohighlight">\(n = 0,1,2,3 \ldots\)</span>. Thus, it is obvious that the energy eigenvalues <span class="math notranslate nohighlight">\(E_n\)</span> are <strong>quantized</strong> and <strong>equidistanct</strong>. Furthermore, the lowest energy is <strong>non-zero</strong>, it is rather</p>
+<div class="math notranslate nohighlight">
+\[E_0 = \frac{1}{2} \hbar \omega \mathrm{.}\]</div>
+<p>Since the quantum number <span class="math notranslate nohighlight">\(n\)</span> uniquely determines the energy of the oscillation, it is referred to as <em>oscillation quantum number</em>. The oscilating wave function finally reads as</p>
+<div class="math notranslate nohighlight">
+\[\psi_n \left( x \right) = \tilde{H}_n \left( x \right) \cdot \mathrm{e}^{-\frac{m \omega}{2 \hbar} x^2}\]</div>
+<figure><p><img alt="839fa600a6bf49e6af49cbb18acab81e" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_waves.png" style="width: 45%;" /> <img alt="db99988d397d48c08dc6d96d3fd4db31" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_squaredwaves.png" style="width: 45%;" /></p>
+<figcaption><p><strong>Fig.: (left) Wave functions :math:`psi_{mathrm{n}}` positioned at the height corresponding to the energy eigenvalue :math:`E_{mathrm{n}}`. (right) The according probability densities (squared wave functions). The postential is :math:`V = 0.5*x^2`.</strong></p>
+</figcaption></figure><figure><p><img alt="21506e25414b468f943288d1acc2d833" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_energy.png" style="width: 45%;" /></p>
+<figcaption><p><strong>Fig.: The energy eigenvalues :math:`E_{mathrm{n}}` in dependence of the oscillation quantum number :math:`n` on a linear scale. The postential is :math:`V = 0.5*x^2`.</strong></p>
+</figcaption></figure><p>Concerning classical mechanics, the probability to find the “classical” oscillating particle within the interval <span class="math notranslate nohighlight">\(\left[x;x+\mathrm{d}x\right]\)</span> is given through</p>
+<div class="math notranslate nohighlight">
+\[P \left( x \right) =  \frac{1}{T} \mathrm{d}t = \frac{1}{v\left(x\right)} \mathrm{d}t \mathrm{,}\]</div>
+<p>where <span class="math notranslate nohighlight">\(T=2\pi / \omega\)</span> is the time for one full oscillation and <span class="math notranslate nohighlight">\(\mathrm{d}t = 1/v\left( x \right) \cdot \mathrm{d}x\)</span> as the time interval the particle needs to cover the distance <span class="math notranslate nohighlight">\(\mathrm{d}x\)</span>. Since the speed of the particle is <span class="math notranslate nohighlight">\(0\)</span> at the reversal points, the probability to find the particle is heighest at these positions.</p>
+<p>At the state of lowets energy <span class="math notranslate nohighlight">\(E_0\)</span> the discrepancy between quantum mechanics and classical mechanics is the biggest. The classical harmonic oscillator exhibits a minimum of the probability at the position at rest, because there the kinetic energy is teh biggest and so the velocity. The quantum mechanic harmonic osciullator, however, exhibits the maximum probability at this position.</p>
+<p>If we consider higher quantum numbers, the probability density <span class="math notranslate nohighlight">\(\left| \psi_n \left( x \right) \right|^2\)</span> rises at the turning points. Thus, for higher quantum numbers, the quantum mechanical harmonic oscillator resambles the results from classical mechanics.</p>
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script></div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="L27_potential_well.html" class="btn btn-neutral float-left" title="A potential well" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Frank Cichos.
+      <span class="lastupdated">Last updated on Jan 27, 2023.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -279,6 +279,16 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L26_AMA/L26_Schroedinger_equation.ipynb
    notebooks/L26_AMA/L26_potential_barrier.ipynb
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 27:
+   
+   lectures/L27/overview_27.rst
+   notebooks/L27_AMA/L27_potential_well.ipynb
+   notebooks/L27_AMA/L27_harmonic_oscillator.ipynb
+
+
  
 
 

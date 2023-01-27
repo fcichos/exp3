@@ -637,6 +637,16 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 27:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L27/overview_27.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L27_AMA/L27_potential_well.html">A potential well</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L27_AMA/L27_potential_well.html#…-with-infinite-high-walls">… with infinite high walls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L27_AMA/L27_potential_well.html#…-with-finite-high-walls">… with finite high walls</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../L27_AMA/L27_harmonic_oscillator.html">The harmonic oscillator</a></li>
+</ul>
 
         </div>
       </div>
@@ -707,7 +717,7 @@ figcaption {
   padding: 2px;
 }
 </style><p>In the last section about Fresnel zones and the zone plate we have considered how different path contribute to the intensity at a point on the optical axis. We would like to generalize this idea to an integral formulation allowing us to calculate any kind of diffraction pattern.</p>
-<figure><p><img alt="d2e61bee5d5f4fcf83bbfebb66b48ce1" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
+<figure><p><img alt="9818e97737644f44a23e695665dae1b1" class="no-scaled-link" src="../../_images/sketch.png" style="width: 80%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction integral.</p>
 </figcaption></figure><p>Assume we have a light source <span class="math notranslate nohighlight">\(S\)</span> as in the image above, which sends out a spherical wave (does not need to be a spherical wave). The spatial amplitude of this wave at the point <span class="math notranslate nohighlight">\(P(x,y)\)</span> at a tiny aperture element <span class="math notranslate nohighlight">\(d\sigma\)</span></p>
 <div class="math notranslate nohighlight">
@@ -757,10 +767,10 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 \[U(x^{\prime},y^{\prime},z_0)=i\frac{e^{-ikz_0}}{\lambda z_0} e^{-\frac{ik}{2z_0}(x^{\prime 2}+y^{\prime 2})}
 \iint U_{s}(x,y)
 e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
-<figure><p><img alt="c02d426f4a4c494692d8224b3c68fcc8" class="no-scaled-link" src="../../_images/near_far_field.png" style="width: 90%;" /></p>
+<figure><p><img alt="82b79f33d86b4f3384f8659b395d24c9" class="no-scaled-link" src="../../_images/near_far_field.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Diffraction pattern of a slit in the near field (Fresnel diffraction, left) and the far field (Fraunhofer diffraction, right).</p>
 </figcaption></figure><p>While these formulas provide the mathematical tools, we may obtain a more intuitive idea about the different approximation in the following way. Consider the image below, where we would like to know about the diffraction intensity of a slit of width <span class="math notranslate nohighlight">\(b\)</span> at the optical axis at a distance <span class="math notranslate nohighlight">\(D\)</span>.</p>
-<figure><p><img alt="a4118aeeb4824ca58e7fab6560244b42" class="no-scaled-link" src="../../_images/diffraction.png" style="width: 55%;" /></p>
+<figure><p><img alt="44c67001a24544219cb09b250331e3d9" class="no-scaled-link" src="../../_images/diffraction.png" style="width: 55%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Illustration of the importance of additional geometrical path length difference for the discrimination of Fresnel (near-field) and Fraunhofer (far-field) diffraction.</p>
 </figcaption></figure><p>The waves from the center of the slit and the edge have to travel towards that point a different pathlength, whcih we may calculate to</p>
 <p><span class="math">\begin{eqnarray}
@@ -791,7 +801,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <div class="section" id="Babinet’s-Principle">
 <h2>Babinet’s Principle<a class="headerlink" href="#Babinet’s-Principle" title="Permalink to this headline">¶</a></h2>
 <p>The above considerations of diffraction have some intruiging consequence. Consider the two apertures in the image below.</p>
-<figure><p><img alt="01a33ed6e1a245a19d19574d3263f605" class="no-scaled-link" src="../../_images/babinet.png" style="width: 60%;" /></p>
+<figure><p><img alt="13f02873d94846db8870f40d4f4b67fe" class="no-scaled-link" src="../../_images/babinet.png" style="width: 60%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Two complementary apertures, which have the same diffraction pattern in the far field.</p>
 </figcaption></figure><p>The left aperture will create in the far field an amplitude distribution <span class="math notranslate nohighlight">\(U_h\)</span>, while the inverse aperture on the right will cause an amplitude <span class="math notranslate nohighlight">\(U_d\)</span>. If we combine both amplitudes in the far field, we obtain a total amplitude distribution</p>
 <div class="math notranslate nohighlight">
@@ -808,7 +818,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 <p>The far field diffraction intensity distribution of complementary apertures is the same.</p>
 </div>
 <p>The images below show an experimental demonstration of Babinet’s principle on a slit and a wire.</p>
-<figure><p><img alt="e4d16b84fab7411fa1e51d67748f6ddc" class="no-scaled-link" src="../../_images/babinet_exp.png" style="width: 90%;" /></p>
+<figure><p><img alt="61121e0a722f4d7f9931be121d4bf31d" class="no-scaled-link" src="../../_images/babinet_exp.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.:</strong> Babinet’s principle demonstrated experimentally on a slit (left) and a wire (right).</p>
 </figcaption></figure><script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
@@ -827,7 +837,7 @@ e^{\frac{ik}{2z_0}(xx^{\prime}+yy^{\prime})} dx dy\]</div>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 26, 2023.
+      <span class="lastupdated">Last updated on Jan 27, 2023.
       </span></p>
   </div>
 
