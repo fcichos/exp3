@@ -645,6 +645,17 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../L27_AMA/L27_harmonic_oscillator.html">The harmonic oscillator</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 28:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L28/overview_28.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html">A particle in a spherically symmetric potential</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#The-sperically-symmetric-Schrödinger-eqution">The sperically symmetric Schrödinger eqution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#Solving-the-solution-function-\Phi-\left(-\varphi-\right)">Solving the solution function <span class="math notranslate nohighlight">\(\Phi \left( \varphi \right)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#Solving-the-solution-function-\Theta-\left(-\vartheta-\right)">Solving the solution function <span class="math notranslate nohighlight">\(\Theta \left( \vartheta \right)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#Solving-the-solution-function-R-\left(-r-\right)">Solving the solution function <span class="math notranslate nohighlight">\(R \left( r \right)\)</span></a></li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -758,9 +769,9 @@
 <p>with</p>
 <div class="math notranslate nohighlight">
 \[A \left(z,t \right) = 2 C \left( k_0 \right) \, \frac{\sin \left(\Delta k \ u /2  \right)}{u} \mathrm{.}\]</div>
-<figure><p><img alt="29d3dbe1131f4306b96ff96b4795d881" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_constant_dispersion1.png" style="width: 45%;" /> <img alt="c89fc9f5758a42469f2aee05ddb4b38b" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_constant_dispersion_21.png" style="width: 45%;" /></p>
+<figure><p><img alt="b9e20f192e0a42828681d11c6e713fc5" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_constant_dispersion1.png" style="width: 45%;" /> <img alt="8df243569d264f018230ee0bd3c0f94f" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_constant_dispersion_21.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.: (left) A wave packet (red) with constant amplitude :math:`C` on the interval :math:`Delta k = pi` and indicated matter wave (black). (right) The same wave packet as left (red, :math:`Delta k = pi`) along a with a wave packet on a narrower broader interval (blue, :math:`Delta k = 2,pi`) and narrower interval (green, :math:`Delta k = 0.5 , pi`). It bis evident that the broader the intervall, the narrower is the width of teh packet.</strong></p>
-</figcaption></figure><figure><p><img alt="0e70fd3d532f452784909595f3e0bcf7" class="no-scaled-link" src="../../_images/L24_const_amp_packet.png" style="width: 90%;" /> <img alt="f4a78d552fe4443695f4c8d0e2143a4a" class="no-scaled-link" src="../../_images/L24_const_amp_prop.png" style="width: 90%;" /></p>
+</figcaption></figure><figure><p><img alt="042f3561fbed409b96e18a5f0801ca9f" class="no-scaled-link" src="../../_images/L24_const_amp_packet.png" style="width: 90%;" /> <img alt="2ee3033ea601463b8d306d50eac9dfa3" class="no-scaled-link" src="../../_images/L24_const_amp_prop.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.: (top) A wave packet with a constant amplitude :math:`C left(k_0right)` on the interval :math:`Delta k = pi / 4`. Note the negative values. (bottom) The propability density :math:`left| psi left(x,y,t=0 right) right|^2` of the wave packet. Note that the negative values vanished due to squaring. The side lobes, however, remain.</strong></p>
 </figcaption></figure><p>The function <span class="math notranslate nohighlight">\(\psi \left( z , t \right)\)</span> represents a plane wave whose amplitude <span class="math notranslate nohighlight">\(A\)</span> exhibits a maximum at <span class="math notranslate nohighlight">\(u=0\)</span>, and therefore <span class="math notranslate nohighlight">\(z_{\mathrm{m}} = \left(\mathrm{d} \omega / \mathrm{d} k \right)_{k_0} \cdot t\)</span>. We call this function <span class="math notranslate nohighlight">\(\psi\)</span> a <strong>wave packet</strong>. Its shape, namely hight and distance to side lobes, does depent on the width o fteh interval <span class="math notranslate nohighlight">\(\Delta k\)</span> and the distribution of the amplitude <span class="math notranslate nohighlight">\(C \left( k \right)\)</span>. The wave packet’s maximum propagates
 with the group velocity</p>
@@ -781,9 +792,9 @@ with the group velocity</p>
 <p>Concerning side lobes we can improfe the description of particles through wave packets, if we use a Gaussian distribution for the amplitude instead of a constant value,</p>
 <div class="math notranslate nohighlight">
 \[C \left( k_0 \right) \longrightarrow C \left( k_0 \right) \, \mathrm{e}^{- \frac{\left( k-k_0\right)^2}{2 \Delta k^2}} \mathrm{.}\]</div>
-<figure><p><img alt="84f09aeb17994766b26b271d447002de" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_gaussian_dispersion1.png" style="width: 45%;" /></p>
+<figure><p><img alt="e647862036724f9cae809ad4037dc62e" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_gaussian_dispersion1.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.: A wave packet (red) with a Gaussian amplitude and indicated matter wave (black). Note, sidelobes as in teh case of a constant amplitude does not appear for a Gaussian amplitude.</strong></p>
-</figcaption></figure><figure><p><img alt="ad6d8d248e2f45d2af01cec4c03cbabb" class="no-scaled-link" src="../../_images/L24_gauss_amp_packet.png" style="width: 90%;" /> <img alt="d5ca3e900ee44b948bbd0b528a609f9d" class="no-scaled-link" src="../../_images/L24_gauss_amp_prop.png" style="width: 90%;" /></p>
+</figcaption></figure><figure><p><img alt="0d600e769fc94c2f8ede78ee3fb5703e" class="no-scaled-link" src="../../_images/L24_gauss_amp_packet.png" style="width: 90%;" /> <img alt="c181d6a08b5a41fe88e77a0bfefa3625" class="no-scaled-link" src="../../_images/L24_gauss_amp_prop.png" style="width: 90%;" /></p>
 <figcaption><p><strong>Fig.: (top) A wave packet with a Gaussian-like amplitude :math:`C left(kright)` on the interval :math:`Delta k = pi / 4`. (bottom) The propability density :math:`left| psi left( x,y,t=0 right) right|^2` of this wave packet.</strong></p>
 </figcaption></figure><p>Despite the correspondences we have figured out so far, a wave packet is not directly the wave equivalent model of a particle. Reasons are,</p>
 <ul class="simple">
@@ -805,7 +816,7 @@ with the group velocity</p>
 <p>thus, the factor of proportionality is <span class="math notranslate nohighlight">\(1\)</span> and we are allowed to state</p>
 <div class="math notranslate nohighlight">
 \[P\left( z, t \right) \mathrm{d}z = \left| \psi \left( z, t \right) \right|^2 \mathrm{d}z \mathrm{.}\]</div>
-<figure><p><img alt="7842c86bd93348bba8856e2d18b90e08" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_propability_density1.png" style="width: 45%;" /></p>
+<figure><p><img alt="16e61886c1d94850862b69a06cb19798" class="no-scaled-link" src="../../_images/Lecture23_wave_packet_propability_density1.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.: The squared wave packet with a Gaussian amplitude distribution (black line) and propability density (area under the curve, shaded gray).</strong></p>
 </figcaption></figure><p>In the case the particle propagetes within a three-dimensional space, we can assign a three-dimensional wave packet <span class="math notranslate nohighlight">\(\psi \left( x,y,z, t \right)\)</span> to this particle. As discussed above, the particle has to be located somewhere in space and as a consequence the propability to find it within the whole space is <span class="math notranslate nohighlight">\(1\)</span> and we can state the nomalization condition</p>
 <div class="math notranslate nohighlight">
@@ -833,7 +844,7 @@ with the group velocity</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 28, 2023.
+      <span class="lastupdated">Last updated on Feb 01, 2023.
       </span></p>
   </div>
 

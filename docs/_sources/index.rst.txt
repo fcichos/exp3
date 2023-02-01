@@ -289,6 +289,15 @@ The fields of optics and quantum mechanics are nowadays very active research are
    notebooks/L27_AMA/L27_harmonic_oscillator.ipynb
 
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Lecture 28:
+   
+   lectures/L28/overview_28.rst
+   notebooks/L28_AMA/L28_spherical_potential.ipynb
+
+
+
  
 
 

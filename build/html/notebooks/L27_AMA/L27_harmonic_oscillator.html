@@ -23,6 +23,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lecture Contents" href="../../lectures/L28/overview_28.html" />
     <link rel="prev" title="A potential well" href="L27_potential_well.html" /> 
 </head>
 
@@ -646,6 +647,17 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The harmonic oscillator</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Lecture 28:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/L28/overview_28.html">Lecture Contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html">A particle in a spherically symmetric potential</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#The-sperically-symmetric-Schrödinger-eqution">The sperically symmetric Schrödinger eqution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#Solving-the-solution-function-\Phi-\left(-\varphi-\right)">Solving the solution function <span class="math notranslate nohighlight">\(\Phi \left( \varphi \right)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#Solving-the-solution-function-\Theta-\left(-\vartheta-\right)">Solving the solution function <span class="math notranslate nohighlight">\(\Theta \left( \vartheta \right)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L28_AMA/L28_spherical_potential.html#Solving-the-solution-function-R-\left(-r-\right)">Solving the solution function <span class="math notranslate nohighlight">\(R \left( r \right)\)</span></a></li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -707,7 +719,7 @@
 <p>and the repelling force depends linearly on the deviation from the equilibrium position</p>
 <div class="math notranslate nohighlight">
 \[F = - \mathrm{grad} \left( E_{\mathrm{pot}} \right) = - D x  \mathrm{.}\]</div>
-<figure><p><img alt="4ff153c9172c404ea4d083346626a58d" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator.png" style="width: 45%;" /></p>
+<figure><p><img alt="602f404552904f998fd0c537a4d4a38f" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.: A particle within the parabolic potential of a harmonic oscillator.</strong></p>
 </figcaption></figure><p>In the case of classical mechanics we allready know examples like a weight at a pendulum or a weight at a spring. We can treat the weight as a point-like mass <span class="math notranslate nohighlight">\(m\)</span> oscillating around the rest position (<span class="math notranslate nohighlight">\(x = 0\)</span>) beeing reelled through the force <span class="math notranslate nohighlight">\(F = - D x\)</span>. The mass will then conduct a harmonic oscillation with the frequency</p>
 <div class="math notranslate nohighlight">
@@ -761,22 +773,22 @@ E &amp; = &amp; \frac{\hbar \omega}{2} C
 <tr class="row-even"><td><p>0</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{1}{2} \hbar \omega\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_0 \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_0 \cdot \mathrm{e}^{-\frac{1}{2}\xi^2}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>1</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{3}{2} \hbar \omega\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(2 \xi\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_1 \cdot 2\xi \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_1 \cdot 2\xi \cdot \mathrm{e}^{-\frac{1}{2}\xi^2}\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p>2</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{5}{2} \hbar \omega\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(4 \xi^2 -2\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_2 \cdot \left(4\xi^2-2\right) \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_2 \cdot \left(4\xi^2-2\right) \cdot \mathrm{e}^{-\frac{1}{2}\xi^2}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>3</p></td>
 <td><p><span class="math notranslate nohighlight">\(\frac{7}{2} \hbar \omega\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(8 \xi^3 -12\xi\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(N_3 \cdot \left(8\xi-12\xi\right) \cdot \mathrm{-\frac{\xi^2}{2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N_3 \cdot \left(8\xi-12\xi\right) \cdot \mathrm{e}^{-\frac{1}{2}\xi^2}\)</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -785,7 +797,7 @@ E &amp; = &amp; \frac{\hbar \omega}{2} C
 \[\int_{x = -\infty}^{+\infty} \left| \psi_n \left( x \right) \right|^2 \mathrm{d}x = 1\]</div>
 <p>We can reformulate the Hermite polynomials through a power series expansion</p>
 <div class="math notranslate nohighlight">
-\[H_n \left( \xi \right) = \sum_{k = 0}^{n} a_k \cdot \mathrm{e}^{k} \mathrm{.}\]</div>
+\[H_n \left( \xi \right) = \sum_{k = 0}^{n} a_k \cdot \mathrm{\xi}^{k} \mathrm{.}\]</div>
 <p>This series has to be <em>finite</em>, since otherwise <span class="math notranslate nohighlight">\(H_n \left( \xi \right)\)</span> will approach <span class="math notranslate nohighlight">\(+\infty\)</span> for <span class="math notranslate nohighlight">\(\xi &gt; 1\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[\psi_n \left( x \right) = \tilde{H}_n \left( x \right) \mathrm{e}^{-\frac{m E}{\hbar^2} \frac{x^2}{2}}\]</div>
@@ -807,9 +819,9 @@ E &amp; = &amp; \frac{\hbar \omega}{2} C
 <p>Since the quantum number <span class="math notranslate nohighlight">\(n\)</span> uniquely determines the energy of the oscillation, it is referred to as <em>oscillation quantum number</em>. The oscilating wave function finally reads as</p>
 <div class="math notranslate nohighlight">
 \[\psi_n \left( x \right) = \tilde{H}_n \left( x \right) \cdot \mathrm{e}^{-\frac{m \omega}{2 \hbar} x^2}\]</div>
-<figure><p><img alt="a258b4bf202041dc9344e81d60da5dfb" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_waves.png" style="width: 45%;" /> <img alt="f6e9bc9029d7482f9c4a1cf2fea72c5d" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_squaredwaves.png" style="width: 45%;" /></p>
+<figure><p><img alt="555b0f90e94940ce9dea0c57b14e332b" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_waves.png" style="width: 45%;" /> <img alt="fd1dd65305c541f5a819309cd4af053f" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_squaredwaves.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.: (left) Wave functions :math:`psi_{mathrm{n}}` positioned at the height corresponding to the equidistant energy eigenvalue :math:`E_{mathrm{n}}`. (right) The according probability densities (squared wave functions). The postential is :math:`V = 0.5 cdot x^2`.</strong></p>
-</figcaption></figure><figure><p><img alt="d34e5fcef65e48ffbd479ccddaac01b4" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_energy.png" style="width: 45%;" /></p>
+</figcaption></figure><figure><p><img alt="4a903ff0fb4241a6a4cf72b006b1631d" class="no-scaled-link" src="../../_images/L27_harmonic_oscillator_energy.png" style="width: 45%;" /></p>
 <figcaption><p><strong>Fig.: The energy eigenvalues :math:`E_{mathrm{n}}` in dependence of the oscillation quantum number :math:`n` on a linear scale. The postential is :math:`V = 0.5 cdot x^2`.</strong></p>
 </figcaption></figure><p>Concerning classical mechanics, the probability to find the “classical” oscillating particle within the interval <span class="math notranslate nohighlight">\(\left[x;x+\mathrm{d}x\right]\)</span> is given through</p>
 <div class="math notranslate nohighlight">
@@ -817,6 +829,7 @@ E &amp; = &amp; \frac{\hbar \omega}{2} C
 <p>where <span class="math notranslate nohighlight">\(T=2\pi / \omega\)</span> is the time for one full oscillation and <span class="math notranslate nohighlight">\(\mathrm{d}t = 1/v\left( x \right) \cdot \mathrm{d}x\)</span> as the time interval the particle needs to cover the distance <span class="math notranslate nohighlight">\(\mathrm{d}x\)</span>. Since the speed of the particle is <span class="math notranslate nohighlight">\(0\)</span> at the reversal points, the probability to find the particle is heighest at these positions.</p>
 <p>At the state of lowets energy <span class="math notranslate nohighlight">\(E_0\)</span> the discrepancy between quantum mechanics and classical mechanics is the biggest. The classical harmonic oscillator exhibits a minimum of the probability at the position at rest, because there the kinetic energy is teh biggest and so the velocity. The quantum mechanic harmonic osciullator, however, exhibits the maximum probability at this position.</p>
 <p>If we consider higher quantum numbers, the probability density <span class="math notranslate nohighlight">\(\left| \psi_n \left( x \right) \right|^2\)</span> rises at the turning points. Thus, for higher quantum numbers, the quantum mechanical harmonic oscillator resambles the results from classical mechanics.</p>
+<p>Please note the squared wavefunction represents the probability density of <strong>stationary states</strong>. If one is seeking for dynamics, one has to consinder wave packets. The time dependence is related to the factor <span class="math notranslate nohighlight">\(\mathrm{e}^{- \omega t}\)</span> which can be omitted (and we did so) in the case of stationary problems.</p>
 <script type="application/vnd.jupyter.widget-state+json">
 {"state": {}, "version_major": 2, "version_minor": 0}
 </script></div>
@@ -826,13 +839,14 @@ E &amp; = &amp; \frac{\hbar \omega}{2} C
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="L27_potential_well.html" class="btn btn-neutral float-left" title="A potential well" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../lectures/L28/overview_28.html" class="btn btn-neutral float-right" title="Lecture Contents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022, Frank Cichos.
-      <span class="lastupdated">Last updated on Jan 28, 2023.
+      <span class="lastupdated">Last updated on Feb 01, 2023.
       </span></p>
   </div>
 
